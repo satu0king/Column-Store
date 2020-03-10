@@ -1,0 +1,89 @@
+<schema>
+
+    <tables>
+
+        <table>
+            <name> EMP_TABLE </name>
+            <columns>
+                <column>
+                    <name> id </name>
+                    <type> int </type>
+                </column>
+                <column>
+                    <name> age </name>
+                    <type> int </type>
+                </column>
+                <column>
+                    <name> salary </name>
+                    <type> int </type>
+
+                </column>
+                <column>
+                    <name> gender </name>
+                    <type> int </type>
+                </column>
+                <column>
+                    <name> dept_id </name>
+                    <type> int </type>
+                </column>
+            </columns>
+            <primary> id </primary>
+            <foreign-keys>
+                <name> dept_id</name>
+                <foreign_table> DEPT_TABLE </foreign_table>
+                <foreign_name> id </foreign_name>
+            </foreign-keys>
+        </table>
+    </tables>
+
+    <projections>
+        <projection>
+            <name> EMP_DEPT_PROJECTION </name>
+            <tables>
+                <base> EMP_TABLE </base>
+                <join-tables>
+                    <table>
+                        <foreign_key> dept_id </foreign_key>
+                        <foreign_table> DEPT_TABLE </foreign_table>
+                        <foreign_name> id </foreign_name>
+                    </table>
+                </join-tables>
+            </tables>
+            <columns>
+                <column>
+                    <table> EMP_TABLE </table>
+                    <name> id </name>
+                </column>
+                <column>
+                    <table> EMP_TABLE </table>
+                    <name> age </name>
+                    <encoding> delta/RLE </encoding>
+                </column>
+                <column>
+                    <table> EMP_TABLE </table>
+                    <name> gender </name>
+                    <encoding> bitmap </encoding>
+                </column>
+                <column>
+                    <table> DEPT_TABLE </table>
+                    <name> city_id </name>
+                </column>
+            </columns>
+            <sort-key>
+                <table> EMP_TABLE </table>
+                <name> age </name>
+            </sort-key>
+            <join-index>
+                <index>
+                    <name> city_id </name>
+                    <foreign_projection> CITY_PROJECTION </foreign_projection>
+                    <foreign_name> id </foreign_name>
+                </index>
+            </join-index>
+        </projection>
+    </projections>
+
+</schema>
+
+
+
