@@ -1,89 +1,192 @@
-<schema>
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.CStore.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:cstore="http://www.CStore.com"
+    xsi:schemaLocation="http://www.CStore.come schema.xsd">
 
     <tables>
-
         <table>
-            <name> EMP_TABLE </name>
+            <table_name>EMPLOYEE</table_name>
+
             <columns>
                 <column>
-                    <name> id </name>
-                    <type> int </type>
+                    <column_name>id</column_name>
+                    <data_type>int</data_type>
                 </column>
                 <column>
-                    <name> age </name>
-                    <type> int </type>
+                    <column_name>age</column_name>
+                    <data_type>int</data_type>
                 </column>
                 <column>
-                    <name> salary </name>
-                    <type> int </type>
-
+                    <column_name>salary</column_name>
+                    <data_type>double</data_type>
                 </column>
                 <column>
-                    <name> gender </name>
-                    <type> int </type>
+                    <column_name>gender</column_name>
+                    <data_type>int</data_type>
                 </column>
                 <column>
-                    <name> dept_id </name>
-                    <type> int </type>
+                    <column_name>dept_id</column_name>
+                    <data_type>int</data_type>
                 </column>
             </columns>
-            <primary> id </primary>
-            <foreign-keys>
-                <name> dept_id</name>
-                <foreign_table> DEPT_TABLE </foreign_table>
-                <foreign_name> id </foreign_name>
-            </foreign-keys>
+
+            <primary_key>id</primary_key>
+
+            <foreign_keys>
+                <foreign_key>
+                    <FK_from>dept_id</FK_from>
+                    <FK_table>DEPARTMENT</FK_table>
+                    <FK_to>id</FK_to>
+                </foreign_key>
+            </foreign_keys>
+        </table>
+
+        <table>
+            <table_name>DEPARTMENT</table_name>
+
+            <columns>
+                <column>
+                    <column_name>id</column_name>
+                    <data_type>int</data_type>
+                </column>
+                <column>
+                    <column_name>mgr_id</column_name>
+                    <data_type>int</data_type>
+                </column>
+                <column>
+                    <column_name>city_id</column_name>
+                    <data_type>int</data_type>
+                </column>
+            </columns>
+
+            <primary_key>id</primary_key>
+
+            <foreign_keys>
+                <foreign_key>
+                    <FK_from>mgr_id</FK_from>
+                    <FK_table>EMPLOYEE</FK_table>
+                    <FK_to>id</FK_to>
+                </foreign_key>
+            </foreign_keys>
+        </table>
+
+        <table>
+            <table_name>CITY</table_name>
+
+            <columns>
+                <column>
+                    <column_name>id</column_name>
+                    <data_type>int</data_type>
+                </column>
+                <column>
+                    <column_name>dept_id</column_name>
+                    <data_type>int</data_type>
+                </column>
+            </columns>
+
+            <primary_key>id</primary_key>
+
+            <foreign_keys>
+                <foreign_key>
+                    <FK_from>dept_id</FK_from>
+                    <FK_table>DEPARTMENT</FK_table>
+                    <FK_to>id</FK_to>
+                </foreign_key>
+            </foreign_keys>
         </table>
     </tables>
 
     <projections>
         <projection>
-            <name> EMP_DEPT_PROJECTION </name>
+
+            <projection_name>EMPLOYEE_DEPARTMENT_PROJECTION</projection_name>
+
             <tables>
-                <base> EMP_TABLE </base>
-                <join-tables>
+                <base_table>EMPLOYEE</base_table>
+                <join_tables>
                     <table>
-                        <foreign_key> dept_id </foreign_key>
-                        <foreign_table> DEPT_TABLE </foreign_table>
-                        <foreign_name> id </foreign_name>
+                        <FK_from>dept_id</FK_from>
+                        <FK_table>DEPARTMENT</FK_table>
+                        <FK_to>id</FK_to>
                     </table>
-                </join-tables>
+                </join_tables>
             </tables>
+
             <columns>
                 <column>
-                    <table> EMP_TABLE </table>
-                    <name> id </name>
+                    <name>emp_id</name>
+                    <table_name>EMPLOYEE</table_name>
+                    <column_name>id</column_name>
                 </column>
                 <column>
-                    <table> EMP_TABLE </table>
-                    <name> age </name>
-                    <encoding> delta/RLE </encoding>
+                    <name>age</name>
+                    <table_name>EMPLOYEE</table_name>
+                    <column_name>age</column_name>
+                    <encoding>RLE</encoding>
                 </column>
                 <column>
-                    <table> EMP_TABLE </table>
-                    <name> gender </name>
-                    <encoding> bitmap </encoding>
+                    <name>gender</name>
+                    <table_name>EMPLOYEE</table_name>
+                    <column_name>gender</column_name>
+                    <encoding>bitmap</encoding>
                 </column>
                 <column>
-                    <table> DEPT_TABLE </table>
-                    <name> city_id </name>
+                    <name>dept_id</name>
+                    <table_name>DEPARTMENT</table_name>
+                    <column_name>id</column_name>
                 </column>
             </columns>
-            <sort-key>
-                <table> EMP_TABLE </table>
-                <name> age </name>
-            </sort-key>
-            <join-index>
-                <index>
-                    <name> city_id </name>
-                    <foreign_projection> CITY_PROJECTION </foreign_projection>
-                    <foreign_name> id </foreign_name>
-                </index>
-            </join-index>
+
+            <sort_key>age</sort_key>
+
+            <join_indexes>
+                <join_index>
+                    <from>id</from>
+                    <other_projection>EMPLOYEE_CITY_PROJECTION</other_projection>
+                    <to>id</to>
+                </join_index>
+            </join_indexes>
+
+        </projection>
+
+        <projection>
+
+            <projection_name>EMPLOYEE_CITY_PROJECTION</projection_name>
+
+            <tables>
+                <base_table>EMPLOYEE</base_table>
+                <join_tables>
+                    <table>
+                        <FK_from>city_id</FK_from>
+                        <FK_table>CITY</FK_table>
+                        <FK_to>id</FK_to>
+                    </table>
+                </join_tables>
+            </tables>
+
+            <columns>
+                <column>
+                    <name>emp_id</name>
+                    <table_name>EMPLOYEE</table_name>
+                    <column_name>id</column_name>
+                </column>
+                <column>
+                    <name>age</name>
+                    <table_name>EMPLOYEE</table_name>
+                    <column_name>age</column_name>
+                    <encoding>RLE</encoding>
+                </column>
+                <column>
+                    <name>city_id</name>
+                    <table_name>CITY</table_name>
+                    <column_name>id</column_name>
+                </column>
+            </columns>
+
+            <sort_key>age</sort_key>
+
         </projection>
     </projections>
 
 </schema>
-
-
-

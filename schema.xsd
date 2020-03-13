@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://www.CStore.com"
+    targetNamespace="http://www.CStore.com"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:cstore="http://www.CStore.com"
+    elementFormDefault="qualified">
+
+    <xsd:complexType name="table_column_type">
+        <xsd:sequence>
+
+            <xsd:element name="column_name" minOccurs="1" maxOccurs="1">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="[a-zA-Z][a-zA-Z_]*[a-zA-Z]"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="data_type" minOccurs="1" maxOccurs="1">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="int"/>
+                        <xsd:enumeration value="float"/>
+                        <xsd:enumeration value="double"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="table_type">
+        <xsd:sequence>
+
+            <xsd:element name="table_name" minOccurs="1" maxOccurs="1">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="[a-zA-Z][a-zA-Z0-9_]*[a-zA-Z0-9]"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="columns" minOccurs="1" maxOccurs="1">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="column" type="table_column_type" minOccurs="1" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+
+                <xsd:key name="PK_table_column_name">
+                    <xsd:selector xpath="cstore:column"/>
+                    <xsd:field xpath="cstore:column_name"/>
+                </xsd:key>
+            </xsd:element>
+
+            <xsd:element name="primary_key" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+
+            <xsd:element name="foreign_keys" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                    <xsd:sequence>
+
+                        <xsd:element name="foreign_key" minOccurs="1" maxOccurs="unbounded">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="FK_from" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                                    <xsd:element name="FK_table" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                                    <xsd:element name="FK_to" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="projection_column_type">
+        <xsd:sequence>
+
+            <xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+
+            <xsd:element name="table_name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+
+            <xsd:element name="column_name" minOccurs="1" maxOccurs="1">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="[a-zA-Z][a-zA-Z_]*[a-zA-Z]"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="encoding" minOccurs="0" maxOccurs="1">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="RLE"/>
+                        <xsd:enumeration value="bitmap"/>
+                        <xsd:enumeration value="delta"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="projection_type">
+        <xsd:sequence>
+        
+            <xsd:element name="projection_name" minOccurs="1" maxOccurs="1">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="[a-zA-Z][a-zA-Z0-9_]*[a-zA-Z0-9]"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+
+            <xsd:element name="tables" minOccurs="1" maxOccurs="1">
+                <xsd:complexType>
+                    <xsd:sequence>
+
+                        <xsd:element name="base_table" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+
+                        <xsd:element name="join_tables" minOccurs="0" maxOccurs="1">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="table" minOccurs="1" maxOccurs="unbounded">
+                                        <xsd:complexType>
+                                            <xsd:sequence>
+                                                <xsd:element name="FK_from" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                                                <xsd:element name="FK_table" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                                                <xsd:element name="FK_to" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                                            </xsd:sequence>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+            <xsd:element name="columns" minOccurs="1" maxOccurs="1">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="column" type="projection_column_type" minOccurs="1" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+
+                <xsd:key name="PK_projection_column_name">
+                    <xsd:selector xpath="cstore:column"/>
+                    <xsd:field xpath="cstore:name"/>
+                </xsd:key>
+            </xsd:element>
+
+            <xsd:element name="sort_key" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+
+            <xsd:element name="join_indexes" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                    <xsd:sequence>
+
+                        <xsd:element name="join_index" minOccurs="1" maxOccurs="unbounded">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="from" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                                    <xsd:element name="other_projection" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                                    <xsd:element name="to" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:element name="schema">
+        <xsd:complexType>
+            <xsd:sequence>
+
+                <xsd:element name="tables" minOccurs="1" maxOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="table" type="table_type" minOccurs="1" maxOccurs="unbounded">
+                                <xsd:keyref name="FK_primary_key_to_column_name" refer="PK_table_column_name">
+                                    <xsd:selector xpath="."/>
+                                    <xsd:field xpath="cstore:primary_key"/>
+                                </xsd:keyref>
+                                
+                                <xsd:keyref name="FK_FK_from_to_column_name" refer="PK_table_column_name">
+                                    <xsd:selector xpath="cstore:foreign_keys/cstore:foreign_key"/>
+                                    <xsd:field xpath="cstore:FK_from"/>
+                                </xsd:keyref>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+
+                    <xsd:key name="PK_table_name">
+                        <xsd:selector xpath="cstore:table"/>
+                        <xsd:field xpath="cstore:table_name"/>
+                    </xsd:key>
+                                
+                    <xsd:keyref name="FK_FK_table_to_table_name" refer="PK_table_name">
+                        <xsd:selector xpath="cstore:table/cstore:foreign_keys/cstore:foreign_key"/>
+                        <xsd:field xpath="cstore:FK_table"/>
+                    </xsd:keyref>
+                </xsd:element>
+
+                <xsd:element name="projections" minOccurs="1" maxOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="projection" type="projection_type" minOccurs="1" maxOccurs="unbounded">
+                                <xsd:keyref name="FK_sort_key_column_name_to_projection_column_name" refer="PK_projection_column_name">
+                                    <xsd:selector xpath="."/>
+                                    <xsd:field xpath="cstore:sort_key"/>
+                                </xsd:keyref>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+
+                    <xsd:key name="PK_projection_name">
+                        <xsd:selector xpath="cstore:projection"/>
+                        <xsd:field xpath="cstore:projection_name"/>
+                    </xsd:key>
+
+                    <xsd:keyref name="FK_other_projection_to_projection_name" refer="PK_projection_name">
+                        <xsd:selector xpath="cstore:projection/cstore:join_indexes/cstore:join_index"/>
+                        <xsd:field xpath="cstore:other_projection"/>
+                    </xsd:keyref>
+                </xsd:element>
+            
+            </xsd:sequence>
+        </xsd:complexType>
+
+        <xsd:keyref name="FK_base_table_to_table_name" refer="PK_table_name">
+            <xsd:selector xpath="cstore:projections/cstore:projection/cstore:tables"/>
+            <xsd:field xpath="cstore:base_table"/>
+        </xsd:keyref>
+
+        <xsd:keyref name="FK_projection_FK_table_to_table_name" refer="PK_table_name">
+            <xsd:selector xpath="cstore:projections/cstore:projection/cstore:tables/cstore:join_tables/cstore:table"/>
+            <xsd:field xpath="cstore:FK_table"/>
+        </xsd:keyref>
+
+        <xsd:keyref name="FK_column_table_name_to_table_name" refer="PK_table_name">
+            <xsd:selector xpath="cstore:projections/cstore:projection/cstore:columns/cstore:column"/>
+            <xsd:field xpath="cstore:table_name"/>
+        </xsd:keyref>
+
+        <xsd:keyref name="FK_sort_key_table_name_to_table_name" refer="PK_table_name">
+            <xsd:selector xpath="cstore:projections/cstore:projection/cstore:sort_key"/>
+            <xsd:field xpath="cstore:table_name"/>
+        </xsd:keyref>
+    </xsd:element>
+
+</xsd:schema>
