@@ -21,7 +21,7 @@
                     <xsd:restriction base="xsd:string">
                         <xsd:enumeration value="int"/>
                         <xsd:enumeration value="float"/>
-                        <xsd:enumeration value="double"/>
+                        <xsd:enumeration value="string"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>
