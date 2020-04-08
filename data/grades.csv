@@ -1,0 +1,26 @@
+Student_Id,Course_Name,Score,MaxScore
+INT,STRING,FLOAT,INT
+1,Data Modeling,7.2,100
+2,Data Modeling,97.7,100
+3,Data Modeling,31.5,100
+4,Data Modeling,69.4,100
+5,Data Modeling,73.3,100
+6,Data Modeling,74.7,100
+1,NLP,22.8,50
+2,NLP,25.3,50
+3,NLP,30.7,50
+4,NLP,34.1,50
+5,NLP,41.5,50
+6,NLP,24.9,50
+1,ASR,10.1,80
+2,ASR,27.6,80
+3,ASR,8.6,80
+4,ASR,21.5,80
+5,ASR,66.3,80
+6,ASR,79.2,80
+1,SPE,17,75
+2,SPE,56.1,75
+3,SPE,22.1,75
+4,SPE,1.8,75
+5,SPE,39.9,75
+6,SPE,68.9,75

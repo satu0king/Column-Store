@@ -1,4 +1,4 @@
-#pragma once;
+#pragma once
 
 #include <string>
 
@@ -11,4 +11,5 @@ enum class DataType{
 struct Column{
     std::string name;
     DataType type;
+    int index;
 };
