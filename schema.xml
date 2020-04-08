@@ -19,7 +19,7 @@
                 </column>
                 <column>
                     <column_name>salary</column_name>
-                    <data_type>double</data_type>
+                    <data_type>float</data_type>
                 </column>
                 <column>
                     <column_name>gender</column_name>

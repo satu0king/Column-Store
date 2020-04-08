@@ -1,7 +1,6 @@
 #pragma once;
 
 #include <vector>
-
 #include "DataRecord.h"
 #include "Column.h"
 
