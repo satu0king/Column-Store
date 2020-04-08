@@ -1,4 +1,4 @@
-#pragma once;
+#pragma once
 
 #include <memory>
 
@@ -6,7 +6,7 @@
 
 class ConditionInterface {
    public:
-    virtual bool validate(DataRecord &) = 0;
+    virtual bool validate(DataRecord &){ return true;};
     virtual ~ConditionInterface(){};
 };
 
@@ -64,7 +64,7 @@ class EqualCondition : public ConditionImpl {
    public:
     EqualCondition(std::string columnName, std::any value,
                    Metadata _metadata)
-        : ConditionImpl(metadata), value(value) {
+        : ConditionImpl(_metadata), value(value) {
         auto &metadata = *(this->metadata.get());
         columnIndex = metadata[columnName].index;
         dataType = metadata[columnName].type;
@@ -93,19 +93,19 @@ class LessThanCondition : public ConditionImpl {
    public:
     LessThanCondition(std::string columnName, std::any value,
                       Metadata _metadata)
-        : ConditionImpl(metadata), value(value) {
+        : ConditionImpl(_metadata), value(value) {
         columnIndex = metadata->operator[](columnName).index;
-        dataType = metadata->operator[][columnName].type;
+        dataType = (*metadata)[columnName].type;
     }
 
     bool validate(DataRecord &record) {
         if (dataType == DataType::INT) {
-            return std::any_cast<int>(value) < record[columnIndex].as<int>();
+            return std::any_cast<int>(value) > record[columnIndex].as<int>();
         } else if (dataType == DataType::FLOAT) {
-            return std::any_cast<float>(value) <
+            return std::any_cast<float>(value) >
                    record[columnIndex].as<float>();
         } else if (dataType == DataType::STRING) {
-            return std::any_cast<std::string>(value) <
+            return std::any_cast<std::string>(value) >
                    record[columnIndex].as<std::string>();
         }
 

@@ -1,4 +1,4 @@
-#pragma once;
+#pragma once
 #include <memory>
 #include <string>
 #include <unordered_map>
@@ -14,7 +14,9 @@ struct Join {
 
 class ConditionQuery {
    public:
-    virtual ConditionChecker getChecker(Metadata metadata) = 0;
+    virtual ConditionChecker getChecker(Metadata metadata) {
+        return ConditionChecker(new ConditionInterface());
+    };
     virtual ~ConditionQuery() {}
 };
 typedef std::shared_ptr<ConditionQuery> Query;
@@ -30,7 +32,7 @@ class GenericQueryBuilder {
     std::vector<std::pair<std::string, Join>> joins;
     std::unordered_map<std::string, std::string> columnMap;
 
-    Query query;
+    Query query = Query(new ConditionQuery);
 
     friend class GenericDataGenerator;
 
@@ -44,24 +46,29 @@ class GenericQueryBuilder {
         baseColumns = columns;
 
         for (std::string column : columns) {
-            assert(columnMap.find(column) != columnMap.end());
+            assert(columnMap.find(column) == columnMap.end());
             columnMap[column] = name;
         }
     }
 
     void join(std::string name, std::vector<std::string> columns,
               std::string foreignKey, std::string primaryKey) {
-        Join join = {foreignKey, primaryKey, columns};
+        Join join = {.foreignKey = foreignKey,
+                     .primaryKey = primaryKey,
+                     .columns = columns};
 
         joins.emplace_back(name, join);
 
         for (std::string column : columns) {
-            assert(columnMap.find(column) != columnMap.end());
+            assert(columnMap.find(column) == columnMap.end());
             columnMap[column] = name;
         }
     }
 
-    void where(Query query) { this->query = query; }
+    void where(Query query) {
+        assert(query->getChecker(generateMetadata()));
+        this->query = query;
+    }
 
     Metadata generateMetadata() {
         std::vector<Column> columns;
@@ -71,8 +78,9 @@ class GenericQueryBuilder {
             for (auto const& name : _columns) {
                 DataType type =
                     data_sources[source]->getMetadata()->getColumn(name).type;
-                Column c = {
-                    .name = name, .type = type, .index = columns.size()};
+                Column c = {.name = name,
+                            .type = type,
+                            .index = static_cast<int>(columns.size())};
 
                 columns.push_back(c);
             }
@@ -93,7 +101,6 @@ class GenericQueryBuilder {
 
 class GenericDataGenerator : public DataGeneratorInterface {
     GenericQueryBuilder builder;
-    Metadata metadata;
     ConditionChecker checker;
     DataSource baseSource;
     std::vector<int> baseIndices;
@@ -138,11 +145,14 @@ class GenericDataGenerator : public DataGeneratorInterface {
 
         DataRecord baseRecord = baseSource->next();
 
-        for (int i : baseIndices) values.push_back(baseRecord[i]);
+        for (int i : baseIndices) {
+            values.push_back(baseRecord[i]);
+        }
 
         for (DataGeneraterJoin& join : joins) {
             DataRecord& record = join.map[baseRecord[join.FKIndex].as<int>()];
-            for (int index : join.indices) values.push_back(record[index]);
+            for (int index : join.indices) 
+                values.push_back(record[index]);
         }
 
         return DataRecord(values);
@@ -152,6 +162,7 @@ class GenericDataGenerator : public DataGeneratorInterface {
     GenericDataGenerator(GenericQueryBuilder builder) : builder(builder) {
         metadata = builder.generateMetadata();
         checker = builder.generateConditionChecker();
+
         baseSource = builder.data_sources[builder.baseSource];
         Metadata baseSource_metadatda = baseSource->getMetadata();
 
@@ -171,7 +182,7 @@ class GenericDataGenerator : public DataGeneratorInterface {
             join.FKIndex =
                 baseSource_metadatda->getColumn(_join.foreignKey).index;
 
-            int PKIndex = join_metadata->getColumn(_join.foreignKey).index;
+            int PKIndex = join_metadata->getColumn(_join.primaryKey).index;
 
             for (auto column : _join.columns)
                 indices.push_back(join_metadata->getColumn(column).index);
@@ -187,17 +198,19 @@ class GenericDataGenerator : public DataGeneratorInterface {
             // Building Join Data Map (this will be in memory)
             while (joinSource->hasNext()) {
                 DataRecord record = joinSource->next();
-                join.map[record[PKIndex].as<int>()] = std::move(record);
+                join.map[record[PKIndex].as<int>()] = record;
             }
 
             joins.push_back(join);
         }
+
+        _setNext();
     }
 
-    bool hasNext() const { return _hasNext; }
+    bool hasNext() { return _hasNext; }
 
     DataRecord next() {
-        DataRecord result = std::move(nextRecord);
+        DataRecord result = nextRecord;
         _setNext();
         return result;
     }
@@ -209,7 +222,7 @@ class AndQuery : public ConditionQuery {
 
    public:
     AndQuery(Query query1, Query query2) : query1(query1), query2(query2) {}
-    ConditionChecker getConditionObject(Metadata m) {
+    ConditionChecker getChecker(Metadata m) {
         return ConditionChecker(
             new AndCondition(query1->getChecker(m), query2->getChecker(m)));
     }
@@ -221,7 +234,7 @@ class OrQuery : public ConditionQuery {
 
    public:
     OrQuery(Query query1, Query query2) : query1(query1), query2(query2) {}
-    ConditionChecker getConditionObject(Metadata m) {
+    ConditionChecker getChecker(Metadata m) {
         return ConditionChecker(
             new OrCondition(query1->getChecker(m), query2->getChecker(m)));
     }
@@ -232,7 +245,7 @@ class NotQuery : public ConditionQuery {
 
    public:
     NotQuery(Query query1) : query1(query1) {}
-    ConditionChecker getConditionObject(Metadata m) {
+    ConditionChecker getChecker(Metadata m) {
         return ConditionChecker(new NotCondition(query1->getChecker(m)));
     }
 };
@@ -244,7 +257,7 @@ class EqualQuery : public ConditionQuery {
    public:
     EqualQuery(std::string name, std::any value) : name(name), value(value) {}
 
-    ConditionChecker getConditionObject(Metadata m) {
+    ConditionChecker getChecker(Metadata m) {
         return ConditionChecker(new EqualCondition(name, value, m));
     }
 };
@@ -257,7 +270,7 @@ class LessThanQuery : public ConditionQuery {
     LessThanQuery(std::string name, std::any value)
         : name(name), value(value) {}
 
-    ConditionChecker getConditionObject(Metadata m) {
+    ConditionChecker getChecker(Metadata m) {
         return ConditionChecker(new LessThanCondition(name, value, m));
     }
 };
