@@ -1,8 +1,10 @@
 #pragma once;
 
+#include <any>
+#include <memory>
 #include <string>
 #include <unordered_map>
-#include <any>
+#include <vector>
 
 #include "Column.h"
 
@@ -16,6 +18,8 @@ class DataValue {
     T as() {
         return std::any_cast<T>(value);
     }
+
+    std::any get() { return value; }
 };
 
 class DataRecordMetadata {
@@ -24,7 +28,8 @@ class DataRecordMetadata {
 
    public:
     DataRecordMetadata(std::vector<Column> columns) : columns(columns) {
-        for (int i = 0; i < columns.size(); i++) columnMap[columns[i].name] = i;
+        for (int i = 0; i < columns.size(); i++) 
+            columnMap[columns[i].name] = i;
     }
 
     std::vector<Column>& getColumns() { return columns; }
@@ -34,12 +39,31 @@ class DataRecordMetadata {
         return columns[i];
     }
 
+    Column& getColumn(std::string name) {
+        return (*this)[name];
+    }
+
+    Column& getColumn(int i) {
+        return (*this)[i];
+    }
+    
     Column& operator[](std::string name) {
         assert(columnMap.find(name) != columnMap.end());
         return columns[columnMap[name]];
     }
 };
 
-class DataRecord {
+typedef std::shared_ptr<DataRecordMetadata> Metadata;
+
+struct DataRecord {
+    // std::shared_ptr<DataRecordMetadata> metadata;
     std::vector<DataValue> values;
+
+    DataRecord(std::vector<DataValue> &values) : values(std::move(values)) {}
+
+    DataValue& operator[](int index) {return values[index];}
+    //    public:
+    //     DataRecord(std::vector<DataValue> values,
+    //                std::shared_ptr<DataRecordMetadata> metadata)
+    //         : values(values), metadata(metadata) {}
 };

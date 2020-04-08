@@ -1,14 +1,20 @@
 #pragma once;
 
+#include <memory>
 #include <vector>
 
-#include "DataRecord.h"
 #include "Column.h"
+#include "DataRecord.h"
 
 class DataGeneratorInterface {
+   protected:
+    Metadata metadata;
+
    public:
     virtual DataRecord next() = 0;
     virtual bool hasNext() = 0;
+
+    Metadata getMetadata() const { return metadata; }
 
     virtual std::vector<DataRecord> nextBatch(int records) {
         assert(records >= 0);
@@ -18,9 +24,10 @@ class DataGeneratorInterface {
             results.push_back(next());
         }
         return results;
-        
     }
     virtual std::vector<Column> getColumns() = 0;
 
-    virtual ~DataGeneratorInterface() {};
+    virtual ~DataGeneratorInterface(){};
 };
+
+typedef std::shared_ptr<DataGeneratorInterface> DataSource;
