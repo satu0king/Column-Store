@@ -22,6 +22,7 @@
  */
 class DataGeneratorInterface {
    protected:
+   /** @brief metadata for processing queries*/
     Metadata metadata;
 
    public:
@@ -43,8 +44,8 @@ class DataGeneratorInterface {
     Metadata getMetadata() const { return metadata; }
 
     /**
-     * @brief Helper function to return batch of records. 
-     * 
+     * @brief Helper function to return batch of records.
+     *
      * Intended to be used for batch processing.
      * @return batch of records
      */
@@ -95,13 +96,13 @@ class DataGeneratorInterface {
 
     /**
      * @brief Destroy the Data Generator Interface object
-     * 
+     *
      */
     virtual ~DataGeneratorInterface(){};
 };
 
 /**
  * @brief Shared pointer to the DataGeneratorInterface
- * 
+ *
  */
 typedef std::shared_ptr<DataGeneratorInterface> DataSource;

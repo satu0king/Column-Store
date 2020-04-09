@@ -53,6 +53,8 @@ std::string trim(const std::string &str,
  * ~~~~~~~~~~~~~~~~~~~~~
  */
 class CSVDataSource : public DataGeneratorInterface {
+
+    /** @brief queue of data records for the generator */
     std::queue<DataRecord> data;
 
    public:
@@ -106,11 +108,22 @@ class CSVDataSource : public DataGeneratorInterface {
         }
     }
 
+    /**
+     * @brief Generates the next record
+     * 
+     * @return DataRecord 
+     */
     DataRecord next() {
         auto d = data.front();
         data.pop();
         return d;
     }
 
+    /**
+     * @brief Checks if a record is available
+     * 
+     * @return true 
+     * @return false 
+     */
     bool hasNext() { return !data.empty(); }
 };

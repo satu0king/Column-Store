@@ -5,14 +5,14 @@
 #include "../DataRecord.h"
 
 /** @file
- * @brief Condition Interfaces and Implementations for Query Processing
+ * @brief RecordValidator Interfaces and Implementations for Query Processing
  */
 
 /**
- * @brief Base Condition Interface
+ * @brief Base RecordValidator Interface
  *
  */
-class ConditionInterface {
+class RecordValidatorInterface {
    public:
     /**
      * @brief Validates record as per query conditions
@@ -24,29 +24,33 @@ class ConditionInterface {
     virtual bool validate(DataRecord &record) { return true; }
 
     /**
-     * @brief Destroy the Condition Interface object
+     * @brief Destroy the Record Validator Interface object
      *
      */
-    virtual ~ConditionInterface(){};
+    virtual ~RecordValidatorInterface(){};
 };
 
 /**
- * @brief Shared Pointer for Condition Interface
+ * @brief Shared Pointer for RecordValidator Interface
  *
- * Conditions are transfered between objects using this type
+ * RecordValidator are transfered between objects using this type
  */
-typedef std::shared_ptr<ConditionInterface> ConditionChecker;
+typedef std::shared_ptr<RecordValidatorInterface> RecordValidator;
 
 /**
- * @brief Extended Condition Interface which handles Metadata
+ * @brief Extended RecordValidator Interface which handles Metadata
  *
  * Use this class if you need access to metadata information of columns
  *
  * @see Metadata
  *
  */
-class ConditionMetadataInterface : public ConditionInterface {
+class ReccordValidatorMetadataInterface : public RecordValidatorInterface {
    protected:
+    /** @brief metadata object
+     * Use this object to extract column information such as column index and
+     * column type
+     */
     Metadata metadata;
 
    public:
@@ -55,23 +59,23 @@ class ConditionMetadataInterface : public ConditionInterface {
      *
      * @param metadata
      */
-    ConditionMetadataInterface(Metadata metadata) : metadata(metadata) {}
+    ReccordValidatorMetadataInterface(Metadata metadata) : metadata(metadata) {}
 };
 
 /**
- * @brief Inverts condition
+ * @brief Inverts RecordValidator
  *
  */
-class NotCondition : public ConditionInterface {
-    ConditionChecker condition;
+class NotRecordValidator : public RecordValidatorInterface {
+    RecordValidator condition;
 
    public:
     /**
-     * @brief Construct a new Not Condition object
+     * @brief Construct a new Not Record Validator object
      *
      * @param condition
      */
-    NotCondition(ConditionChecker condition) : condition(condition) {}
+    NotRecordValidator(RecordValidator condition) : condition(condition) {}
 
     /**
      * @brief inverts the value of the condition
@@ -84,62 +88,62 @@ class NotCondition : public ConditionInterface {
 };
 
 /**
- * @brief Logical AND condition
+ * @brief Logical AND RecordValidator
  *
  */
-class AndCondition : public ConditionInterface {
-    ConditionChecker condition1;
-    ConditionChecker condition2;
+class AndRecordValidator : public RecordValidatorInterface {
+    RecordValidator validator1;
+    RecordValidator validator2;
 
    public:
     /**
-     * @brief Construct a new And Condition object
+     * @brief Construct a new And Record Validator object
      *
-     * @param condition1
-     * @param condition2
+     * @param validator1
+     * @param validator2
      */
-    AndCondition(ConditionChecker condition1, ConditionChecker condition2)
-        : condition1(condition1), condition2(condition2) {}
+    AndRecordValidator(RecordValidator validator1, RecordValidator validator2)
+        : validator1(validator1), validator2(validator2) {}
 
     /**
-     * @brief Applies logical AND on condition1 and condition2
+     * @brief Applies logical AND on validator1 and validator2
      *
      * @param record
      * @return true
      * @return false
      */
     bool validate(DataRecord &record) {
-        return condition1->validate(record) && condition2->validate(record);
+        return validator1->validate(record) && validator2->validate(record);
     }
 };
 
 /**
- * @brief Logical OR condition
+ * @brief Logical OR RecordValidator
  *
  */
-class OrCondition : public ConditionInterface {
-    ConditionChecker condition1;
-    ConditionChecker condition2;
+class OrRecordValidator : public RecordValidatorInterface {
+    RecordValidator validator1;
+    RecordValidator validator2;
 
    public:
     /**
-     * @brief Construct a new Or Condition object
+     * @brief Construct a new Or Record Validator object
      *
-     * @param condition1
-     * @param condition2
+     * @param validator1
+     * @param validator2
      */
-    OrCondition(ConditionChecker condition1, ConditionChecker condition2)
-        : condition1(condition1), condition2(condition2) {}
+    OrRecordValidator(RecordValidator validator1, RecordValidator validator2)
+        : validator1(validator1), validator2(validator2) {}
 
     /**
-     * @brief Applies logical OR condition to condition1 and condition2
+     * @brief Applies logical OR condition to validator1 and validator2
      *
      * @param record
      * @return true
      * @return false
      */
     bool validate(DataRecord &record) {
-        return condition1->validate(record) || condition2->validate(record);
+        return validator1->validate(record) || validator2->validate(record);
     }
 };
 
@@ -147,21 +151,22 @@ class OrCondition : public ConditionInterface {
  * @brief Checks equality of a data field
  *
  */
-class EqualCondition : public ConditionMetadataInterface {
+class EqualRecordValidator : public ReccordValidatorMetadataInterface {
     int columnIndex;
     std::any value;
     DataType dataType;
 
    public:
     /**
-     * @brief Construct a new Equal Condition object
+     * @brief Construct a new Equal Record Validator object
      *
-     * @param columnName of column to compare
-     * @param value of the column
+     * @param columnName
+     * @param value
      * @param _metadata
      */
-    EqualCondition(std::string columnName, std::any value, Metadata _metadata)
-        : ConditionMetadataInterface(_metadata), value(value) {
+    EqualRecordValidator(std::string columnName, std::any value,
+                         Metadata _metadata)
+        : ReccordValidatorMetadataInterface(_metadata), value(value) {
         auto &metadata = *(this->metadata.get());
         columnIndex = metadata[columnName].index;
         dataType = metadata[columnName].type;
@@ -195,22 +200,22 @@ class EqualCondition : public ConditionMetadataInterface {
  * @brief Checks if value of a field is less than given value
  *
  */
-class LessThanCondition : public ConditionMetadataInterface {
+class LessThanRecordValidator : public ReccordValidatorMetadataInterface {
     int columnIndex;
     std::any value;
     DataType dataType;
 
    public:
     /**
-     * @brief Construct a new Less Than Condition object
+     * @brief Construct a new Less Than Record Validator object
      *
      * @param columnName
      * @param value
      * @param _metadata
      */
-    LessThanCondition(std::string columnName, std::any value,
-                      Metadata _metadata)
-        : ConditionMetadataInterface(_metadata), value(value) {
+    LessThanRecordValidator(std::string columnName, std::any value,
+                            Metadata _metadata)
+        : ReccordValidatorMetadataInterface(_metadata), value(value) {
         columnIndex = metadata->operator[](columnName).index;
         dataType = (*metadata)[columnName].type;
     }

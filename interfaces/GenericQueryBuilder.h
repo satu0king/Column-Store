@@ -24,19 +24,19 @@
 class ConditionQuery {
    public:
     /**
-     * @brief Get the Checker object which complies to ConditionInterface
+     * @brief Get the Valdiator object which complies to ConditionInterface
      *
      * This is required because the record validators need metadata information
      * to perform validation efficiently. Therefore record validators needs to
      * be created once the query is built.
      *
      * @param metadata
-     * @return ConditionChecker
+     * @return RecordValidator
      *
      * see @ConditionInterface
      */
-    virtual ConditionChecker getChecker(Metadata metadata) {
-        return ConditionChecker(new ConditionInterface());
+    virtual RecordValidator getValidator(Metadata metadata) {
+        return RecordValidator(new RecordValidatorInterface());
     };
 
     /**
@@ -75,12 +75,11 @@ class GenericQueryBuilder {
      */
 
     struct Join {
+        /** @brief Foreign key from base source */
         std::string foreignKey;
+        /** @brief Primary key in join source */
         std::string primaryKey;
-        /**
-         * @brief List of columns required in result from joined table
-         *
-         */
+        /** @brief List of columns required in result from joined source */
         std::vector<std::string> columns;
     };
 
@@ -180,7 +179,7 @@ class GenericQueryBuilder {
      * @param query
      */
     void where(Query query) {
-        assert(query->getChecker(generateMetadata()));
+        assert(query->getValidator(generateMetadata()));
         this->query = query;
     }
 
@@ -198,20 +197,19 @@ class GenericQueryBuilder {
     Metadata generateMetadata() {
         std::vector<Column> columns;
 
-        /**
-         * @brief Extracts column information from data source
-         *
-         * column index is set here in a first come manner - implicit ordering
-         * happens here
-         */
+        // Extracts column information from data source
+
+        // column index is set here in a first come manner - implicit ordering
+        // happens here
+
         auto helper = [&](std::string source,
                           std::vector<std::string> _columns) {
             for (auto const& name : _columns) {
-                /** Extract type information*/
+                // Extract type information
                 DataType type =
                     data_sources[source]->getMetadata()->getColumn(name).type;
 
-                /** Construct column information*/
+                // Construct column information
                 Column c = {.name = name,
                             .type = type,
                             .index = static_cast<int>(columns.size())};
@@ -220,51 +218,85 @@ class GenericQueryBuilder {
             }
         };
 
-        /**
-         * Extract columns from base source followed by join sources
-         */
+        // Extract columns from base source followed by join sources
         helper(baseSource, baseColumns);
-        for (const auto& [source, join] : joins) helper(source, join.columns);
+        for (const auto& [source, join] : joins) {
+            helper(source, join.columns);
+        }
 
         return Metadata(new DataRecordMetadata(columns));
     }
 
     /**
      * @brief creates record
-     * 
-     * @return ConditionChecker 
+     *
+     * @return RecordValidator
      */
-    ConditionChecker generateConditionChecker() {
-        return query->getChecker(generateMetadata());
+    RecordValidator generateRecordValidator() {
+        return query->getValidator(generateMetadata());
     }
 };
 
+/**
+ * @brief Data Generator for GenericQueryBuilder
+ *
+ * @see GenericQueryBuilder
+ *
+ */
 class GenericDataGenerator : public DataGeneratorInterface {
+    /**  builder object from which we are generating data */
     GenericQueryBuilder builder;
-    ConditionChecker checker;
+    RecordValidator recordValidator;
     DataSource baseSource;
+
+    /** List of column indices to extract values from base source records */
     std::vector<int> baseIndices;
 
+    /**
+     * @brief helper structure to efficiently process joins
+     *
+     */
     struct DataGeneraterJoin {
+        /** @brief indices of columns required for joined result */
         std::vector<int> indices;
+        /** @brief FK index in base data source */
         int FKIndex;
-        std::unordered_map<int, DataRecord> map;
+        /**
+         * @brief map of PK of join source to join records
+         *
+         * The data generator loads all the joined table data into memory and
+         * processes the PK-FK join in memory. This is not an issue as long as
+         * the number of joined table records is small.
+         */
+        std::unordered_map<int, DataRecord> joinMap;
     };
 
     bool _hasNext = false;
+
     DataRecord nextRecord;
 
+    /** List of joins */
     std::vector<DataGeneraterJoin> joins;
 
+    /**
+     * @brief internal function to process and generate next valid record
+     *
+     * @return DataRecord
+     */
     DataRecord _getNext() {
         DataRecord candidate = _getCandidateNext();
 
-        while (!checker->validate(candidate)) {
+        while (!recordValidator->validate(candidate)) {
             candidate = _getCandidateNext();
         }
         return candidate;
     }
 
+    /**
+     * @brief internal function to set the next valid record
+     *
+     * If not valid record is found, it sets _hasNext to false
+     */
     void _setNext() {
         _hasNext = false;
 
@@ -276,6 +308,14 @@ class GenericDataGenerator : public DataGeneratorInterface {
         }
     }
 
+    /**
+     * @brief Gets the next candidate record
+     *
+     * Gets the next record from base source. Applies join on the join map data.
+     * This function does not perform record validation.
+     *
+     * @return DataRecord
+     */
     DataRecord _getCandidateNext() {
         std::vector<DataValue> values;
 
@@ -285,12 +325,14 @@ class GenericDataGenerator : public DataGeneratorInterface {
 
         DataRecord baseRecord = baseSource->next();
 
+        // Extract base column values
         for (int i : baseIndices) {
             values.push_back(baseRecord[i]);
         }
 
+        // Find join record and extract join column values
         for (DataGeneraterJoin& join : joins) {
-            DataRecord& record = join.map[baseRecord[join.FKIndex].as<int>()];
+            DataRecord& record = join.joinMap[baseRecord[join.FKIndex].as<int>()];
             for (int index : join.indices) values.push_back(record[index]);
         }
 
@@ -298,13 +340,23 @@ class GenericDataGenerator : public DataGeneratorInterface {
     }
 
    public:
+    /**
+     * @brief Construct a new Generic Data Generator object
+     *
+     * The generator processes all column data and maps it to column indices for
+     * efficiency. All joined data sources are loaded into memory in the
+     * constructor
+     *
+     * @param builder object to constuct generator from
+     */
     GenericDataGenerator(GenericQueryBuilder builder) : builder(builder) {
         metadata = builder.generateMetadata();
-        checker = builder.generateConditionChecker();
+        recordValidator = builder.generateRecordValidator();
 
         baseSource = builder.data_sources[builder.baseSource];
         Metadata baseSource_metadatda = baseSource->getMetadata();
 
+        // Extract base source column indices
         for (std::string name : builder.baseColumns) {
             baseIndices.push_back(baseSource_metadatda->getColumn(name).index);
         }
@@ -317,12 +369,13 @@ class GenericDataGenerator : public DataGeneratorInterface {
 
             DataGeneraterJoin join;
 
-            // Extracting Metadata
+            // Extracting FK index
             join.FKIndex =
                 baseSource_metadatda->getColumn(_join.foreignKey).index;
 
             int PKIndex = join_metadata->getColumn(_join.primaryKey).index;
 
+            // Extracting join source column indices
             for (auto column : _join.columns)
                 indices.push_back(join_metadata->getColumn(column).index);
 
@@ -337,79 +390,170 @@ class GenericDataGenerator : public DataGeneratorInterface {
             // Building Join Data Map (this will be in memory)
             while (joinSource->hasNext()) {
                 DataRecord record = joinSource->next();
-                join.map[record[PKIndex].as<int>()] = record;
+                join.joinMap[record[PKIndex].as<int>()] = record;
             }
 
             joins.push_back(join);
         }
 
+        // Sets a new record and in turn sets _hasNext value
         _setNext();
     }
 
+    /**
+     * @brief check if a record is available
+     *
+     * @return true
+     * @return false
+     */
     bool hasNext() { return _hasNext; }
 
+    /**
+     * @brief generates a new record
+     *
+     * @return DataRecord
+     */
     DataRecord next() {
         DataRecord result = nextRecord;
         _setNext();
         return result;
-    }
+    }  //< Base
 };
 
+/**
+ * @brief Logical AND query
+ *
+ */
 class AndQuery : public ConditionQuery {
     Query query1;
     Query query2;
 
    public:
+    /**
+     * @brief Construct a new And Query object
+     *
+     * @param query1
+     * @param query2
+     */
     AndQuery(Query query1, Query query2) : query1(query1), query2(query2) {}
-    ConditionChecker getChecker(Metadata m) {
-        return ConditionChecker(
-            new AndCondition(query1->getChecker(m), query2->getChecker(m)));
+    /**
+     * @brief Get the Validator object
+     *
+     * @param metadata
+     * @return RecordValidator
+     */
+    RecordValidator getValidator(Metadata metadata) {
+        return RecordValidator(new AndRecordValidator(
+            query1->getValidator(metadata), query2->getValidator(metadata)));
     }
 };
 
+/**
+ * @brief Logical OR query
+ *
+ */
 class OrQuery : public ConditionQuery {
     Query query1;
     Query query2;
 
    public:
+    /**
+     * @brief Construct a new Or Query object
+     *
+     * @param query1
+     * @param query2
+     */
     OrQuery(Query query1, Query query2) : query1(query1), query2(query2) {}
-    ConditionChecker getChecker(Metadata m) {
-        return ConditionChecker(
-            new OrCondition(query1->getChecker(m), query2->getChecker(m)));
+    /**
+     * @brief Get the Validator object
+     *
+     * @param metadata
+     * @return RecordValidator
+     */
+    RecordValidator getValidator(Metadata metadata) {
+        return RecordValidator(new OrRecordValidator(
+            query1->getValidator(metadata), query2->getValidator(metadata)));
     }
 };
 
+/**
+ * @brief Logical NOT query
+ *
+ */
 class NotQuery : public ConditionQuery {
     Query query1;
 
    public:
+    /**
+     * @brief Construct a new Not Query object
+     *
+     * @param query1
+     */
     NotQuery(Query query1) : query1(query1) {}
-    ConditionChecker getChecker(Metadata m) {
-        return ConditionChecker(new NotCondition(query1->getChecker(m)));
+    /**
+     * @brief Get the Validator object
+     *
+     * @param metadata
+     * @return RecordValidator
+     */
+    RecordValidator getValidator(Metadata metadata) {
+        return RecordValidator(
+            new NotRecordValidator(query1->getValidator(metadata)));
     }
 };
 
+/**
+ * @brief Equality Query
+ *
+ */
 class EqualQuery : public ConditionQuery {
     std::string name;
     std::any value;
 
    public:
+    /**
+     * @brief Construct a new Equal Query object
+     *
+     * @param name
+     * @param value
+     */
     EqualQuery(std::string name, std::any value) : name(name), value(value) {}
-
-    ConditionChecker getChecker(Metadata m) {
-        return ConditionChecker(new EqualCondition(name, value, m));
+    /**
+     * @brief Get the Validator object
+     *
+     * @param metadata
+     * @return RecordValidator
+     */
+    RecordValidator getValidator(Metadata metadata) {
+        return RecordValidator(new EqualRecordValidator(name, value, metadata));
     }
 };
 
+/**
+ * @brief Less Than Query
+ *
+ */
 class LessThanQuery : public ConditionQuery {
     std::string name;
     std::any value;
 
    public:
+   /**
+    * @brief Construct a new Less Than Query object
+    * 
+    * @param name 
+    * @param value 
+    */
     LessThanQuery(std::string name, std::any value)
         : name(name), value(value) {}
 
-    ConditionChecker getChecker(Metadata m) {
-        return ConditionChecker(new LessThanCondition(name, value, m));
+    /**
+     * @brief Get the Validator object
+     * 
+     * @param metadata 
+     * @return RecordValidator 
+     */
+    RecordValidator getValidator(Metadata metadata) {
+        return RecordValidator(new LessThanRecordValidator(name, value, metadata));
     }
 };

@@ -17,11 +17,16 @@ enum class DataType { INT, FLOAT, STRING };
  *
  */
 struct Column {
-    std::string name;
+    /** @brief name of the column */
+    std::string name; 
+
+    /** @brief data type of the column */
     DataType type;
 
     /**
-     * @brief Index of the column in the data record - Needed for fast retrieval
+     * @brief Index of the column in the data record. 
+     * 
+     * Index is used to retrieve column value from record
      */
     int index;
 };
