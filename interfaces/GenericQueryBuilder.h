@@ -244,12 +244,12 @@ class GenericQueryBuilder {
  *
  */
 class GenericDataGenerator : public DataGeneratorInterface {
-    /**  builder object from which we are generating data */
+    /** @brief  builder object from which we are generating data */
     GenericQueryBuilder builder;
     RecordValidator recordValidator;
     DataSource baseSource;
 
-    /** List of column indices to extract values from base source records */
+    /** @brief  List of column indices to extract values from base source records */
     std::vector<int> baseIndices;
 
     /**
@@ -275,7 +275,7 @@ class GenericDataGenerator : public DataGeneratorInterface {
 
     DataRecord nextRecord;
 
-    /** List of joins */
+    /** @brief List of joins */
     std::vector<DataGeneraterJoin> joins;
 
     /**
@@ -295,7 +295,7 @@ class GenericDataGenerator : public DataGeneratorInterface {
     /**
      * @brief internal function to set the next valid record
      *
-     * If not valid record is found, it sets _hasNext to false
+     * If no valid record is found, it sets _hasNext to false
      */
     void _setNext() {
         _hasNext = false;
