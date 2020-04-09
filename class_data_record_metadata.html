@@ -63,6 +63,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_data_record_metadata-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">DataRecordMetadata Class Reference</div>  </div>
@@ -100,6 +101,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a91658f70e254e73a9dbf614a18953bb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_record_metadata.html#a91658f70e254e73a9dbf614a18953bb2">print</a> ()</td></tr>
 <tr class="memdesc:a91658f70e254e73a9dbf614a18953bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print metadata.  <a href="class_data_record_metadata.html#a91658f70e254e73a9dbf614a18953bb2">More...</a><br /></td></tr>
 <tr class="separator:a91658f70e254e73a9dbf614a18953bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab13be60f55384b34973d657332dbcf8e"><td class="memItemLeft" align="right" valign="top"><a id="ab13be60f55384b34973d657332dbcf8e"></a>
+std::vector&lt; <a class="el" href="struct_column.html">Column</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>columns</b></td></tr>
+<tr class="separator:ab13be60f55384b34973d657332dbcf8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad62877bdc87c9ee5e5030eb03423e2b4"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_record_metadata.html#ad62877bdc87c9ee5e5030eb03423e2b4">columnMap</a></td></tr>
+<tr class="memdesc:ad62877bdc87c9ee5e5030eb03423e2b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map from column name to column index.  <a href="class_data_record_metadata.html#ad62877bdc87c9ee5e5030eb03423e2b4">More...</a><br /></td></tr>
+<tr class="separator:ad62877bdc87c9ee5e5030eb03423e2b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Stores metadata information of the data record. </p>
@@ -336,6 +346,31 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad62877bdc87c9ee5e5030eb03423e2b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad62877bdc87c9ee5e5030eb03423e2b4">&#9670;&nbsp;</a></span>columnMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, int&gt; DataRecordMetadata::columnMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Map from column name to column index. </p>
 
 </div>
 </div>

@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Condition Interfaces and Implementations for Query Processing.  
+<p>RecordValidator Interfaces and Implementations for Query Processing.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;memory&gt;</code><br />
 <code>#include &quot;<a class="el" href="_data_record_8h_source.html">../DataRecord.h</a>&quot;</code><br />
@@ -82,51 +82,51 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_condition_interface.html">ConditionInterface</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base Condition Interface.  <a href="class_condition_interface.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_record_validator_interface.html">RecordValidatorInterface</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base RecordValidator Interface.  <a href="class_record_validator_interface.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_condition_metadata_interface.html">ConditionMetadataInterface</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extended Condition Interface which handles Metadata.  <a href="class_condition_metadata_interface.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reccord_validator_metadata_interface.html">ReccordValidatorMetadataInterface</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extended RecordValidator Interface which handles Metadata.  <a href="class_reccord_validator_metadata_interface.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_not_condition.html">NotCondition</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverts condition.  <a href="class_not_condition.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_not_record_validator.html">NotRecordValidator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverts RecordValidator.  <a href="class_not_record_validator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_and_condition.html">AndCondition</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical AND condition.  <a href="class_and_condition.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_and_record_validator.html">AndRecordValidator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical AND RecordValidator.  <a href="class_and_record_validator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_or_condition.html">OrCondition</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical OR condition.  <a href="class_or_condition.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_or_record_validator.html">OrRecordValidator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical OR RecordValidator.  <a href="class_or_record_validator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_equal_condition.html">EqualCondition</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks equality of a data field.  <a href="class_equal_condition.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_equal_record_validator.html">EqualRecordValidator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks equality of a data field.  <a href="class_equal_record_validator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_less_than_condition.html">LessThanCondition</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if value of a field is less than given value.  <a href="class_less_than_condition.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_less_than_record_validator.html">LessThanRecordValidator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if value of a field is less than given value.  <a href="class_less_than_record_validator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a2258b751748e15cc5afa43761051a801"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="class_condition_interface.html">ConditionInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_condition_interface_8h.html#a2258b751748e15cc5afa43761051a801">ConditionChecker</a></td></tr>
-<tr class="memdesc:a2258b751748e15cc5afa43761051a801"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared Pointer for Condition Interface.  <a href="_condition_interface_8h.html#a2258b751748e15cc5afa43761051a801">More...</a><br /></td></tr>
-<tr class="separator:a2258b751748e15cc5afa43761051a801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1a288e23d2365ee1666989cabdfae01"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="class_record_validator_interface.html">RecordValidatorInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_condition_interface_8h.html#ae1a288e23d2365ee1666989cabdfae01">RecordValidator</a></td></tr>
+<tr class="memdesc:ae1a288e23d2365ee1666989cabdfae01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared Pointer for RecordValidator Interface.  <a href="_condition_interface_8h.html#ae1a288e23d2365ee1666989cabdfae01">More...</a><br /></td></tr>
+<tr class="separator:ae1a288e23d2365ee1666989cabdfae01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Condition Interfaces and Implementations for Query Processing. </p>
+<div class="textblock"><p>RecordValidator Interfaces and Implementations for Query Processing. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="a2258b751748e15cc5afa43761051a801"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2258b751748e15cc5afa43761051a801">&#9670;&nbsp;</a></span>ConditionChecker</h2>
+<a id="ae1a288e23d2365ee1666989cabdfae01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1a288e23d2365ee1666989cabdfae01">&#9670;&nbsp;</a></span>RecordValidator</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="class_condition_interface.html">ConditionInterface</a>&gt; <a class="el" href="_condition_interface_8h.html#a2258b751748e15cc5afa43761051a801">ConditionChecker</a></td>
+          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="class_record_validator_interface.html">RecordValidatorInterface</a>&gt; <a class="el" href="_condition_interface_8h.html#ae1a288e23d2365ee1666989cabdfae01">RecordValidator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Shared Pointer for Condition Interface. </p>
-<p>Conditions are transfered between objects using this type </p>
+<p>Shared Pointer for RecordValidator Interface. </p>
+<p>RecordValidator are transfered between objects using this type </p>
 
 </div>
 </div>

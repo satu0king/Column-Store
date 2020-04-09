@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['andcondition_82',['AndCondition',['../class_and_condition.html#a8cd6bff81928f827d1960fb9d0e83581',1,'AndCondition']]],
-  ['as_83',['as',['../class_data_value.html#a55cf2915bfe1c068861026401eb1ac39',1,'DataValue']]]
+  ['_5fgetcandidatenext_113',['_getCandidateNext',['../class_generic_data_generator.html#a41199b60fdefd8bbc78d9eccc2c087cd',1,'GenericDataGenerator']]],
+  ['_5fgetnext_114',['_getNext',['../class_generic_data_generator.html#adcbaa51ba021753d99bcc55d9bd14de3',1,'GenericDataGenerator']]],
+  ['_5fsetnext_115',['_setNext',['../class_generic_data_generator.html#ad45d799ce987617ed26fecda9c43d82c',1,'GenericDataGenerator']]]
 ];

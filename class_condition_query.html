@@ -68,26 +68,106 @@ $(function() {
 <div class="title">ConditionQuery Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Base Condition Query Structure.  
+ <a href="class_condition_query.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_generic_query_builder_8h_source.html">GenericQueryBuilder.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ConditionQuery:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_condition_query.png" usemap="#ConditionQuery_map" alt=""/>
   <map id="ConditionQuery_map" name="ConditionQuery_map">
-<area href="class_and_query.html" alt="AndQuery" shape="rect" coords="0,56,102,80"/>
-<area href="class_equal_query.html" alt="EqualQuery" shape="rect" coords="112,56,214,80"/>
-<area href="class_less_than_query.html" alt="LessThanQuery" shape="rect" coords="224,56,326,80"/>
-<area href="class_not_query.html" alt="NotQuery" shape="rect" coords="336,56,438,80"/>
-<area href="class_or_query.html" alt="OrQuery" shape="rect" coords="448,56,550,80"/>
+<area href="class_and_query.html" title="Logical AND query." alt="AndQuery" shape="rect" coords="0,56,102,80"/>
+<area href="class_equal_query.html" title="Equality Query." alt="EqualQuery" shape="rect" coords="112,56,214,80"/>
+<area href="class_less_than_query.html" title="Less Than Query." alt="LessThanQuery" shape="rect" coords="224,56,326,80"/>
+<area href="class_not_query.html" title="Logical NOT query." alt="NotQuery" shape="rect" coords="336,56,438,80"/>
+<area href="class_or_query.html" title="Logical OR query." alt="OrQuery" shape="rect" coords="448,56,550,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a62e2c83506a486aa4aded55542a1e261"><td class="memItemLeft" align="right" valign="top"><a id="a62e2c83506a486aa4aded55542a1e261"></a>
-virtual <a class="el" href="_condition_interface_8h.html#a2258b751748e15cc5afa43761051a801">ConditionChecker</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getChecker</b> (<a class="el" href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a> metadata)</td></tr>
-<tr class="separator:a62e2c83506a486aa4aded55542a1e261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d014aa7d328130b21d6f0c38b12a197"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_condition_interface_8h.html#ae1a288e23d2365ee1666989cabdfae01">RecordValidator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_condition_query.html#a2d014aa7d328130b21d6f0c38b12a197">getValidator</a> (<a class="el" href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a> metadata)</td></tr>
+<tr class="memdesc:a2d014aa7d328130b21d6f0c38b12a197"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Valdiator object which complies to ConditionInterface.  <a href="class_condition_query.html#a2d014aa7d328130b21d6f0c38b12a197">More...</a><br /></td></tr>
+<tr class="separator:a2d014aa7d328130b21d6f0c38b12a197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a926d298c7387e6e59cc4000dbcfa9308"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_condition_query.html#a926d298c7387e6e59cc4000dbcfa9308">~ConditionQuery</a> ()</td></tr>
+<tr class="memdesc:a926d298c7387e6e59cc4000dbcfa9308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the Condition Query object.  <a href="class_condition_query.html#a926d298c7387e6e59cc4000dbcfa9308">More...</a><br /></td></tr>
+<tr class="separator:a926d298c7387e6e59cc4000dbcfa9308"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Base Condition Query Structure. </p>
+<p><a class="el" href="class_condition_query.html" title="Base Condition Query Structure.">ConditionQuery</a> structures are used to create the query. ConditionInterface structures are used to validate the records</p>
+<p>see @ConditionInterface </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a926d298c7387e6e59cc4000dbcfa9308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a926d298c7387e6e59cc4000dbcfa9308">&#9670;&nbsp;</a></span>~ConditionQuery()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ConditionQuery::~ConditionQuery </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destroy the Condition Query object. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2d014aa7d328130b21d6f0c38b12a197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d014aa7d328130b21d6f0c38b12a197">&#9670;&nbsp;</a></span>getValidator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_condition_interface_8h.html#ae1a288e23d2365ee1666989cabdfae01">RecordValidator</a> ConditionQuery::getValidator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a>&#160;</td>
+          <td class="paramname"><em>metadata</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Valdiator object which complies to ConditionInterface. </p>
+<p>This is required because the record validators need metadata information to perform validation efficiently. Therefore record validators needs to be created once the query is built.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">metadata</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>RecordValidator</dd></dl>
+<p>see @ConditionInterface </p>
+
+<p>Reimplemented in <a class="el" href="class_less_than_query.html#a1749b3d0451fc96dbbe81454dd21c040">LessThanQuery</a>, <a class="el" href="class_equal_query.html#a69fcc1b1eea79626b7bdcb1a120750f3">EqualQuery</a>, <a class="el" href="class_not_query.html#a7ba1e3d1e63db52a90faa7aa9ba13d4a">NotQuery</a>, <a class="el" href="class_or_query.html#a6bcce27a3f682c54ed72c97bff3dd4f0">OrQuery</a>, and <a class="el" href="class_and_query.html#a43f9488af37a14d1b3c1e6ea0f8125cb">AndQuery</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>interfaces/<a class="el" href="_generic_query_builder_8h_source.html">GenericQueryBuilder.h</a></li>
 </ul>

@@ -62,34 +62,68 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_generic_query_builder-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">GenericQueryBuilder Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Generic Query Builder Class.  
+ <a href="class_generic_query_builder.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_generic_query_builder_8h_source.html">GenericQueryBuilder.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_generic_query_builder_1_1_join.html">Join</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper struct to represent join infromation.  <a href="struct_generic_query_builder_1_1_join.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8513a4d7fb4a72c85a009402e3337812"><td class="memItemLeft" align="right" valign="top"><a id="a8513a4d7fb4a72c85a009402e3337812"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>registerDataSource</b> (std::string name, <a class="el" href="_data_generator_interface_8h.html#a9d42be8386d4eae9e9759f2f6ac24461">DataSource</a> source)</td></tr>
+<tr class="memitem:a8513a4d7fb4a72c85a009402e3337812"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_builder.html#a8513a4d7fb4a72c85a009402e3337812">registerDataSource</a> (std::string name, <a class="el" href="_data_generator_interface_8h.html#a9d42be8386d4eae9e9759f2f6ac24461">DataSource</a> source)</td></tr>
+<tr class="memdesc:a8513a4d7fb4a72c85a009402e3337812"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a new data source and gives is an alias name.  <a href="class_generic_query_builder.html#a8513a4d7fb4a72c85a009402e3337812">More...</a><br /></td></tr>
 <tr class="separator:a8513a4d7fb4a72c85a009402e3337812"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe2ae5175de8f343d6c6502c14d58907"><td class="memItemLeft" align="right" valign="top"><a id="afe2ae5175de8f343d6c6502c14d58907"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setBaseSource</b> (std::string name, std::vector&lt; std::string &gt; columns)</td></tr>
+<tr class="memitem:afe2ae5175de8f343d6c6502c14d58907"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_builder.html#afe2ae5175de8f343d6c6502c14d58907">setBaseSource</a> (std::string name, std::vector&lt; std::string &gt; columns)</td></tr>
+<tr class="memdesc:afe2ae5175de8f343d6c6502c14d58907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Base Source and the columns required in the query result.  <a href="class_generic_query_builder.html#afe2ae5175de8f343d6c6502c14d58907">More...</a><br /></td></tr>
 <tr class="separator:afe2ae5175de8f343d6c6502c14d58907"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af384db7ccc6d84f08e8a988d5831ff6c"><td class="memItemLeft" align="right" valign="top"><a id="af384db7ccc6d84f08e8a988d5831ff6c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>join</b> (std::string name, std::vector&lt; std::string &gt; columns, std::string foreignKey, std::string primaryKey)</td></tr>
+<tr class="memitem:af384db7ccc6d84f08e8a988d5831ff6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_builder.html#af384db7ccc6d84f08e8a988d5831ff6c">join</a> (std::string name, std::vector&lt; std::string &gt; columns, std::string foreignKey, std::string primaryKey)</td></tr>
+<tr class="memdesc:af384db7ccc6d84f08e8a988d5831ff6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a join from base source to a join source.  <a href="class_generic_query_builder.html#af384db7ccc6d84f08e8a988d5831ff6c">More...</a><br /></td></tr>
 <tr class="separator:af384db7ccc6d84f08e8a988d5831ff6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81ed3c02d3ca43a999c045a2c2f0e943"><td class="memItemLeft" align="right" valign="top"><a id="a81ed3c02d3ca43a999c045a2c2f0e943"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>where</b> (Query query)</td></tr>
+<tr class="memitem:a81ed3c02d3ca43a999c045a2c2f0e943"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_builder.html#a81ed3c02d3ca43a999c045a2c2f0e943">where</a> (<a class="el" href="_generic_query_builder_8h.html#a4330e6bc0f11e29ebeeb3124fed72f3b">Query</a> <a class="el" href="class_generic_query_builder.html#a67edeaae4837eb39cf27298e58a434ed">query</a>)</td></tr>
+<tr class="memdesc:a81ed3c02d3ca43a999c045a2c2f0e943"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the query object.  <a href="class_generic_query_builder.html#a81ed3c02d3ca43a999c045a2c2f0e943">More...</a><br /></td></tr>
 <tr class="separator:a81ed3c02d3ca43a999c045a2c2f0e943"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50bdde19bfcfed5508ea1fdc4fc42600"><td class="memItemLeft" align="right" valign="top"><a id="a50bdde19bfcfed5508ea1fdc4fc42600"></a>
-<a class="el" href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a>&#160;</td><td class="memItemRight" valign="bottom"><b>generateMetadata</b> ()</td></tr>
+<tr class="memitem:a50bdde19bfcfed5508ea1fdc4fc42600"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_builder.html#a50bdde19bfcfed5508ea1fdc4fc42600">generateMetadata</a> ()</td></tr>
+<tr class="memdesc:a50bdde19bfcfed5508ea1fdc4fc42600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates metadata of result records using join and query information.  <a href="class_generic_query_builder.html#a50bdde19bfcfed5508ea1fdc4fc42600">More...</a><br /></td></tr>
 <tr class="separator:a50bdde19bfcfed5508ea1fdc4fc42600"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9762b36454f1836e611971ef667499e"><td class="memItemLeft" align="right" valign="top"><a id="aa9762b36454f1836e611971ef667499e"></a>
-<a class="el" href="_condition_interface_8h.html#a2258b751748e15cc5afa43761051a801">ConditionChecker</a>&#160;</td><td class="memItemRight" valign="bottom"><b>generateConditionChecker</b> ()</td></tr>
-<tr class="separator:aa9762b36454f1836e611971ef667499e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a4091208d2f64887f6228e3db19888"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_condition_interface_8h.html#ae1a288e23d2365ee1666989cabdfae01">RecordValidator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_builder.html#a45a4091208d2f64887f6228e3db19888">generateRecordValidator</a> ()</td></tr>
+<tr class="memdesc:a45a4091208d2f64887f6228e3db19888"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates record  <a href="class_generic_query_builder.html#a45a4091208d2f64887f6228e3db19888">More...</a><br /></td></tr>
+<tr class="separator:a45a4091208d2f64887f6228e3db19888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a4c6d7b62c6bb6b58de5ee7f37ddaab09"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="_data_generator_interface_8h.html#a9d42be8386d4eae9e9759f2f6ac24461">DataSource</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_builder.html#a4c6d7b62c6bb6b58de5ee7f37ddaab09">data_sources</a></td></tr>
+<tr class="memdesc:a4c6d7b62c6bb6b58de5ee7f37ddaab09"><td class="mdescLeft">&#160;</td><td class="mdescRight">map of data source name and data generator  <a href="class_generic_query_builder.html#a4c6d7b62c6bb6b58de5ee7f37ddaab09">More...</a><br /></td></tr>
+<tr class="separator:a4c6d7b62c6bb6b58de5ee7f37ddaab09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3121ca3ef1467cbd06788b2a1c98160"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_builder.html#ab3121ca3ef1467cbd06788b2a1c98160">baseSource</a></td></tr>
+<tr class="memdesc:ab3121ca3ef1467cbd06788b2a1c98160"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base data source.  <a href="class_generic_query_builder.html#ab3121ca3ef1467cbd06788b2a1c98160">More...</a><br /></td></tr>
+<tr class="separator:ab3121ca3ef1467cbd06788b2a1c98160"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac013b6ffaffa08ad038c18b4dea7d681"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_builder.html#ac013b6ffaffa08ad038c18b4dea7d681">baseColumns</a></td></tr>
+<tr class="memdesc:ac013b6ffaffa08ad038c18b4dea7d681"><td class="mdescLeft">&#160;</td><td class="mdescRight">list of columns from the base table required in result  <a href="class_generic_query_builder.html#ac013b6ffaffa08ad038c18b4dea7d681">More...</a><br /></td></tr>
+<tr class="separator:ac013b6ffaffa08ad038c18b4dea7d681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a38049c5cdf77082a5ec84c057084ff"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; std::string, <a class="el" href="struct_generic_query_builder_1_1_join.html">Join</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_builder.html#a4a38049c5cdf77082a5ec84c057084ff">joins</a></td></tr>
+<tr class="memdesc:a4a38049c5cdf77082a5ec84c057084ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of joins.  <a href="class_generic_query_builder.html#a4a38049c5cdf77082a5ec84c057084ff">More...</a><br /></td></tr>
+<tr class="separator:a4a38049c5cdf77082a5ec84c057084ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae62e939b9eef4645b50d275b461a72a2"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_builder.html#ae62e939b9eef4645b50d275b461a72a2">columnMap</a></td></tr>
+<tr class="memdesc:ae62e939b9eef4645b50d275b461a72a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of columns and their corresponding data source.  <a href="class_generic_query_builder.html#ae62e939b9eef4645b50d275b461a72a2">More...</a><br /></td></tr>
+<tr class="separator:ae62e939b9eef4645b50d275b461a72a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67edeaae4837eb39cf27298e58a434ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_generic_query_builder_8h.html#a4330e6bc0f11e29ebeeb3124fed72f3b">Query</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_builder.html#a67edeaae4837eb39cf27298e58a434ed">query</a> = <a class="el" href="_generic_query_builder_8h.html#a4330e6bc0f11e29ebeeb3124fed72f3b">Query</a>(new <a class="el" href="class_condition_query.html">ConditionQuery</a>)</td></tr>
+<tr class="memdesc:a67edeaae4837eb39cf27298e58a434ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query object.  <a href="class_generic_query_builder.html#a67edeaae4837eb39cf27298e58a434ed">More...</a><br /></td></tr>
+<tr class="separator:a67edeaae4837eb39cf27298e58a434ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -97,6 +131,398 @@ Friends</h2></td></tr>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>GenericDataGenerator</b></td></tr>
 <tr class="separator:acc2036a337429622ef580c19211d1f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Generic Query Builder Class. </p>
+<p>Generic Query builder can be used to query any data source. The query mechanisim is performed in a general manner and will not take any advantage of the underlying storage mechanisim, i.e. indexes, encoding, ordering etc will not be used for optimization. Advantage of this builder is that it can work with any data source.</p>
+<p>Every builder class will also have a corresponding data generator. The generator for this builder is <a class="el" href="class_generic_data_generator.html" title="Data Generator for GenericQueryBuilder.">GenericDataGenerator</a></p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_generic_data_generator.html" title="Data Generator for GenericQueryBuilder.">GenericDataGenerator</a> </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a50bdde19bfcfed5508ea1fdc4fc42600"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50bdde19bfcfed5508ea1fdc4fc42600">&#9670;&nbsp;</a></span>generateMetadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a> GenericQueryBuilder::generateMetadata </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generates metadata of result records using join and query information. </p>
+<p>Columns are ordered as follows - Base Source Columns, followed by individual join columns. This ordering is important as it allows the generator to implicitely generate <a class="el" href="struct_data_record.html" title="Stores a row of data.">DataRecord</a> without explicit ordering of <a class="el" href="class_data_value.html" title="Implementation of a single data element.">DataValue</a></p>
+<dl class="section return"><dt>Returns</dt><dd>Metadata of builder </dd></dl>
+
+</div>
+</div>
+<a id="a45a4091208d2f64887f6228e3db19888"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45a4091208d2f64887f6228e3db19888">&#9670;&nbsp;</a></span>generateRecordValidator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_condition_interface_8h.html#ae1a288e23d2365ee1666989cabdfae01">RecordValidator</a> GenericQueryBuilder::generateRecordValidator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>creates record </p>
+<dl class="section return"><dt>Returns</dt><dd>RecordValidator </dd></dl>
+
+</div>
+</div>
+<a id="af384db7ccc6d84f08e8a988d5831ff6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af384db7ccc6d84f08e8a988d5831ff6c">&#9670;&nbsp;</a></span>join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GenericQueryBuilder::join </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt;&#160;</td>
+          <td class="paramname"><em>columns</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>foreignKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>primaryKey</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a join from base source to a join source. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>of join source </td></tr>
+    <tr><td class="paramname">columns</td><td>of join source required in result </td></tr>
+    <tr><td class="paramname">foreignKey</td><td>from base source </td></tr>
+    <tr><td class="paramname">primaryKey</td><td>of join source </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8513a4d7fb4a72c85a009402e3337812"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8513a4d7fb4a72c85a009402e3337812">&#9670;&nbsp;</a></span>registerDataSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GenericQueryBuilder::registerDataSource </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_data_generator_interface_8h.html#a9d42be8386d4eae9e9759f2f6ac24461">DataSource</a>&#160;</td>
+          <td class="paramname"><em>source</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Registers a new data source and gives is an alias name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+    <tr><td class="paramname">source</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afe2ae5175de8f343d6c6502c14d58907"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe2ae5175de8f343d6c6502c14d58907">&#9670;&nbsp;</a></span>setBaseSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GenericQueryBuilder::setBaseSource </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt;&#160;</td>
+          <td class="paramname"><em>columns</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Base Source and the columns required in the query result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>of data source </td></tr>
+    <tr><td class="paramname">columns</td><td>required in result </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a81ed3c02d3ca43a999c045a2c2f0e943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81ed3c02d3ca43a999c045a2c2f0e943">&#9670;&nbsp;</a></span>where()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GenericQueryBuilder::where </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_generic_query_builder_8h.html#a4330e6bc0f11e29ebeeb3124fed72f3b">Query</a>&#160;</td>
+          <td class="paramname"><em>query</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the query object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac013b6ffaffa08ad038c18b4dea7d681"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac013b6ffaffa08ad038c18b4dea7d681">&#9670;&nbsp;</a></span>baseColumns</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; GenericQueryBuilder::baseColumns</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>list of columns from the base table required in result </p>
+
+</div>
+</div>
+<a id="ab3121ca3ef1467cbd06788b2a1c98160"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3121ca3ef1467cbd06788b2a1c98160">&#9670;&nbsp;</a></span>baseSource</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GenericQueryBuilder::baseSource</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Base data source. </p>
+<p>All joins are done on FKs of the base table to PKs of joined table </p>
+
+</div>
+</div>
+<a id="ae62e939b9eef4645b50d275b461a72a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae62e939b9eef4645b50d275b461a72a2">&#9670;&nbsp;</a></span>columnMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, std::string&gt; GenericQueryBuilder::columnMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List of columns and their corresponding data source. </p>
+
+</div>
+</div>
+<a id="a4c6d7b62c6bb6b58de5ee7f37ddaab09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c6d7b62c6bb6b58de5ee7f37ddaab09">&#9670;&nbsp;</a></span>data_sources</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="_data_generator_interface_8h.html#a9d42be8386d4eae9e9759f2f6ac24461">DataSource</a>&gt; GenericQueryBuilder::data_sources</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>map of data source name and data generator </p>
+
+</div>
+</div>
+<a id="a4a38049c5cdf77082a5ec84c057084ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a38049c5cdf77082a5ec84c057084ff">&#9670;&nbsp;</a></span>joins</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::pair&lt;std::string, <a class="el" href="struct_generic_query_builder_1_1_join.html">Join</a>&gt; &gt; GenericQueryBuilder::joins</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List of joins. </p>
+
+</div>
+</div>
+<a id="a67edeaae4837eb39cf27298e58a434ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67edeaae4837eb39cf27298e58a434ed">&#9670;&nbsp;</a></span>query</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_generic_query_builder_8h.html#a4330e6bc0f11e29ebeeb3124fed72f3b">Query</a> GenericQueryBuilder::query = <a class="el" href="_generic_query_builder_8h.html#a4330e6bc0f11e29ebeeb3124fed72f3b">Query</a>(new <a class="el" href="class_condition_query.html">ConditionQuery</a>)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Query object. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>interfaces/<a class="el" href="_generic_query_builder_8h_source.html">GenericQueryBuilder.h</a></li>
 </ul>

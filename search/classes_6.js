@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['join_66',['Join',['../struct_join.html',1,'']]]
+  ['join_94',['Join',['../struct_generic_query_builder_1_1_join.html',1,'GenericQueryBuilder']]]
 ];

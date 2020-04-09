@@ -89,72 +89,75 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_c_s_v_data_source.html">   55</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_s_v_data_source.html">CSVDataSource</a> : <span class="keyword">public</span> <a class="code" href="class_data_generator_interface.html">DataGeneratorInterface</a> {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    std::queue&lt;DataRecord&gt; data;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_c_s_v_data_source.html#acb2c4dedcfb10f6aeb238f9b86231548">   66</a></span>&#160;    <a class="code" href="class_c_s_v_data_source.html#acb2c4dedcfb10f6aeb238f9b86231548">CSVDataSource</a>(std::string filename) {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        csv::Parser file(filename);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">int</span> columnCount = file.columnCount();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">int</span> rowCount = file.rowCount();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        std::vector&lt;Column&gt; columns(columnCount);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_c_s_v_data_source.html#ab2d0fdfe5a388cbdd015d21f37f36242">   58</a></span>&#160;    std::queue&lt;DataRecord&gt; <a class="code" href="class_c_s_v_data_source.html#ab2d0fdfe5a388cbdd015d21f37f36242">data</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_c_s_v_data_source.html#acb2c4dedcfb10f6aeb238f9b86231548">   68</a></span>&#160;    <a class="code" href="class_c_s_v_data_source.html#acb2c4dedcfb10f6aeb238f9b86231548">CSVDataSource</a>(std::string filename) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        csv::Parser file(filename);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">int</span> columnCount = file.columnCount();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">int</span> rowCount = file.rowCount();</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">auto</span> header = file.getHeader();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; columnCount; i++) {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            columns[i].name = <a class="code" href="_c_s_v_data_generator_8h.html#a6474a77d936ca3cb982c93d28384fdba">trim</a>(header[i]);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            columns[i].index = i;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; columnCount; i++) {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            std::string type = <a class="code" href="_c_s_v_data_generator_8h.html#a6474a77d936ca3cb982c93d28384fdba">trim</a>(std::string(file[0][i]));</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;INT&quot;</span>)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                columns[i].type = DataType::INT;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;STRING&quot;</span>)</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                columns[i].type = DataType::STRING;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;FLOAT&quot;</span>)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                columns[i].type = DataType::FLOAT;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Unknown DataType&quot;</span>);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        metadata = <a class="code" href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a>(<span class="keyword">new</span> <a class="code" href="class_data_record_metadata.html">DataRecordMetadata</a>(columns));</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        std::vector&lt;Column&gt; columns(columnCount);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">auto</span> header = file.getHeader();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; columnCount; i++) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            columns[i].name = <a class="code" href="_c_s_v_data_generator_8h.html#a6474a77d936ca3cb982c93d28384fdba">trim</a>(header[i]);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            columns[i].index = i;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; columnCount; i++) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            std::string type = <a class="code" href="_c_s_v_data_generator_8h.html#a6474a77d936ca3cb982c93d28384fdba">trim</a>(std::string(file[0][i]));</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;INT&quot;</span>)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                columns[i].type = DataType::INT;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;STRING&quot;</span>)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                columns[i].type = DataType::STRING;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == <span class="stringliteral">&quot;FLOAT&quot;</span>)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                columns[i].type = DataType::FLOAT;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Unknown DataType&quot;</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; rowCount; i++) {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            std::vector&lt;DataValue&gt; values;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; columnCount; j++) {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="keyword">auto</span> type = columns[j].type;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="keywordflow">if</span> (type == DataType::INT)</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    values.push_back(<a class="code" href="class_data_value.html">DataValue</a>((<span class="keywordtype">int</span>)stoi(file[i][j])));</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == DataType::FLOAT)</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    values.push_back(<a class="code" href="class_data_value.html">DataValue</a>((<span class="keywordtype">float</span>)stof(file[i][j])));</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == DataType::STRING)</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    values.push_back(<a class="code" href="class_data_value.html">DataValue</a>(<a class="code" href="_c_s_v_data_generator_8h.html#a6474a77d936ca3cb982c93d28384fdba">trim</a>(file[i][j])));</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            data.push(values);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="class_c_s_v_data_source.html#a9b78f2a9b5ec576496898ea7aa209d09">  109</a></span>&#160;    <a class="code" href="struct_data_record.html">DataRecord</a> <a class="code" href="class_c_s_v_data_source.html#a9b78f2a9b5ec576496898ea7aa209d09">next</a>() {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keyword">auto</span> d = data.front();</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        data.pop();</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> d;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="class_c_s_v_data_source.html#a260bcbcee830e4d26749a85d29ff953b">  115</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_c_s_v_data_source.html#a260bcbcee830e4d26749a85d29ff953b">hasNext</a>() { <span class="keywordflow">return</span> !data.empty(); }</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <a class="code" href="class_data_generator_interface.html#ae914b47b1731437108dece6b900d5ad6">metadata</a> = <a class="code" href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a>(<span class="keyword">new</span> <a class="code" href="class_data_record_metadata.html">DataRecordMetadata</a>(columns));</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; rowCount; i++) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            std::vector&lt;DataValue&gt; values;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; columnCount; j++) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="keyword">auto</span> type = columns[j].type;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">if</span> (type == DataType::INT)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    values.push_back(<a class="code" href="class_data_value.html">DataValue</a>((<span class="keywordtype">int</span>)stoi(file[i][j])));</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == DataType::FLOAT)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    values.push_back(<a class="code" href="class_data_value.html">DataValue</a>((<span class="keywordtype">float</span>)stof(file[i][j])));</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == DataType::STRING)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    values.push_back(<a class="code" href="class_data_value.html">DataValue</a>(<a class="code" href="_c_s_v_data_generator_8h.html#a6474a77d936ca3cb982c93d28384fdba">trim</a>(file[i][j])));</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <a class="code" href="class_c_s_v_data_source.html#ab2d0fdfe5a388cbdd015d21f37f36242">data</a>.push(values);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="class_c_s_v_data_source.html#a9b78f2a9b5ec576496898ea7aa209d09">  116</a></span>&#160;    <a class="code" href="struct_data_record.html">DataRecord</a> <a class="code" href="class_c_s_v_data_source.html#a9b78f2a9b5ec576496898ea7aa209d09">next</a>() {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keyword">auto</span> d = <a class="code" href="class_c_s_v_data_source.html#ab2d0fdfe5a388cbdd015d21f37f36242">data</a>.front();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="class_c_s_v_data_source.html#ab2d0fdfe5a388cbdd015d21f37f36242">data</a>.pop();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">return</span> d;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="class_c_s_v_data_source.html#a260bcbcee830e4d26749a85d29ff953b">  128</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_c_s_v_data_source.html#a260bcbcee830e4d26749a85d29ff953b">hasNext</a>() { <span class="keywordflow">return</span> !<a class="code" href="class_c_s_v_data_source.html#ab2d0fdfe5a388cbdd015d21f37f36242">data</a>.empty(); }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_c_s_v_data_source_html_ab2d0fdfe5a388cbdd015d21f37f36242"><div class="ttname"><a href="class_c_s_v_data_source.html#ab2d0fdfe5a388cbdd015d21f37f36242">CSVDataSource::data</a></div><div class="ttdeci">std::queue&lt; DataRecord &gt; data</div><div class="ttdoc">queue of data records for the generator</div><div class="ttdef"><b>Definition:</b> CSVDataGenerator.h:58</div></div>
 <div class="ttc" id="a_c_s_v_data_generator_8h_html_a6474a77d936ca3cb982c93d28384fdba"><div class="ttname"><a href="_c_s_v_data_generator_8h.html#a6474a77d936ca3cb982c93d28384fdba">trim</a></div><div class="ttdeci">std::string trim(const std::string &amp;str, const std::string &amp;whitespace=&quot; \t\r\n&quot;)</div><div class="ttdoc">Helper function to trim trailing whitespace.</div><div class="ttdef"><b>Definition:</b> CSVDataGenerator.h:21</div></div>
-<div class="ttc" id="aclass_c_s_v_data_source_html_acb2c4dedcfb10f6aeb238f9b86231548"><div class="ttname"><a href="class_c_s_v_data_source.html#acb2c4dedcfb10f6aeb238f9b86231548">CSVDataSource::CSVDataSource</a></div><div class="ttdeci">CSVDataSource(std::string filename)</div><div class="ttdoc">Construct a new CSVDataSource object.</div><div class="ttdef"><b>Definition:</b> CSVDataGenerator.h:66</div></div>
+<div class="ttc" id="aclass_c_s_v_data_source_html_acb2c4dedcfb10f6aeb238f9b86231548"><div class="ttname"><a href="class_c_s_v_data_source.html#acb2c4dedcfb10f6aeb238f9b86231548">CSVDataSource::CSVDataSource</a></div><div class="ttdeci">CSVDataSource(std::string filename)</div><div class="ttdoc">Construct a new CSVDataSource object.</div><div class="ttdef"><b>Definition:</b> CSVDataGenerator.h:68</div></div>
 <div class="ttc" id="aclass_data_value_html"><div class="ttname"><a href="class_data_value.html">DataValue</a></div><div class="ttdoc">Implementation of a single data element.</div><div class="ttdef"><b>Definition:</b> DataRecord.h:28</div></div>
 <div class="ttc" id="aclass_data_record_metadata_html"><div class="ttname"><a href="class_data_record_metadata.html">DataRecordMetadata</a></div><div class="ttdoc">Stores metadata information of the data record.</div><div class="ttdef"><b>Definition:</b> DataRecord.h:82</div></div>
 <div class="ttc" id="aclass_data_generator_interface_html"><div class="ttname"><a href="class_data_generator_interface.html">DataGeneratorInterface</a></div><div class="ttdoc">Interface for relational data sources.</div><div class="ttdef"><b>Definition:</b> DataGeneratorInterface.h:23</div></div>
-<div class="ttc" id="aclass_c_s_v_data_source_html_a260bcbcee830e4d26749a85d29ff953b"><div class="ttname"><a href="class_c_s_v_data_source.html#a260bcbcee830e4d26749a85d29ff953b">CSVDataSource::hasNext</a></div><div class="ttdeci">bool hasNext()</div><div class="ttdef"><b>Definition:</b> CSVDataGenerator.h:115</div></div>
+<div class="ttc" id="aclass_c_s_v_data_source_html_a260bcbcee830e4d26749a85d29ff953b"><div class="ttname"><a href="class_c_s_v_data_source.html#a260bcbcee830e4d26749a85d29ff953b">CSVDataSource::hasNext</a></div><div class="ttdeci">bool hasNext()</div><div class="ttdoc">Checks if a record is available.</div><div class="ttdef"><b>Definition:</b> CSVDataGenerator.h:128</div></div>
 <div class="ttc" id="a_data_record_8h_html_aae7d65312098e5dbd46f7b60b7fdbcb1"><div class="ttname"><a href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a></div><div class="ttdeci">std::shared_ptr&lt; DataRecordMetadata &gt; Metadata</div><div class="ttdoc">Shared pointer to DataRecordMetadata.</div><div class="ttdef"><b>Definition:</b> DataRecord.h:199</div></div>
 <div class="ttc" id="a_data_generator_interface_8h_html"><div class="ttname"><a href="_data_generator_interface_8h.html">DataGeneratorInterface.h</a></div><div class="ttdoc">Data Generator Interface.</div></div>
 <div class="ttc" id="aclass_c_s_v_data_source_html"><div class="ttname"><a href="class_c_s_v_data_source.html">CSVDataSource</a></div><div class="ttdoc">CSV Data Source generator.</div><div class="ttdef"><b>Definition:</b> CSVDataGenerator.h:55</div></div>
 <div class="ttc" id="astruct_data_record_html"><div class="ttname"><a href="struct_data_record.html">DataRecord</a></div><div class="ttdoc">Stores a row of data.</div><div class="ttdef"><b>Definition:</b> DataRecord.h:58</div></div>
-<div class="ttc" id="aclass_c_s_v_data_source_html_a9b78f2a9b5ec576496898ea7aa209d09"><div class="ttname"><a href="class_c_s_v_data_source.html#a9b78f2a9b5ec576496898ea7aa209d09">CSVDataSource::next</a></div><div class="ttdeci">DataRecord next()</div><div class="ttdef"><b>Definition:</b> CSVDataGenerator.h:109</div></div>
+<div class="ttc" id="aclass_data_generator_interface_html_ae914b47b1731437108dece6b900d5ad6"><div class="ttname"><a href="class_data_generator_interface.html#ae914b47b1731437108dece6b900d5ad6">DataGeneratorInterface::metadata</a></div><div class="ttdeci">Metadata metadata</div><div class="ttdoc">metadata for processing queries</div><div class="ttdef"><b>Definition:</b> DataGeneratorInterface.h:26</div></div>
+<div class="ttc" id="aclass_c_s_v_data_source_html_a9b78f2a9b5ec576496898ea7aa209d09"><div class="ttname"><a href="class_c_s_v_data_source.html#a9b78f2a9b5ec576496898ea7aa209d09">CSVDataSource::next</a></div><div class="ttdeci">DataRecord next()</div><div class="ttdoc">Generates the next record.</div><div class="ttdef"><b>Definition:</b> CSVDataGenerator.h:116</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

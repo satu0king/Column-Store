@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['metadata_105',['Metadata',['../_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1',1,'DataRecord.h']]]
+  ['query_171',['Query',['../_generic_query_builder_8h.html#a4330e6bc0f11e29ebeeb3124fed72f3b',1,'GenericQueryBuilder.h']]]
 ];

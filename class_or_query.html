@@ -63,30 +63,135 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_or_query-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">OrQuery Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Logical OR query.  
+ <a href="class_or_query.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_generic_query_builder_8h_source.html">GenericQueryBuilder.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for OrQuery:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_or_query.png" usemap="#OrQuery_map" alt=""/>
   <map id="OrQuery_map" name="OrQuery_map">
-<area href="class_condition_query.html" alt="ConditionQuery" shape="rect" coords="0,0,101,24"/>
+<area href="class_condition_query.html" title="Base Condition Query Structure." alt="ConditionQuery" shape="rect" coords="0,0,101,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9ed4494a8de360329c45f405c41a4147"><td class="memItemLeft" align="right" valign="top"><a id="a9ed4494a8de360329c45f405c41a4147"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>OrQuery</b> (Query query1, Query query2)</td></tr>
+<tr class="memitem:a9ed4494a8de360329c45f405c41a4147"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_or_query.html#a9ed4494a8de360329c45f405c41a4147">OrQuery</a> (<a class="el" href="_generic_query_builder_8h.html#a4330e6bc0f11e29ebeeb3124fed72f3b">Query</a> query1, <a class="el" href="_generic_query_builder_8h.html#a4330e6bc0f11e29ebeeb3124fed72f3b">Query</a> query2)</td></tr>
+<tr class="memdesc:a9ed4494a8de360329c45f405c41a4147"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Or Query object.  <a href="class_or_query.html#a9ed4494a8de360329c45f405c41a4147">More...</a><br /></td></tr>
 <tr class="separator:a9ed4494a8de360329c45f405c41a4147"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d0b3eff536ceca1c9c465f3e49fe386"><td class="memItemLeft" align="right" valign="top"><a id="a0d0b3eff536ceca1c9c465f3e49fe386"></a>
-<a class="el" href="_condition_interface_8h.html#a2258b751748e15cc5afa43761051a801">ConditionChecker</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getChecker</b> (<a class="el" href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a> m)</td></tr>
-<tr class="separator:a0d0b3eff536ceca1c9c465f3e49fe386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bcce27a3f682c54ed72c97bff3dd4f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_condition_interface_8h.html#ae1a288e23d2365ee1666989cabdfae01">RecordValidator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_or_query.html#a6bcce27a3f682c54ed72c97bff3dd4f0">getValidator</a> (<a class="el" href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a> metadata)</td></tr>
+<tr class="memdesc:a6bcce27a3f682c54ed72c97bff3dd4f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Validator object.  <a href="class_or_query.html#a6bcce27a3f682c54ed72c97bff3dd4f0">More...</a><br /></td></tr>
+<tr class="separator:a6bcce27a3f682c54ed72c97bff3dd4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_condition_query"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_condition_query')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_condition_query.html">ConditionQuery</a></td></tr>
+<tr class="memitem:a926d298c7387e6e59cc4000dbcfa9308 inherit pub_methods_class_condition_query"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_condition_query.html#a926d298c7387e6e59cc4000dbcfa9308">~ConditionQuery</a> ()</td></tr>
+<tr class="memdesc:a926d298c7387e6e59cc4000dbcfa9308 inherit pub_methods_class_condition_query"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the Condition Query object.  <a href="class_condition_query.html#a926d298c7387e6e59cc4000dbcfa9308">More...</a><br /></td></tr>
+<tr class="separator:a926d298c7387e6e59cc4000dbcfa9308 inherit pub_methods_class_condition_query"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a832013c91635c1d3788601b0b461a623"><td class="memItemLeft" align="right" valign="top"><a id="a832013c91635c1d3788601b0b461a623"></a>
+<a class="el" href="_generic_query_builder_8h.html#a4330e6bc0f11e29ebeeb3124fed72f3b">Query</a>&#160;</td><td class="memItemRight" valign="bottom"><b>query1</b></td></tr>
+<tr class="separator:a832013c91635c1d3788601b0b461a623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26cc0c9dd45fe4a2ef035c6698b71b3a"><td class="memItemLeft" align="right" valign="top"><a id="a26cc0c9dd45fe4a2ef035c6698b71b3a"></a>
+<a class="el" href="_generic_query_builder_8h.html#a4330e6bc0f11e29ebeeb3124fed72f3b">Query</a>&#160;</td><td class="memItemRight" valign="bottom"><b>query2</b></td></tr>
+<tr class="separator:a26cc0c9dd45fe4a2ef035c6698b71b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Logical OR query. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9ed4494a8de360329c45f405c41a4147"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ed4494a8de360329c45f405c41a4147">&#9670;&nbsp;</a></span>OrQuery()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">OrQuery::OrQuery </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_generic_query_builder_8h.html#a4330e6bc0f11e29ebeeb3124fed72f3b">Query</a>&#160;</td>
+          <td class="paramname"><em>query1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_generic_query_builder_8h.html#a4330e6bc0f11e29ebeeb3124fed72f3b">Query</a>&#160;</td>
+          <td class="paramname"><em>query2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new Or Query object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">query1</td><td></td></tr>
+    <tr><td class="paramname">query2</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6bcce27a3f682c54ed72c97bff3dd4f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bcce27a3f682c54ed72c97bff3dd4f0">&#9670;&nbsp;</a></span>getValidator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_condition_interface_8h.html#ae1a288e23d2365ee1666989cabdfae01">RecordValidator</a> OrQuery::getValidator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a>&#160;</td>
+          <td class="paramname"><em>metadata</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Validator object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">metadata</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>RecordValidator </dd></dl>
+
+<p>Reimplemented from <a class="el" href="class_condition_query.html#a2d014aa7d328130b21d6f0c38b12a197">ConditionQuery</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>interfaces/<a class="el" href="_generic_query_builder_8h_source.html">GenericQueryBuilder.h</a></li>
 </ul>

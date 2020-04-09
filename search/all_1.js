@@ -1,12 +1,6 @@
 var searchData=
 [
-  ['column_3',['Column',['../struct_column.html',1,'']]],
-  ['column_2eh_4',['Column.h',['../_column_8h.html',1,'']]],
-  ['conditionchecker_5',['ConditionChecker',['../_condition_interface_8h.html#a2258b751748e15cc5afa43761051a801',1,'ConditionInterface.h']]],
-  ['conditioninterface_6',['ConditionInterface',['../class_condition_interface.html',1,'']]],
-  ['conditioninterface_2eh_7',['ConditionInterface.h',['../_condition_interface_8h.html',1,'']]],
-  ['conditionmetadatainterface_8',['ConditionMetadataInterface',['../class_condition_metadata_interface.html',1,'ConditionMetadataInterface'],['../class_condition_metadata_interface.html#ad960193720c69aeb7d8bfa3b755ae618',1,'ConditionMetadataInterface::ConditionMetadataInterface()']]],
-  ['conditionquery_9',['ConditionQuery',['../class_condition_query.html',1,'']]],
-  ['csvdatagenerator_2eh_10',['CSVDataGenerator.h',['../_c_s_v_data_generator_8h.html',1,'']]],
-  ['csvdatasource_11',['CSVDataSource',['../class_c_s_v_data_source.html',1,'CSVDataSource'],['../class_c_s_v_data_source.html#acb2c4dedcfb10f6aeb238f9b86231548',1,'CSVDataSource::CSVDataSource()']]]
+  ['andquery_3',['AndQuery',['../class_and_query.html',1,'AndQuery'],['../class_and_query.html#a1b5fc4c5460de32c528388fb706a71d7',1,'AndQuery::AndQuery()']]],
+  ['andrecordvalidator_4',['AndRecordValidator',['../class_and_record_validator.html',1,'AndRecordValidator'],['../class_and_record_validator.html#aa1bf9fb59bb080e2a21e4f7bd8a883c3',1,'AndRecordValidator::AndRecordValidator()']]],
+  ['as_5',['as',['../class_data_value.html#a55cf2915bfe1c068861026401eb1ac39',1,'DataValue']]]
 ];

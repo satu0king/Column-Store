@@ -63,6 +63,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_c_s_v_data_source-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CSVDataSource Class Reference</div>  </div>
@@ -89,8 +90,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:acb2c4dedcfb10f6aeb238f9b86231548"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_c_s_v_data_source.html" title="CSV Data Source generator.">CSVDataSource</a> object.  <a href="class_c_s_v_data_source.html#acb2c4dedcfb10f6aeb238f9b86231548">More...</a><br /></td></tr>
 <tr class="separator:acb2c4dedcfb10f6aeb238f9b86231548"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b78f2a9b5ec576496898ea7aa209d09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_data_record.html">DataRecord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_v_data_source.html#a9b78f2a9b5ec576496898ea7aa209d09">next</a> ()</td></tr>
+<tr class="memdesc:a9b78f2a9b5ec576496898ea7aa209d09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates the next record.  <a href="class_c_s_v_data_source.html#a9b78f2a9b5ec576496898ea7aa209d09">More...</a><br /></td></tr>
 <tr class="separator:a9b78f2a9b5ec576496898ea7aa209d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a260bcbcee830e4d26749a85d29ff953b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_v_data_source.html#a260bcbcee830e4d26749a85d29ff953b">hasNext</a> ()</td></tr>
+<tr class="memdesc:a260bcbcee830e4d26749a85d29ff953b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a record is available.  <a href="class_c_s_v_data_source.html#a260bcbcee830e4d26749a85d29ff953b">More...</a><br /></td></tr>
 <tr class="separator:a260bcbcee830e4d26749a85d29ff953b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_data_generator_interface"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_data_generator_interface')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_data_generator_interface.html">DataGeneratorInterface</a></td></tr>
 <tr class="memitem:a2e9958e1a7ef04b884dd9cb4d60ad9df inherit pub_methods_class_data_generator_interface"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_generator_interface.html#a2e9958e1a7ef04b884dd9cb4d60ad9df">getMetadata</a> () const</td></tr>
@@ -105,11 +108,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4e82add73156d5a7b57b10be4ec82afb inherit pub_methods_class_data_generator_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the Data Generator Interface object.  <a href="class_data_generator_interface.html#a4e82add73156d5a7b57b10be4ec82afb">More...</a><br /></td></tr>
 <tr class="separator:a4e82add73156d5a7b57b10be4ec82afb inherit pub_methods_class_data_generator_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab2d0fdfe5a388cbdd015d21f37f36242"><td class="memItemLeft" align="right" valign="top"><a id="ab2d0fdfe5a388cbdd015d21f37f36242"></a>
+std::queue&lt; <a class="el" href="struct_data_record.html">DataRecord</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_s_v_data_source.html#ab2d0fdfe5a388cbdd015d21f37f36242">data</a></td></tr>
+<tr class="memdesc:ab2d0fdfe5a388cbdd015d21f37f36242"><td class="mdescLeft">&#160;</td><td class="mdescRight">queue of data records for the generator <br /></td></tr>
+<tr class="separator:ab2d0fdfe5a388cbdd015d21f37f36242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_data_generator_interface"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_data_generator_interface')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_data_generator_interface.html">DataGeneratorInterface</a></td></tr>
 <tr class="memitem:ae914b47b1731437108dece6b900d5ad6 inherit pro_attribs_class_data_generator_interface"><td class="memItemLeft" align="right" valign="top"><a id="ae914b47b1731437108dece6b900d5ad6"></a>
-<a class="el" href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a>&#160;</td><td class="memItemRight" valign="bottom"><b>metadata</b></td></tr>
+<a class="el" href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_generator_interface.html#ae914b47b1731437108dece6b900d5ad6">metadata</a></td></tr>
+<tr class="memdesc:ae914b47b1731437108dece6b900d5ad6 inherit pro_attribs_class_data_generator_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">metadata for processing queries <br /></td></tr>
 <tr class="separator:ae914b47b1731437108dece6b900d5ad6 inherit pro_attribs_class_data_generator_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -181,7 +192,11 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>returns true if record can be generated </dd></dl>
+
+<p>Checks if a record is available. </p>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
 
 <p>Implements <a class="el" href="class_data_generator_interface.html#a562f463b6a39112153327e92d7cfeced">DataGeneratorInterface</a>.</p>
 
@@ -209,7 +224,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>next record </dd></dl>
+
+<p>Generates the next record. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_data_record.html" title="Stores a row of data.">DataRecord</a> </dd></dl>
 
 <p>Implements <a class="el" href="class_data_generator_interface.html#a202ced48a936eed360ef3c23be0f5a34">DataGeneratorInterface</a>.</p>
 
