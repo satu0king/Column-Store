@@ -14,6 +14,7 @@ class SchemaLoader {
     pqxx::connection *conn;
     void setup_database();
     void create_tables();
+    void create_views();
 
     public:
         SchemaLoader(string db_name, string username, string password, SchemaMetaData schema_meta_data);

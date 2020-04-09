@@ -29,6 +29,10 @@
                     <column_name>dept_id</column_name>
                     <data_type>int</data_type>
                 </column>
+                <column>
+                    <column_name>city_id</column_name>
+                    <data_type>int</data_type>
+                </column>
             </columns>
 
             <primary_key>id</primary_key>
@@ -142,9 +146,9 @@
 
             <join_indexes>
                 <join_index>
-                    <from>id</from>
+                    <from>emp_id</from>
                     <other_projection>EMPLOYEE_CITY_PROJECTION</other_projection>
-                    <to>id</to>
+                    <to>emp_id</to>
                 </join_index>
             </join_indexes>
 

@@ -1,5 +1,11 @@
 #include "SchemaLoader.h"
 #include "Table.h"
+#include "stdlib.h"
+
+// #define XMLVALIDATE "\
+// #/bin/bash \n\
+// xmllint -noout -schema ../schema.xsd ../schema.xml \n\
+// "
 
 using namespace std;
 
@@ -23,6 +29,7 @@ SchemaLoader::SchemaLoader(string db_name, string username, string password, Sch
 
 void SchemaLoader::setup_database() {
     create_tables();
+    create_views();
 }
 
 void SchemaLoader::create_tables() {
@@ -59,7 +66,40 @@ void SchemaLoader::create_tables() {
     W.commit();
 }
 
+void SchemaLoader::create_views() {
+    pqxx::work W(*conn);
+    vector<Projection> projections = schema_meta_data.get_projections();
+    for(Projection projection : projections) {
+        string sql = "CREATE VIEW " + projection.get_projection_name() + " (";
+        for(projection_column col : projection.get_columns()) {
+            sql += (col.name + ",");
+        }
+
+        sql.pop_back();
+        sql += ") AS SELECT ";
+
+        for(projection_column col : projection.get_columns()) {
+            sql += (col.table + "." + col.column_name + ",");
+        }
+
+        sql.pop_back();
+        sql += " FROM " + projection.get_base_table();
+
+        for(foreign_key join_tab : projection.get_join_tables()) {
+            sql += " INNER JOIN " + join_tab.table + " ON " + projection.get_base_table() + "."\
+                    + join_tab.from + " = " + join_tab.table + "." + join_tab.to;
+        }
+
+        sql += ";";
+        cout << sql << endl;
+        W.exec(sql);
+    }
+
+    W.commit();
+}
+
 int main() {
+    // system(XMLVALIDATE);
     SchemaExtractor schema_extractor("../schema.xml");
     SchemaMetaData schema_meta_data = schema_extractor.get_meta_data();
     SchemaLoader schema_loader("column_store", "test", "test", schema_meta_data);

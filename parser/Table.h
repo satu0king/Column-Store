@@ -3,14 +3,9 @@
 #include <string>
 #include <unordered_map>
 #include <vector>
+#include "ForeignKey.h"
 
 using namespace std;
-
-struct foreign_key {
-    string from;
-    string table;
-    string to;
-};
 
 class Table {
     string table_name;
