@@ -6,51 +6,159 @@
 #include "ConditionsInterfaces/ConditionInterface.h"
 #include "DataGeneratorInterface.h"
 
-struct Join {
-    std::string foreignKey;
-    std::string primaryKey;
-    std::vector<std::string> columns;
-};
+/** @file
+ * @brief Generic Query Builder
+ *
+ * This file contains structures to query any data source. Currently supported
+ * query features are join and filter
+ */
 
+/**
+ * @brief Base Condition Query Structure
+ *
+ * ConditionQuery structures are used to create the query. ConditionInterface
+ * structures are used to validate the records
+ *
+ * see @ConditionInterface
+ */
 class ConditionQuery {
    public:
+    /**
+     * @brief Get the Checker object which complies to ConditionInterface
+     *
+     * This is required because the record validators need metadata information
+     * to perform validation efficiently. Therefore record validators needs to
+     * be created once the query is built.
+     *
+     * @param metadata
+     * @return ConditionChecker
+     *
+     * see @ConditionInterface
+     */
     virtual ConditionChecker getChecker(Metadata metadata) {
         return ConditionChecker(new ConditionInterface());
     };
+
+    /**
+     * @brief Destroy the Condition Query object
+     *
+     */
     virtual ~ConditionQuery() {}
 };
+
+/**
+ * @brief Shared pointer to Query Structure
+ *
+ */
 typedef std::shared_ptr<ConditionQuery> Query;
 
 class GenericDataGenerator;
 
+/**
+ * @brief Generic Query Builder Class
+ *
+ * Generic Query builder can be used to query any data source. The query
+ * mechanisim is performed in a general manner and will not take any advantage
+ * of the underlying storage mechanisim, i.e. indexes, encoding, ordering etc
+ * will not be used for optimization. Advantage of this builder is that it can
+ * work with any data source.
+ *
+ * Every builder class will also have a corresponding data generator. The
+ * generator for this builder is GenericDataGenerator
+ *
+ * @see GenericDataGenerator
+ */
 class GenericQueryBuilder {
+    /**
+     * @brief Helper struct to represent join infromation
+     *
+     */
+
+    struct Join {
+        std::string foreignKey;
+        std::string primaryKey;
+        /**
+         * @brief List of columns required in result from joined table
+         *
+         */
+        std::vector<std::string> columns;
+    };
+
+    /**
+     * @brief map of data source name and data generator
+     *
+     */
     std::unordered_map<std::string, DataSource> data_sources;
 
+    /**
+     * @brief Base data source
+     *
+     * All joins are done on FKs of the base table to PKs of joined table
+     */
     std::string baseSource;
+
+    /**
+     * @brief list of columns from the base table required in result
+     *
+     */
     std::vector<std::string> baseColumns;
 
+    /**
+     * @brief List of joins
+     *
+     */
     std::vector<std::pair<std::string, Join>> joins;
+
+    /**
+     * @brief List of columns and their corresponding data source
+     *
+     */
     std::unordered_map<std::string, std::string> columnMap;
 
+    /**
+     * @brief Query object
+     *
+     */
     Query query = Query(new ConditionQuery);
 
     friend class GenericDataGenerator;
 
    public:
+    /**
+     * @brief Registers a new data source and gives is an alias name
+     *
+     * @param name
+     * @param source
+     */
     void registerDataSource(std::string name, DataSource source) {
         data_sources[name] = source;
     }
 
+    /**
+     * @brief Set the Base Source and the columns required in the query result
+     *
+     * @param name of data source
+     * @param columns required in result
+     */
     void setBaseSource(std::string name, std::vector<std::string> columns) {
         baseSource = name;
         baseColumns = columns;
 
         for (std::string column : columns) {
+            // Ensures that there are no duplicate columns
             assert(columnMap.find(column) == columnMap.end());
             columnMap[column] = name;
         }
     }
 
+    /**
+     * @brief Creates a join from base source to a join source
+     *
+     * @param name of join source
+     * @param columns of join source required in result
+     * @param foreignKey from base source
+     * @param primaryKey of join source
+     */
     void join(std::string name, std::vector<std::string> columns,
               std::string foreignKey, std::string primaryKey) {
         Join join = {.foreignKey = foreignKey,
@@ -60,24 +168,50 @@ class GenericQueryBuilder {
         joins.emplace_back(name, join);
 
         for (std::string column : columns) {
+            // Ensures that there are no duplicate columns
             assert(columnMap.find(column) == columnMap.end());
             columnMap[column] = name;
         }
     }
 
+    /**
+     * @brief Sets the query object
+     *
+     * @param query
+     */
     void where(Query query) {
         assert(query->getChecker(generateMetadata()));
         this->query = query;
     }
 
+    /**
+     * @brief Generates metadata of result records using join and query
+     * information
+     *
+     * Columns are ordered as follows - Base Source Columns, followed by
+     * individual join columns. This ordering is important as it allows the
+     * generator to implicitely generate DataRecord without explicit ordering of
+     * DataValue
+     *
+     * @return Metadata of builder
+     */
     Metadata generateMetadata() {
         std::vector<Column> columns;
 
+        /**
+         * @brief Extracts column information from data source
+         *
+         * column index is set here in a first come manner - implicit ordering
+         * happens here
+         */
         auto helper = [&](std::string source,
                           std::vector<std::string> _columns) {
             for (auto const& name : _columns) {
+                /** Extract type information*/
                 DataType type =
                     data_sources[source]->getMetadata()->getColumn(name).type;
+
+                /** Construct column information*/
                 Column c = {.name = name,
                             .type = type,
                             .index = static_cast<int>(columns.size())};
@@ -86,14 +220,20 @@ class GenericQueryBuilder {
             }
         };
 
+        /**
+         * Extract columns from base source followed by join sources
+         */
         helper(baseSource, baseColumns);
-        for (const auto& [source, join] : joins) {
-            helper(source, join.columns);
-        }
+        for (const auto& [source, join] : joins) helper(source, join.columns);
 
         return Metadata(new DataRecordMetadata(columns));
     }
 
+    /**
+     * @brief creates record
+     * 
+     * @return ConditionChecker 
+     */
     ConditionChecker generateConditionChecker() {
         return query->getChecker(generateMetadata());
     }
@@ -151,8 +291,7 @@ class GenericDataGenerator : public DataGeneratorInterface {
 
         for (DataGeneraterJoin& join : joins) {
             DataRecord& record = join.map[baseRecord[join.FKIndex].as<int>()];
-            for (int index : join.indices) 
-                values.push_back(record[index]);
+            for (int index : join.indices) values.push_back(record[index]);
         }
 
         return DataRecord(values);
