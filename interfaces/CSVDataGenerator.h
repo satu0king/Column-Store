@@ -1,12 +1,23 @@
 #pragma once
 
-#include "CSVparser.hpp"
-#include "DataGeneratorInterface.h"
 #include <queue>
 #include <vector>
 
-// https://github.com/rsylvian/CSVparser
+#include "CSVparser.hpp"
+#include "DataGeneratorInterface.h"
 
+/** @file
+ * @brief Data Generator for CSV files
+ * 
+ */
+
+/**
+ * @brief Helper function to trim trailing whitespace
+ *
+ * @param str
+ * @param whitespace
+ * @return std::string
+ */
 std::string trim(const std::string &str,
                  const std::string &whitespace = " \t\r\n") {
     const auto strBegin = str.find_first_not_of(whitespace);
@@ -18,10 +29,40 @@ std::string trim(const std::string &str,
     return str.substr(strBegin, strRange);
 }
 
+/**
+ * @brief CSV Data Source generator
+ *
+ * This implementation loads the whole CSV file into memory and exposes the data
+ * generator interface. As this loads the entire file it is intended for testing
+ * only and not for use with large CSV files.
+ *
+ * CSV File Format Expectation
+ *
+ * First row is the column Header which is comma seperated column names. Second
+ * row is the Ttpe Header which is comma seperated data types
+ *
+ * CSV Parser Library used - https://github.com/rsylvian/CSVparser
+ * 
+ * Example CSV file -
+ *
+ * ~~~~~~~~~~~~~~~~~~~~~
+ * Year,Make,Model
+ * INT,STRING,STRING
+ * 1997,Ford,E350
+ * 2000,Mercury,Cougar
+ * ~~~~~~~~~~~~~~~~~~~~~
+ */
 class CSVDataSource : public DataGeneratorInterface {
     std::queue<DataRecord> data;
 
    public:
+    /**
+     * @brief Construct a new CSVDataSource object
+     *
+     * Constructor parses CSV data, generates all the data records and stores it
+     * in a queue for data record generation
+     * @param filename of the CSV file
+     */
     CSVDataSource(std::string filename) {
         csv::Parser file(filename);
         int columnCount = file.columnCount();
@@ -32,8 +73,6 @@ class CSVDataSource : public DataGeneratorInterface {
         auto header = file.getHeader();
         for (int i = 0; i < columnCount; i++) {
             columns[i].name = trim(header[i]);
-            // std::cout << columns[i].name << " " << columns[i].name.size() <<
-            // std::endl;
             columns[i].index = i;
         }
 
