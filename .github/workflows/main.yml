@@ -41,3 +41,6 @@ jobs:
         doxyfile-path: "./Doxyfile" # default is ./Doxyfile
         # Working directory
         working-directory: "." # default is .
+    
+    - name: GitHub Pages action
+      uses: peaceiris/actions-gh-pages@v3.5.6
