@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['reccordvalidatormetadatainterface_101',['ReccordValidatorMetadataInterface',['../class_reccord_validator_metadata_interface.html',1,'']]],
-  ['recordvalidatorinterface_102',['RecordValidatorInterface',['../class_record_validator_interface.html',1,'']]]
+  ['projection_105',['Projection',['../class_projection.html',1,'']]],
+  ['projection_5fcolumn_106',['projection_column',['../structprojection__column.html',1,'']]]
 ];

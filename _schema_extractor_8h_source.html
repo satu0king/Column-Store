@@ -79,22 +79,21 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;SchemaMetaData.h&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_schema_extractor.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_schema_extractor.html">SchemaExtractor</a> {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* xml_file_path;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    pugi::xml_document xml_dom;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_schema_meta_data.html">SchemaMetaData</a> schema_meta_data;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> create_tables();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_schema_extractor.html">SchemaExtractor</a>(<span class="keywordtype">string</span> xml_fpath);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_schema_meta_data.html">SchemaMetaData</a> get_meta_data() {<span class="keywordflow">return</span> schema_meta_data;}</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_schema_extractor.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_schema_extractor.html">SchemaExtractor</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* xml_file_path;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    pugi::xml_document xml_dom;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_schema_meta_data.html">SchemaMetaData</a> schema_meta_data;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> create_tables();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> create_projections();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="class_schema_extractor.html">SchemaExtractor</a>(std::string xml_fpath);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_schema_meta_data.html">SchemaMetaData</a> get_meta_data() {<span class="keywordflow">return</span> schema_meta_data;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_schema_meta_data_html"><div class="ttname"><a href="class_schema_meta_data.html">SchemaMetaData</a></div><div class="ttdef"><b>Definition:</b> SchemaMetaData.h:6</div></div>
-<div class="ttc" id="aclass_schema_extractor_html"><div class="ttname"><a href="class_schema_extractor.html">SchemaExtractor</a></div><div class="ttdef"><b>Definition:</b> SchemaExtractor.h:13</div></div>
+<div class="ttc" id="aclass_schema_meta_data_html"><div class="ttname"><a href="class_schema_meta_data.html">SchemaMetaData</a></div><div class="ttdef"><b>Definition:</b> SchemaMetaData.h:7</div></div>
+<div class="ttc" id="aclass_schema_extractor_html"><div class="ttname"><a href="class_schema_extractor.html">SchemaExtractor</a></div><div class="ttdef"><b>Definition:</b> SchemaExtractor.h:11</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
