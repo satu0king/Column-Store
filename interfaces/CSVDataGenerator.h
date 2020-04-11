@@ -43,7 +43,7 @@ std::string trim(const std::string &str,
  *
  * CSV Parser Library used - https://github.com/rsylvian/CSVparser
  * 
- * Example CSV file -
+ * See example CSV file -
  *
  * ~~~~~~~~~~~~~~~~~~~~~
  * Year,Make,Model
