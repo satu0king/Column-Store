@@ -2,8 +2,10 @@
 
 #include <string>
 #include <vector>
+
 #include "ForeignKey.h"
 #include "JoinIndex.h"
+#include "../interfaces/Column.h"
 
 using namespace std;
 
@@ -12,6 +14,7 @@ struct projection_column {
     std::string table;
     std::string column_name;
     std::string encoding;
+    DataType data_type;
 };
 
 class Projection {
@@ -26,7 +29,7 @@ class Projection {
         void set_projection_name(std::string projection_n) {projection_name = projection_n;}
         void set_base_table(std::string base_tab) {base_table = base_tab;}
         void set_sort_key(std::string sk) {sort_key = sk;}
-        void add_column(std::string name, std::string table, std::string column_name, std::string encoding);
+        void add_column(std::string name, std::string table, std::string column_name, std::string encoding, DataType data_type);
         void add_join_table(std::string from, std::string table, std::string to);
         void add_join_index(std::string from, std::string other_projection, std::string to);
         std::string get_projection_name() {return projection_name;}

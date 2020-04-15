@@ -2,6 +2,9 @@
 
 #include <string>
 
+#include "assert.h"
+
+
 /** @file Column.h
  * @brief Column Metadata and Type information
  */

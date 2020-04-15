@@ -14,6 +14,10 @@
                     <data_type>int</data_type>
                 </column>
                 <column>
+                    <column_name>name</column_name>
+                    <data_type>string</data_type>
+                </column>
+                <column>
                     <column_name>age</column_name>
                     <data_type>int</data_type>
                 </column>
@@ -43,6 +47,12 @@
                     <FK_table>DEPARTMENT</FK_table>
                     <FK_to>id</FK_to>
                 </foreign_key>
+
+                <foreign_key>
+                    <FK_from>city_id</FK_from>
+                    <FK_table>CITY</FK_table>
+                    <FK_to>id</FK_to>
+                </foreign_key>
             </foreign_keys>
         </table>
 
@@ -55,24 +65,12 @@
                     <data_type>int</data_type>
                 </column>
                 <column>
-                    <column_name>mgr_id</column_name>
-                    <data_type>int</data_type>
-                </column>
-                <column>
-                    <column_name>city_id</column_name>
-                    <data_type>int</data_type>
+                    <column_name>name</column_name>
+                    <data_type>string</data_type>
                 </column>
             </columns>
 
             <primary_key>id</primary_key>
-
-            <foreign_keys>
-                <foreign_key>
-                    <FK_from>mgr_id</FK_from>
-                    <FK_table>EMPLOYEE</FK_table>
-                    <FK_to>id</FK_to>
-                </foreign_key>
-            </foreign_keys>
         </table>
 
         <table>
@@ -84,20 +82,12 @@
                     <data_type>int</data_type>
                 </column>
                 <column>
-                    <column_name>dept_id</column_name>
-                    <data_type>int</data_type>
+                    <column_name>name</column_name>
+                    <data_type>string</data_type>
                 </column>
             </columns>
 
             <primary_key>id</primary_key>
-
-            <foreign_keys>
-                <foreign_key>
-                    <FK_from>dept_id</FK_from>
-                    <FK_table>DEPARTMENT</FK_table>
-                    <FK_to>id</FK_to>
-                </foreign_key>
-            </foreign_keys>
         </table>
     </tables>
 
@@ -124,25 +114,24 @@
                     <column_name>id</column_name>
                 </column>
                 <column>
-                    <name>age</name>
+                    <name>salary</name>
                     <table_name>EMPLOYEE</table_name>
-                    <column_name>age</column_name>
+                    <column_name>salary</column_name>
                     <encoding>RLE</encoding>
                 </column>
                 <column>
-                    <name>gender</name>
+                    <name>emp_name</name>
                     <table_name>EMPLOYEE</table_name>
-                    <column_name>gender</column_name>
-                    <encoding>bitmap</encoding>
+                    <column_name>name</column_name>
                 </column>
                 <column>
-                    <name>dept_id</name>
+                    <name>dept_name</name>
                     <table_name>DEPARTMENT</table_name>
-                    <column_name>id</column_name>
+                    <column_name>name</column_name>
                 </column>
             </columns>
 
-            <sort_key>age</sort_key>
+            <sort_key>salary</sort_key>
 
             <join_indexes>
                 <join_index>
@@ -182,9 +171,9 @@
                     <encoding>RLE</encoding>
                 </column>
                 <column>
-                    <name>city_id</name>
+                    <name>city_name</name>
                     <table_name>CITY</table_name>
-                    <column_name>id</column_name>
+                    <column_name>name</column_name>
                 </column>
             </columns>
 

@@ -162,7 +162,9 @@ void SchemaExtractor::create_projections() {
             }
 
             if(flag) {
-                new_projection.add_column(name, table_name, column_name, encoding);
+                Table table = schema_meta_data.get_table(table_name);
+                DataType data_type = table[column_name].type;
+                new_projection.add_column(name, table_name, column_name, encoding, data_type);
             } else {
                 string to_throw = "";
                 to_throw += "Attribute ";

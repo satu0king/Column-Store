@@ -2,8 +2,8 @@
 
 using namespace std;
 
-void Projection::add_column(string name, string table, string column_name, string encoding) {
-    projection_column column = {name, table, column_name, encoding};
+void Projection::add_column(string name, string table, string column_name, string encoding, DataType data_type) {
+    projection_column column = {name, table, column_name, encoding, data_type};
     columns.push_back(column);
 }
 

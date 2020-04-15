@@ -37,9 +37,18 @@ void SchemaLoader::create_tables() {
     vector<Table> tables = schema_meta_data.get_tables();
     for(Table table : tables) {
         string sql = "CREATE TABLE " + table.get_table_name() + "(";
-        unordered_map<string, string> columns = table.get_columns();
-        for(unordered_map<string, string>::iterator it = columns.begin(); it != columns.end(); it++) {
-            sql += (it->first + " " + it->second + ",");
+        vector<Column> columns = table.get_columns();
+        for(vector<Column>::iterator it = columns.begin(); it != columns.end(); it++) {
+            sql += (it->name + " ");
+            if(it->type == DataType::STRING) {
+                sql += "varchar";
+            } else if(it->type == DataType::INT) {
+                sql += "int";
+            } else if(it->type == DataType::FLOAT) {
+                sql += "float";
+            }
+
+            sql += ",";
         }
 
         sql.pop_back();

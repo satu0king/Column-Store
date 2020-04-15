@@ -7,6 +7,7 @@
 #include <unordered_map>
 #include <vector>
 #include "SchemaMetaData.h"
+#include "../interfaces/Column.h"
 
 class SchemaExtractor {
     const char* xml_file_path;
