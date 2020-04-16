@@ -1,4 +1,5 @@
 #include "SchemaLoader.h"
+#include "DataLoader.h"
 #include "Table.h"
 #include "stdlib.h"
 
@@ -21,8 +22,8 @@ SchemaLoader::SchemaLoader(string db_name, string username, string password, Sch
 
         setup_database();
 
-    } catch (const std::exception &e) {
-        cerr << e.what() << std::endl;
+    } catch (const exception &e) {
+        cerr << e.what() << endl;
         exit(1);
     }
 }
@@ -103,7 +104,6 @@ void SchemaLoader::create_views() {
         cout << sql << endl;
         W.exec(sql);
     }
-
     W.commit();
 }
 
@@ -112,5 +112,6 @@ int main() {
     SchemaExtractor schema_extractor("../schema.xml");
     SchemaMetaData schema_meta_data = schema_extractor.get_meta_data();
     SchemaLoader schema_loader("column_store", "test", "test", schema_meta_data);
+    DataLoader data_loader("column_store", "test", "test", "dummy_data.sql");
     return 0;
 }
