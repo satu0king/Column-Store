@@ -33,3 +33,12 @@ struct Column {
      */
     int index;
 };
+
+// class ColumnNotFoundException : public exception {
+//     std::string msg;
+//     public:
+//         ColumnNotFoundException(std::string &r_name, std::string &c_name) : msg("Column " + c_name + " not found in " + r_name) {}
+//         virtual const char* what() const throw() {
+//             return msg.c_str(); 
+//         }
+// };
