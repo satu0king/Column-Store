@@ -3,7 +3,8 @@
 using namespace std;
 
 void Projection::add_column(string name, string table, string column_name, string encoding, DataType data_type) {
-    projection_column column = {name, table, column_name, encoding, data_type};
+    projection_column column = {name, table, column_name, encoding, data_type, int(columns.size())};
+    column_map[name] = columns.size();
     columns.push_back(column);
 }
 

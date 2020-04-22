@@ -1,10 +1,11 @@
 #pragma once
 
 #include <vector>
+#include <assert.h>
 #include <unordered_map>
+
 #include "Table.h"
 #include "Projection.h"
-#include <assert.h>
 
 class SchemaMetaData {
     vector<Table> tables;
