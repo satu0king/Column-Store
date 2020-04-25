@@ -2,7 +2,8 @@
 
 
 #include "src/interfaces/DataRecord.h"
-#include "src/interfaces/GenericQueryBuilder.h"
+#include "GenericQueryBuilder.h"
+#include "GenericGenerator.h"
 #include "src/CSVDataGenerator/CSVDataGenerator.h"
 
 int main(int argc, char **argv) {
