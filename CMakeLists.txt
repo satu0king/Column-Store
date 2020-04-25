@@ -8,8 +8,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libs)
 
-find_package(Boost 1.72.0 COMPONENTS program_options REQUIRED)
-find_package(Catch2 REQUIRED)
+# find_package(Boost 1.72.0 COMPONENTS program_options REQUIRED)
+# find_package(Catch2 REQUIRED)
 
 add_subdirectory(src/PostgresDataGenerator)
 add_subdirectory(src/Parser)
