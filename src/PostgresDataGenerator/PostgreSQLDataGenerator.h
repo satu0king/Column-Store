@@ -7,7 +7,7 @@
 
 #include "DataGeneratorInterface.h"
 #include "PostgreSQLMetaData.h"
-#include "../parser/SchemaMetaData.h"
+#include "Parser/SchemaMetaData.h"
 
 using namespace std;
 

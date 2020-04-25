@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "Column.h"
-#include "fort.hpp"
+#include "../Fort/fort.hpp"
 
 /** @file DataRecord.h
  * @brief Data storage structures

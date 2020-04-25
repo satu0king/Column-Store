@@ -1,14 +1,14 @@
 #include <iostream>
 
 
-#include "DataRecord.h"
-#include "GenericQueryBuilder.h"
-#include "CSVDataGenerator.h"
+#include "src/interfaces/DataRecord.h"
+#include "src/interfaces/GenericQueryBuilder.h"
+#include "src/CSVDataGenerator/CSVDataGenerator.h"
 
 int main(int argc, char **argv) {
-    DataSource sampleCSV = DataSource(new CSVDataSource("data/sample.csv"));
-    DataSource studentCSV = DataSource(new CSVDataSource("data/students.csv"));
-    DataSource gradesCSV = DataSource(new CSVDataSource("data/grades.csv"));
+    DataSource sampleCSV = DataSource(new CSVDataSource("../data/sample.csv"));
+    DataSource studentCSV = DataSource(new CSVDataSource("../data/students.csv"));
+    DataSource gradesCSV = DataSource(new CSVDataSource("../data/grades.csv"));
 
     {
         GenericQueryBuilder builder;

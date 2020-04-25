@@ -3,7 +3,7 @@
 #include <string>
 #include <unordered_map>
 
-#include "ConditionsInterfaces/ConditionInterface.h"
+#include "ConditionInterface.h"
 #include "DataGeneratorInterface.h"
 
 /** @file

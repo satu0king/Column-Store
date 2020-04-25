@@ -5,7 +5,7 @@
 
 #include "Column.h"
 #include "DataRecord.h"
-#include "fort.hpp"
+#include "../Fort/fort.hpp"
 
 /** @file
  * @brief Data Generator Interface

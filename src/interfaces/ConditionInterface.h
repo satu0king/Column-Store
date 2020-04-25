@@ -2,7 +2,7 @@
 
 #include <memory>
 
-#include "../DataRecord.h"
+#include "DataRecord.h"
 
 /** @file
  * @brief RecordValidator Interfaces and Implementations for Query Processing
