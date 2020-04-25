@@ -4,7 +4,7 @@
 #include <unordered_map>
 #include <vector>
 #include "ForeignKey.h"
-#include "../interfaces/Column.h"
+#include "Column.h"
 
 using namespace std;
 

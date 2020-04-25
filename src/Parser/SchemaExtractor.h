@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../libs/pugixml-1.10/src/pugixml.hpp"
+#include "pugixml-1.10/src/pugixml.hpp"
 #include <iostream>
 #include <pqxx/pqxx>
 #include <string>

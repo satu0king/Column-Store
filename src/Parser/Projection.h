@@ -6,7 +6,7 @@
 
 #include "ForeignKey.h"
 #include "JoinIndex.h"
-#include "../interfaces/Column.h"
+#include "Column.h"
 
 using namespace std;
 
