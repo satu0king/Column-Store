@@ -4,12 +4,10 @@ add_library(parser SchemaLoader.cpp SchemaExtractor.cpp SchemaMetaData.cpp Table
 
 target_compile_options(parser PRIVATE -Wall)
 
-find_package(PostgreSQL REQUIRED)
-
 target_include_directories(parser 
 PUBLIC 
     ${CMAKE_CURRENT_SOURCE_DIR}/../interfaces ${CMAKE_CURRENT_SOURCE_DIR} ${LIB_DIR}
-    ${PostgreSQL_INCLUDE_DIRS}
+    /usr/local/include
 )
 
 find_library(PQXX_LIB pqxx)
