@@ -28,7 +28,7 @@ class PostgreSQLDataSource : public DataGeneratorInterface {
         }
         sql.pop_back();
         sql += " FROM " + relation_name + " LIMIT " + to_string(batch_size) + " OFFSET " + to_string(offset) + ";";
-        cout << sql << endl;
+        // cout << sql << endl;
         offset += batch_size;
         return txn.exec(sql);
     }
@@ -47,19 +47,19 @@ class PostgreSQLDataSource : public DataGeneratorInterface {
                 auto type = columns[i].type;
                 string column_name = columns[i].name;
                 if (type == DataType::INT) {
-                    cout << (int)row[column_name].as<int>() << "\t";
+                    // cout << (int)row[column_name].as<int>() << "\t";
                     values.push_back(DataValue((int)row[column_name].as<int>()));
                 }
                 else if (type == DataType::FLOAT) {
-                    cout << (float)row[column_name].as<float>() << "\t";
+                    // cout << (float)row[column_name].as<float>() << "\t";
                     values.push_back(DataValue((float)row[column_name].as<float>()));
                 }
                 else if (type == DataType::STRING) {
-                    cout << (string)row[column_name].as<string>() << "\t";
+                    // cout << (string)row[column_name].as<string>() << "\t";
                     values.push_back(DataValue((string)row[column_name].as<string>()));
                 }
             }
-            cout << endl;
+            // cout << endl;
             data.push(values);
         }
     }
@@ -172,6 +172,6 @@ class PostgreSQLDataSource : public DataGeneratorInterface {
     }
 
     bool hasNext() {
-        return (offset < total_number_of_rows);
+        return (offset < total_number_of_rows) || data.size();
     }
 };
