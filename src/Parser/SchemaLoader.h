@@ -2,11 +2,12 @@
 
 #include <iostream>
 #include <pqxx/pqxx>
+#include <string>
 #include <unordered_map>
 #include <vector>
-#include <string>
-#include "SchemaMetaData.h"
+
 #include "SchemaExtractor.h"
+#include "SchemaMetaData.h"
 
 class SchemaLoader {
     string db_name, username, password;
@@ -16,6 +17,7 @@ class SchemaLoader {
     void create_tables();
     void create_views();
 
-    public:
-        SchemaLoader(string db_name, string username, string password, SchemaMetaData schema_meta_data);
+   public:
+    SchemaLoader(string db_name, string username, string password,
+                 SchemaMetaData schema_meta_data);
 };

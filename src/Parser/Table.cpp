@@ -4,11 +4,11 @@ using namespace std;
 
 void Table::add_column(string column_name, string data_type) {
     DataType dt;
-    if(data_type == "string") {
+    if (data_type == "string") {
         dt = DataType::STRING;
-    } else if(data_type == "int") {
+    } else if (data_type == "int") {
         dt = DataType::INT;
-    } else if(data_type == "float") {
+    } else if (data_type == "float") {
         dt = DataType::FLOAT;
     }
 
