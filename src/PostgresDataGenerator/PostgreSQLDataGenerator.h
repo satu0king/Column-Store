@@ -11,7 +11,17 @@
 
 using namespace std;
 
-class PostgreSQLDataSource : public DataGeneratorInterface {
+using ColumnStore::DataRecord;
+using ColumnStore::DataRecordMetadata;
+using ColumnStore::DataSource;
+using ColumnStore::DataValue;
+using ColumnStore::Metadata;
+using ColumnStore::DataType;
+using Parser::Table;
+using Parser::Projection;
+using Parser::projection_column;
+
+class PostgreSQLDataSource : public ColumnStore::DataGeneratorInterface {
     std::queue<DataRecord> data;
     pqxx::connection *conn;
     std::string relation_name;
@@ -21,7 +31,7 @@ class PostgreSQLDataSource : public DataGeneratorInterface {
     vector<string> columns;
 
     pqxx::result get_rows_of_columns(pqxx::transaction_base &txn,
-                                     vector<Column> columns) {
+                                     vector<ColumnStore::Column> columns) {
         string sql = "SELECT ";
         for (int i = 0; i < columns.size(); i++) {
             string column_name = columns[i].name;
@@ -41,7 +51,7 @@ class PostgreSQLDataSource : public DataGeneratorInterface {
         total_number_of_rows = rows[0]["count"].as<int>();
     }
 
-    void load_into_queue(pqxx::transaction_base &txn, vector<Column> columns) {
+    void load_into_queue(pqxx::transaction_base &txn, vector<ColumnStore::Column> columns) {
         pqxx::result rows_of_all_columns = get_rows_of_columns(txn, columns);
         for (auto row : rows_of_all_columns) {
             vector<DataValue> values;
@@ -81,45 +91,47 @@ class PostgreSQLDataSource : public DataGeneratorInterface {
         try {
             try {
                 vector<Table> tables = schema_meta_data.get_tables();
-                Table t = schema_meta_data.get_table(relation_name);
+                Table table = schema_meta_data.get_table(relation_name);
                 set_total_number_of_rows(txn);
-                vector<Column> metadata_columns;
+                vector<ColumnStore::Column> metadata_columns;
                 if (columns.size() == 0) {
-                    metadata_columns = t.get_columns();
+                    auto temp = table.get_columns();
+                    for(auto column: temp)
+                    metadata_columns.push_back(column.getColumnStoreColumn());
                 } else {
                     for (int i = 0; i < columns.size(); i++) {
-                        metadata_columns.push_back(t[columns[i]]);
+                        metadata_columns.push_back(table[columns[i]].getColumnStoreColumn());
                     }
                 }
                 metadata = Metadata(new DataRecordMetadata(metadata_columns));
                 load_into_queue(txn, metadata_columns);
-            } catch (const TableNotFoundException &e) {
+            } catch (const Parser::TableNotFoundException &e) {
                 cout << e.what() << endl;
                 vector<Projection> projections =
                     schema_meta_data.get_projections();
                 Projection p = schema_meta_data.get_projection(relation_name);
                 set_total_number_of_rows(txn);
-                vector<Column> metadata_columns;
+                vector<ColumnStore::Column> metadata_columns;
                 if (columns.size() == 0) {
                     vector<projection_column> projection_columns =
                         p.get_columns();
                     for (int i = 0; i < projection_columns.size(); i++) {
                         projection_column p_column = projection_columns[i];
-                        Column c = {p_column.name, p_column.data_type,
+                        ColumnStore::Column c = {p_column.name, p_column.data_type.dataType,
                                     p_column.index};
                         metadata_columns.push_back(c);
                     }
                 } else {
                     for (int i = 0; i < columns.size(); i++) {
                         projection_column p_column = p[columns[i]];
-                        Column c = {p_column.name, p_column.data_type,
+                        ColumnStore::Column c = {p_column.name, p_column.data_type.dataType,
                                     p_column.index};
                         metadata_columns.push_back(c);
                     }
                 }
                 metadata = Metadata(new DataRecordMetadata(metadata_columns));
                 load_into_queue(txn, metadata_columns);
-            } catch (const ProjectionNotFoundException &e) {
+            } catch (const Parser::ProjectionNotFoundException &e) {
                 cout << e.what() << endl;
                 exit(1);
             }
@@ -135,13 +147,14 @@ class PostgreSQLDataSource : public DataGeneratorInterface {
             try {
                 try {
                     vector<Table> tables = schema_meta_data.get_tables();
-                    Table t = schema_meta_data.get_table(relation_name);
-                    vector<Column> metadata_columns;
+                    Table table = schema_meta_data.get_table(relation_name);
+                    vector<ColumnStore::Column> metadata_columns;
                     if (columns.size() == 0) {
-                        metadata_columns = t.get_columns();
+                        for(auto c: table.get_columns())
+                        metadata_columns.push_back(c.getColumnStoreColumn());
                     } else {
                         for (int i = 0; i < columns.size(); i++) {
-                            metadata_columns.push_back(t[columns[i]]);
+                            metadata_columns.push_back(table[columns[i]].getColumnStoreColumn());
                         }
                     }
                     load_into_queue(txn, metadata_columns);
@@ -152,20 +165,20 @@ class PostgreSQLDataSource : public DataGeneratorInterface {
                         schema_meta_data.get_projection(relation_name);
                     vector<projection_column> projection_columns =
                         p.get_columns();
-                    vector<Column> metadata_columns;
+                    vector<ColumnStore::Column> metadata_columns;
                     if (columns.size() == 0) {
                         vector<projection_column> projection_columns =
                             p.get_columns();
                         for (int i = 0; i < projection_columns.size(); i++) {
                             projection_column p_column = projection_columns[i];
-                            Column c = {p_column.name, p_column.data_type,
+                            ColumnStore::Column c = {p_column.name, p_column.data_type.dataType,
                                         p_column.index};
                             metadata_columns.push_back(c);
                         }
                     } else {
                         for (int i = 0; i < columns.size(); i++) {
                             projection_column p_column = p[columns[i]];
-                            Column c = {p_column.name, p_column.data_type,
+                            ColumnStore::Column c = {p_column.name, p_column.data_type.dataType,
                                         p_column.index};
                             metadata_columns.push_back(c);
                         }

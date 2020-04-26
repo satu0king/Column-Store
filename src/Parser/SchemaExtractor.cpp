@@ -38,7 +38,7 @@ void Parser::SchemaExtractor::create_tables() {
             if(data_type == "int" || data_type == "float") {
                 new_table.add_column(column_name, data_type);
             } else {
-                new_table.add_column(column_name, "string", data_type.substr(5));
+                new_table.add_column(column_name, "string", stoi(data_type.substr(6)));
             }
         }
 
