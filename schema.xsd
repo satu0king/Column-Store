@@ -19,9 +19,7 @@
             <xsd:element name="data_type" minOccurs="1" maxOccurs="1">
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
-                        <xsd:enumeration value="int"/>
-                        <xsd:enumeration value="float"/>
-                        <xsd:enumeration value="string"/>
+                        <xsd:pattern value="string[0-9]+|int|float"/>
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:element>

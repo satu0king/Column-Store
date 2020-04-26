@@ -15,7 +15,7 @@
                 </column>
                 <column>
                     <column_name>name</column_name>
-                    <data_type>string</data_type>
+                    <data_type>string8</data_type>
                 </column>
                 <column>
                     <column_name>age</column_name>
@@ -66,7 +66,7 @@
                 </column>
                 <column>
                     <column_name>name</column_name>
-                    <data_type>string</data_type>
+                    <data_type>string16</data_type>
                 </column>
             </columns>
 
@@ -83,7 +83,7 @@
                 </column>
                 <column>
                     <column_name>name</column_name>
-                    <data_type>string</data_type>
+                    <data_type>string20</data_type>
                 </column>
             </columns>
 
