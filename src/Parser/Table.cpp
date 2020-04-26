@@ -11,9 +11,10 @@ void Parser::Table::add_column(string column_name, string data_type, int size) {
     } else if (data_type == "float") {
         dt = ColumnStore::DataType::FLOAT;
     }
+    else throw std::runtime_error("Unknown Type");
     Parser::DataType parser_data_type(dt, size);
 
-    ColumnStore::Column column = {column_name, dt, int(columns.size())};
+    Parser::Column column = {column_name, parser_data_type, int(columns.size())};
     column_map[column_name] = columns.size();
     columns.push_back(column);
 }

@@ -7,6 +7,8 @@
 #include "Parser/SchemaExtractor.h"
 #include "Parser/SchemaMetaData.h"
 
+using Parser::SchemaMetaData;
+
 class PostgreSQLMetaData {
     std::string db_name, username, password;
     pqxx::connection *conn;

@@ -6,7 +6,7 @@ target_compile_options(parser PRIVATE -Wall)
 
 target_include_directories(parser 
 PUBLIC 
-    ${CMAKE_CURRENT_SOURCE_DIR}/../interfaces ${CMAKE_CURRENT_SOURCE_DIR} ${LIB_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR} ${LIB_DIR}
     /usr/local/include
 )
 

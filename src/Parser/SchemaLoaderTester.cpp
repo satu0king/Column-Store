@@ -3,6 +3,8 @@
 #include "Table.h"
 #include "stdlib.h"
 
+using namespace Parser;
+
 int main() {
     // system(XMLVALIDATE);
     SchemaExtractor schema_extractor("../schema.xml");

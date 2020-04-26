@@ -46,15 +46,15 @@ void Parser::SchemaLoader::create_tables() {
     vector<Table> tables = schema_meta_data.get_tables();
     for (Table table : tables) {
         string sql = "CREATE TABLE " + table.get_table_name() + "(";
-        vector<Column> columns = table.get_columns();
-        for (vector<Column>::iterator it = columns.begin(); it != columns.end();
+        vector<Parser::Column> columns = table.get_columns();
+        for (vector<Parser::Column>::iterator it = columns.begin(); it != columns.end();
              it++) {
             sql += (it->name + " ");
-            if (it->type == DataType::STRING) {
+            if (it->type.dataType == ColumnStore::DataType::STRING) {
                 sql += "varchar";
-            } else if (it->type == DataType::INT) {
+            } else if (it->type.dataType == ColumnStore::DataType::INT) {
                 sql += "int";
-            } else if (it->type == DataType::FLOAT) {
+            } else if (it->type.dataType == ColumnStore::DataType::FLOAT) {
                 sql += "float";
             }
 
