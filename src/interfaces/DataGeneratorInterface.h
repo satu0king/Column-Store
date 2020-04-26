@@ -72,4 +72,5 @@ class DataGeneratorInterface {
  */
 typedef std::shared_ptr<DataGeneratorInterface> DataSource;
 
+
 };  // namespace ColumnStore
