@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['_7econditionquery_386',['~ConditionQuery',['../class_column_store_1_1_condition_query.html#a7922922d7a4ae0165122db74f8e8dc1d',1,'ColumnStore::ConditionQuery']]],
-  ['_7edatageneratorinterface_387',['~DataGeneratorInterface',['../class_column_store_1_1_data_generator_interface.html#ad37eb64dd123cc3ebf2014da2a166ac2',1,'ColumnStore::DataGeneratorInterface']]],
-  ['_7erecordvalidatorinterface_388',['~RecordValidatorInterface',['../class_column_store_1_1_record_validator_interface.html#a884af3899a67bb7c38d9dd58fc9982c0',1,'ColumnStore::RecordValidatorInterface']]]
+  ['what_417',['what',['../class_parser_1_1_projection_not_found_exception.html#ab2f50959b2e2ca033ecb7170114e6929',1,'Parser::ProjectionNotFoundException::what()'],['../class_parser_1_1_table_not_found_exception.html#adc43648eb4fe57c68f98a3a394a41874',1,'Parser::TableNotFoundException::what()']]],
+  ['where_418',['where',['../class_generic_query_1_1_generic_query_builder.html#ae9390e286bce58d2e8d12f54ae0c8973',1,'GenericQuery::GenericQueryBuilder']]]
 ];

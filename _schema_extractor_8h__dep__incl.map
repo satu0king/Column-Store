@@ -1,11 +1,12 @@
 <map id="src/Parser/SchemaExtractor.h" name="src/Parser/SchemaExtractor.h">
-<area shape="rect" id="node1" title=" " alt="" coords="247,5,442,32"/>
-<area shape="rect" id="node2" href="$_schema_extractor_8cpp.html" title=" " alt="" coords="19,87,228,114"/>
-<area shape="rect" id="node3" href="$_schema_loader_8h.html" title=" " alt="" coords="253,87,437,114"/>
-<area shape="rect" id="node6" href="$_postgre_s_q_l_meta_data_8h.html" title=" " alt="" coords="501,80,681,121"/>
-<area shape="rect" id="node4" href="$_schema_loader_8cpp.html" title=" " alt="" coords="5,177,204,203"/>
-<area shape="rect" id="node5" href="$_schema_loader_tester_8cpp.html" title=" " alt="" coords="227,177,462,203"/>
-<area shape="rect" id="node7" href="$_postgre_s_q_l_data_generator_8h.html" title=" " alt="" coords="537,169,729,211"/>
-<area shape="rect" id="node8" href="$_postgre_s_q_l_data_generator_test_8cpp.html" title=" " alt="" coords="401,259,633,300"/>
-<area shape="rect" id="node9" href="$_postgre_s_q_l_meta_data_8cpp.html" title=" " alt="" coords="667,259,847,300"/>
+<area shape="rect" id="node1" title=" " alt="" coords="296,5,491,32"/>
+<area shape="rect" id="node2" href="$_schema_extractor_8cpp.html" title=" " alt="" coords="67,87,277,114"/>
+<area shape="rect" id="node3" href="$_schema_loader_8h.html" title=" " alt="" coords="301,87,485,114"/>
+<area shape="rect" id="node7" href="$_postgre_s_q_l_meta_data_8h.html" title=" " alt="" coords="671,80,851,121"/>
+<area shape="rect" id="node4" href="$_driver_8cpp.html" title=" " alt="" coords="5,169,176,211"/>
+<area shape="rect" id="node5" href="$_schema_loader_8cpp.html" title=" " alt="" coords="201,177,399,203"/>
+<area shape="rect" id="node6" href="$_schema_loader_tester_8cpp.html" title=" " alt="" coords="423,177,657,203"/>
+<area shape="rect" id="node8" href="$_postgre_s_q_l_data_generator_8h.html" title=" " alt="" coords="732,169,924,211"/>
+<area shape="rect" id="node9" href="$_postgre_s_q_l_data_generator_test_8cpp.html" title=" " alt="" coords="596,259,828,300"/>
+<area shape="rect" id="node10" href="$_postgre_s_q_l_meta_data_8cpp.html" title=" " alt="" coords="862,259,1042,300"/>
 </map>

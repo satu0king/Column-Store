@@ -64,7 +64,8 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ColumnStore Namespace Reference</div>  </div>
 </div><!--header-->
@@ -101,6 +102,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_equal_record_validator.html">EqualRecordValidator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks equality of a data field.  <a href="class_column_store_1_1_equal_record_validator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_initializer.html">Initializer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_less_than_query.html">LessThanQuery</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less Than Query.  <a href="class_column_store_1_1_less_than_query.html#details">More...</a><br /></td></tr>
@@ -150,6 +153,19 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ad8d7aa92d3da396b9f9666ae836aea0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Different datatypes supported by this project.  <a href="namespace_column_store.html#ad8d7aa92d3da396b9f9666ae836aea0a">More...</a><br /></td></tr>
 <tr class="separator:ad8d7aa92d3da396b9f9666ae836aea0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a410ca4cb66973721581036dec4beac63"><td class="memItemLeft" align="right" valign="top">fs::path&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_column_store.html#a410ca4cb66973721581036dec4beac63">getProjectionPath</a> (std::string column_store_path, std::string projection_name)</td></tr>
+<tr class="separator:a410ca4cb66973721581036dec4beac63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47ea9f1f19d34b6bf77c4aea9b0c2be1"><td class="memItemLeft" align="right" valign="top">fs::path&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_column_store.html#a47ea9f1f19d34b6bf77c4aea9b0c2be1">getMetaDataPath</a> (std::string column_store_path)</td></tr>
+<tr class="separator:a47ea9f1f19d34b6bf77c4aea9b0c2be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b5b041a13b06fe1ae5d0e0b57629909"><td class="memItemLeft" align="right" valign="top">fs::path&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_column_store.html#a4b5b041a13b06fe1ae5d0e0b57629909">getSchemaPath</a> (std::string column_store_path)</td></tr>
+<tr class="separator:a4b5b041a13b06fe1ae5d0e0b57629909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e41e4bd8b603907857cfa2dfbc3e0d1"><td class="memItemLeft" align="right" valign="top">fs::path&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_column_store.html#a7e41e4bd8b603907857cfa2dfbc3e0d1">getJoinIndexPath</a> (std::string column_store_path, std::string source_projection_name, <a class="el" href="struct_parser_1_1join__index.html">Parser::join_index</a> join_index)</td></tr>
+<tr class="separator:a7e41e4bd8b603907857cfa2dfbc3e0d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02326e9a3370f96a5329e53fe746682c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_column_store.html#a02326e9a3370f96a5329e53fe746682c">createFile</a> (fs::path path)</td></tr>
+<tr class="separator:a02326e9a3370f96a5329e53fe746682c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a9266cb438f0f76e2bf392940b5e33f84"></a>
@@ -245,6 +261,178 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="ad8d7aa92d3da396b9f9666ae836aea0aae738c26bf4ce1037fa81b039a915cbf6"></a>FLOAT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad8d7aa92d3da396b9f9666ae836aea0aa63b588d5559f64f89a416e656880b949"></a>STRING&#160;</td><td class="fielddoc"></td></tr>
 </table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a02326e9a3370f96a5329e53fe746682c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02326e9a3370f96a5329e53fe746682c">&#9670;&nbsp;</a></span>createFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ColumnStore::createFile </td>
+          <td>(</td>
+          <td class="paramtype">fs::path&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespace_column_store_a02326e9a3370f96a5329e53fe746682c_icgraph.png" border="0" usemap="#namespace_column_store_a02326e9a3370f96a5329e53fe746682c_icgraph" alt=""/></div>
+<map name="namespace_column_store_a02326e9a3370f96a5329e53fe746682c_icgraph" id="namespace_column_store_a02326e9a3370f96a5329e53fe746682c_icgraph">
+<area shape="rect" title=" " alt="" coords="509,13,669,39"/>
+<area shape="rect" href="class_column_store_1_1_initializer.html#aa6cbfaf536e2b60e0bf80133b321ba64" title=" " alt="" coords="307,5,461,47"/>
+<area shape="rect" href="class_column_store_1_1_initializer.html#a89bc8ca87b00170b3b7c6c0803b13e1b" title=" " alt="" coords="104,5,259,47"/>
+<area shape="rect" href="_driver_8cpp.html#adacbe0175a79dff748855d8c9839f82b" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7e41e4bd8b603907857cfa2dfbc3e0d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e41e4bd8b603907857cfa2dfbc3e0d1">&#9670;&nbsp;</a></span>getJoinIndexPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fs::path ColumnStore::getJoinIndexPath </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>column_store_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>source_projection_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_parser_1_1join__index.html">Parser::join_index</a>&#160;</td>
+          <td class="paramname"><em>join_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespace_column_store_a7e41e4bd8b603907857cfa2dfbc3e0d1_icgraph.png" border="0" usemap="#namespace_column_store_a7e41e4bd8b603907857cfa2dfbc3e0d1_icgraph" alt=""/></div>
+<map name="namespace_column_store_a7e41e4bd8b603907857cfa2dfbc3e0d1_icgraph" id="namespace_column_store_a7e41e4bd8b603907857cfa2dfbc3e0d1_icgraph">
+<area shape="rect" title=" " alt="" coords="545,46,748,73"/>
+<area shape="rect" href="class_column_store_1_1_initializer.html#aa6cbfaf536e2b60e0bf80133b321ba64" title=" " alt="" coords="325,5,479,47"/>
+<area shape="rect" href="class_column_store_1_1_initializer.html#a725d50c821d6ae2d8253bc6f3363c351" title=" " alt="" coords="307,71,497,112"/>
+<area shape="rect" href="class_column_store_1_1_initializer.html#a89bc8ca87b00170b3b7c6c0803b13e1b" title=" " alt="" coords="104,39,259,80"/>
+<area shape="rect" href="_driver_8cpp.html#adacbe0175a79dff748855d8c9839f82b" title=" " alt="" coords="5,46,56,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a47ea9f1f19d34b6bf77c4aea9b0c2be1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47ea9f1f19d34b6bf77c4aea9b0c2be1">&#9670;&nbsp;</a></span>getMetaDataPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fs::path ColumnStore::getMetaDataPath </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>column_store_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespace_column_store_a47ea9f1f19d34b6bf77c4aea9b0c2be1_icgraph.png" border="0" usemap="#namespace_column_store_a47ea9f1f19d34b6bf77c4aea9b0c2be1_icgraph" alt=""/></div>
+<map name="namespace_column_store_a47ea9f1f19d34b6bf77c4aea9b0c2be1_icgraph" id="namespace_column_store_a47ea9f1f19d34b6bf77c4aea9b0c2be1_icgraph">
+<area shape="rect" title=" " alt="" coords="307,13,511,39"/>
+<area shape="rect" href="class_column_store_1_1_initializer.html#a96ac91aaecc46af8d918a8352179901c" title=" " alt="" coords="104,5,259,47"/>
+<area shape="rect" href="_driver_8cpp.html#adacbe0175a79dff748855d8c9839f82b" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a410ca4cb66973721581036dec4beac63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a410ca4cb66973721581036dec4beac63">&#9670;&nbsp;</a></span>getProjectionPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fs::path ColumnStore::getProjectionPath </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>column_store_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>projection_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespace_column_store_a410ca4cb66973721581036dec4beac63_icgraph.png" border="0" usemap="#namespace_column_store_a410ca4cb66973721581036dec4beac63_icgraph" alt=""/></div>
+<map name="namespace_column_store_a410ca4cb66973721581036dec4beac63_icgraph" id="namespace_column_store_a410ca4cb66973721581036dec4beac63_icgraph">
+<area shape="rect" title=" " alt="" coords="545,46,752,73"/>
+<area shape="rect" href="class_column_store_1_1_initializer.html#aa6cbfaf536e2b60e0bf80133b321ba64" title=" " alt="" coords="325,5,479,47"/>
+<area shape="rect" href="class_column_store_1_1_initializer.html#a725d50c821d6ae2d8253bc6f3363c351" title=" " alt="" coords="307,71,497,112"/>
+<area shape="rect" href="class_column_store_1_1_initializer.html#a89bc8ca87b00170b3b7c6c0803b13e1b" title=" " alt="" coords="104,39,259,80"/>
+<area shape="rect" href="_driver_8cpp.html#adacbe0175a79dff748855d8c9839f82b" title=" " alt="" coords="5,46,56,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4b5b041a13b06fe1ae5d0e0b57629909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b5b041a13b06fe1ae5d0e0b57629909">&#9670;&nbsp;</a></span>getSchemaPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">fs::path ColumnStore::getSchemaPath </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>column_store_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespace_column_store_a4b5b041a13b06fe1ae5d0e0b57629909_icgraph.png" border="0" usemap="#namespace_column_store_a4b5b041a13b06fe1ae5d0e0b57629909_icgraph" alt=""/></div>
+<map name="namespace_column_store_a4b5b041a13b06fe1ae5d0e0b57629909_icgraph" id="namespace_column_store_a4b5b041a13b06fe1ae5d0e0b57629909_icgraph">
+<area shape="rect" title=" " alt="" coords="307,13,503,39"/>
+<area shape="rect" href="class_column_store_1_1_initializer.html#ac1514e25217df229b2c711c1d7377dd5" title=" " alt="" coords="104,5,259,47"/>
+<area shape="rect" href="_driver_8cpp.html#adacbe0175a79dff748855d8c9839f82b" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
 
 </div>
 </div>

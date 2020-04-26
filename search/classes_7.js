@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['lessthanquery_234',['LessThanQuery',['../class_column_store_1_1_less_than_query.html',1,'ColumnStore']]],
-  ['lessthanrecordvalidator_235',['LessThanRecordValidator',['../class_column_store_1_1_less_than_record_validator.html',1,'ColumnStore']]]
+  ['join_250',['Join',['../struct_generic_query_1_1_generic_query_builder_1_1_join.html',1,'GenericQuery::GenericQueryBuilder']]],
+  ['join_5findex_251',['join_index',['../struct_parser_1_1join__index.html',1,'Parser']]]
 ];
