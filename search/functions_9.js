@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['operator_5b_5d_164',['operator[]',['../struct_column_store_1_1_data_record.html#a30ee7c2884d59e1c29ca011d039baa06',1,'ColumnStore::DataRecord::operator[]()'],['../class_column_store_1_1_data_record_metadata.html#ae7d6a450490e65591b0ebe1fdd4ead94',1,'ColumnStore::DataRecordMetadata::operator[](int i)'],['../class_column_store_1_1_data_record_metadata.html#a67397e4cc7a689e1743b5158c2fcd3c8',1,'ColumnStore::DataRecordMetadata::operator[](std::string name)']]],
-  ['orquery_165',['OrQuery',['../class_column_store_1_1_or_query.html#a634ace867e732304e5a6fa0dcc739a09',1,'ColumnStore::OrQuery']]],
-  ['orrecordvalidator_166',['OrRecordValidator',['../class_column_store_1_1_or_record_validator.html#a9e6645d87b5b7afe37b84c9e5c36e07a',1,'ColumnStore::OrRecordValidator']]]
+  ['lessthanquery_350',['LessThanQuery',['../class_column_store_1_1_less_than_query.html#a70393d97724771f547025a2f76cfb399',1,'ColumnStore::LessThanQuery']]],
+  ['lessthanrecordvalidator_351',['LessThanRecordValidator',['../class_column_store_1_1_less_than_record_validator.html#ad12282ce79530266691afd0a254185b8',1,'ColumnStore::LessThanRecordValidator']]],
+  ['load_5fdata_352',['load_data',['../class_parser_1_1_data_loader.html#a3211d0ae5a3af15065b2f36e1a339991',1,'Parser::DataLoader']]],
+  ['load_5finto_5fqueue_353',['load_into_queue',['../class_postgre_s_q_l_data_source.html#a2282c8efbc4b67451764d73f568f2eba',1,'PostgreSQLDataSource']]]
 ];

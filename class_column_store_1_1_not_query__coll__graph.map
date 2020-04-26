@@ -1,0 +1,4 @@
+<map id="ColumnStore::NotQuery" name="ColumnStore::NotQuery">
+<area shape="rect" id="node1" title="Logical NOT query." alt="" coords="21,145,180,237"/>
+<area shape="rect" id="node2" href="$class_column_store_1_1_condition_query.html" title="Base Condition Query Structure." alt="" coords="5,5,196,97"/>
+</map>

@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">ConditionQuery.h File Reference</div>  </div>
@@ -80,6 +81,39 @@ $(function() {
 <code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &quot;<a class="el" href="_data_generator_interface_8h_source.html">DataGeneratorInterface.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_validators_8h_source.html">Validators.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for ConditionQuery.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="_condition_query_8h__incl.png" border="0" usemap="#src_2interfaces_2_condition_query_8h" alt=""/></div>
+<map name="src_2interfaces_2_condition_query_8h" id="src_2interfaces_2_condition_query_8h">
+<area shape="rect" title="Generic Condition Builder." alt="" coords="274,5,433,47"/>
+<area shape="rect" title=" " alt="" coords="698,244,766,271"/>
+<area shape="rect" title=" " alt="" coords="370,319,425,345"/>
+<area shape="rect" title=" " alt="" coords="38,244,149,271"/>
+<area shape="rect" href="_data_generator_interface_8h.html" title="Data Generator Interface." alt="" coords="270,95,437,121"/>
+<area shape="rect" href="_validators_8h.html" title="RecordValidator Interfaces and Implementations for Query Processing." alt="" coords="461,95,552,121"/>
+<area shape="rect" title=" " alt="" coords="173,244,232,271"/>
+<area shape="rect" title=" " alt="" coords="257,244,359,271"/>
+<area shape="rect" href="interfaces_2_column_8h.html" title="Column Metadata and Type information." alt="" coords="598,244,674,271"/>
+<area shape="rect" href="_data_record_8h.html" title="Data storage structures." alt="" coords="350,169,450,196"/>
+<area shape="rect" title=" " alt="" coords="602,319,670,345"/>
+<area shape="rect" title=" " alt="" coords="435,244,477,271"/>
+<area shape="rect" title=" " alt="" coords="501,244,573,271"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="_condition_query_8h__dep__incl.png" border="0" usemap="#src_2interfaces_2_condition_query_8hdep" alt=""/></div>
+<map name="src_2interfaces_2_condition_query_8hdep" id="src_2interfaces_2_condition_query_8hdep">
+<area shape="rect" title="Generic Condition Builder." alt="" coords="187,5,345,47"/>
+<area shape="rect" href="_generic_generator_8h.html" title=" " alt="" coords="119,184,291,225"/>
+<area shape="rect" href="_generic_query_builder_8h.html" title="Generic Query Builder." alt="" coords="243,95,415,136"/>
+<area shape="rect" href="_generic_generator_8cpp.html" title=" " alt="" coords="5,273,177,315"/>
+<area shape="rect" href="_generic_query_builder_8cpp.html" title=" " alt="" coords="293,273,465,315"/>
+<area shape="rect" href="test_8cpp.html" title=" " alt="" coords="201,281,269,307"/>
+</map>
+</div>
 </div>
 <p><a href="_condition_query_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -104,33 +138,21 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less Than Query.  <a href="class_column_store_1_1_less_than_query.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespace_column_store"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_column_store.html">ColumnStore</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a42efce201d3924ec51c727817093edcc"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; ConditionQuery &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_condition_query_8h.html#a42efce201d3924ec51c727817093edcc">ColumnStore::Query</a></td></tr>
-<tr class="memdesc:a42efce201d3924ec51c727817093edcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared pointer to Query Structure.  <a href="_condition_query_8h.html#a42efce201d3924ec51c727817093edcc">More...</a><br /></td></tr>
+<tr class="memitem:a42efce201d3924ec51c727817093edcc"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; ConditionQuery &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_column_store.html#a42efce201d3924ec51c727817093edcc">ColumnStore::Query</a></td></tr>
+<tr class="memdesc:a42efce201d3924ec51c727817093edcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared pointer to Query Structure.  <a href="namespace_column_store.html#a42efce201d3924ec51c727817093edcc">More...</a><br /></td></tr>
 <tr class="separator:a42efce201d3924ec51c727817093edcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generic Condition Builder. </p>
 <p>This file contains structures required to construct the condition query any data source. </p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="a42efce201d3924ec51c727817093edcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42efce201d3924ec51c727817093edcc">&#9670;&nbsp;</a></span>Query</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::shared_ptr&lt;ConditionQuery&gt; <a class="el" href="_condition_query_8h.html#a42efce201d3924ec51c727817093edcc">ColumnStore::Query</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Shared pointer to Query Structure. </p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

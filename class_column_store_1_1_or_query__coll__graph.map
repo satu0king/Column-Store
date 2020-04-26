@@ -1,0 +1,4 @@
+<map id="ColumnStore::OrQuery" name="ColumnStore::OrQuery">
+<area shape="rect" id="node1" title="Logical OR query." alt="" coords="25,145,176,252"/>
+<area shape="rect" id="node2" href="$class_column_store_1_1_condition_query.html" title="Base Condition Query Structure." alt="" coords="5,5,196,97"/>
+</map>

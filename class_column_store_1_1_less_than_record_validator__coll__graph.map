@@ -1,0 +1,5 @@
+<map id="ColumnStore::LessThanRecordValidator" name="ColumnStore::LessThanRecordValidator">
+<area shape="rect" id="node1" title="Checks if value of a field is less than given value." alt="" coords="5,315,208,451"/>
+<area shape="rect" id="node2" href="$class_column_store_1_1_reccord_validator_metadata_interface.html" title="Extended RecordValidator Interface which handles Metadata." alt="" coords="5,160,208,267"/>
+<area shape="rect" id="node3" href="$class_column_store_1_1_record_validator_interface.html" title="Base RecordValidator Interface." alt="" coords="9,5,204,112"/>
+</map>

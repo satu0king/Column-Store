@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>ColumnStore</b></li><li class="navelem"><a class="el" href="class_column_store_1_1_data_generator_interface.html">DataGeneratorInterface</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespace_column_store.html">ColumnStore</a></li><li class="navelem"><a class="el" href="class_column_store_1_1_data_generator_interface.html">DataGeneratorInterface</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -81,14 +81,22 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for ColumnStore::DataGeneratorInterface:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_column_store_1_1_data_generator_interface.png" usemap="#ColumnStore::DataGeneratorInterface_map" alt=""/>
-  <map id="ColumnStore::DataGeneratorInterface_map" name="ColumnStore::DataGeneratorInterface_map">
-<area href="class_c_s_v_1_1_c_s_v_data_source.html" alt="CSV::CSVDataSource" shape="rect" coords="0,56,227,80"/>
-<area href="class_generic_query_1_1_generic_data_generator.html" alt="GenericQuery::GenericDataGenerator" shape="rect" coords="237,56,464,80"/>
-<area href="class_postgre_s_q_l_data_source.html" alt="PostgreSQLDataSource" shape="rect" coords="474,56,701,80"/>
-  </map>
-</div></div>
+<div class="center"><img src="class_column_store_1_1_data_generator_interface__inherit__graph.png" border="0" usemap="#_column_store_1_1_data_generator_interface_inherit__map" alt="Inheritance graph"/></div>
+<map name="_column_store_1_1_data_generator_interface_inherit__map" id="_column_store_1_1_data_generator_interface_inherit__map">
+<area shape="rect" title="Interface for relational data sources." alt="" coords="177,5,363,171"/>
+<area shape="rect" href="class_c_s_v_1_1_c_s_v_data_source.html" title=" " alt="" coords="5,292,156,399"/>
+<area shape="rect" href="class_generic_query_1_1_generic_data_generator.html" title=" " alt="" coords="181,219,359,472"/>
+<area shape="rect" href="class_postgre_s_q_l_data_source.html" title=" " alt="" coords="384,219,575,472"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for ColumnStore::DataGeneratorInterface:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_column_store_1_1_data_generator_interface__coll__graph.png" border="0" usemap="#_column_store_1_1_data_generator_interface_coll__map" alt="Collaboration graph"/></div>
+<map name="_column_store_1_1_data_generator_interface_coll__map" id="_column_store_1_1_data_generator_interface_coll__map">
+<area shape="rect" title="Interface for relational data sources." alt="" coords="5,5,192,171"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -96,7 +104,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9a29eb24c66f2c0c0a081744e107841e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb1cf070990a2591ed786ee169df00ed"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_data_generator_interface.html#abb1cf070990a2591ed786ee169df00ed">hasNext</a> ()=0</td></tr>
 <tr class="separator:abb1cf070990a2591ed786ee169df00ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67fea3f3de472ee88fa0ca4c4945026d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_data_record_8h.html#a706499867a4f69cd73e6cdc47fc86c62">Metadata</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_data_generator_interface.html#a67fea3f3de472ee88fa0ca4c4945026d">getMetadata</a> () const</td></tr>
+<tr class="memitem:a67fea3f3de472ee88fa0ca4c4945026d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_column_store.html#a706499867a4f69cd73e6cdc47fc86c62">Metadata</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_data_generator_interface.html#a67fea3f3de472ee88fa0ca4c4945026d">getMetadata</a> () const</td></tr>
 <tr class="memdesc:a67fea3f3de472ee88fa0ca4c4945026d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for relational data sources.  <a href="class_column_store_1_1_data_generator_interface.html#a67fea3f3de472ee88fa0ca4c4945026d">More...</a><br /></td></tr>
 <tr class="separator:a67fea3f3de472ee88fa0ca4c4945026d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13f38e88c6abcc40c4e1088fb17018b2"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="struct_column_store_1_1_data_record.html">DataRecord</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_data_generator_interface.html#a13f38e88c6abcc40c4e1088fb17018b2">nextBatch</a> (int batchSize)</td></tr>
@@ -111,9 +119,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a8b586b30a0c18f1d370f52ae8c7a5c83"><td class="memItemLeft" align="right" valign="top"><a id="a8b586b30a0c18f1d370f52ae8c7a5c83"></a>
-<a class="el" href="_data_record_8h.html#a706499867a4f69cd73e6cdc47fc86c62">Metadata</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_data_generator_interface.html#a8b586b30a0c18f1d370f52ae8c7a5c83">metadata</a></td></tr>
-<tr class="memdesc:a8b586b30a0c18f1d370f52ae8c7a5c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">metadata for processing queries <br /></td></tr>
+<tr class="memitem:a8b586b30a0c18f1d370f52ae8c7a5c83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_column_store.html#a706499867a4f69cd73e6cdc47fc86c62">Metadata</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_data_generator_interface.html#a8b586b30a0c18f1d370f52ae8c7a5c83">metadata</a></td></tr>
+<tr class="memdesc:a8b586b30a0c18f1d370f52ae8c7a5c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">metadata for processing queries  <a href="class_column_store_1_1_data_generator_interface.html#a8b586b30a0c18f1d370f52ae8c7a5c83">More...</a><br /></td></tr>
 <tr class="separator:a8b586b30a0c18f1d370f52ae8c7a5c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -158,7 +165,7 @@ GenericDataGenerator </dd></dl>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_data_record_8h.html#a706499867a4f69cd73e6cdc47fc86c62">Metadata</a> ColumnStore::DataGeneratorInterface::getMetadata </td>
+          <td class="memname"><a class="el" href="namespace_column_store.html#a706499867a4f69cd73e6cdc47fc86c62">Metadata</a> ColumnStore::DataGeneratorInterface::getMetadata </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -175,6 +182,16 @@ GenericDataGenerator </dd></dl>
 GenericDataGenerator </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Metadata</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_column_store_1_1_data_record_metadata.html" title="Stores metadata information of the data record.">DataRecordMetadata</a> </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_column_store_1_1_data_generator_interface_a67fea3f3de472ee88fa0ca4c4945026d_icgraph.png" border="0" usemap="#class_column_store_1_1_data_generator_interface_a67fea3f3de472ee88fa0ca4c4945026d_icgraph" alt=""/></div>
+<map name="class_column_store_1_1_data_generator_interface_a67fea3f3de472ee88fa0ca4c4945026d_icgraph" id="class_column_store_1_1_data_generator_interface_a67fea3f3de472ee88fa0ca4c4945026d_icgraph">
+<area shape="rect" title="Interface for relational data sources." alt="" coords="339,5,525,47"/>
+<area shape="rect" href="class_column_store_1_1_data_generator_interface.html#af9cf96f6d35a6e0edd42f0592667b4fa" title="Print the data." alt="" coords="104,5,291,47"/>
+<area shape="rect" href="_postgre_s_q_l_data_generator_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -203,6 +220,17 @@ GenericDataGenerator </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>returns true if record can be generated </dd></dl>
 
 <p>Implemented in <a class="el" href="class_postgre_s_q_l_data_source.html#a7bdfd66d14518180c9ed593227e79112">PostgreSQLDataSource</a>, <a class="el" href="class_generic_query_1_1_generic_data_generator.html#aed2e55a891e4389135847e0eb8296ce1">GenericQuery::GenericDataGenerator</a>, and <a class="el" href="class_c_s_v_1_1_c_s_v_data_source.html#a78f06de277757f381383669129e585e8">CSV::CSVDataSource</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_column_store_1_1_data_generator_interface_abb1cf070990a2591ed786ee169df00ed_icgraph.png" border="0" usemap="#class_column_store_1_1_data_generator_interface_abb1cf070990a2591ed786ee169df00ed_icgraph" alt=""/></div>
+<map name="class_column_store_1_1_data_generator_interface_abb1cf070990a2591ed786ee169df00ed_icgraph" id="class_column_store_1_1_data_generator_interface_abb1cf070990a2591ed786ee169df00ed_icgraph">
+<area shape="rect" title=" " alt="" coords="339,39,525,80"/>
+<area shape="rect" href="class_column_store_1_1_data_generator_interface.html#a13f38e88c6abcc40c4e1088fb17018b2" title="Helper function to return batch of records." alt="" coords="104,5,291,47"/>
+<area shape="rect" href="class_column_store_1_1_data_generator_interface.html#af9cf96f6d35a6e0edd42f0592667b4fa" title="Print the data." alt="" coords="104,71,291,112"/>
+<area shape="rect" href="_postgre_s_q_l_data_generator_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,78,56,105"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -231,6 +259,17 @@ GenericDataGenerator </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>next record </dd></dl>
 
 <p>Implemented in <a class="el" href="class_postgre_s_q_l_data_source.html#ad03bcc06efafaa8bafc0236d096ff213">PostgreSQLDataSource</a>, <a class="el" href="class_generic_query_1_1_generic_data_generator.html#a8433e193e38f9044bfc3bd00a926915b">GenericQuery::GenericDataGenerator</a>, and <a class="el" href="class_c_s_v_1_1_c_s_v_data_source.html#aa7a79b80ce4cb8c7aad8cb8b29b07192">CSV::CSVDataSource</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_column_store_1_1_data_generator_interface_a9a29eb24c66f2c0c0a081744e107841e_icgraph.png" border="0" usemap="#class_column_store_1_1_data_generator_interface_a9a29eb24c66f2c0c0a081744e107841e_icgraph" alt=""/></div>
+<map name="class_column_store_1_1_data_generator_interface_a9a29eb24c66f2c0c0a081744e107841e_icgraph" id="class_column_store_1_1_data_generator_interface_a9a29eb24c66f2c0c0a081744e107841e_icgraph">
+<area shape="rect" title=" " alt="" coords="339,39,525,80"/>
+<area shape="rect" href="class_column_store_1_1_data_generator_interface.html#a13f38e88c6abcc40c4e1088fb17018b2" title="Helper function to return batch of records." alt="" coords="104,5,291,47"/>
+<area shape="rect" href="class_column_store_1_1_data_generator_interface.html#af9cf96f6d35a6e0edd42f0592667b4fa" title="Print the data." alt="" coords="104,71,291,112"/>
+<area shape="rect" href="_postgre_s_q_l_data_generator_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,78,56,105"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -260,6 +299,16 @@ GenericDataGenerator </dd></dl>
 
 <p>Helper function to return batch of records. </p>
 <p>Intended to be used for batch processing. </p><dl class="section return"><dt>Returns</dt><dd>batch of records </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_column_store_1_1_data_generator_interface_a13f38e88c6abcc40c4e1088fb17018b2_cgraph.png" border="0" usemap="#class_column_store_1_1_data_generator_interface_a13f38e88c6abcc40c4e1088fb17018b2_cgraph" alt=""/></div>
+<map name="class_column_store_1_1_data_generator_interface_a13f38e88c6abcc40c4e1088fb17018b2_cgraph" id="class_column_store_1_1_data_generator_interface_a13f38e88c6abcc40c4e1088fb17018b2_cgraph">
+<area shape="rect" title="Helper function to return batch of records." alt="" coords="5,39,192,80"/>
+<area shape="rect" href="class_column_store_1_1_data_generator_interface.html#abb1cf070990a2591ed786ee169df00ed" title=" " alt="" coords="240,5,427,47"/>
+<area shape="rect" href="class_column_store_1_1_data_generator_interface.html#a9a29eb24c66f2c0c0a081744e107841e" title=" " alt="" coords="240,71,427,112"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -280,6 +329,51 @@ GenericDataGenerator </dd></dl>
 
 <p>Print the data. </p>
 <p>Pretty print the relational data in a tabular form with column names </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_column_store_1_1_data_generator_interface_af9cf96f6d35a6e0edd42f0592667b4fa_cgraph.png" border="0" usemap="#class_column_store_1_1_data_generator_interface_af9cf96f6d35a6e0edd42f0592667b4fa_cgraph" alt=""/></div>
+<map name="class_column_store_1_1_data_generator_interface_af9cf96f6d35a6e0edd42f0592667b4fa_cgraph" id="class_column_store_1_1_data_generator_interface_af9cf96f6d35a6e0edd42f0592667b4fa_cgraph">
+<area shape="rect" title="Print the data." alt="" coords="5,71,192,112"/>
+<area shape="rect" href="class_column_store_1_1_data_generator_interface.html#a67fea3f3de472ee88fa0ca4c4945026d" title="Interface for relational data sources." alt="" coords="240,5,427,47"/>
+<area shape="rect" href="class_column_store_1_1_data_generator_interface.html#abb1cf070990a2591ed786ee169df00ed" title=" " alt="" coords="240,71,427,112"/>
+<area shape="rect" href="class_column_store_1_1_data_generator_interface.html#a9a29eb24c66f2c0c0a081744e107841e" title=" " alt="" coords="240,136,427,177"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_column_store_1_1_data_generator_interface_af9cf96f6d35a6e0edd42f0592667b4fa_icgraph.png" border="0" usemap="#class_column_store_1_1_data_generator_interface_af9cf96f6d35a6e0edd42f0592667b4fa_icgraph" alt=""/></div>
+<map name="class_column_store_1_1_data_generator_interface_af9cf96f6d35a6e0edd42f0592667b4fa_icgraph" id="class_column_store_1_1_data_generator_interface_af9cf96f6d35a6e0edd42f0592667b4fa_icgraph">
+<area shape="rect" title="Print the data." alt="" coords="104,5,291,47"/>
+<area shape="rect" href="_postgre_s_q_l_data_generator_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a8b586b30a0c18f1d370f52ae8c7a5c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b586b30a0c18f1d370f52ae8c7a5c83">&#9670;&nbsp;</a></span>metadata</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_column_store.html#a706499867a4f69cd73e6cdc47fc86c62">Metadata</a> ColumnStore::DataGeneratorInterface::metadata</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>metadata for processing queries </p>
 
 </div>
 </div>

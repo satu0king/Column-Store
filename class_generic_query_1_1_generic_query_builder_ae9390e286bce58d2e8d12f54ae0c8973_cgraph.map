@@ -1,0 +1,5 @@
+<map id="GenericQuery::GenericQueryBuilder::where" name="GenericQuery::GenericQueryBuilder::where">
+<area shape="rect" id="node1" title="Sets the query object." alt="" coords="5,5,192,47"/>
+<area shape="rect" id="node2" href="$class_generic_query_1_1_generic_query_builder.html#a500b382e1f94c1376a6e3b3b4a3f98dd" title="Generates metadata of result records using join and query information." alt="" coords="240,5,427,47"/>
+<area shape="rect" id="node3" href="$class_generic_query_1_1_generic_query_builder.html#a427ff30da7981b44596426a2645d434b" title="Creates a join from base source to a join source." alt="" coords="475,5,661,47"/>
+</map>

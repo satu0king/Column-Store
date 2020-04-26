@@ -1,0 +1,17 @@
+<map id="src/interfaces/DataRecord.h" name="src/interfaces/DataRecord.h">
+<area shape="rect" id="node1" title="Data storage structures." alt="" coords="594,5,777,32"/>
+<area shape="rect" id="node2" href="$_data_generator_interface_8h.html" title="Data Generator Interface." alt="" coords="591,80,780,121"/>
+<area shape="rect" id="node5" href="$test_8cpp.html" title=" " alt="" coords="429,445,497,471"/>
+<area shape="rect" id="node15" href="$_validators_8h.html" title="RecordValidator Interfaces and Implementations for Query Processing." alt="" coords="973,87,1147,114"/>
+<area shape="rect" id="node3" href="$_c_s_v_data_generator_8h.html" title="Data Generator for CSV files." alt="" coords="165,169,320,211"/>
+<area shape="rect" id="node6" href="$_generic_generator_8h.html" title=" " alt="" coords="865,348,1037,389"/>
+<area shape="rect" id="node9" href="$_generic_query_builder_8h.html" title="Generic Query Builder." alt="" coords="741,259,913,300"/>
+<area shape="rect" id="node10" href="$_condition_query_8h.html" title="Generic Condition Builder." alt="" coords="922,169,1081,211"/>
+<area shape="rect" id="node11" href="$_data_generator_interface_8cpp.html" title="Data Generator Interface." alt="" coords="657,169,847,211"/>
+<area shape="rect" id="node12" href="$_postgre_s_q_l_data_generator_8h.html" title=" " alt="" coords="391,169,583,211"/>
+<area shape="rect" id="node4" href="$_c_s_v_data_generator_8cpp.html" title="Data Generator for CSV files." alt="" coords="43,259,205,300"/>
+<area shape="rect" id="node7" href="$_generic_generator_8cpp.html" title=" " alt="" coords="937,437,1109,479"/>
+<area shape="rect" id="node8" href="$_generic_query_builder_8cpp.html" title=" " alt="" coords="741,437,913,479"/>
+<area shape="rect" id="node13" href="$_postgre_s_q_l_data_generator_test_8cpp.html" title=" " alt="" coords="280,259,512,300"/>
+<area shape="rect" id="node14" href="$_postgre_s_q_l_meta_data_8cpp.html" title=" " alt="" coords="537,259,717,300"/>
+</map>

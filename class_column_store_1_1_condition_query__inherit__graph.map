@@ -1,0 +1,8 @@
+<map id="ColumnStore::ConditionQuery" name="ColumnStore::ConditionQuery">
+<area shape="rect" id="node1" title="Base Condition Query Structure." alt="" coords="386,5,577,97"/>
+<area shape="rect" id="node2" href="$class_column_store_1_1_and_query.html" title="Logical AND query." alt="" coords="5,145,165,252"/>
+<area shape="rect" id="node3" href="$class_column_store_1_1_equal_query.html" title="Equality Query." alt="" coords="190,145,359,252"/>
+<area shape="rect" id="node4" href="$class_column_store_1_1_less_than_query.html" title="Less Than Query." alt="" coords="384,145,579,252"/>
+<area shape="rect" id="node5" href="$class_column_store_1_1_not_query.html" title="Logical NOT query." alt="" coords="603,153,762,245"/>
+<area shape="rect" id="node6" href="$class_column_store_1_1_or_query.html" title="Logical OR query." alt="" coords="786,145,937,252"/>
+</map>

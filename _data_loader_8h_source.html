@@ -69,26 +69,36 @@ $(function() {
 <div class="title">DataLoader.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<a href="_data_loader_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;pqxx/pqxx&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>Parser {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_parser.html">Parser</a> {</div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_parser_1_1_data_loader.html">    9</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_parser_1_1_data_loader.html">DataLoader</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        std::string db_name, username, password, sql_file_name;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        pqxx::connection *conn;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordtype">void</span> load_data();</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_parser_1_1_data_loader.html#aeca1d343554ba164dcbc9c7e5f215e31">   10</a></span>&#160;        std::string <a class="code" href="class_parser_1_1_data_loader.html#a60916c968833d728b7322f1567d67146">db_name</a>, <a class="code" href="class_parser_1_1_data_loader.html#aeca1d343554ba164dcbc9c7e5f215e31">username</a>, <a class="code" href="class_parser_1_1_data_loader.html#aa99f956e1ff79b061c7e06774d88cec8">password</a>, <a class="code" href="class_parser_1_1_data_loader.html#ae0066c7be42fe00694181ff171a7965d">sql_file_name</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_parser_1_1_data_loader.html#a0f9ecd4ca8c6850e05bbd4b04b771836">   11</a></span>&#160;        pqxx::connection *<a class="code" href="class_parser_1_1_data_loader.html#a0f9ecd4ca8c6850e05bbd4b04b771836">conn</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_parser_1_1_data_loader.html#a3211d0ae5a3af15065b2f36e1a339991">load_data</a>();</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="class_parser_1_1_data_loader.html">DataLoader</a>(std::string db_name, std::string username, std::string password,</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                std::string sql_file_name);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="class_parser_1_1_data_loader.html#a2d0d77c5829e4b90d95b3fe747b417ba">DataLoader</a>(std::string <a class="code" href="class_parser_1_1_data_loader.html#a60916c968833d728b7322f1567d67146">db_name</a>, std::string <a class="code" href="class_parser_1_1_data_loader.html#aeca1d343554ba164dcbc9c7e5f215e31">username</a>, std::string <a class="code" href="class_parser_1_1_data_loader.html#aa99f956e1ff79b061c7e06774d88cec8">password</a>,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                std::string <a class="code" href="class_parser_1_1_data_loader.html#ae0066c7be42fe00694181ff171a7965d">sql_file_name</a>);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    };</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespace_parser_html"><div class="ttname"><a href="namespace_parser.html">Parser</a></div><div class="ttdef"><b>Definition:</b> Column.h:5</div></div>
+<div class="ttc" id="aclass_parser_1_1_data_loader_html_a60916c968833d728b7322f1567d67146"><div class="ttname"><a href="class_parser_1_1_data_loader.html#a60916c968833d728b7322f1567d67146">Parser::DataLoader::db_name</a></div><div class="ttdeci">std::string db_name</div><div class="ttdef"><b>Definition:</b> DataLoader.h:10</div></div>
+<div class="ttc" id="aclass_parser_1_1_data_loader_html_a2d0d77c5829e4b90d95b3fe747b417ba"><div class="ttname"><a href="class_parser_1_1_data_loader.html#a2d0d77c5829e4b90d95b3fe747b417ba">Parser::DataLoader::DataLoader</a></div><div class="ttdeci">DataLoader(std::string db_name, std::string username, std::string password, std::string sql_file_name)</div><div class="ttdef"><b>Definition:</b> DataLoader.cpp:5</div></div>
+<div class="ttc" id="aclass_parser_1_1_data_loader_html_a0f9ecd4ca8c6850e05bbd4b04b771836"><div class="ttname"><a href="class_parser_1_1_data_loader.html#a0f9ecd4ca8c6850e05bbd4b04b771836">Parser::DataLoader::conn</a></div><div class="ttdeci">pqxx::connection * conn</div><div class="ttdef"><b>Definition:</b> DataLoader.h:11</div></div>
+<div class="ttc" id="aclass_parser_1_1_data_loader_html_aa99f956e1ff79b061c7e06774d88cec8"><div class="ttname"><a href="class_parser_1_1_data_loader.html#aa99f956e1ff79b061c7e06774d88cec8">Parser::DataLoader::password</a></div><div class="ttdeci">std::string password</div><div class="ttdef"><b>Definition:</b> DataLoader.h:10</div></div>
+<div class="ttc" id="aclass_parser_1_1_data_loader_html_aeca1d343554ba164dcbc9c7e5f215e31"><div class="ttname"><a href="class_parser_1_1_data_loader.html#aeca1d343554ba164dcbc9c7e5f215e31">Parser::DataLoader::username</a></div><div class="ttdeci">std::string username</div><div class="ttdef"><b>Definition:</b> DataLoader.h:10</div></div>
+<div class="ttc" id="acreate__dummy__data_8cpp_html_a524c1ef0e622a1cc50361d520a6de886"><div class="ttname"><a href="create__dummy__data_8cpp.html#a524c1ef0e622a1cc50361d520a6de886">create_dummy_data</a></div><div class="ttdeci">void create_dummy_data(string file_name)</div><div class="ttdef"><b>Definition:</b> create_dummy_data.cpp:10</div></div>
+<div class="ttc" id="aclass_parser_1_1_data_loader_html_a3211d0ae5a3af15065b2f36e1a339991"><div class="ttname"><a href="class_parser_1_1_data_loader.html#a3211d0ae5a3af15065b2f36e1a339991">Parser::DataLoader::load_data</a></div><div class="ttdeci">void load_data()</div><div class="ttdef"><b>Definition:</b> DataLoader.cpp:30</div></div>
+<div class="ttc" id="aclass_parser_1_1_data_loader_html_ae0066c7be42fe00694181ff171a7965d"><div class="ttname"><a href="class_parser_1_1_data_loader.html#ae0066c7be42fe00694181ff171a7965d">Parser::DataLoader::sql_file_name</a></div><div class="ttdeci">std::string sql_file_name</div><div class="ttdef"><b>Definition:</b> DataLoader.h:10</div></div>
 <div class="ttc" id="aclass_parser_1_1_data_loader_html"><div class="ttname"><a href="class_parser_1_1_data_loader.html">Parser::DataLoader</a></div><div class="ttdef"><b>Definition:</b> DataLoader.h:9</div></div>
+<div class="ttc" id="a_data_loader_8h_html"><div class="ttname"><a href="_data_loader_8h.html">DataLoader.h</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

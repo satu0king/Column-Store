@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">Validators.h File Reference</div>  </div>
@@ -77,6 +78,38 @@ $(function() {
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;memory&gt;</code><br />
 <code>#include &quot;<a class="el" href="_data_record_8h_source.html">DataRecord.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for Validators.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="_validators_8h__incl.png" border="0" usemap="#src_2interfaces_2_validators_8h" alt=""/></div>
+<map name="src_2interfaces_2_validators_8h" id="src_2interfaces_2_validators_8h">
+<area shape="rect" title="RecordValidator Interfaces and Implementations for Query Processing." alt="" coords="70,5,243,32"/>
+<area shape="rect" title=" " alt="" coords="5,155,73,181"/>
+<area shape="rect" href="_data_record_8h.html" title="Data storage structures." alt="" coords="224,80,324,107"/>
+<area shape="rect" title=" " alt="" coords="98,155,141,181"/>
+<area shape="rect" title=" " alt="" coords="165,155,237,181"/>
+<area shape="rect" title=" " alt="" coords="352,229,407,256"/>
+<area shape="rect" title=" " alt="" coords="312,155,423,181"/>
+<area shape="rect" title=" " alt="" coords="447,155,506,181"/>
+<area shape="rect" href="interfaces_2_column_8h.html" title="Column Metadata and Type information." alt="" coords="531,155,607,181"/>
+<area shape="rect" title=" " alt="" coords="631,155,733,181"/>
+<area shape="rect" title=" " alt="" coords="535,229,603,256"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="_validators_8h__dep__incl.png" border="0" usemap="#src_2interfaces_2_validators_8hdep" alt=""/></div>
+<map name="src_2interfaces_2_validators_8hdep" id="src_2interfaces_2_validators_8hdep">
+<area shape="rect" title="RecordValidator Interfaces and Implementations for Query Processing." alt="" coords="155,5,329,32"/>
+<area shape="rect" href="_generic_query_builder_8h.html" title="Generic Query Builder." alt="" coords="243,169,415,211"/>
+<area shape="rect" href="_generic_generator_8h.html" title=" " alt="" coords="119,259,291,300"/>
+<area shape="rect" href="_condition_query_8h.html" title="Generic Condition Builder." alt="" coords="163,80,321,121"/>
+<area shape="rect" href="_generic_query_builder_8cpp.html" title=" " alt="" coords="293,348,465,389"/>
+<area shape="rect" href="test_8cpp.html" title=" " alt="" coords="201,355,269,382"/>
+<area shape="rect" href="_generic_generator_8cpp.html" title=" " alt="" coords="5,348,177,389"/>
+</map>
+</div>
 </div>
 <p><a href="_validators_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -104,33 +137,20 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if value of a field is less than given value.  <a href="class_column_store_1_1_less_than_record_validator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespace_column_store"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_column_store.html">ColumnStore</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a3c6fedd40d8bf24dde513b17a7ca5d94"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; RecordValidatorInterface &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_validators_8h.html#a3c6fedd40d8bf24dde513b17a7ca5d94">ColumnStore::RecordValidator</a></td></tr>
-<tr class="memdesc:a3c6fedd40d8bf24dde513b17a7ca5d94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared Pointer for RecordValidator Interface.  <a href="_validators_8h.html#a3c6fedd40d8bf24dde513b17a7ca5d94">More...</a><br /></td></tr>
+<tr class="memitem:a3c6fedd40d8bf24dde513b17a7ca5d94"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; RecordValidatorInterface &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_column_store.html#a3c6fedd40d8bf24dde513b17a7ca5d94">ColumnStore::RecordValidator</a></td></tr>
+<tr class="memdesc:a3c6fedd40d8bf24dde513b17a7ca5d94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared Pointer for RecordValidator Interface.  <a href="namespace_column_store.html#a3c6fedd40d8bf24dde513b17a7ca5d94">More...</a><br /></td></tr>
 <tr class="separator:a3c6fedd40d8bf24dde513b17a7ca5d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>RecordValidator Interfaces and Implementations for Query Processing. </p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="a3c6fedd40d8bf24dde513b17a7ca5d94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c6fedd40d8bf24dde513b17a7ca5d94">&#9670;&nbsp;</a></span>RecordValidator</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::shared_ptr&lt;RecordValidatorInterface&gt; <a class="el" href="_validators_8h.html#a3c6fedd40d8bf24dde513b17a7ca5d94">ColumnStore::RecordValidator</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Shared Pointer for RecordValidator Interface. </p>
-<p>RecordValidator are transfered between objects using this type </p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

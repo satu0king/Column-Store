@@ -1,0 +1,7 @@
+<map id="GenericQuery::GenericDataGenerator::_getCandidateNext" name="GenericQuery::GenericDataGenerator::_getCandidateNext">
+<area shape="rect" id="node1" title="Gets the next candidate record." alt="" coords="721,39,916,80"/>
+<area shape="rect" id="node2" href="$class_generic_query_1_1_generic_data_generator.html#ad6120dee559e07000053d95cb48ee279" title="internal function to process and generate next valid record" alt="" coords="495,39,673,80"/>
+<area shape="rect" id="node3" href="$class_generic_query_1_1_generic_data_generator.html#ac792337f68466ab51907562009de17e7" title="internal function to set the next valid record" alt="" coords="268,39,447,80"/>
+<area shape="rect" id="node4" href="$class_generic_query_1_1_generic_data_generator.html#a009a5809f606dcfa19b7b104f1341c93" title="Construct a new Generic Data Generator object." alt="" coords="5,5,220,47"/>
+<area shape="rect" id="node5" href="$class_generic_query_1_1_generic_data_generator.html#a8433e193e38f9044bfc3bd00a926915b" title="generates a new record" alt="" coords="23,71,202,112"/>
+</map>

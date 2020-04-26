@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>ColumnStore</b></li><li class="navelem"><a class="el" href="struct_column_store_1_1_data_record.html">DataRecord</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespace_column_store.html">ColumnStore</a></li><li class="navelem"><a class="el" href="struct_column_store_1_1_data_record.html">DataRecord</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -78,11 +78,20 @@ $(function() {
  <a href="struct_column_store_1_1_data_record.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_data_record_8h_source.html">DataRecord.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for ColumnStore::DataRecord:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_column_store_1_1_data_record__coll__graph.png" border="0" usemap="#_column_store_1_1_data_record_coll__map" alt="Collaboration graph"/></div>
+<map name="_column_store_1_1_data_record_coll__map" id="_column_store_1_1_data_record_coll__map">
+<area shape="rect" title="Stores a row of data." alt="" coords="5,5,176,112"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac422d354387253effea7a5b858f1907c"><td class="memItemLeft" align="right" valign="top"><a id="ac422d354387253effea7a5b858f1907c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DataRecord</b> (std::vector&lt; <a class="el" href="class_column_store_1_1_data_value.html">DataValue</a> &gt; &amp;values)</td></tr>
+<tr class="memitem:abb0eeca4fc9483867c488318f5de7208"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_column_store_1_1_data_record.html#abb0eeca4fc9483867c488318f5de7208">DataRecord</a> ()</td></tr>
+<tr class="separator:abb0eeca4fc9483867c488318f5de7208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac422d354387253effea7a5b858f1907c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_column_store_1_1_data_record.html#ac422d354387253effea7a5b858f1907c">DataRecord</a> (std::vector&lt; <a class="el" href="class_column_store_1_1_data_value.html">DataValue</a> &gt; &amp;<a class="el" href="struct_column_store_1_1_data_record.html#ad8053b130b3b8cd0e0c215ac0063fe2e">values</a>)</td></tr>
 <tr class="separator:ac422d354387253effea7a5b858f1907c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30ee7c2884d59e1c29ca011d039baa06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_column_store_1_1_data_value.html">DataValue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_column_store_1_1_data_record.html#a30ee7c2884d59e1c29ca011d039baa06">operator[]</a> (int index)</td></tr>
 <tr class="memdesc:a30ee7c2884d59e1c29ca011d039baa06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts data value by index.  <a href="struct_column_store_1_1_data_record.html#a30ee7c2884d59e1c29ca011d039baa06">More...</a><br /></td></tr>
@@ -90,8 +99,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ad8053b130b3b8cd0e0c215ac0063fe2e"><td class="memItemLeft" align="right" valign="top"><a id="ad8053b130b3b8cd0e0c215ac0063fe2e"></a>
-std::vector&lt; <a class="el" href="class_column_store_1_1_data_value.html">DataValue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>values</b></td></tr>
+<tr class="memitem:ad8053b130b3b8cd0e0c215ac0063fe2e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_column_store_1_1_data_value.html">DataValue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_column_store_1_1_data_record.html#ad8053b130b3b8cd0e0c215ac0063fe2e">values</a></td></tr>
 <tr class="separator:ad8053b130b3b8cd0e0c215ac0063fe2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -100,7 +108,59 @@ std::vector&lt; <a class="el" href="class_column_store_1_1_data_value.html">Data
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_column_store_1_1_data_record_metadata.html" title="Stores metadata information of the data record.">DataRecordMetadata</a> </dd>
 <dd>
 <a class="el" href="class_column_store_1_1_data_value.html" title="Implementation of a single data element.">DataValue</a> </dd></dl>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="abb0eeca4fc9483867c488318f5de7208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb0eeca4fc9483867c488318f5de7208">&#9670;&nbsp;</a></span>DataRecord() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ColumnStore::DataRecord::DataRecord </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac422d354387253effea7a5b858f1907c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac422d354387253effea7a5b858f1907c">&#9670;&nbsp;</a></span>DataRecord() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ColumnStore::DataRecord::DataRecord </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_column_store_1_1_data_value.html">DataValue</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a30ee7c2884d59e1c29ca011d039baa06"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30ee7c2884d59e1c29ca011d039baa06">&#9670;&nbsp;</a></span>operator[]()</h2>
 
@@ -133,6 +193,21 @@ std::vector&lt; <a class="el" href="class_column_store_1_1_data_value.html">Data
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_column_store_1_1_data_value.html" title="Implementation of a single data element.">DataValue</a> at index </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad8053b130b3b8cd0e0c215ac0063fe2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8053b130b3b8cd0e0c215ac0063fe2e">&#9670;&nbsp;</a></span>values</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_column_store_1_1_data_value.html">DataValue</a>&gt; ColumnStore::DataRecord::values</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

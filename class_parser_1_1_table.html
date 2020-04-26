@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Parser</b></li><li class="navelem"><a class="el" href="class_parser_1_1_table.html">Table</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespace_parser.html">Parser</a></li><li class="navelem"><a class="el" href="class_parser_1_1_table.html">Table</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -73,64 +73,523 @@ $(function() {
 <div class="title">Parser::Table Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_table_8h_source.html">Table.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Parser::Table:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_parser_1_1_table__coll__graph.png" border="0" usemap="#_parser_1_1_table_coll__map" alt="Collaboration graph"/></div>
+<map name="_parser_1_1_table_coll__map" id="_parser_1_1_table_coll__map">
+<area shape="rect" title=" " alt="" coords="5,160,144,413"/>
+<area shape="rect" title=" " alt="" coords="47,5,102,83"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a018b874faa50f5ff1b5802513f976a6d"><td class="memItemLeft" align="right" valign="top"><a id="a018b874faa50f5ff1b5802513f976a6d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_table_name</b> (std::string table_n)</td></tr>
+<tr class="memitem:a018b874faa50f5ff1b5802513f976a6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_table.html#a018b874faa50f5ff1b5802513f976a6d">set_table_name</a> (std::string table_n)</td></tr>
 <tr class="separator:a018b874faa50f5ff1b5802513f976a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a341a77697c6a944a021b0d3771151273"><td class="memItemLeft" align="right" valign="top"><a id="a341a77697c6a944a021b0d3771151273"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_primary_key</b> (std::string pk)</td></tr>
+<tr class="memitem:a341a77697c6a944a021b0d3771151273"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_table.html#a341a77697c6a944a021b0d3771151273">set_primary_key</a> (std::string pk)</td></tr>
 <tr class="separator:a341a77697c6a944a021b0d3771151273"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7fcab38ecc0277ab4beeb67caf76430"><td class="memItemLeft" align="right" valign="top"><a id="aa7fcab38ecc0277ab4beeb67caf76430"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add_column</b> (std::string column_name, std::string data_type, int size=0)</td></tr>
+<tr class="memitem:aa7fcab38ecc0277ab4beeb67caf76430"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_table.html#aa7fcab38ecc0277ab4beeb67caf76430">add_column</a> (std::string column_name, std::string data_type, int size=0)</td></tr>
 <tr class="separator:aa7fcab38ecc0277ab4beeb67caf76430"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4b38a5141aae464e2204b4ce1c76699"><td class="memItemLeft" align="right" valign="top"><a id="aa4b38a5141aae464e2204b4ce1c76699"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add_foreign_key</b> (std::string from, std::string table, std::string to)</td></tr>
+<tr class="memitem:aa4b38a5141aae464e2204b4ce1c76699"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_table.html#aa4b38a5141aae464e2204b4ce1c76699">add_foreign_key</a> (std::string from, std::string table, std::string to)</td></tr>
 <tr class="separator:aa4b38a5141aae464e2204b4ce1c76699"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4519c3152e6079b1931f3408ed587bdd"><td class="memItemLeft" align="right" valign="top"><a id="a4519c3152e6079b1931f3408ed587bdd"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_table_name</b> ()</td></tr>
+<tr class="memitem:a4519c3152e6079b1931f3408ed587bdd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_table.html#a4519c3152e6079b1931f3408ed587bdd">get_table_name</a> ()</td></tr>
 <tr class="separator:a4519c3152e6079b1931f3408ed587bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa350b51e5fce0e5f39d6ef82619b6c88"><td class="memItemLeft" align="right" valign="top"><a id="aa350b51e5fce0e5f39d6ef82619b6c88"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_primary_key</b> ()</td></tr>
+<tr class="memitem:aa350b51e5fce0e5f39d6ef82619b6c88"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_table.html#aa350b51e5fce0e5f39d6ef82619b6c88">get_primary_key</a> ()</td></tr>
 <tr class="separator:aa350b51e5fce0e5f39d6ef82619b6c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55124dc2c12393ede3aa2619e77e923f"><td class="memItemLeft" align="right" valign="top"><a id="a55124dc2c12393ede3aa2619e77e923f"></a>
-std::vector&lt; <a class="el" href="struct_parser_1_1foreign__key.html">foreign_key</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_foreign_keys</b> ()</td></tr>
+<tr class="memitem:a55124dc2c12393ede3aa2619e77e923f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_parser_1_1foreign__key.html">foreign_key</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_table.html#a55124dc2c12393ede3aa2619e77e923f">get_foreign_keys</a> ()</td></tr>
 <tr class="separator:a55124dc2c12393ede3aa2619e77e923f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa38453cc984ce86b7d43fc7ecde12da5"><td class="memItemLeft" align="right" valign="top"><a id="aa38453cc984ce86b7d43fc7ecde12da5"></a>
-std::vector&lt; <a class="el" href="struct_parser_1_1_column.html">Parser::Column</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_columns</b> ()</td></tr>
+<tr class="memitem:aa38453cc984ce86b7d43fc7ecde12da5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_parser_1_1_column.html">Parser::Column</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_table.html#aa38453cc984ce86b7d43fc7ecde12da5">get_columns</a> ()</td></tr>
 <tr class="separator:aa38453cc984ce86b7d43fc7ecde12da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e22b10515d9ae3ceff4e7b559f19905"><td class="memItemLeft" align="right" valign="top"><a id="a1e22b10515d9ae3ceff4e7b559f19905"></a>
-<a class="el" href="struct_parser_1_1_column.html">Parser::Column</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (int i)</td></tr>
+<tr class="memitem:a1e22b10515d9ae3ceff4e7b559f19905"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_parser_1_1_column.html">Parser::Column</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_table.html#a1e22b10515d9ae3ceff4e7b559f19905">operator[]</a> (int i)</td></tr>
 <tr class="separator:a1e22b10515d9ae3ceff4e7b559f19905"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d243a03e8212b0504377ee1c48b0bb0"><td class="memItemLeft" align="right" valign="top"><a id="a0d243a03e8212b0504377ee1c48b0bb0"></a>
-<a class="el" href="struct_parser_1_1_column.html">Parser::Column</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_column</b> (std::string name)</td></tr>
+<tr class="memitem:a0d243a03e8212b0504377ee1c48b0bb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_parser_1_1_column.html">Parser::Column</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_table.html#a0d243a03e8212b0504377ee1c48b0bb0">get_column</a> (std::string name)</td></tr>
 <tr class="separator:a0d243a03e8212b0504377ee1c48b0bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7747f9279078caa52d32223c4a69d53"><td class="memItemLeft" align="right" valign="top"><a id="ab7747f9279078caa52d32223c4a69d53"></a>
-<a class="el" href="struct_parser_1_1_column.html">Parser::Column</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (std::string name)</td></tr>
+<tr class="memitem:ab7747f9279078caa52d32223c4a69d53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_parser_1_1_column.html">Parser::Column</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_table.html#ab7747f9279078caa52d32223c4a69d53">operator[]</a> (std::string name)</td></tr>
 <tr class="separator:ab7747f9279078caa52d32223c4a69d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a9cb76abe816d393af117532278d34d8f"><td class="memItemLeft" align="right" valign="top"><a id="a9cb76abe816d393af117532278d34d8f"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>table_name</b></td></tr>
+<tr class="memitem:a9cb76abe816d393af117532278d34d8f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_table.html#a9cb76abe816d393af117532278d34d8f">table_name</a></td></tr>
 <tr class="separator:a9cb76abe816d393af117532278d34d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5d2d552f48cf6f6d2e62629830a6931"><td class="memItemLeft" align="right" valign="top"><a id="ac5d2d552f48cf6f6d2e62629830a6931"></a>
-std::unordered_map&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>column_map</b></td></tr>
+<tr class="memitem:ac5d2d552f48cf6f6d2e62629830a6931"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_table.html#ac5d2d552f48cf6f6d2e62629830a6931">column_map</a></td></tr>
 <tr class="separator:ac5d2d552f48cf6f6d2e62629830a6931"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b9993e8802faa019807318c1f231a2d"><td class="memItemLeft" align="right" valign="top"><a id="a7b9993e8802faa019807318c1f231a2d"></a>
-std::vector&lt; <a class="el" href="struct_parser_1_1_column.html">Parser::Column</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>columns</b></td></tr>
+<tr class="memitem:a7b9993e8802faa019807318c1f231a2d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_parser_1_1_column.html">Parser::Column</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_table.html#a7b9993e8802faa019807318c1f231a2d">columns</a></td></tr>
 <tr class="separator:a7b9993e8802faa019807318c1f231a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79940bbd3c49fa204b85f816dc02cd5d"><td class="memItemLeft" align="right" valign="top"><a id="a79940bbd3c49fa204b85f816dc02cd5d"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>primary_key</b></td></tr>
+<tr class="memitem:a79940bbd3c49fa204b85f816dc02cd5d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_table.html#a79940bbd3c49fa204b85f816dc02cd5d">primary_key</a></td></tr>
 <tr class="separator:a79940bbd3c49fa204b85f816dc02cd5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49881d34f5bf8d5dab2762994adceade"><td class="memItemLeft" align="right" valign="top"><a id="a49881d34f5bf8d5dab2762994adceade"></a>
-std::vector&lt; <a class="el" href="struct_parser_1_1foreign__key.html">foreign_key</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>foreign_keys</b></td></tr>
+<tr class="memitem:a49881d34f5bf8d5dab2762994adceade"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_parser_1_1foreign__key.html">foreign_key</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_table.html#a49881d34f5bf8d5dab2762994adceade">foreign_keys</a></td></tr>
 <tr class="separator:a49881d34f5bf8d5dab2762994adceade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa7fcab38ecc0277ab4beeb67caf76430"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7fcab38ecc0277ab4beeb67caf76430">&#9670;&nbsp;</a></span>add_column()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Parser::Table::add_column </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>column_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>data_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_parser_1_1_table_aa7fcab38ecc0277ab4beeb67caf76430_icgraph.png" border="0" usemap="#class_parser_1_1_table_aa7fcab38ecc0277ab4beeb67caf76430_icgraph" alt=""/></div>
+<map name="class_parser_1_1_table_aa7fcab38ecc0277ab4beeb67caf76430_icgraph" id="class_parser_1_1_table_aa7fcab38ecc0277ab4beeb67caf76430_icgraph">
+<area shape="rect" title=" " alt="" coords="219,5,344,47"/>
+<area shape="rect" href="class_parser_1_1_schema_extractor.html#a184ba5bfd0ce0a1f9f293968c8221fc5" title=" " alt="" coords="5,5,171,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa4b38a5141aae464e2204b4ce1c76699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4b38a5141aae464e2204b4ce1c76699">&#9670;&nbsp;</a></span>add_foreign_key()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Parser::Table::add_foreign_key </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>table</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>to</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_parser_1_1_table_aa4b38a5141aae464e2204b4ce1c76699_icgraph.png" border="0" usemap="#class_parser_1_1_table_aa4b38a5141aae464e2204b4ce1c76699_icgraph" alt=""/></div>
+<map name="class_parser_1_1_table_aa4b38a5141aae464e2204b4ce1c76699_icgraph" id="class_parser_1_1_table_aa4b38a5141aae464e2204b4ce1c76699_icgraph">
+<area shape="rect" title=" " alt="" coords="219,5,344,47"/>
+<area shape="rect" href="class_parser_1_1_schema_extractor.html#a184ba5bfd0ce0a1f9f293968c8221fc5" title=" " alt="" coords="5,5,171,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0d243a03e8212b0504377ee1c48b0bb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d243a03e8212b0504377ee1c48b0bb0">&#9670;&nbsp;</a></span>get_column()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_parser_1_1_column.html">Parser::Column</a>&amp; Parser::Table::get_column </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa38453cc984ce86b7d43fc7ecde12da5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa38453cc984ce86b7d43fc7ecde12da5">&#9670;&nbsp;</a></span>get_columns()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="struct_parser_1_1_column.html">Parser::Column</a>&gt;&amp; Parser::Table::get_columns </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_parser_1_1_table_aa38453cc984ce86b7d43fc7ecde12da5_icgraph.png" border="0" usemap="#class_parser_1_1_table_aa38453cc984ce86b7d43fc7ecde12da5_icgraph" alt=""/></div>
+<map name="class_parser_1_1_table_aa38453cc984ce86b7d43fc7ecde12da5_icgraph" id="class_parser_1_1_table_aa38453cc984ce86b7d43fc7ecde12da5_icgraph">
+<area shape="rect" title=" " alt="" coords="216,5,339,47"/>
+<area shape="rect" href="class_postgre_s_q_l_data_source.html#ad03bcc06efafaa8bafc0236d096ff213" title=" " alt="" coords="5,5,168,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a55124dc2c12393ede3aa2619e77e923f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55124dc2c12393ede3aa2619e77e923f">&#9670;&nbsp;</a></span>get_foreign_keys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="struct_parser_1_1foreign__key.html">foreign_key</a>&gt;&amp; Parser::Table::get_foreign_keys </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa350b51e5fce0e5f39d6ef82619b6c88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa350b51e5fce0e5f39d6ef82619b6c88">&#9670;&nbsp;</a></span>get_primary_key()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Parser::Table::get_primary_key </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4519c3152e6079b1931f3408ed587bdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4519c3152e6079b1931f3408ed587bdd">&#9670;&nbsp;</a></span>get_table_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Parser::Table::get_table_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_parser_1_1_table_a4519c3152e6079b1931f3408ed587bdd_icgraph.png" border="0" usemap="#class_parser_1_1_table_a4519c3152e6079b1931f3408ed587bdd_icgraph" alt=""/></div>
+<map name="class_parser_1_1_table_a4519c3152e6079b1931f3408ed587bdd_icgraph" id="class_parser_1_1_table_a4519c3152e6079b1931f3408ed587bdd_icgraph">
+<area shape="rect" title=" " alt="" coords="224,5,347,47"/>
+<area shape="rect" href="class_parser_1_1_schema_meta_data.html#ab23b7f3837248c9186d3be0781d1b61c" title=" " alt="" coords="5,5,176,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1e22b10515d9ae3ceff4e7b559f19905"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e22b10515d9ae3ceff4e7b559f19905">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_parser_1_1_column.html">Parser::Column</a>&amp; Parser::Table::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7747f9279078caa52d32223c4a69d53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7747f9279078caa52d32223c4a69d53">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_parser_1_1_column.html">Parser::Column</a>&amp; Parser::Table::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a341a77697c6a944a021b0d3771151273"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a341a77697c6a944a021b0d3771151273">&#9670;&nbsp;</a></span>set_primary_key()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Parser::Table::set_primary_key </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>pk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_parser_1_1_table_a341a77697c6a944a021b0d3771151273_icgraph.png" border="0" usemap="#class_parser_1_1_table_a341a77697c6a944a021b0d3771151273_icgraph" alt=""/></div>
+<map name="class_parser_1_1_table_a341a77697c6a944a021b0d3771151273_icgraph" id="class_parser_1_1_table_a341a77697c6a944a021b0d3771151273_icgraph">
+<area shape="rect" title=" " alt="" coords="219,5,341,47"/>
+<area shape="rect" href="class_parser_1_1_schema_extractor.html#a184ba5bfd0ce0a1f9f293968c8221fc5" title=" " alt="" coords="5,5,171,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a018b874faa50f5ff1b5802513f976a6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a018b874faa50f5ff1b5802513f976a6d">&#9670;&nbsp;</a></span>set_table_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Parser::Table::set_table_name </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>table_n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_parser_1_1_table_a018b874faa50f5ff1b5802513f976a6d_icgraph.png" border="0" usemap="#class_parser_1_1_table_a018b874faa50f5ff1b5802513f976a6d_icgraph" alt=""/></div>
+<map name="class_parser_1_1_table_a018b874faa50f5ff1b5802513f976a6d_icgraph" id="class_parser_1_1_table_a018b874faa50f5ff1b5802513f976a6d_icgraph">
+<area shape="rect" title=" " alt="" coords="219,5,341,47"/>
+<area shape="rect" href="class_parser_1_1_schema_extractor.html#a184ba5bfd0ce0a1f9f293968c8221fc5" title=" " alt="" coords="5,5,171,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac5d2d552f48cf6f6d2e62629830a6931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5d2d552f48cf6f6d2e62629830a6931">&#9670;&nbsp;</a></span>column_map</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, int&gt; Parser::Table::column_map</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b9993e8802faa019807318c1f231a2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b9993e8802faa019807318c1f231a2d">&#9670;&nbsp;</a></span>columns</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="struct_parser_1_1_column.html">Parser::Column</a>&gt; Parser::Table::columns</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49881d34f5bf8d5dab2762994adceade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49881d34f5bf8d5dab2762994adceade">&#9670;&nbsp;</a></span>foreign_keys</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="struct_parser_1_1foreign__key.html">foreign_key</a>&gt; Parser::Table::foreign_keys</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79940bbd3c49fa204b85f816dc02cd5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79940bbd3c49fa204b85f816dc02cd5d">&#9670;&nbsp;</a></span>primary_key</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Parser::Table::primary_key</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9cb76abe816d393af117532278d34d8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cb76abe816d393af117532278d34d8f">&#9670;&nbsp;</a></span>table_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Parser::Table::table_name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Parser/<a class="el" href="_table_8h_source.html">Table.h</a></li>
-<li>src/Parser/Table.cpp</li>
+<li>src/Parser/<a class="el" href="_table_8cpp.html">Table.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,0 +1,15 @@
+<map id="src/interfaces/ConditionQuery.h" name="src/interfaces/ConditionQuery.h">
+<area shape="rect" id="node1" title="Generic Condition Builder." alt="" coords="274,5,433,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="698,244,766,271"/>
+<area shape="rect" id="node3" title=" " alt="" coords="370,319,425,345"/>
+<area shape="rect" id="node4" title=" " alt="" coords="38,244,149,271"/>
+<area shape="rect" id="node5" href="$_data_generator_interface_8h.html" title="Data Generator Interface." alt="" coords="270,95,437,121"/>
+<area shape="rect" id="node13" href="$_validators_8h.html" title="RecordValidator Interfaces and Implementations for Query Processing." alt="" coords="461,95,552,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="173,244,232,271"/>
+<area shape="rect" id="node7" title=" " alt="" coords="257,244,359,271"/>
+<area shape="rect" id="node8" href="$interfaces_2_column_8h.html" title="Column Metadata and Type information." alt="" coords="598,244,674,271"/>
+<area shape="rect" id="node10" href="$_data_record_8h.html" title="Data storage structures." alt="" coords="350,169,450,196"/>
+<area shape="rect" id="node9" title=" " alt="" coords="602,319,670,345"/>
+<area shape="rect" id="node11" title=" " alt="" coords="435,244,477,271"/>
+<area shape="rect" id="node12" title=" " alt="" coords="501,244,573,271"/>
+</map>

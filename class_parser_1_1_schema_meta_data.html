@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Parser</b></li><li class="navelem"><a class="el" href="class_parser_1_1_schema_meta_data.html">SchemaMetaData</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespace_parser.html">Parser</a></li><li class="navelem"><a class="el" href="class_parser_1_1_schema_meta_data.html">SchemaMetaData</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -73,46 +73,333 @@ $(function() {
 <div class="title">Parser::SchemaMetaData Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_schema_meta_data_8h_source.html">SchemaMetaData.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Parser::SchemaMetaData:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_parser_1_1_schema_meta_data__coll__graph.png" border="0" usemap="#_parser_1_1_schema_meta_data_coll__map" alt="Collaboration graph"/></div>
+<map name="_parser_1_1_schema_meta_data_coll__map" id="_parser_1_1_schema_meta_data_coll__map">
+<area shape="rect" title=" " alt="" coords="194,315,365,465"/>
+<area shape="rect" title=" " alt="" coords="5,145,164,237"/>
+<area shape="rect" title=" " alt="" coords="29,5,140,83"/>
+<area shape="rect" title=" " alt="" coords="188,153,371,230"/>
+<area shape="rect" title=" " alt="" coords="346,5,405,83"/>
+<area shape="rect" title=" " alt="" coords="395,153,551,230"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab23b7f3837248c9186d3be0781d1b61c"><td class="memItemLeft" align="right" valign="top"><a id="ab23b7f3837248c9186d3be0781d1b61c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add_table</b> (<a class="el" href="class_parser_1_1_table.html">Table</a> table)</td></tr>
+<tr class="memitem:ab23b7f3837248c9186d3be0781d1b61c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_schema_meta_data.html#ab23b7f3837248c9186d3be0781d1b61c">add_table</a> (<a class="el" href="class_parser_1_1_table.html">Table</a> table)</td></tr>
 <tr class="separator:ab23b7f3837248c9186d3be0781d1b61c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2541e48427bbf99da1f0d098194dcfd"><td class="memItemLeft" align="right" valign="top"><a id="ab2541e48427bbf99da1f0d098194dcfd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add_projection</b> (<a class="el" href="class_parser_1_1_projection.html">Projection</a> projection)</td></tr>
+<tr class="memitem:ab2541e48427bbf99da1f0d098194dcfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_schema_meta_data.html#ab2541e48427bbf99da1f0d098194dcfd">add_projection</a> (<a class="el" href="class_parser_1_1_projection.html">Projection</a> projection)</td></tr>
 <tr class="separator:ab2541e48427bbf99da1f0d098194dcfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bb1664e9b6b21a8aa4585371b419f3f"><td class="memItemLeft" align="right" valign="top"><a id="a1bb1664e9b6b21a8aa4585371b419f3f"></a>
-vector&lt; <a class="el" href="class_parser_1_1_table.html">Table</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_tables</b> ()</td></tr>
+<tr class="memitem:a1bb1664e9b6b21a8aa4585371b419f3f"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_parser_1_1_table.html">Table</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_schema_meta_data.html#a1bb1664e9b6b21a8aa4585371b419f3f">get_tables</a> ()</td></tr>
 <tr class="separator:a1bb1664e9b6b21a8aa4585371b419f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae24dc5bd68981d49300f8cea576c7283"><td class="memItemLeft" align="right" valign="top"><a id="ae24dc5bd68981d49300f8cea576c7283"></a>
-<a class="el" href="class_parser_1_1_table.html">Table</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_table</b> (string table_name)</td></tr>
+<tr class="memitem:ae24dc5bd68981d49300f8cea576c7283"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_parser_1_1_table.html">Table</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_schema_meta_data.html#ae24dc5bd68981d49300f8cea576c7283">get_table</a> (string table_name)</td></tr>
 <tr class="separator:ae24dc5bd68981d49300f8cea576c7283"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa74b58b23cfe3f0f420128a06607e59a"><td class="memItemLeft" align="right" valign="top"><a id="aa74b58b23cfe3f0f420128a06607e59a"></a>
-vector&lt; <a class="el" href="class_parser_1_1_projection.html">Projection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_projections</b> ()</td></tr>
+<tr class="memitem:aa74b58b23cfe3f0f420128a06607e59a"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_parser_1_1_projection.html">Projection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_schema_meta_data.html#aa74b58b23cfe3f0f420128a06607e59a">get_projections</a> ()</td></tr>
 <tr class="separator:aa74b58b23cfe3f0f420128a06607e59a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc8584dc0753ef60670076659b280fd6"><td class="memItemLeft" align="right" valign="top"><a id="afc8584dc0753ef60670076659b280fd6"></a>
-<a class="el" href="class_parser_1_1_projection.html">Projection</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_projection</b> (string projection_name)</td></tr>
+<tr class="memitem:afc8584dc0753ef60670076659b280fd6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_parser_1_1_projection.html">Projection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_schema_meta_data.html#afc8584dc0753ef60670076659b280fd6">get_projection</a> (string projection_name)</td></tr>
 <tr class="separator:afc8584dc0753ef60670076659b280fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:aa86b3a850d464e7601278c453b5ea465"><td class="memItemLeft" align="right" valign="top"><a id="aa86b3a850d464e7601278c453b5ea465"></a>
-vector&lt; <a class="el" href="class_parser_1_1_table.html">Table</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tables</b></td></tr>
+<tr class="memitem:aa86b3a850d464e7601278c453b5ea465"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_parser_1_1_table.html">Table</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_schema_meta_data.html#aa86b3a850d464e7601278c453b5ea465">tables</a></td></tr>
 <tr class="separator:aa86b3a850d464e7601278c453b5ea465"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00e53a46e79f915742448f438247c36a"><td class="memItemLeft" align="right" valign="top"><a id="a00e53a46e79f915742448f438247c36a"></a>
-unordered_map&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>table_map</b></td></tr>
+<tr class="memitem:a00e53a46e79f915742448f438247c36a"><td class="memItemLeft" align="right" valign="top">unordered_map&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_schema_meta_data.html#a00e53a46e79f915742448f438247c36a">table_map</a></td></tr>
 <tr class="separator:a00e53a46e79f915742448f438247c36a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a220bae96c8d11c97ab3ec5f2e8861ed0"><td class="memItemLeft" align="right" valign="top"><a id="a220bae96c8d11c97ab3ec5f2e8861ed0"></a>
-vector&lt; <a class="el" href="class_parser_1_1_projection.html">Projection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>projections</b></td></tr>
+<tr class="memitem:a220bae96c8d11c97ab3ec5f2e8861ed0"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_parser_1_1_projection.html">Projection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_schema_meta_data.html#a220bae96c8d11c97ab3ec5f2e8861ed0">projections</a></td></tr>
 <tr class="separator:a220bae96c8d11c97ab3ec5f2e8861ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac242dc5ac499c63da4d5c41c30157e86"><td class="memItemLeft" align="right" valign="top"><a id="ac242dc5ac499c63da4d5c41c30157e86"></a>
-unordered_map&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>projection_map</b></td></tr>
+<tr class="memitem:ac242dc5ac499c63da4d5c41c30157e86"><td class="memItemLeft" align="right" valign="top">unordered_map&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_schema_meta_data.html#ac242dc5ac499c63da4d5c41c30157e86">projection_map</a></td></tr>
 <tr class="separator:ac242dc5ac499c63da4d5c41c30157e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab2541e48427bbf99da1f0d098194dcfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2541e48427bbf99da1f0d098194dcfd">&#9670;&nbsp;</a></span>add_projection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Parser::SchemaMetaData::add_projection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_parser_1_1_projection.html">Projection</a>&#160;</td>
+          <td class="paramname"><em>projection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_parser_1_1_schema_meta_data_ab2541e48427bbf99da1f0d098194dcfd_cgraph.png" border="0" usemap="#class_parser_1_1_schema_meta_data_ab2541e48427bbf99da1f0d098194dcfd_cgraph" alt=""/></div>
+<map name="class_parser_1_1_schema_meta_data_ab2541e48427bbf99da1f0d098194dcfd_cgraph" id="class_parser_1_1_schema_meta_data_ab2541e48427bbf99da1f0d098194dcfd_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,176,47"/>
+<area shape="rect" href="class_parser_1_1_projection.html#a135f46aa11eb91444a86d1ae4fc250f3" title=" " alt="" coords="224,5,372,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab23b7f3837248c9186d3be0781d1b61c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab23b7f3837248c9186d3be0781d1b61c">&#9670;&nbsp;</a></span>add_table()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Parser::SchemaMetaData::add_table </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_parser_1_1_table.html">Table</a>&#160;</td>
+          <td class="paramname"><em>table</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_parser_1_1_schema_meta_data_ab23b7f3837248c9186d3be0781d1b61c_cgraph.png" border="0" usemap="#class_parser_1_1_schema_meta_data_ab23b7f3837248c9186d3be0781d1b61c_cgraph" alt=""/></div>
+<map name="class_parser_1_1_schema_meta_data_ab23b7f3837248c9186d3be0781d1b61c_cgraph" id="class_parser_1_1_schema_meta_data_ab23b7f3837248c9186d3be0781d1b61c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,176,47"/>
+<area shape="rect" href="class_parser_1_1_table.html#a4519c3152e6079b1931f3408ed587bdd" title=" " alt="" coords="224,5,347,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afc8584dc0753ef60670076659b280fd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc8584dc0753ef60670076659b280fd6">&#9670;&nbsp;</a></span>get_projection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_parser_1_1_projection.html">Parser::Projection</a> Parser::SchemaMetaData::get_projection </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>projection_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_parser_1_1_schema_meta_data_afc8584dc0753ef60670076659b280fd6_icgraph.png" border="0" usemap="#class_parser_1_1_schema_meta_data_afc8584dc0753ef60670076659b280fd6_icgraph" alt=""/></div>
+<map name="class_parser_1_1_schema_meta_data_afc8584dc0753ef60670076659b280fd6_icgraph" id="class_parser_1_1_schema_meta_data_afc8584dc0753ef60670076659b280fd6_icgraph">
+<area shape="rect" title=" " alt="" coords="216,5,387,47"/>
+<area shape="rect" href="class_postgre_s_q_l_data_source.html#ad03bcc06efafaa8bafc0236d096ff213" title=" " alt="" coords="5,5,168,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa74b58b23cfe3f0f420128a06607e59a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa74b58b23cfe3f0f420128a06607e59a">&#9670;&nbsp;</a></span>get_projections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_parser_1_1_projection.html">Projection</a>&gt; Parser::SchemaMetaData::get_projections </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_parser_1_1_schema_meta_data_aa74b58b23cfe3f0f420128a06607e59a_icgraph.png" border="0" usemap="#class_parser_1_1_schema_meta_data_aa74b58b23cfe3f0f420128a06607e59a_icgraph" alt=""/></div>
+<map name="class_parser_1_1_schema_meta_data_aa74b58b23cfe3f0f420128a06607e59a_icgraph" id="class_parser_1_1_schema_meta_data_aa74b58b23cfe3f0f420128a06607e59a_icgraph">
+<area shape="rect" title=" " alt="" coords="216,5,387,47"/>
+<area shape="rect" href="class_postgre_s_q_l_data_source.html#ad03bcc06efafaa8bafc0236d096ff213" title=" " alt="" coords="5,5,168,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae24dc5bd68981d49300f8cea576c7283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae24dc5bd68981d49300f8cea576c7283">&#9670;&nbsp;</a></span>get_table()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_parser_1_1_table.html">Parser::Table</a> Parser::SchemaMetaData::get_table </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>table_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_parser_1_1_schema_meta_data_ae24dc5bd68981d49300f8cea576c7283_icgraph.png" border="0" usemap="#class_parser_1_1_schema_meta_data_ae24dc5bd68981d49300f8cea576c7283_icgraph" alt=""/></div>
+<map name="class_parser_1_1_schema_meta_data_ae24dc5bd68981d49300f8cea576c7283_icgraph" id="class_parser_1_1_schema_meta_data_ae24dc5bd68981d49300f8cea576c7283_icgraph">
+<area shape="rect" title=" " alt="" coords="216,5,387,47"/>
+<area shape="rect" href="class_postgre_s_q_l_data_source.html#ad03bcc06efafaa8bafc0236d096ff213" title=" " alt="" coords="5,5,168,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1bb1664e9b6b21a8aa4585371b419f3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bb1664e9b6b21a8aa4585371b419f3f">&#9670;&nbsp;</a></span>get_tables()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_parser_1_1_table.html">Table</a>&gt; Parser::SchemaMetaData::get_tables </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_parser_1_1_schema_meta_data_a1bb1664e9b6b21a8aa4585371b419f3f_icgraph.png" border="0" usemap="#class_parser_1_1_schema_meta_data_a1bb1664e9b6b21a8aa4585371b419f3f_icgraph" alt=""/></div>
+<map name="class_parser_1_1_schema_meta_data_a1bb1664e9b6b21a8aa4585371b419f3f_icgraph" id="class_parser_1_1_schema_meta_data_a1bb1664e9b6b21a8aa4585371b419f3f_icgraph">
+<area shape="rect" title=" " alt="" coords="216,5,387,47"/>
+<area shape="rect" href="class_postgre_s_q_l_data_source.html#ad03bcc06efafaa8bafc0236d096ff213" title=" " alt="" coords="5,5,168,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac242dc5ac499c63da4d5c41c30157e86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac242dc5ac499c63da4d5c41c30157e86">&#9670;&nbsp;</a></span>projection_map</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unordered_map&lt;string, int&gt; Parser::SchemaMetaData::projection_map</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a220bae96c8d11c97ab3ec5f2e8861ed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a220bae96c8d11c97ab3ec5f2e8861ed0">&#9670;&nbsp;</a></span>projections</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_parser_1_1_projection.html">Projection</a>&gt; Parser::SchemaMetaData::projections</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00e53a46e79f915742448f438247c36a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00e53a46e79f915742448f438247c36a">&#9670;&nbsp;</a></span>table_map</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unordered_map&lt;string, int&gt; Parser::SchemaMetaData::table_map</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa86b3a850d464e7601278c453b5ea465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa86b3a850d464e7601278c453b5ea465">&#9670;&nbsp;</a></span>tables</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_parser_1_1_table.html">Table</a>&gt; Parser::SchemaMetaData::tables</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Parser/<a class="el" href="_schema_meta_data_8h_source.html">SchemaMetaData.h</a></li>
-<li>src/Parser/SchemaMetaData.cpp</li>
+<li>src/Parser/<a class="el" href="_schema_meta_data_8cpp.html">SchemaMetaData.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

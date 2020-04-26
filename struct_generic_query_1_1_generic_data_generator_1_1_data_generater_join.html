@@ -75,16 +75,22 @@ $(function() {
 
 <p>helper structure to efficiently process joins  
  <a href="struct_generic_query_1_1_generic_data_generator_1_1_data_generater_join.html#details">More...</a></p>
+<div class="dynheader">
+Collaboration diagram for GenericQuery::GenericDataGenerator::DataGeneraterJoin:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_generic_query_1_1_generic_data_generator_1_1_data_generater_join__coll__graph.png" border="0" usemap="#_generic_query_1_1_generic_data_generator_1_1_data_generater_join_coll__map" alt="Collaboration graph"/></div>
+<map name="_generic_query_1_1_generic_data_generator_1_1_data_generater_join_coll__map" id="_generic_query_1_1_generic_data_generator_1_1_data_generater_join_coll__map">
+<area shape="rect" title="helper structure to efficiently process joins" alt="" coords="5,5,199,127"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a72418034d8a827b974bc09248b944fd4"><td class="memItemLeft" align="right" valign="top"><a id="a72418034d8a827b974bc09248b944fd4"></a>
-std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_generic_query_1_1_generic_data_generator_1_1_data_generater_join.html#a72418034d8a827b974bc09248b944fd4">indices</a></td></tr>
-<tr class="memdesc:a72418034d8a827b974bc09248b944fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">indices of columns required for joined result <br /></td></tr>
+<tr class="memitem:a72418034d8a827b974bc09248b944fd4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_generic_query_1_1_generic_data_generator_1_1_data_generater_join.html#a72418034d8a827b974bc09248b944fd4">indices</a></td></tr>
+<tr class="memdesc:a72418034d8a827b974bc09248b944fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">indices of columns required for joined result  <a href="struct_generic_query_1_1_generic_data_generator_1_1_data_generater_join.html#a72418034d8a827b974bc09248b944fd4">More...</a><br /></td></tr>
 <tr class="separator:a72418034d8a827b974bc09248b944fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c430fefd72b5caefd90a1ae3a6d86e8"><td class="memItemLeft" align="right" valign="top"><a id="a3c430fefd72b5caefd90a1ae3a6d86e8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_generic_query_1_1_generic_data_generator_1_1_data_generater_join.html#a3c430fefd72b5caefd90a1ae3a6d86e8">FKIndex</a></td></tr>
-<tr class="memdesc:a3c430fefd72b5caefd90a1ae3a6d86e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">FK index in base data source. <br /></td></tr>
+<tr class="memitem:a3c430fefd72b5caefd90a1ae3a6d86e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_generic_query_1_1_generic_data_generator_1_1_data_generater_join.html#a3c430fefd72b5caefd90a1ae3a6d86e8">FKIndex</a></td></tr>
+<tr class="memdesc:a3c430fefd72b5caefd90a1ae3a6d86e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">FK index in base data source.  <a href="struct_generic_query_1_1_generic_data_generator_1_1_data_generater_join.html#a3c430fefd72b5caefd90a1ae3a6d86e8">More...</a><br /></td></tr>
 <tr class="separator:a3c430fefd72b5caefd90a1ae3a6d86e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27616f3ffb659547dc3af5433dd7ea16"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; int, <a class="el" href="struct_column_store_1_1_data_record.html">DataRecord</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_generic_query_1_1_generic_data_generator_1_1_data_generater_join.html#a27616f3ffb659547dc3af5433dd7ea16">joinMap</a></td></tr>
 <tr class="memdesc:a27616f3ffb659547dc3af5433dd7ea16"><td class="mdescLeft">&#160;</td><td class="mdescRight">map of PK of join source to join records  <a href="struct_generic_query_1_1_generic_data_generator_1_1_data_generater_join.html#a27616f3ffb659547dc3af5433dd7ea16">More...</a><br /></td></tr>
@@ -93,6 +99,38 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struc
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>helper structure to efficiently process joins </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3c430fefd72b5caefd90a1ae3a6d86e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c430fefd72b5caefd90a1ae3a6d86e8">&#9670;&nbsp;</a></span>FKIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GenericQuery::GenericDataGenerator::DataGeneraterJoin::FKIndex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>FK index in base data source. </p>
+
+</div>
+</div>
+<a id="a72418034d8a827b974bc09248b944fd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72418034d8a827b974bc09248b944fd4">&#9670;&nbsp;</a></span>indices</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; GenericQuery::GenericDataGenerator::DataGeneraterJoin::indices</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>indices of columns required for joined result </p>
+
+</div>
+</div>
 <a id="a27616f3ffb659547dc3af5433dd7ea16"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a27616f3ffb659547dc3af5433dd7ea16">&#9670;&nbsp;</a></span>joinMap</h2>
 

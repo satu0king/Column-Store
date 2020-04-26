@@ -1,0 +1,6 @@
+<map id="ColumnStore::ReccordValidatorMetadataInterface" name="ColumnStore::ReccordValidatorMetadataInterface">
+<area shape="rect" id="node1" title="Extended RecordValidator Interface which handles Metadata." alt="" coords="99,160,301,267"/>
+<area shape="rect" id="node3" href="$class_column_store_1_1_equal_record_validator.html" title="Checks equality of a data field." alt="" coords="5,315,181,451"/>
+<area shape="rect" id="node4" href="$class_column_store_1_1_less_than_record_validator.html" title="Checks if value of a field is less than given value." alt="" coords="205,315,408,451"/>
+<area shape="rect" id="node2" href="$class_column_store_1_1_record_validator_interface.html" title="Base RecordValidator Interface." alt="" coords="103,5,297,112"/>
+</map>
