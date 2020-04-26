@@ -26,9 +26,9 @@ class SchemaMetaData {
         projection_map[projection.get_projection_name()] = projections.size();
         projections.push_back(projection);
     }
-    vector<Table> get_tables() { return tables; }
-    Table get_table(string table_name);
-    vector<Projection> get_projections() { return projections; }
-    Projection get_projection(string projection_name);
+    vector<Table> &get_tables() { return tables; }
+    Table &get_table(string table_name);
+    vector<Projection> &get_projections() { return projections; }
+    Projection &get_projection(string projection_name);
 };
 }  // namespace Parser

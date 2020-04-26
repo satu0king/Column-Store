@@ -4,4 +4,6 @@ test.xml
 docs
 a.out
 build/*
+store/*
 Column_Store.*
+compile_commands.json
