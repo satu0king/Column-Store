@@ -8,6 +8,10 @@ struct DataType {
     int size;
     DataType(ColumnStore::DataType dataType, int size = 0)
         : dataType(dataType), size(size) {}
+
+    operator ColumnStore::DataType() {
+        return dataType;
+    }
 };
 
 struct Column {
@@ -26,6 +30,10 @@ struct Column {
 
     ColumnStore::Column getColumnStoreColumn() {
         return ColumnStore::Column{name, type.dataType, index};
+    }
+
+    operator ColumnStore::Column() {
+        return getColumnStoreColumn();
     }
 };
 }  // namespace Parser
