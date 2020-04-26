@@ -35,7 +35,11 @@ void Parser::SchemaExtractor::create_tables() {
             pugi::xml_node column = c.node();
             string column_name = column.child_value("column_name");
             string data_type = column.child_value("data_type");
-            new_table.add_column(column_name, data_type);
+            if(data_type == "int" || data_type == "float") {
+                new_table.add_column(column_name, data_type);
+            } else {
+                new_table.add_column(column_name, "string", data_type.substr(5));
+            }
         }
 
         string get_foreign_keys = "/schema/tables/table[table_name=\"" +
