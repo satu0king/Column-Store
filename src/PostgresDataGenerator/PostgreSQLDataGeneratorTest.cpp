@@ -1,7 +1,6 @@
 #include "PostgreSQLDataGenerator.h"
 #include "PostgreSQLMetaData.h"
 
-
 int main() {
     Parser::SchemaExtractor schema_extractor("../schema.xml");
     SchemaMetaData schema_meta_data = schema_extractor.get_meta_data();

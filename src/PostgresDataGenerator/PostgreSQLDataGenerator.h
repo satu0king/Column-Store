@@ -14,12 +14,12 @@ using namespace std;
 using ColumnStore::DataRecord;
 using ColumnStore::DataRecordMetadata;
 using ColumnStore::DataSource;
+using ColumnStore::DataType;
 using ColumnStore::DataValue;
 using ColumnStore::Metadata;
-using ColumnStore::DataType;
-using Parser::Table;
 using Parser::Projection;
 using Parser::projection_column;
+using Parser::Table;
 
 class PostgreSQLDataSource : public ColumnStore::DataGeneratorInterface {
     std::queue<DataRecord> data;
@@ -50,7 +50,8 @@ class PostgreSQLDataSource : public ColumnStore::DataGeneratorInterface {
         total_number_of_rows = rows[0]["count"].as<int>();
     }
 
-    void load_into_queue(pqxx::transaction_base &txn, vector<ColumnStore::Column> columns) {
+    void load_into_queue(pqxx::transaction_base &txn,
+                         vector<ColumnStore::Column> columns) {
         pqxx::result rows_of_all_columns = get_rows_of_columns(txn, columns);
         for (auto row : rows_of_all_columns) {
             vector<DataValue> values;
@@ -95,8 +96,7 @@ class PostgreSQLDataSource : public ColumnStore::DataGeneratorInterface {
                 vector<ColumnStore::Column> metadata_columns;
                 if (columns.size() == 0) {
                     auto temp = table.get_columns();
-                    for(auto column: temp)
-                    metadata_columns.push_back(column);
+                    for (auto column : temp) metadata_columns.push_back(column);
                 } else {
                     for (int i = 0; i < columns.size(); i++) {
                         metadata_columns.push_back(table[columns[i]]);
@@ -116,15 +116,15 @@ class PostgreSQLDataSource : public ColumnStore::DataGeneratorInterface {
                         p.get_columns();
                     for (int i = 0; i < projection_columns.size(); i++) {
                         projection_column p_column = projection_columns[i];
-                        ColumnStore::Column c = {p_column.name, p_column.data_type,
-                                    p_column.index};
+                        ColumnStore::Column c = {
+                            p_column.name, p_column.data_type, p_column.index};
                         metadata_columns.push_back(c);
                     }
                 } else {
                     for (int i = 0; i < columns.size(); i++) {
                         projection_column p_column = p[columns[i]];
-                        ColumnStore::Column c = {p_column.name, p_column.data_type,
-                                    p_column.index};
+                        ColumnStore::Column c = {
+                            p_column.name, p_column.data_type, p_column.index};
                         metadata_columns.push_back(c);
                     }
                 }
@@ -149,8 +149,8 @@ class PostgreSQLDataSource : public ColumnStore::DataGeneratorInterface {
                     Table table = schema_meta_data.get_table(relation_name);
                     vector<ColumnStore::Column> metadata_columns;
                     if (columns.size() == 0) {
-                        for(auto c: table.get_columns())
-                        metadata_columns.push_back(c);
+                        for (auto c : table.get_columns())
+                            metadata_columns.push_back(c);
                     } else {
                         for (int i = 0; i < columns.size(); i++) {
                             metadata_columns.push_back(table[columns[i]]);
@@ -170,15 +170,17 @@ class PostgreSQLDataSource : public ColumnStore::DataGeneratorInterface {
                             p.get_columns();
                         for (int i = 0; i < projection_columns.size(); i++) {
                             projection_column p_column = projection_columns[i];
-                            ColumnStore::Column c = {p_column.name, p_column.data_type,
-                                        p_column.index};
+                            ColumnStore::Column c = {p_column.name,
+                                                     p_column.data_type,
+                                                     p_column.index};
                             metadata_columns.push_back(c);
                         }
                     } else {
                         for (int i = 0; i < columns.size(); i++) {
                             projection_column p_column = p[columns[i]];
-                            ColumnStore::Column c = {p_column.name, p_column.data_type,
-                                        p_column.index};
+                            ColumnStore::Column c = {p_column.name,
+                                                     p_column.data_type,
+                                                     p_column.index};
                             metadata_columns.push_back(c);
                         }
                     }
