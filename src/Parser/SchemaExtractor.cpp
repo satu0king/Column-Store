@@ -2,7 +2,7 @@
 
 using namespace std;
 
-SchemaExtractor::SchemaExtractor(string xml_fpath) {
+Parser::SchemaExtractor::SchemaExtractor(string xml_fpath) {
     xml_file_path = xml_fpath.c_str();
     pugi::xml_parse_result result = xml_dom.load_file(xml_file_path);
     if (!result) {
@@ -18,7 +18,7 @@ SchemaExtractor::SchemaExtractor(string xml_fpath) {
     }
 }
 
-void SchemaExtractor::create_tables() {
+void Parser::SchemaExtractor::create_tables() {
     pugi::xpath_node_set tables = xml_dom.select_nodes("/schema/tables/table");
     for (pugi::xpath_node t : tables) {
         pugi::xml_node table = t.node();
@@ -79,7 +79,7 @@ void SchemaExtractor::create_tables() {
     }
 }
 
-void SchemaExtractor::create_projections() {
+void Parser::SchemaExtractor::create_projections() {
     pugi::xpath_node_set projections =
         xml_dom.select_nodes("/schema/projections/projection");
     for (pugi::xpath_node p : projections) {

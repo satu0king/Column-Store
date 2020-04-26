@@ -11,7 +11,7 @@
 
 using namespace std;
 
-SchemaLoader::SchemaLoader(string db_name, string username, string password,
+Parser::SchemaLoader::SchemaLoader(string db_name, string username, string password,
                            SchemaMetaData schema_meta_data)
     : db_name(db_name),
       username(username),
@@ -36,12 +36,12 @@ SchemaLoader::SchemaLoader(string db_name, string username, string password,
     }
 }
 
-void SchemaLoader::setup_database() {
+void Parser::SchemaLoader::setup_database() {
     create_tables();
     create_views();
 }
 
-void SchemaLoader::create_tables() {
+void Parser::SchemaLoader::create_tables() {
     pqxx::work W(*conn);
     vector<Table> tables = schema_meta_data.get_tables();
     for (Table table : tables) {
@@ -89,7 +89,7 @@ void SchemaLoader::create_tables() {
     W.commit();
 }
 
-void SchemaLoader::create_views() {
+void Parser::SchemaLoader::create_views() {
     pqxx::work W(*conn);
     vector<Projection> projections = schema_meta_data.get_projections();
     for (Projection projection : projections) {

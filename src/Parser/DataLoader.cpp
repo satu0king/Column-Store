@@ -2,7 +2,7 @@
 
 using namespace std;
 
-DataLoader::DataLoader(string db_name, string username, string password,
+Parser::DataLoader::DataLoader(string db_name, string username, string password,
                        string sql_file_name)
     : db_name(db_name),
       username(username),
@@ -27,7 +27,7 @@ DataLoader::DataLoader(string db_name, string username, string password,
     }
 }
 
-void DataLoader::load_data() {
+void Parser::DataLoader::load_data() {
     pqxx::work W(*conn);
     string line;
     try {
