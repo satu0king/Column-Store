@@ -28,7 +28,7 @@ add_executable(postgres_data_test src/PostgresDataGenerator/PostgreSQLDataGenera
 target_link_libraries(postgres_data_test PRIVATE postgres_data_generator)
 
 add_executable(main_test test.cpp)
-target_link_libraries(main_test PRIVATE csv_data_generator generic_query)
+target_link_libraries(main_test PRIVATE csv_data_generator generic_query interfaces)
 
 # add_executable(cache_server src/cache/cache_server.cpp)
 # target_link_libraries(cache_server PRIVATE Boost::program_options cache basic_data_connector postgres_data_connector gossip membership_list)

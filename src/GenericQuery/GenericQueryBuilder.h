@@ -3,9 +3,9 @@
 #include <string>
 #include <unordered_map>
 
-#include "ConditionQuery.h"
-#include "DataGeneratorInterface.h"
-#include "Validators.h"
+#include "interfaces/ConditionQuery.h"
+#include "interfaces/DataGeneratorInterface.h"
+#include "interfaces/Validators.h"
 
 /** @file
  * @brief Generic Query Builder

@@ -4,10 +4,10 @@
 #include <string>
 #include <unordered_map>
 
-#include "ConditionQuery.h"
-#include "DataGeneratorInterface.h"
 #include "GenericQueryBuilder.h"
-#include "Validators.h"
+#include "interfaces/ConditionQuery.h"
+#include "interfaces/DataGeneratorInterface.h"
+#include "interfaces/Validators.h"
 
 namespace GenericQuery {
 /**
@@ -17,11 +17,11 @@ namespace GenericQuery {
  *
  */
 
-using ColumnStore::RecordValidator;
-using ColumnStore::DataSource;
 using ColumnStore::DataRecord;
-using ColumnStore::DataValue;
+using ColumnStore::DataSource;
 using ColumnStore::DataType;
+using ColumnStore::DataValue;
+using ColumnStore::RecordValidator;
 
 class GenericDataGenerator : public ColumnStore::DataGeneratorInterface {
     /** @brief  builder object from which we are generating data */

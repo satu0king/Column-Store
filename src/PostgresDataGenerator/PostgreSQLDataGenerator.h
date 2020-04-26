@@ -5,7 +5,7 @@
 #include <queue>
 #include <vector>
 
-#include "DataGeneratorInterface.h"
+#include "interfaces/DataGeneratorInterface.h"
 #include "Parser/SchemaMetaData.h"
 #include "PostgreSQLMetaData.h"
 

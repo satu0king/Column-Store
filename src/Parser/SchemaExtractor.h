@@ -6,7 +6,7 @@
 #include <unordered_map>
 #include <vector>
 
-#include "../interfaces/Column.h"
+#include "interfaces/Column.h"
 #include "SchemaMetaData.h"
 #include "pugixml-1.10/src/pugixml.hpp"
 

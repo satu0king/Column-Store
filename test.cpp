@@ -2,8 +2,8 @@
 
 
 #include "src/interfaces/DataRecord.h"
-#include "GenericQueryBuilder.h"
-#include "GenericGenerator.h"
+#include "src/GenericQuery/GenericQueryBuilder.h"
+#include "src/GenericQuery/GenericGenerator.h"
 #include "src/CSVDataGenerator/CSVDataGenerator.h"
 
 using namespace ColumnStore;

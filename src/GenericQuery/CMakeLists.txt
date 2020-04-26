@@ -6,7 +6,8 @@ target_compile_options(generic_query PRIVATE -Wall)
 
 target_include_directories(generic_query 
 PUBLIC 
-    ${CMAKE_CURRENT_SOURCE_DIR} 
+    ${CMAKE_CURRENT_SOURCE_DIR}  
+    ${CMAKE_CURRENT_SOURCE_DIR}/.. 
 )
 
-target_link_libraries(generic_query PUBLIC interfaces)
+target_link_libraries(generic_query PUBLIC fort)

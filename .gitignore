@@ -4,3 +4,4 @@ test.xml
 docs
 a.out
 build/*
+Column_Store.*

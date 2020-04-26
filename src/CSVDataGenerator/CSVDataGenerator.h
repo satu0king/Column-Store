@@ -4,7 +4,7 @@
 #include <vector>
 
 #include "CSVparser.hpp"
-#include "DataGeneratorInterface.h"
+#include "interfaces/DataGeneratorInterface.h"
 
 /** @file
  * @brief Data Generator for CSV files
