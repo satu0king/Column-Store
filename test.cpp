@@ -23,9 +23,9 @@ int main(int argc, char **argv) {
 
         builder.where(Query(new LessThanQuery("Year", 1998)));
 
-        GenericDataGenerator generator(builder);
+        auto generator = builder.build();
 
-        generator.print();
+        generator->print();
     }
 
     {
@@ -42,9 +42,9 @@ int main(int argc, char **argv) {
             Query(new LessThanQuery("CGPA", 3.4f)),
             Query(new NotQuery(Query(new LessThanQuery("CGPA", 3.2f)))))));
 
-        GenericDataGenerator generator(builder);
+        auto generator = builder.build();
 
-        generator.print();
+        generator->print();
     }
     return 0;
 }

@@ -134,6 +134,6 @@ RecordValidator GenericQueryBuilder::generateRecordValidator() {
 }
 
 DataSource GenericQueryBuilder::build() {
-    
+    return DataSource(new GenericDataGenerator(*this));
 }
 };  // namespace GenericQuery
