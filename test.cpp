@@ -6,6 +6,10 @@
 #include "GenericGenerator.h"
 #include "src/CSVDataGenerator/CSVDataGenerator.h"
 
+using namespace ColumnStore;
+using namespace GenericQuery;
+using namespace CSV;
+
 int main(int argc, char **argv) {
     DataSource sampleCSV = DataSource(new CSVDataSource("../data/sample.csv"));
     DataSource studentCSV = DataSource(new CSVDataSource("../data/students.csv"));

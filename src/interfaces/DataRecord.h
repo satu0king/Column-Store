@@ -13,7 +13,7 @@
 /** @file DataRecord.h
  * @brief Data storage structures
  */
-
+namespace ColumnStore{
 /**
  * @brief Implementation of a single data element
  *
@@ -197,3 +197,4 @@ class DataRecordMetadata {
  * Metadata is transfered between objects using this type
  */
 typedef std::shared_ptr<DataRecordMetadata> Metadata;
+};

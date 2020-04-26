@@ -3,17 +3,17 @@
 #include <string>
 #include <unordered_map>
 
-#include "Validators.h"
 #include "DataGeneratorInterface.h"
+#include "Validators.h"
 
 /** @file
- * @brief Generic Query Builder
+ * @brief Generic Condition Builder
  *
- * This file contains structures required to construct the condition query any data source.
+ * This file contains structures required to construct the condition query any
+ * data source.
  */
 
-
-
+namespace ColumnStore {
 /**
  * @brief Base Condition Query Structure
  *
@@ -52,7 +52,6 @@ class ConditionQuery {
  *
  */
 typedef std::shared_ptr<ConditionQuery> Query;
-
 
 /**
  * @brief Logical AND query
@@ -172,22 +171,24 @@ class LessThanQuery : public ConditionQuery {
     std::any value;
 
    public:
-   /**
-    * @brief Construct a new Less Than Query object
-    * 
-    * @param name 
-    * @param value 
-    */
+    /**
+     * @brief Construct a new Less Than Query object
+     *
+     * @param name
+     * @param value
+     */
     LessThanQuery(std::string name, std::any value)
         : name(name), value(value) {}
 
     /**
      * @brief Get the Validator object
-     * 
-     * @param metadata 
-     * @return RecordValidator 
+     *
+     * @param metadata
+     * @return RecordValidator
      */
     RecordValidator getValidator(Metadata metadata) {
-        return RecordValidator(new LessThanRecordValidator(name, value, metadata));
+        return RecordValidator(
+            new LessThanRecordValidator(name, value, metadata));
     }
 };
+};  // namespace ColumnStore

@@ -4,6 +4,7 @@
  * @brief Data Generator Interface
  */
 
+namespace ColumnStore {
 /**
  * @brief Interface for relational data sources
  *
@@ -71,3 +72,4 @@ void DataGeneratorInterface::print() {
 
     std::cout << table.to_string() << std::endl;
 }
+};  // namespace ColumnStore

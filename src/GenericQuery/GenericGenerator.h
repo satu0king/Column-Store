@@ -9,13 +9,21 @@
 #include "GenericQueryBuilder.h"
 #include "Validators.h"
 
+namespace GenericQuery {
 /**
  * @brief Data Generator for GenericQueryBuilder
  *
  * @see GenericQueryBuilder
  *
  */
-class GenericDataGenerator : public DataGeneratorInterface {
+
+using ColumnStore::RecordValidator;
+using ColumnStore::DataSource;
+using ColumnStore::DataRecord;
+using ColumnStore::DataValue;
+using ColumnStore::DataType;
+
+class GenericDataGenerator : public ColumnStore::DataGeneratorInterface {
     /** @brief  builder object from which we are generating data */
     GenericQueryBuilder builder;
     RecordValidator recordValidator;
@@ -101,3 +109,4 @@ class GenericDataGenerator : public DataGeneratorInterface {
      */
     DataRecord next();
 };
+}  // namespace GenericQuery

@@ -34,7 +34,16 @@
  * 2000,Mercury,Cougar
  * ~~~~~~~~~~~~~~~~~~~~~
  */
-class CSVDataSource : public DataGeneratorInterface {
+
+using ColumnStore::Column;
+using ColumnStore::DataRecord;
+using ColumnStore::DataRecordMetadata;
+using ColumnStore::DataType;
+using ColumnStore::DataValue;
+using ColumnStore::Metadata;
+
+namespace CSV {
+class CSVDataSource : public ColumnStore::DataGeneratorInterface {
     /** @brief queue of data records for the generator */
     std::queue<DataRecord> data;
 
@@ -63,3 +72,5 @@ class CSVDataSource : public DataGeneratorInterface {
      */
     bool hasNext();
 };
+
+}  // namespace CSV

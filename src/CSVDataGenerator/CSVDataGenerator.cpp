@@ -47,6 +47,7 @@ std::string trim(const std::string &str,
  * ~~~~~~~~~~~~~~~~~~~~~
  */
 
+namespace CSV {
 /**
  * @brief Construct a new CSVDataSource object
  *
@@ -115,3 +116,5 @@ DataRecord CSVDataSource::next() {
  * @return false
  */
 bool CSVDataSource::hasNext() { return !data.empty(); }
+
+};  // namespace CSV

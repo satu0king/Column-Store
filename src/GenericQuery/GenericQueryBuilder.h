@@ -14,6 +14,19 @@
  * query features are join and filter
  */
 
+namespace GenericQuery {
+
+using ColumnStore::Column;
+using ColumnStore::ConditionQuery;
+using ColumnStore::DataRecord;
+using ColumnStore::DataRecordMetadata;
+using ColumnStore::DataSource;
+using ColumnStore::DataValue;
+using ColumnStore::Metadata;
+using ColumnStore::Query;
+using ColumnStore::RecordValidator;
+using ColumnStore::DataType;
+
 class GenericDataGenerator;
 
 /**
@@ -138,4 +151,8 @@ class GenericQueryBuilder {
      * @return RecordValidator
      */
     RecordValidator generateRecordValidator();
+
+
+    DataSource build();
 };
+};  // namespace GenericQuery

@@ -1,6 +1,8 @@
 
 #include "GenericQueryBuilder.h"
 
+#include "GenericGenerator.h"
+
 /**
  * @brief Generic Query Builder Class
  *
@@ -16,6 +18,7 @@
  * @see GenericDataGenerator
  */
 
+namespace GenericQuery {
 /**
  * @brief Registers a new data source and gives is an alias name
  *
@@ -129,3 +132,8 @@ Metadata GenericQueryBuilder::generateMetadata() {
 RecordValidator GenericQueryBuilder::generateRecordValidator() {
     return query->getValidator(generateMetadata());
 }
+
+DataSource GenericQueryBuilder::build() {
+    
+}
+};  // namespace GenericQuery

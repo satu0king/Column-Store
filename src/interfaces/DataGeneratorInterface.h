@@ -3,14 +3,15 @@
 #include <memory>
 #include <vector>
 
+#include "../Fort/fort.hpp"
 #include "Column.h"
 #include "DataRecord.h"
-#include "../Fort/fort.hpp"
 
 /** @file
  * @brief Data Generator Interface
  */
 
+namespace ColumnStore {
 /**
  * @brief Interface for relational data sources
  *
@@ -22,7 +23,7 @@
  */
 class DataGeneratorInterface {
    protected:
-   /** @brief metadata for processing queries*/
+    /** @brief metadata for processing queries*/
     Metadata metadata;
 
    public:
@@ -70,3 +71,5 @@ class DataGeneratorInterface {
  *
  */
 typedef std::shared_ptr<DataGeneratorInterface> DataSource;
+
+};  // namespace ColumnStore

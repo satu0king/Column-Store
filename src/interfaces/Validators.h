@@ -8,6 +8,7 @@
  * @brief RecordValidator Interfaces and Implementations for Query Processing
  */
 
+namespace ColumnStore {
 /**
  * @brief Base RecordValidator Interface
  *
@@ -241,3 +242,4 @@ class LessThanRecordValidator : public ReccordValidatorMetadataInterface {
         throw "Unknown DataType";
     }
 };
+};  // namespace ColumnStore

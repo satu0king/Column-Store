@@ -8,6 +8,7 @@
  *
  */
 
+namespace GenericQuery {
 /**
  * @brief internal function to process and generate next valid record
  *
@@ -78,7 +79,8 @@ DataRecord GenericDataGenerator::_getCandidateNext() {
  *
  * @param builder object to constuct generator from
  */
-GenericDataGenerator::GenericDataGenerator(GenericQueryBuilder builder) : builder(builder) {
+GenericDataGenerator::GenericDataGenerator(GenericQueryBuilder builder)
+    : builder(builder) {
     metadata = builder.generateMetadata();
     recordValidator = builder.generateRecordValidator();
 
@@ -146,3 +148,4 @@ DataRecord GenericDataGenerator::next() {
     _setNext();
     return result;
 }  //< Base
+}  // namespace GenericQuery
