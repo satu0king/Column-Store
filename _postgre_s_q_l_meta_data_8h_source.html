@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Column Store: interfaces/PostgreSQLMetaData.h Source File</title>
+<title>Column Store: src/PostgresDataGenerator/PostgreSQLMetaData.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_ff6b5900125bb0123025c1cb24bdc726.html">interfaces</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f6c199f1e15756b19dd1e8e8f60f5bc6.html">PostgresDataGenerator</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -69,31 +69,34 @@ $(function() {
 <div class="title">PostgreSQLMetaData.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once </span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;pqxx/pqxx&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;pqxx/pqxx&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../parser/SchemaExtractor.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../parser/SchemaMetaData.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;Parser/SchemaExtractor.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Parser/SchemaMetaData.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_postgre_s_q_l_meta_data.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_postgre_s_q_l_meta_data.html">PostgreSQLMetaData</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    std::string db_name, username, password;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    pqxx::connection *conn;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_schema_meta_data.html">SchemaMetaData</a> schema_meta_data;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="class_postgre_s_q_l_meta_data.html">PostgreSQLMetaData</a>(std::string db_name, std::string username, std::string password, <a class="code" href="class_schema_meta_data.html">SchemaMetaData</a> schema);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        pqxx::connection *get_connection()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> conn; }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        std::string get_db_name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> db_name; }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::string get_username()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> username; }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        std::string get_password()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> password; }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_schema_meta_data.html">SchemaMetaData</a> get_schema_meta_data()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> schema_meta_data; }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using</span> <a class="code" href="class_parser_1_1_schema_meta_data.html">Parser::SchemaMetaData</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_postgre_s_q_l_meta_data.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_postgre_s_q_l_meta_data.html">PostgreSQLMetaData</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    std::string db_name, username, password;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    pqxx::connection *conn;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_parser_1_1_schema_meta_data.html">SchemaMetaData</a> schema_meta_data;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;   <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_postgre_s_q_l_meta_data.html">PostgreSQLMetaData</a>(std::string db_name, std::string username,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                       std::string password, <a class="code" href="class_parser_1_1_schema_meta_data.html">SchemaMetaData</a> schema);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    pqxx::connection *get_connection()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> conn; }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::string get_db_name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> db_name; }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    std::string get_username()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> username; }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    std::string get_password()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> password; }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_parser_1_1_schema_meta_data.html">SchemaMetaData</a> get_schema_meta_data()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> schema_meta_data; }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_postgre_s_q_l_meta_data_html"><div class="ttname"><a href="class_postgre_s_q_l_meta_data.html">PostgreSQLMetaData</a></div><div class="ttdef"><b>Definition:</b> PostgreSQLMetaData.h:10</div></div>
-<div class="ttc" id="aclass_schema_meta_data_html"><div class="ttname"><a href="class_schema_meta_data.html">SchemaMetaData</a></div><div class="ttdef"><b>Definition:</b> SchemaMetaData.h:10</div></div>
+<div class="ttc" id="aclass_parser_1_1_schema_meta_data_html"><div class="ttname"><a href="class_parser_1_1_schema_meta_data.html">Parser::SchemaMetaData</a></div><div class="ttdef"><b>Definition:</b> SchemaMetaData.h:14</div></div>
+<div class="ttc" id="aclass_postgre_s_q_l_meta_data_html"><div class="ttname"><a href="class_postgre_s_q_l_meta_data.html">PostgreSQLMetaData</a></div><div class="ttdef"><b>Definition:</b> PostgreSQLMetaData.h:12</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

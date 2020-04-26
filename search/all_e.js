@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['operator_5b_5d_59',['operator[]',['../struct_data_record.html#a90c22ece8be42313a591c9f8df11ddf0',1,'DataRecord::operator[]()'],['../class_data_record_metadata.html#aa1eb49cd8047eb71275cd26f85dddad3',1,'DataRecordMetadata::operator[](int i)'],['../class_data_record_metadata.html#a3211b01d235650b405009913c7554782',1,'DataRecordMetadata::operator[](std::string name)']]],
-  ['orquery_60',['OrQuery',['../class_or_query.html',1,'OrQuery'],['../class_or_query.html#a9ed4494a8de360329c45f405c41a4147',1,'OrQuery::OrQuery()']]],
-  ['orrecordvalidator_61',['OrRecordValidator',['../class_or_record_validator.html',1,'OrRecordValidator'],['../class_or_record_validator.html#a8d4be5b11cfbb2795a904b912fc90d04',1,'OrRecordValidator::OrRecordValidator()']]]
+  ['operator_5b_5d_63',['operator[]',['../struct_column_store_1_1_data_record.html#a30ee7c2884d59e1c29ca011d039baa06',1,'ColumnStore::DataRecord::operator[]()'],['../class_column_store_1_1_data_record_metadata.html#ae7d6a450490e65591b0ebe1fdd4ead94',1,'ColumnStore::DataRecordMetadata::operator[](int i)'],['../class_column_store_1_1_data_record_metadata.html#a67397e4cc7a689e1743b5158c2fcd3c8',1,'ColumnStore::DataRecordMetadata::operator[](std::string name)']]],
+  ['orquery_64',['OrQuery',['../class_column_store_1_1_or_query.html',1,'ColumnStore::OrQuery'],['../class_column_store_1_1_or_query.html#a634ace867e732304e5a6fa0dcc739a09',1,'ColumnStore::OrQuery::OrQuery()']]],
+  ['orrecordvalidator_65',['OrRecordValidator',['../class_column_store_1_1_or_record_validator.html',1,'ColumnStore::OrRecordValidator'],['../class_column_store_1_1_or_record_validator.html#a9e6645d87b5b7afe37b84c9e5c36e07a',1,'ColumnStore::OrRecordValidator::OrRecordValidator()']]]
 ];

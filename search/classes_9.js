@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['orquery_109',['OrQuery',['../class_or_query.html',1,'']]],
-  ['orrecordvalidator_110',['OrRecordValidator',['../class_or_record_validator.html',1,'']]]
+  ['orquery_115',['OrQuery',['../class_column_store_1_1_or_query.html',1,'ColumnStore']]],
+  ['orrecordvalidator_116',['OrRecordValidator',['../class_column_store_1_1_or_record_validator.html',1,'ColumnStore']]]
 ];

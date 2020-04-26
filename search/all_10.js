@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['query_69',['query',['../class_generic_query_builder.html#a67edeaae4837eb39cf27298e58a434ed',1,'GenericQueryBuilder::query()'],['../_generic_query_builder_8h.html#a4330e6bc0f11e29ebeeb3124fed72f3b',1,'Query():&#160;GenericQueryBuilder.h']]]
+  ['query_73',['query',['../class_generic_query_1_1_generic_query_builder.html#afd45498afd091f250d440d033a160d81',1,'GenericQuery::GenericQueryBuilder::query()'],['../_condition_query_8h.html#a42efce201d3924ec51c727817093edcc',1,'ColumnStore::Query()']]]
 ];

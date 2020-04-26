@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Column Store: interfaces/DataGeneratorInterface.h Source File</title>
+<title>Column Store: src/interfaces/DataGeneratorInterface.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_ff6b5900125bb0123025c1cb24bdc726.html">interfaces</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ee3f1a7951c308657a65f8199076c1d6.html">interfaces</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -74,79 +74,45 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_column_8h.html">Column.h</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_data_record_8h.html">DataRecord.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;fort.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../Fort/fort.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;Column.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_data_record_8h.html">DataRecord.h</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_data_generator_interface.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_data_generator_interface.html">DataGeneratorInterface</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;   <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_data_generator_interface.html#ae914b47b1731437108dece6b900d5ad6">   26</a></span>&#160;    <a class="code" href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a> <a class="code" href="class_data_generator_interface.html#ae914b47b1731437108dece6b900d5ad6">metadata</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;   <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_data_generator_interface.html#a202ced48a936eed360ef3c23be0f5a34">   32</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="struct_data_record.html">DataRecord</a> <a class="code" href="class_data_generator_interface.html#a202ced48a936eed360ef3c23be0f5a34">next</a>() = 0;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_data_generator_interface.html#a562f463b6a39112153327e92d7cfeced">   37</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_data_generator_interface.html#a562f463b6a39112153327e92d7cfeced">hasNext</a>() = 0;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_data_generator_interface.html#a2e9958e1a7ef04b884dd9cb4d60ad9df">   44</a></span>&#160;    <a class="code" href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a> <a class="code" href="class_data_generator_interface.html#a2e9958e1a7ef04b884dd9cb4d60ad9df">getMetadata</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_data_generator_interface.html#ae914b47b1731437108dece6b900d5ad6">metadata</a>; }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_data_generator_interface.html#a8aa561bd1aa6491f251323f1fe82fd87">   52</a></span>&#160;    <span class="keyword">virtual</span> std::vector&lt;DataRecord&gt; <a class="code" href="class_data_generator_interface.html#a8aa561bd1aa6491f251323f1fe82fd87">nextBatch</a>(<span class="keywordtype">int</span> records) {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        assert(records &gt;= 0);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>ColumnStore {</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_column_store_1_1_data_generator_interface.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_column_store_1_1_data_generator_interface.html">DataGeneratorInterface</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;   <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_column_store_1_1_data_generator_interface.html#a8b586b30a0c18f1d370f52ae8c7a5c83">   27</a></span>&#160;    <a class="code" href="_data_record_8h.html#a706499867a4f69cd73e6cdc47fc86c62">Metadata</a> <a class="code" href="class_column_store_1_1_data_generator_interface.html#a8b586b30a0c18f1d370f52ae8c7a5c83">metadata</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;   <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_column_store_1_1_data_generator_interface.html#a9a29eb24c66f2c0c0a081744e107841e">   33</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="struct_column_store_1_1_data_record.html">DataRecord</a> <a class="code" href="class_column_store_1_1_data_generator_interface.html#a9a29eb24c66f2c0c0a081744e107841e">next</a>() = 0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_column_store_1_1_data_generator_interface.html#abb1cf070990a2591ed786ee169df00ed">   38</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_column_store_1_1_data_generator_interface.html#abb1cf070990a2591ed786ee169df00ed">hasNext</a>() = 0;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="_data_record_8h.html#a706499867a4f69cd73e6cdc47fc86c62">Metadata</a> <a class="code" href="class_column_store_1_1_data_generator_interface.html#a67fea3f3de472ee88fa0ca4c4945026d">getMetadata</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;DataRecord&gt; <a class="code" href="class_column_store_1_1_data_generator_interface.html#a13f38e88c6abcc40c4e1088fb17018b2">nextBatch</a>(<span class="keywordtype">int</span> batchSize);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        std::vector&lt;DataRecord&gt; results;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; records &amp;&amp; <a class="code" href="class_data_generator_interface.html#a562f463b6a39112153327e92d7cfeced">hasNext</a>(); ++i) {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            results.push_back(<a class="code" href="class_data_generator_interface.html#a202ced48a936eed360ef3c23be0f5a34">next</a>());</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> results;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_column_store_1_1_data_generator_interface.html#af9cf96f6d35a6e0edd42f0592667b4fa">print</a>();</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_data_generator_interface.html#aa8dfdf92fbb8aa00b312814a8b5714c3">   67</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_data_generator_interface.html#aa8dfdf92fbb8aa00b312814a8b5714c3">print</a>() {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">auto</span> m = <a class="code" href="class_data_generator_interface.html#a2e9958e1a7ef04b884dd9cb4d60ad9df">getMetadata</a>();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        fort::char_table table;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        table &lt;&lt; fort::header;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">auto</span> columns = m-&gt;getColumns();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; columns.size(); i++) table &lt;&lt; columns[i].name;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        table &lt;&lt; fort::endr;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">while</span> (<a class="code" href="class_data_generator_interface.html#a562f463b6a39112153327e92d7cfeced">hasNext</a>()) {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keyword">auto</span> record = <a class="code" href="class_data_generator_interface.html#a202ced48a936eed360ef3c23be0f5a34">next</a>();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; columns.size(); i++) {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keyword">auto</span> type = columns[i].type;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <span class="keywordflow">if</span> (type == DataType::INT)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    table &lt;&lt; record[i].as&lt;<span class="keywordtype">int</span>&gt;();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == DataType::FLOAT)</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    table &lt;&lt; record[i].as&lt;<span class="keywordtype">float</span>&gt;();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == DataType::STRING)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    table &lt;&lt; record[i].as&lt;std::string&gt;();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Unknown DataType&quot;</span>);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            table &lt;&lt; fort::endr;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        std::cout &lt;&lt; table.to_string() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_data_generator_interface.html#a4e82add73156d5a7b57b10be4ec82afb">  101</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_data_generator_interface.html#a4e82add73156d5a7b57b10be4ec82afb">~DataGeneratorInterface</a>(){};</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;};</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="_data_generator_interface_8h.html#a9d42be8386d4eae9e9759f2f6ac24461">  108</a></span>&#160;<span class="keyword">typedef</span> std::shared_ptr&lt;DataGeneratorInterface&gt; <a class="code" href="_data_generator_interface_8h.html#a9d42be8386d4eae9e9759f2f6ac24461">DataSource</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_column_store_1_1_data_generator_interface.html#ad37eb64dd123cc3ebf2014da2a166ac2">   66</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_column_store_1_1_data_generator_interface.html#ad37eb64dd123cc3ebf2014da2a166ac2">~DataGeneratorInterface</a>(){};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="_data_generator_interface_8h.html#a9266cb438f0f76e2bf392940b5e33f84">   73</a></span>&#160;<span class="keyword">typedef</span> std::shared_ptr&lt;DataGeneratorInterface&gt; <a class="code" href="_data_generator_interface_8h.html#a9266cb438f0f76e2bf392940b5e33f84">DataSource</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};  <span class="comment">// namespace ColumnStore</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_data_generator_interface_html_a4e82add73156d5a7b57b10be4ec82afb"><div class="ttname"><a href="class_data_generator_interface.html#a4e82add73156d5a7b57b10be4ec82afb">DataGeneratorInterface::~DataGeneratorInterface</a></div><div class="ttdeci">virtual ~DataGeneratorInterface()</div><div class="ttdoc">Destroy the Data Generator Interface object.</div><div class="ttdef"><b>Definition:</b> DataGeneratorInterface.h:101</div></div>
-<div class="ttc" id="aclass_data_generator_interface_html_a202ced48a936eed360ef3c23be0f5a34"><div class="ttname"><a href="class_data_generator_interface.html#a202ced48a936eed360ef3c23be0f5a34">DataGeneratorInterface::next</a></div><div class="ttdeci">virtual DataRecord next()=0</div></div>
+<div class="ttc" id="aclass_column_store_1_1_data_generator_interface_html_abb1cf070990a2591ed786ee169df00ed"><div class="ttname"><a href="class_column_store_1_1_data_generator_interface.html#abb1cf070990a2591ed786ee169df00ed">ColumnStore::DataGeneratorInterface::hasNext</a></div><div class="ttdeci">virtual bool hasNext()=0</div></div>
+<div class="ttc" id="aclass_column_store_1_1_data_generator_interface_html_a9a29eb24c66f2c0c0a081744e107841e"><div class="ttname"><a href="class_column_store_1_1_data_generator_interface.html#a9a29eb24c66f2c0c0a081744e107841e">ColumnStore::DataGeneratorInterface::next</a></div><div class="ttdeci">virtual DataRecord next()=0</div></div>
+<div class="ttc" id="aclass_column_store_1_1_data_generator_interface_html_ad37eb64dd123cc3ebf2014da2a166ac2"><div class="ttname"><a href="class_column_store_1_1_data_generator_interface.html#ad37eb64dd123cc3ebf2014da2a166ac2">ColumnStore::DataGeneratorInterface::~DataGeneratorInterface</a></div><div class="ttdeci">virtual ~DataGeneratorInterface()</div><div class="ttdoc">Destroy the Data Generator Interface object.</div><div class="ttdef"><b>Definition:</b> DataGeneratorInterface.h:66</div></div>
+<div class="ttc" id="astruct_column_store_1_1_data_record_html"><div class="ttname"><a href="struct_column_store_1_1_data_record.html">ColumnStore::DataRecord</a></div><div class="ttdoc">Stores a row of data.</div><div class="ttdef"><b>Definition:</b> DataRecord.h:58</div></div>
 <div class="ttc" id="a_data_record_8h_html"><div class="ttname"><a href="_data_record_8h.html">DataRecord.h</a></div><div class="ttdoc">Data storage structures.</div></div>
-<div class="ttc" id="aclass_data_generator_interface_html"><div class="ttname"><a href="class_data_generator_interface.html">DataGeneratorInterface</a></div><div class="ttdoc">Interface for relational data sources.</div><div class="ttdef"><b>Definition:</b> DataGeneratorInterface.h:23</div></div>
-<div class="ttc" id="aclass_data_generator_interface_html_a562f463b6a39112153327e92d7cfeced"><div class="ttname"><a href="class_data_generator_interface.html#a562f463b6a39112153327e92d7cfeced">DataGeneratorInterface::hasNext</a></div><div class="ttdeci">virtual bool hasNext()=0</div></div>
-<div class="ttc" id="a_data_generator_interface_8h_html_a9d42be8386d4eae9e9759f2f6ac24461"><div class="ttname"><a href="_data_generator_interface_8h.html#a9d42be8386d4eae9e9759f2f6ac24461">DataSource</a></div><div class="ttdeci">std::shared_ptr&lt; DataGeneratorInterface &gt; DataSource</div><div class="ttdoc">Shared pointer to the DataGeneratorInterface.</div><div class="ttdef"><b>Definition:</b> DataGeneratorInterface.h:108</div></div>
-<div class="ttc" id="a_data_record_8h_html_aae7d65312098e5dbd46f7b60b7fdbcb1"><div class="ttname"><a href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a></div><div class="ttdeci">std::shared_ptr&lt; DataRecordMetadata &gt; Metadata</div><div class="ttdoc">Shared pointer to DataRecordMetadata.</div><div class="ttdef"><b>Definition:</b> DataRecord.h:199</div></div>
-<div class="ttc" id="a_column_8h_html"><div class="ttname"><a href="_column_8h.html">Column.h</a></div><div class="ttdoc">Column Metadata and Type information.</div></div>
-<div class="ttc" id="aclass_data_generator_interface_html_a8aa561bd1aa6491f251323f1fe82fd87"><div class="ttname"><a href="class_data_generator_interface.html#a8aa561bd1aa6491f251323f1fe82fd87">DataGeneratorInterface::nextBatch</a></div><div class="ttdeci">virtual std::vector&lt; DataRecord &gt; nextBatch(int records)</div><div class="ttdoc">Helper function to return batch of records.</div><div class="ttdef"><b>Definition:</b> DataGeneratorInterface.h:52</div></div>
-<div class="ttc" id="astruct_data_record_html"><div class="ttname"><a href="struct_data_record.html">DataRecord</a></div><div class="ttdoc">Stores a row of data.</div><div class="ttdef"><b>Definition:</b> DataRecord.h:58</div></div>
-<div class="ttc" id="aclass_data_generator_interface_html_ae914b47b1731437108dece6b900d5ad6"><div class="ttname"><a href="class_data_generator_interface.html#ae914b47b1731437108dece6b900d5ad6">DataGeneratorInterface::metadata</a></div><div class="ttdeci">Metadata metadata</div><div class="ttdoc">metadata for processing queries</div><div class="ttdef"><b>Definition:</b> DataGeneratorInterface.h:26</div></div>
-<div class="ttc" id="aclass_data_generator_interface_html_aa8dfdf92fbb8aa00b312814a8b5714c3"><div class="ttname"><a href="class_data_generator_interface.html#aa8dfdf92fbb8aa00b312814a8b5714c3">DataGeneratorInterface::print</a></div><div class="ttdeci">void print()</div><div class="ttdoc">Print the data.</div><div class="ttdef"><b>Definition:</b> DataGeneratorInterface.h:67</div></div>
-<div class="ttc" id="aclass_data_generator_interface_html_a2e9958e1a7ef04b884dd9cb4d60ad9df"><div class="ttname"><a href="class_data_generator_interface.html#a2e9958e1a7ef04b884dd9cb4d60ad9df">DataGeneratorInterface::getMetadata</a></div><div class="ttdeci">Metadata getMetadata() const</div><div class="ttdef"><b>Definition:</b> DataGeneratorInterface.h:44</div></div>
+<div class="ttc" id="aclass_column_store_1_1_data_generator_interface_html_a13f38e88c6abcc40c4e1088fb17018b2"><div class="ttname"><a href="class_column_store_1_1_data_generator_interface.html#a13f38e88c6abcc40c4e1088fb17018b2">ColumnStore::DataGeneratorInterface::nextBatch</a></div><div class="ttdeci">virtual std::vector&lt; DataRecord &gt; nextBatch(int batchSize)</div><div class="ttdoc">Helper function to return batch of records.</div><div class="ttdef"><b>Definition:</b> DataGeneratorInterface.cpp:31</div></div>
+<div class="ttc" id="aclass_column_store_1_1_data_generator_interface_html_a67fea3f3de472ee88fa0ca4c4945026d"><div class="ttname"><a href="class_column_store_1_1_data_generator_interface.html#a67fea3f3de472ee88fa0ca4c4945026d">ColumnStore::DataGeneratorInterface::getMetadata</a></div><div class="ttdeci">Metadata getMetadata() const</div><div class="ttdoc">Interface for relational data sources.</div><div class="ttdef"><b>Definition:</b> DataGeneratorInterface.cpp:23</div></div>
+<div class="ttc" id="a_data_generator_interface_8h_html_a9266cb438f0f76e2bf392940b5e33f84"><div class="ttname"><a href="_data_generator_interface_8h.html#a9266cb438f0f76e2bf392940b5e33f84">ColumnStore::DataSource</a></div><div class="ttdeci">std::shared_ptr&lt; DataGeneratorInterface &gt; DataSource</div><div class="ttdoc">Shared pointer to the DataGeneratorInterface.</div><div class="ttdef"><b>Definition:</b> DataGeneratorInterface.h:73</div></div>
+<div class="ttc" id="aclass_column_store_1_1_data_generator_interface_html_a8b586b30a0c18f1d370f52ae8c7a5c83"><div class="ttname"><a href="class_column_store_1_1_data_generator_interface.html#a8b586b30a0c18f1d370f52ae8c7a5c83">ColumnStore::DataGeneratorInterface::metadata</a></div><div class="ttdeci">Metadata metadata</div><div class="ttdoc">metadata for processing queries</div><div class="ttdef"><b>Definition:</b> DataGeneratorInterface.h:27</div></div>
+<div class="ttc" id="aclass_column_store_1_1_data_generator_interface_html_af9cf96f6d35a6e0edd42f0592667b4fa"><div class="ttname"><a href="class_column_store_1_1_data_generator_interface.html#af9cf96f6d35a6e0edd42f0592667b4fa">ColumnStore::DataGeneratorInterface::print</a></div><div class="ttdeci">void print()</div><div class="ttdoc">Print the data.</div><div class="ttdef"><b>Definition:</b> DataGeneratorInterface.cpp:46</div></div>
+<div class="ttc" id="a_data_record_8h_html_a706499867a4f69cd73e6cdc47fc86c62"><div class="ttname"><a href="_data_record_8h.html#a706499867a4f69cd73e6cdc47fc86c62">ColumnStore::Metadata</a></div><div class="ttdeci">std::shared_ptr&lt; DataRecordMetadata &gt; Metadata</div><div class="ttdoc">Shared pointer to DataRecordMetadata.</div><div class="ttdef"><b>Definition:</b> DataRecord.h:199</div></div>
+<div class="ttc" id="aclass_column_store_1_1_data_generator_interface_html"><div class="ttname"><a href="class_column_store_1_1_data_generator_interface.html">ColumnStore::DataGeneratorInterface</a></div><div class="ttdoc">Interface for relational data sources.</div><div class="ttdef"><b>Definition:</b> DataGeneratorInterface.h:24</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

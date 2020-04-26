@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['andquery_132',['AndQuery',['../class_and_query.html#a1b5fc4c5460de32c528388fb706a71d7',1,'AndQuery']]],
-  ['andrecordvalidator_133',['AndRecordValidator',['../class_and_record_validator.html#aa1bf9fb59bb080e2a21e4f7bd8a883c3',1,'AndRecordValidator']]],
-  ['as_134',['as',['../class_data_value.html#a55cf2915bfe1c068861026401eb1ac39',1,'DataValue']]]
+  ['andquery_143',['AndQuery',['../class_column_store_1_1_and_query.html#adc2fc5695acb2607eca7113d84d2ac51',1,'ColumnStore::AndQuery']]],
+  ['andrecordvalidator_144',['AndRecordValidator',['../class_column_store_1_1_and_record_validator.html#aea11735359fe74f9a31b88fb4acb7747',1,'ColumnStore::AndRecordValidator']]],
+  ['as_145',['as',['../class_column_store_1_1_data_value.html#af9a94f310f4838094813b8fc3a058a40',1,'ColumnStore::DataValue']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['equalquery_98',['EqualQuery',['../class_equal_query.html',1,'']]],
-  ['equalrecordvalidator_99',['EqualRecordValidator',['../class_equal_record_validator.html',1,'']]]
+  ['equalquery_104',['EqualQuery',['../class_column_store_1_1_equal_query.html',1,'ColumnStore']]],
+  ['equalrecordvalidator_105',['EqualRecordValidator',['../class_column_store_1_1_equal_record_validator.html',1,'ColumnStore']]]
 ];

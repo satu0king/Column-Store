@@ -1,12 +1,13 @@
 var searchData=
 [
-  ['generatemetadata_35',['generateMetadata',['../class_generic_query_builder.html#a50bdde19bfcfed5508ea1fdc4fc42600',1,'GenericQueryBuilder']]],
-  ['generaterecordvalidator_36',['generateRecordValidator',['../class_generic_query_builder.html#a45a4091208d2f64887f6228e3db19888',1,'GenericQueryBuilder']]],
-  ['genericdatagenerator_37',['GenericDataGenerator',['../class_generic_data_generator.html',1,'GenericDataGenerator'],['../class_generic_data_generator.html#a2499028ae554a4c20a25d4ce253f23e9',1,'GenericDataGenerator::GenericDataGenerator()']]],
-  ['genericquerybuilder_38',['GenericQueryBuilder',['../class_generic_query_builder.html',1,'']]],
-  ['genericquerybuilder_2eh_39',['GenericQueryBuilder.h',['../_generic_query_builder_8h.html',1,'']]],
-  ['getcolumn_40',['getColumn',['../class_data_record_metadata.html#a036470c38bca984530db3f8536a77c0f',1,'DataRecordMetadata::getColumn(std::string name)'],['../class_data_record_metadata.html#aadfda8352d88c9f7d4edcf0603413ad3',1,'DataRecordMetadata::getColumn(int i)']]],
-  ['getcolumns_41',['getColumns',['../class_data_record_metadata.html#a2a8a984a28161bb0b33dcaa4468112cc',1,'DataRecordMetadata']]],
-  ['getmetadata_42',['getMetadata',['../class_data_generator_interface.html#a2e9958e1a7ef04b884dd9cb4d60ad9df',1,'DataGeneratorInterface']]],
-  ['getvalidator_43',['getValidator',['../class_condition_query.html#a2d014aa7d328130b21d6f0c38b12a197',1,'ConditionQuery::getValidator()'],['../class_and_query.html#a43f9488af37a14d1b3c1e6ea0f8125cb',1,'AndQuery::getValidator()'],['../class_or_query.html#a6bcce27a3f682c54ed72c97bff3dd4f0',1,'OrQuery::getValidator()'],['../class_not_query.html#a7ba1e3d1e63db52a90faa7aa9ba13d4a',1,'NotQuery::getValidator()'],['../class_equal_query.html#a69fcc1b1eea79626b7bdcb1a120750f3',1,'EqualQuery::getValidator()'],['../class_less_than_query.html#a1749b3d0451fc96dbbe81454dd21c040',1,'LessThanQuery::getValidator()']]]
+  ['generatemetadata_38',['generateMetadata',['../class_generic_query_1_1_generic_query_builder.html#a500b382e1f94c1376a6e3b3b4a3f98dd',1,'GenericQuery::GenericQueryBuilder']]],
+  ['generaterecordvalidator_39',['generateRecordValidator',['../class_generic_query_1_1_generic_query_builder.html#ac0c48f2da9cedcb6497255b4cf739098',1,'GenericQuery::GenericQueryBuilder']]],
+  ['genericdatagenerator_40',['GenericDataGenerator',['../class_generic_query_1_1_generic_data_generator.html',1,'GenericQuery::GenericDataGenerator'],['../class_generic_query_1_1_generic_data_generator.html#a009a5809f606dcfa19b7b104f1341c93',1,'GenericQuery::GenericDataGenerator::GenericDataGenerator()']]],
+  ['genericquery_41',['GenericQuery',['../namespace_generic_query.html',1,'']]],
+  ['genericquerybuilder_42',['GenericQueryBuilder',['../class_generic_query_1_1_generic_query_builder.html',1,'GenericQuery']]],
+  ['genericquerybuilder_2eh_43',['GenericQueryBuilder.h',['../_generic_query_builder_8h.html',1,'']]],
+  ['getcolumn_44',['getColumn',['../class_column_store_1_1_data_record_metadata.html#a53ff4bf7b55567a76b4af0e9ff692152',1,'ColumnStore::DataRecordMetadata::getColumn(std::string name)'],['../class_column_store_1_1_data_record_metadata.html#aa0c0b20a020b177dc813be8e16c627aa',1,'ColumnStore::DataRecordMetadata::getColumn(int i)']]],
+  ['getcolumns_45',['getColumns',['../class_column_store_1_1_data_record_metadata.html#a22e0186274a74649bbb966d3b8204792',1,'ColumnStore::DataRecordMetadata']]],
+  ['getmetadata_46',['getMetadata',['../class_column_store_1_1_data_generator_interface.html#a67fea3f3de472ee88fa0ca4c4945026d',1,'ColumnStore::DataGeneratorInterface']]],
+  ['getvalidator_47',['getValidator',['../class_column_store_1_1_condition_query.html#af758733c416e69fb24da9d277a64451a',1,'ColumnStore::ConditionQuery::getValidator()'],['../class_column_store_1_1_and_query.html#a7b90e2f5e64c6fb7b3fe6ac3b5a11b5e',1,'ColumnStore::AndQuery::getValidator()'],['../class_column_store_1_1_or_query.html#a1c8c41367fec411741b56cc92e17bb93',1,'ColumnStore::OrQuery::getValidator()'],['../class_column_store_1_1_not_query.html#ac838921b4c734107a886539ffdffa3b7',1,'ColumnStore::NotQuery::getValidator()'],['../class_column_store_1_1_equal_query.html#a0e82a57255ff51076a38ae95916f8954',1,'ColumnStore::EqualQuery::getValidator()'],['../class_column_store_1_1_less_than_query.html#aa859244b06f782a71d7a91aad3a52b30',1,'ColumnStore::LessThanQuery::getValidator()']]]
 ];

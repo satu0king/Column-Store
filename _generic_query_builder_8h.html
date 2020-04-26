@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Column Store: interfaces/GenericQueryBuilder.h File Reference</title>
+<title>Column Store: src/GenericQuery/GenericQueryBuilder.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,13 +61,13 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_ff6b5900125bb0123025c1cb24bdc726.html">interfaces</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_854bcbf3da10555f45ce38b1cad81648.html">GenericQuery</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">GenericQueryBuilder.h File Reference</div>  </div>
 </div><!--header-->
@@ -78,71 +78,31 @@ $(function() {
 <div class="textblock"><code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
-<code>#include &quot;<a class="el" href="_condition_interface_8h_source.html">ConditionsInterfaces/ConditionInterface.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_condition_query_8h_source.html">ConditionQuery.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_data_generator_interface_8h_source.html">DataGeneratorInterface.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_validators_8h_source.html">Validators.h</a>&quot;</code><br />
 </div>
 <p><a href="_generic_query_builder_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_condition_query.html">ConditionQuery</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base Condition Query Structure.  <a href="class_condition_query.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_1_1_generic_query_builder.html">GenericQuery::GenericQueryBuilder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic Query Builder Class.  <a href="class_generic_query_1_1_generic_query_builder.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_builder.html">GenericQueryBuilder</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic Query Builder Class.  <a href="class_generic_query_builder.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_generic_query_builder_1_1_join.html">GenericQueryBuilder::Join</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper struct to represent join infromation.  <a href="struct_generic_query_builder_1_1_join.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_data_generator.html">GenericDataGenerator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data Generator for <a class="el" href="class_generic_query_builder.html" title="Generic Query Builder Class.">GenericQueryBuilder</a>.  <a href="class_generic_data_generator.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_generic_data_generator_1_1_data_generater_join.html">GenericDataGenerator::DataGeneraterJoin</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper structure to efficiently process joins  <a href="struct_generic_data_generator_1_1_data_generater_join.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_and_query.html">AndQuery</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical AND query.  <a href="class_and_query.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_or_query.html">OrQuery</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical OR query.  <a href="class_or_query.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_not_query.html">NotQuery</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logical NOT query.  <a href="class_not_query.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_equal_query.html">EqualQuery</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality Query.  <a href="class_equal_query.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_less_than_query.html">LessThanQuery</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less Than Query.  <a href="class_less_than_query.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_generic_query_1_1_generic_query_builder_1_1_join.html">GenericQuery::GenericQueryBuilder::Join</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper struct to represent join infromation.  <a href="struct_generic_query_1_1_generic_query_builder_1_1_join.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a4330e6bc0f11e29ebeeb3124fed72f3b"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="class_condition_query.html">ConditionQuery</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_generic_query_builder_8h.html#a4330e6bc0f11e29ebeeb3124fed72f3b">Query</a></td></tr>
-<tr class="memdesc:a4330e6bc0f11e29ebeeb3124fed72f3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared pointer to Query Structure.  <a href="_generic_query_builder_8h.html#a4330e6bc0f11e29ebeeb3124fed72f3b">More...</a><br /></td></tr>
-<tr class="separator:a4330e6bc0f11e29ebeeb3124fed72f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespace_generic_query"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_generic_query.html">GenericQuery</a></td></tr>
+<tr class="memdesc:namespace_generic_query"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data Generator for <a class="el" href="class_generic_query_1_1_generic_query_builder.html" title="Generic Query Builder Class.">GenericQueryBuilder</a>. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generic Query Builder. </p>
 <p>This file contains structures to query any data source. Currently supported query features are join and filter </p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="a4330e6bc0f11e29ebeeb3124fed72f3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4330e6bc0f11e29ebeeb3124fed72f3b">&#9670;&nbsp;</a></span>Query</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="class_condition_query.html">ConditionQuery</a>&gt; <a class="el" href="_generic_query_builder_8h.html#a4330e6bc0f11e29ebeeb3124fed72f3b">Query</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Shared pointer to Query Structure. </p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

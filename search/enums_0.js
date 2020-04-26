@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['datatype_189',['DataType',['../_column_8h.html#ad8ed01ff3ff33333d8e19db4d2818bb6',1,'Column.h']]]
+  ['datatype_200',['DataType',['../interfaces_2_column_8h.html#ad8d7aa92d3da396b9f9666ae836aea0a',1,'ColumnStore']]]
 ];

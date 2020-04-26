@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Column Store: interfaces/DataRecord.h File Reference</title>
+<title>Column Store: src/interfaces/DataRecord.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_ff6b5900125bb0123025c1cb24bdc726.html">interfaces</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ee3f1a7951c308657a65f8199076c1d6.html">interfaces</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -81,45 +81,45 @@ $(function() {
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="_column_8h_source.html">Column.h</a>&quot;</code><br />
-<code>#include &quot;fort.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="interfaces_2_column_8h_source.html">Column.h</a>&quot;</code><br />
+<code>#include &quot;../Fort/fort.hpp&quot;</code><br />
 </div>
 <p><a href="_data_record_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_value.html">DataValue</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of a single data element.  <a href="class_data_value.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_data_value.html">ColumnStore::DataValue</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of a single data element.  <a href="class_column_store_1_1_data_value.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_data_record.html">DataRecord</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores a row of data.  <a href="struct_data_record.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_column_store_1_1_data_record.html">ColumnStore::DataRecord</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores a row of data.  <a href="struct_column_store_1_1_data_record.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_record_metadata.html">DataRecordMetadata</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores metadata information of the data record.  <a href="class_data_record_metadata.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_data_record_metadata.html">ColumnStore::DataRecordMetadata</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores metadata information of the data record.  <a href="class_column_store_1_1_data_record_metadata.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:aae7d65312098e5dbd46f7b60b7fdbcb1"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="class_data_record_metadata.html">DataRecordMetadata</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a></td></tr>
-<tr class="memdesc:aae7d65312098e5dbd46f7b60b7fdbcb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared pointer to <a class="el" href="class_data_record_metadata.html" title="Stores metadata information of the data record.">DataRecordMetadata</a>.  <a href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">More...</a><br /></td></tr>
-<tr class="separator:aae7d65312098e5dbd46f7b60b7fdbcb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a706499867a4f69cd73e6cdc47fc86c62"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; DataRecordMetadata &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_data_record_8h.html#a706499867a4f69cd73e6cdc47fc86c62">ColumnStore::Metadata</a></td></tr>
+<tr class="memdesc:a706499867a4f69cd73e6cdc47fc86c62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared pointer to <a class="el" href="class_column_store_1_1_data_record_metadata.html" title="Stores metadata information of the data record.">DataRecordMetadata</a>.  <a href="_data_record_8h.html#a706499867a4f69cd73e6cdc47fc86c62">More...</a><br /></td></tr>
+<tr class="separator:a706499867a4f69cd73e6cdc47fc86c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Data storage structures. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="aae7d65312098e5dbd46f7b60b7fdbcb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae7d65312098e5dbd46f7b60b7fdbcb1">&#9670;&nbsp;</a></span>Metadata</h2>
+<a id="a706499867a4f69cd73e6cdc47fc86c62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a706499867a4f69cd73e6cdc47fc86c62">&#9670;&nbsp;</a></span>Metadata</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="class_data_record_metadata.html">DataRecordMetadata</a>&gt; <a class="el" href="_data_record_8h.html#aae7d65312098e5dbd46f7b60b7fdbcb1">Metadata</a></td>
+          <td class="memname">typedef std::shared_ptr&lt;DataRecordMetadata&gt; <a class="el" href="_data_record_8h.html#a706499867a4f69cd73e6cdc47fc86c62">ColumnStore::Metadata</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Shared pointer to <a class="el" href="class_data_record_metadata.html" title="Stores metadata information of the data record.">DataRecordMetadata</a>. </p>
+<p>Shared pointer to DataRecordMetadata. </p>
 <p>Metadata is transfered between objects using this type </p>
 
 </div>

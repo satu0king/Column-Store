@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['query_183',['query',['../class_generic_query_builder.html#a67edeaae4837eb39cf27298e58a434ed',1,'GenericQueryBuilder']]]
+  ['query_194',['query',['../class_generic_query_1_1_generic_query_builder.html#afd45498afd091f250d440d033a160d81',1,'GenericQuery::GenericQueryBuilder']]]
 ];

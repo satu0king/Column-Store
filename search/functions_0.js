@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['_5fgetcandidatenext_129',['_getCandidateNext',['../class_generic_data_generator.html#a41199b60fdefd8bbc78d9eccc2c087cd',1,'GenericDataGenerator']]],
-  ['_5fgetnext_130',['_getNext',['../class_generic_data_generator.html#adcbaa51ba021753d99bcc55d9bd14de3',1,'GenericDataGenerator']]],
-  ['_5fsetnext_131',['_setNext',['../class_generic_data_generator.html#ad45d799ce987617ed26fecda9c43d82c',1,'GenericDataGenerator']]]
+  ['_5fgetcandidatenext_140',['_getCandidateNext',['../class_generic_query_1_1_generic_data_generator.html#a1edac837e3efdbef3c179aec2f0e00d9',1,'GenericQuery::GenericDataGenerator']]],
+  ['_5fgetnext_141',['_getNext',['../class_generic_query_1_1_generic_data_generator.html#ad6120dee559e07000053d95cb48ee279',1,'GenericQuery::GenericDataGenerator']]],
+  ['_5fsetnext_142',['_setNext',['../class_generic_query_1_1_generic_data_generator.html#ac792337f68466ab51907562009de17e7',1,'GenericQuery::GenericDataGenerator']]]
 ];
