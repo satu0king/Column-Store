@@ -85,12 +85,12 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using</span> <a class="code" href="struct_column_store_1_1_data_record.html">ColumnStore::DataRecord</a>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using</span> <a class="code" href="class_column_store_1_1_data_record_metadata.html">ColumnStore::DataRecordMetadata</a>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> <a class="code" href="_data_generator_interface_8h.html#a9266cb438f0f76e2bf392940b5e33f84">ColumnStore::DataSource</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> <a class="code" href="class_column_store_1_1_data_value.html">ColumnStore::DataValue</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using</span> <a class="code" href="_data_record_8h.html#a706499867a4f69cd73e6cdc47fc86c62">ColumnStore::Metadata</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using</span> <a class="code" href="interfaces_2_column_8h.html#ad8d7aa92d3da396b9f9666ae836aea0a">ColumnStore::DataType</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> <a class="code" href="class_parser_1_1_table.html">Parser::Table</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using</span> <a class="code" href="class_parser_1_1_projection.html">Parser::Projection</a>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">using</span> <a class="code" href="struct_parser_1_1projection__column.html">Parser::projection_column</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> <a class="code" href="interfaces_2_column_8h.html#ad8d7aa92d3da396b9f9666ae836aea0a">ColumnStore::DataType</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using</span> <a class="code" href="class_column_store_1_1_data_value.html">ColumnStore::DataValue</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using</span> <a class="code" href="_data_record_8h.html#a706499867a4f69cd73e6cdc47fc86c62">ColumnStore::Metadata</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> <a class="code" href="class_parser_1_1_projection.html">Parser::Projection</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using</span> <a class="code" href="struct_parser_1_1projection__column.html">Parser::projection_column</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">using</span> <a class="code" href="class_parser_1_1_table.html">Parser::Table</a>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_postgre_s_q_l_data_source.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_postgre_s_q_l_data_source.html">PostgreSQLDataSource</a> : <span class="keyword">public</span> <a class="code" href="class_column_store_1_1_data_generator_interface.html">ColumnStore::DataGeneratorInterface</a> {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::queue&lt;DataRecord&gt; data;</div>
@@ -121,53 +121,53 @@ $(function() {
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        total_number_of_rows = rows[0][<span class="stringliteral">&quot;count&quot;</span>].as&lt;<span class="keywordtype">int</span>&gt;();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> load_into_queue(pqxx::transaction_base &amp;txn, vector&lt;ColumnStore::Column&gt; columns) {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        pqxx::result rows_of_all_columns = get_rows_of_columns(txn, columns);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> row : rows_of_all_columns) {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            vector&lt;DataValue&gt; values;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; columns.size(); i++) {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keyword">auto</span> type = columns[i].type;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordtype">string</span> column_name = columns[i].name;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">if</span> (type == DataType::INT) {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    <span class="comment">// cout &lt;&lt; (int)row[column_name].as&lt;int&gt;() &lt;&lt; &quot;\t&quot;;</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    values.push_back(</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                        <a class="code" href="class_column_store_1_1_data_value.html">DataValue</a>((<span class="keywordtype">int</span>)row[column_name].as&lt;int&gt;()));</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == DataType::FLOAT) {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    <span class="comment">// cout &lt;&lt; (float)row[column_name].as&lt;float&gt;() &lt;&lt; &quot;\t&quot;;</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    values.push_back(</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                        <a class="code" href="class_column_store_1_1_data_value.html">DataValue</a>((<span class="keywordtype">float</span>)row[column_name].as&lt;float&gt;()));</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == DataType::STRING) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    <span class="comment">// cout &lt;&lt; (string)row[column_name].as&lt;string&gt;() &lt;&lt; &quot;\t&quot;;</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    values.push_back(</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                        <a class="code" href="class_column_store_1_1_data_value.html">DataValue</a>((<span class="keywordtype">string</span>)row[column_name].as&lt;string&gt;()));</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="comment">// cout &lt;&lt; endl;</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            data.push(values);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;   <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="class_postgre_s_q_l_data_source.html">PostgreSQLDataSource</a>(<a class="code" href="class_postgre_s_q_l_meta_data.html">PostgreSQLMetaData</a> postgresql_meta_data,</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                         std::string r_name, vector&lt;string&gt; c = {},</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                         <span class="keywordtype">int</span> b_size = 16) {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        conn = postgresql_meta_data.get_connection();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        pqxx::work txn{*conn};</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        relation_name = r_name;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        columns = c;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        batch_size = b_size;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        offset = 0;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        schema_meta_data = postgresql_meta_data.get_schema_meta_data();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                vector&lt;Table&gt; tables = schema_meta_data.get_tables();</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <a class="code" href="class_parser_1_1_table.html">Table</a> table = schema_meta_data.get_table(relation_name);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                set_total_number_of_rows(txn);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                vector&lt;ColumnStore::Column&gt; metadata_columns;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="keywordflow">if</span> (columns.size() == 0) {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    <span class="keyword">auto</span> temp = table.get_columns();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> column: temp)</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    metadata_columns.push_back(column);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> load_into_queue(pqxx::transaction_base &amp;txn,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                         vector&lt;ColumnStore::Column&gt; columns) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        pqxx::result rows_of_all_columns = get_rows_of_columns(txn, columns);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> row : rows_of_all_columns) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            vector&lt;DataValue&gt; values;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; columns.size(); i++) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keyword">auto</span> type = columns[i].type;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordtype">string</span> column_name = columns[i].name;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">if</span> (type == DataType::INT) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    <span class="comment">// cout &lt;&lt; (int)row[column_name].as&lt;int&gt;() &lt;&lt; &quot;\t&quot;;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    values.push_back(</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                        <a class="code" href="class_column_store_1_1_data_value.html">DataValue</a>((<span class="keywordtype">int</span>)row[column_name].as&lt;int&gt;()));</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == DataType::FLOAT) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    <span class="comment">// cout &lt;&lt; (float)row[column_name].as&lt;float&gt;() &lt;&lt; &quot;\t&quot;;</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    values.push_back(</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                        <a class="code" href="class_column_store_1_1_data_value.html">DataValue</a>((<span class="keywordtype">float</span>)row[column_name].as&lt;float&gt;()));</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == DataType::STRING) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    <span class="comment">// cout &lt;&lt; (string)row[column_name].as&lt;string&gt;() &lt;&lt; &quot;\t&quot;;</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                    values.push_back(</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                        <a class="code" href="class_column_store_1_1_data_value.html">DataValue</a>((<span class="keywordtype">string</span>)row[column_name].as&lt;string&gt;()));</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="comment">// cout &lt;&lt; endl;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            data.push(values);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;   <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="class_postgre_s_q_l_data_source.html">PostgreSQLDataSource</a>(<a class="code" href="class_postgre_s_q_l_meta_data.html">PostgreSQLMetaData</a> postgresql_meta_data,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                         std::string r_name, vector&lt;string&gt; c = {},</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                         <span class="keywordtype">int</span> b_size = 16) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        conn = postgresql_meta_data.get_connection();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        pqxx::work txn{*conn};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        relation_name = r_name;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        columns = c;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        batch_size = b_size;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        offset = 0;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        schema_meta_data = postgresql_meta_data.get_schema_meta_data();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                vector&lt;Table&gt; tables = schema_meta_data.get_tables();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <a class="code" href="class_parser_1_1_table.html">Table</a> table = schema_meta_data.get_table(relation_name);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                set_total_number_of_rows(txn);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                vector&lt;ColumnStore::Column&gt; metadata_columns;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="keywordflow">if</span> (columns.size() == 0) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    <span class="keyword">auto</span> temp = table.get_columns();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">auto</span> column : temp) metadata_columns.push_back(column);</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; columns.size(); i++) {</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                        metadata_columns.push_back(table[columns[i]]);</div>
@@ -187,15 +187,15 @@ $(function() {
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                        p.get_columns();</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; projection_columns.size(); i++) {</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                        <a class="code" href="struct_parser_1_1projection__column.html">projection_column</a> p_column = projection_columns[i];</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                        <a class="code" href="struct_column_store_1_1_column.html">ColumnStore::Column</a> c = {p_column.name, p_column.data_type,</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                                    p_column.index};</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                        <a class="code" href="struct_column_store_1_1_column.html">ColumnStore::Column</a> c = {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                            p_column.name, p_column.data_type, p_column.index};</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                        metadata_columns.push_back(c);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                    }</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; columns.size(); i++) {</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                        <a class="code" href="struct_parser_1_1projection__column.html">projection_column</a> p_column = p[columns[i]];</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                        <a class="code" href="struct_column_store_1_1_column.html">ColumnStore::Column</a> c = {p_column.name, p_column.data_type,</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                                    p_column.index};</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                        <a class="code" href="struct_column_store_1_1_column.html">ColumnStore::Column</a> c = {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                            p_column.name, p_column.data_type, p_column.index};</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                        metadata_columns.push_back(c);</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                    }</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                }</div>
@@ -220,8 +220,8 @@ $(function() {
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                    <a class="code" href="class_parser_1_1_table.html">Table</a> table = schema_meta_data.get_table(relation_name);</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                    vector&lt;ColumnStore::Column&gt; metadata_columns;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                    <span class="keywordflow">if</span> (columns.size() == 0) {</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                        <span class="keywordflow">for</span>(<span class="keyword">auto</span> c: table.get_columns())</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                        metadata_columns.push_back(c);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                        <span class="keywordflow">for</span> (<span class="keyword">auto</span> c : table.get_columns())</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                            metadata_columns.push_back(c);</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; columns.size(); i++) {</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                            metadata_columns.push_back(table[columns[i]]);</div>
@@ -241,33 +241,35 @@ $(function() {
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                            p.get_columns();</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; projection_columns.size(); i++) {</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                            <a class="code" href="struct_parser_1_1projection__column.html">projection_column</a> p_column = projection_columns[i];</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                            <a class="code" href="struct_column_store_1_1_column.html">ColumnStore::Column</a> c = {p_column.name, p_column.data_type,</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                                        p_column.index};</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                            metadata_columns.push_back(c);</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                        }</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; columns.size(); i++) {</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                            <a class="code" href="struct_parser_1_1projection__column.html">projection_column</a> p_column = p[columns[i]];</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                            <a class="code" href="struct_column_store_1_1_column.html">ColumnStore::Column</a> c = {p_column.name, p_column.data_type,</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                                        p_column.index};</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                            metadata_columns.push_back(c);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                        }</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                    }</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                    load_into_queue(txn, metadata_columns);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                }</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            } <span class="keywordflow">catch</span> (<span class="keyword">const</span> exception &amp;e) {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;No relation &quot;</span> + relation_name &lt;&lt; endl;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                cerr &lt;&lt; e.what() &lt;&lt; endl;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                exit(1);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        }</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keyword">auto</span> d = data.front();</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        data.pop();</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">return</span> d;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    }</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
-<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="class_postgre_s_q_l_data_source.html#a7bdfd66d14518180c9ed593227e79112">  198</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_postgre_s_q_l_data_source.html#a7bdfd66d14518180c9ed593227e79112">hasNext</a>() { <span class="keywordflow">return</span> (offset &lt; total_number_of_rows) || data.size(); }</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;};</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                            <a class="code" href="struct_column_store_1_1_column.html">ColumnStore::Column</a> c = {p_column.name,</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                                                     p_column.data_type,</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                                                     p_column.index};</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                            metadata_columns.push_back(c);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                        }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; columns.size(); i++) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                            <a class="code" href="struct_parser_1_1projection__column.html">projection_column</a> p_column = p[columns[i]];</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                            <a class="code" href="struct_column_store_1_1_column.html">ColumnStore::Column</a> c = {p_column.name,</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                                                     p_column.data_type,</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                                                     p_column.index};</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                            metadata_columns.push_back(c);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                        }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                    }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                    load_into_queue(txn, metadata_columns);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            } <span class="keywordflow">catch</span> (<span class="keyword">const</span> exception &amp;e) {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;No relation &quot;</span> + relation_name &lt;&lt; endl;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                cerr &lt;&lt; e.what() &lt;&lt; endl;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                exit(1);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keyword">auto</span> d = data.front();</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        data.pop();</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">return</span> d;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="class_postgre_s_q_l_data_source.html#a7bdfd66d14518180c9ed593227e79112">  200</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_postgre_s_q_l_data_source.html#a7bdfd66d14518180c9ed593227e79112">hasNext</a>() { <span class="keywordflow">return</span> (offset &lt; total_number_of_rows) || data.size(); }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_parser_1_1_schema_meta_data_html"><div class="ttname"><a href="class_parser_1_1_schema_meta_data.html">Parser::SchemaMetaData</a></div><div class="ttdef"><b>Definition:</b> SchemaMetaData.h:14</div></div>
 <div class="ttc" id="aclass_postgre_s_q_l_meta_data_html"><div class="ttname"><a href="class_postgre_s_q_l_meta_data.html">PostgreSQLMetaData</a></div><div class="ttdef"><b>Definition:</b> PostgreSQLMetaData.h:12</div></div>
@@ -280,7 +282,7 @@ $(function() {
 <div class="ttc" id="aclass_postgre_s_q_l_data_source_html_ad03bcc06efafaa8bafc0236d096ff213"><div class="ttname"><a href="class_postgre_s_q_l_data_source.html#ad03bcc06efafaa8bafc0236d096ff213">PostgreSQLDataSource::next</a></div><div class="ttdeci">DataRecord next()</div><div class="ttdef"><b>Definition:</b> PostgreSQLDataGenerator.h:143</div></div>
 <div class="ttc" id="aclass_parser_1_1_table_not_found_exception_html"><div class="ttname"><a href="class_parser_1_1_table_not_found_exception.html">Parser::TableNotFoundException</a></div><div class="ttdef"><b>Definition:</b> Table.h:16</div></div>
 <div class="ttc" id="a_data_generator_interface_8h_html_a9266cb438f0f76e2bf392940b5e33f84"><div class="ttname"><a href="_data_generator_interface_8h.html#a9266cb438f0f76e2bf392940b5e33f84">ColumnStore::DataSource</a></div><div class="ttdeci">std::shared_ptr&lt; DataGeneratorInterface &gt; DataSource</div><div class="ttdoc">Shared pointer to the DataGeneratorInterface.</div><div class="ttdef"><b>Definition:</b> DataGeneratorInterface.h:73</div></div>
-<div class="ttc" id="aclass_postgre_s_q_l_data_source_html_a7bdfd66d14518180c9ed593227e79112"><div class="ttname"><a href="class_postgre_s_q_l_data_source.html#a7bdfd66d14518180c9ed593227e79112">PostgreSQLDataSource::hasNext</a></div><div class="ttdeci">bool hasNext()</div><div class="ttdef"><b>Definition:</b> PostgreSQLDataGenerator.h:198</div></div>
+<div class="ttc" id="aclass_postgre_s_q_l_data_source_html_a7bdfd66d14518180c9ed593227e79112"><div class="ttname"><a href="class_postgre_s_q_l_data_source.html#a7bdfd66d14518180c9ed593227e79112">PostgreSQLDataSource::hasNext</a></div><div class="ttdeci">bool hasNext()</div><div class="ttdef"><b>Definition:</b> PostgreSQLDataGenerator.h:200</div></div>
 <div class="ttc" id="astruct_parser_1_1projection__column_html"><div class="ttname"><a href="struct_parser_1_1projection__column.html">Parser::projection_column</a></div><div class="ttdef"><b>Definition:</b> Projection.h:26</div></div>
 <div class="ttc" id="a_data_generator_interface_8h_html"><div class="ttname"><a href="_data_generator_interface_8h.html">DataGeneratorInterface.h</a></div><div class="ttdoc">Data Generator Interface.</div></div>
 <div class="ttc" id="aclass_parser_1_1_table_html"><div class="ttname"><a href="class_parser_1_1_table.html">Parser::Table</a></div><div class="ttdef"><b>Definition:</b> Table.h:25</div></div>
