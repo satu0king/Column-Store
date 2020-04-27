@@ -6,7 +6,13 @@ project(ColumnStore VERSION 0.1)
 # specify the C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+
 set(LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libs)
+
+if (CMAKE_COMPILER_IS_GNUCXX)
+  set ( CMAKE_FS_LINK stdc++fs)
+endif ()
+
 
 find_package(Boost 1.65.1 COMPONENTS program_options REQUIRED)
 find_package(nlohmann_json 3.2.0 REQUIRED)
@@ -32,7 +38,7 @@ add_executable(main_test test.cpp)
 target_link_libraries(main_test PRIVATE csv_data_generator generic_query interfaces)
 
 add_executable(column_store_init src/ColumnStoreInitializer/Driver.cpp)
-target_link_libraries(column_store_init PRIVATE parser Boost::program_options nlohmann_json::nlohmann_json stdc++fs)
+target_link_libraries(column_store_init PRIVATE parser Boost::program_options nlohmann_json::nlohmann_json ${CMAKE_FS_LINK})
 
 # add_executable(cache_server src/cache/cache_server.cpp)
 # target_link_libraries(cache_server PRIVATE Boost::program_options cache basic_data_connector postgres_data_connector gossip membership_list)
