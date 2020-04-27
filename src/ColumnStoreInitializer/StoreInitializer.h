@@ -1,12 +1,12 @@
 #pragma once
-#include <filesystem>
+#include <experimental/filesystem>
 #include <fstream>
 #include <iostream>
 #include <nlohmann/json.hpp>
 
 #include "Parser/SchemaMetaData.h"
 
-namespace fs = std::filesystem;
+namespace fs = std::experimental::filesystem::v1;
 
 using nlohmann::json;
 
@@ -36,7 +36,7 @@ fs::path getJoinIndexPath(std::string column_store_path,
 }
 
 void createFile(fs::path path) {
-    std::filesystem::create_directories(path.parent_path());
+    fs::create_directories(path.parent_path());
 
     std::ofstream ofs(path);
     ofs.close();
