@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
+#include <experimental/filesystem>
 #include <fstream>
 #include <nlohmann/json.hpp>
 #include <string>
@@ -14,10 +15,8 @@
 #include "interfaces/DataRecord.h"
 
 #ifdef __cpp_lib_filesystem
-#include <filesystem>
 namespace fs = std::filesystem;
 #elif __cpp_lib_experimental_filesystem
-#include <experimental/filesystem>
 namespace fs = std::experimental::filesystem;
 #else
 #error "no filesystem support ='("
