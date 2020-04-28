@@ -95,7 +95,7 @@ class DataRecordMetadata {
 
    public:
     DataRecordMetadata(std::vector<Column> columns) : columns(columns) {
-        for (int i = 0; i < columns.size(); i++) columnMap[columns[i].name] = i;
+        for (int i = 0; i < int(columns.size()); i++) columnMap[columns[i].name] = i;
     }
     /**
      * @brief Get the Columns object
@@ -111,7 +111,7 @@ class DataRecordMetadata {
      * @return Column
      */
     Column& operator[](int i) {
-        assert(i < columns.size());
+        assert(i < int(columns.size()));
         return columns[i];
     }
 
@@ -153,11 +153,11 @@ class DataRecordMetadata {
         fort::char_table table;
         table << fort::header;
 
-        for (int i = 0; i < columns.size(); i++) table << columns[i].name;
+        for (int i = 0; i < int(columns.size()); i++) table << columns[i].name;
 
         table << fort::endr;
 
-        for (int i = 0; i < columns.size(); i++) {
+        for (int i = 0; i < int(columns.size()); i++) {
             auto type = columns[i].type;
             if (type == DataType::INT)
                 table << record[i].as<int>();
@@ -179,7 +179,7 @@ class DataRecordMetadata {
      * Prints column names and type
      */
     void print() {
-        for (int i = 0; i < columns.size(); i++) {
+        for (int i = 0; i < int(columns.size()); i++) {
             auto type = columns[i].type;
             std::cout << columns[i].name << " - ";
             if (type == DataType::INT)

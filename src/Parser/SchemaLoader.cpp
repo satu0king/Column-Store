@@ -4,11 +4,6 @@
 #include "Table.h"
 #include "stdlib.h"
 
-// #define XMLVALIDATE "\
-// #/bin/bash \n\
-// xmllint -noout -schema ../schema.xsd ../schema.xml \n\
-// "
-
 using namespace std;
 
 Parser::SchemaLoader::SchemaLoader(string db_name, string username, string password,
@@ -122,7 +117,6 @@ void Parser::SchemaLoader::create_views() {
 }
 
 // int main() {
-//     // system(XMLVALIDATE);
 //     SchemaExtractor schema_extractor("../schema.xml");
 //     SchemaMetaData schema_meta_data = schema_extractor.get_meta_data();
 //     SchemaLoader schema_loader("column_store", "test", "test",

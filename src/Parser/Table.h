@@ -40,7 +40,7 @@ class Table {
     std::vector<foreign_key>& get_foreign_keys() { return foreign_keys; }
     std::vector<Parser::Column>& get_columns() { return columns; }
     Parser::Column& operator[](int i) {
-        if (i >= columns.size()) {
+        if (i >= int(columns.size())) {
             throw runtime_error("Index out of Bounds in Table:" + table_name);
         }
         return columns[i];
