@@ -10,7 +10,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libs)
 
 if (CMAKE_COMPILER_IS_GNUCXX)
-  set ( CMAKE_FS_LINK stdc++fs)
+  set (CMAKE_FS_LINK stdc++fs)
 endif ()
 
 
@@ -39,6 +39,10 @@ target_link_libraries(main_test PRIVATE csv_data_generator generic_query interfa
 
 add_executable(column_store_init src/ColumnStoreInitializer/Driver.cpp)
 target_link_libraries(column_store_init PRIVATE parser Boost::program_options nlohmann_json::nlohmann_json ${CMAKE_FS_LINK})
+
+add_executable(projection_test src/Core/ProjectionDataTest.cpp)
+target_include_directories(projection_test PUBLIC src/interfaces)
+target_link_libraries(projection_test PRIVATE parser Boost::program_options nlohmann_json::nlohmann_json ${CMAKE_FS_LINK} interfaces)
 
 # add_executable(cache_server src/cache/cache_server.cpp)
 # target_link_libraries(cache_server PRIVATE Boost::program_options cache basic_data_connector postgres_data_connector gossip membership_list)

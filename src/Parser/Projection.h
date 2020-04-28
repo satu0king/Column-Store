@@ -12,8 +12,8 @@ namespace Parser {
 using std::exception;
 using std::runtime_error;
 using std::string;
-using std::vector;
 using std::unordered_map;
+using std::vector;
 class ProjectionNotFoundException : public exception {
     std::string msg;
 
@@ -30,6 +30,10 @@ struct projection_column {
     std::string encoding;
     DataType data_type;
     int index;
+
+    operator Parser::DataType() { return data_type; }
+    operator ColumnStore::DataType() { return data_type; }
+    operator int() { return data_type; }
 };
 
 class Projection {

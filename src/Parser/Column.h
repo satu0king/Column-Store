@@ -7,11 +7,27 @@ struct DataType {
     ColumnStore::DataType dataType;
     int size;
     DataType(ColumnStore::DataType dataType, int size = 0)
-        : dataType(dataType), size(size) {}
-
-    operator ColumnStore::DataType() {
-        return dataType;
+        : dataType(dataType), size(size) {
+        if (dataType == ColumnStore::DataType::INT ||
+            dataType == ColumnStore::DataType::FLOAT)
+            size = 4;
     }
+
+    DataType(const char *type) : DataType(std::string(type)) {}
+
+    DataType(std::string type) {
+        if (type == "int") {
+            dataType = ColumnStore::DataType::INT;
+        } else if (type == "float") {
+            dataType = ColumnStore::DataType::FLOAT;
+        } else if (type.substr(0, 6) == "string") {
+            dataType = ColumnStore::DataType::STRING;
+            size = stoi(type.substr(6));
+        }
+    }
+
+    operator int() { return size; };
+    operator ColumnStore::DataType() { return dataType; }
 };
 
 struct Column {
@@ -28,12 +44,17 @@ struct Column {
      */
     int index;
 
+    Column(std::string name, DataType type, int index = -1)
+        : name(name), type(type), index(index) {}
+
     ColumnStore::Column getColumnStoreColumn() {
         return ColumnStore::Column{name, type.dataType, index};
     }
 
-    operator ColumnStore::Column() {
-        return getColumnStoreColumn();
-    }
+    operator ColumnStore::Column() { return getColumnStoreColumn(); }
+
+    operator ColumnStore::DataType() { return type; }
+    operator Parser::DataType() { return type; }
+    operator int() { return type; }
 };
 }  // namespace Parser
