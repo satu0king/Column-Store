@@ -30,5 +30,6 @@ class SchemaMetaData {
     Table &get_table(string table_name);
     vector<Projection> &get_projections() { return projections; }
     Projection &get_projection(string projection_name);
+
 };
 }  // namespace Parser

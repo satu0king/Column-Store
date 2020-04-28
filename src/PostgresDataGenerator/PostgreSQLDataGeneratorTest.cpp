@@ -9,6 +9,7 @@ int main() {
     vector<string> column_names = {"id", "name", "age"};
     PostgreSQLDataSource postgresql_data_source(postgresql_meta_data,
                                                 "EMPLOYEE", column_names);
+    postgresql_data_source.advance(4900);
     postgresql_data_source.print();
     return 0;
 }

@@ -4,11 +4,26 @@
 #include <string.h>
 
 #include <fstream>
+#include <nlohmann/json.hpp>
 #include <string>
 #include <vector>
 
+#include "ColumnStoreInitializer/StoreInitializer.h"
 #include "Parser/Projection.h"
+#include "Parser/SchemaLoader.h"
 #include "interfaces/DataRecord.h"
+
+#ifdef __cpp_lib_filesystem
+#include <filesystem>
+namespace fs = std::filesystem;
+#elif __cpp_lib_experimental_filesystem
+#include <experimental/filesystem>
+namespace fs = std::experimental::filesystem;
+#else
+#error "no filesystem support ='("
+#endif
+
+using nlohmann::json;
 
 namespace ColumnStore {
 
@@ -19,12 +34,19 @@ struct ColumnStoreData {
     ColumnStoreData(ColumnStoreData &&data) : data(data.data) {}
     ColumnStoreData(int size) : data(size) {}
 
-    ColumnStoreData(DataRecord &record, std::vector<Parser::Column> &columns) {
-        int size = 0;
-        for (auto &c : columns) size += c;
-
-        data.resize(size);
+    ColumnStoreData(DataRecord &record, std::vector<Parser::Column> &columns)
+        : ColumnStoreData(columns) {
         set(record, columns);
+    }
+
+    ColumnStoreData(std::vector<Parser::Column> &columns) {
+        int size = 0;
+        for (auto &c : columns) {
+            size += c.type.size;
+            std::cout << c.type.size << std::endl;
+        }
+        std::cout << size << std::endl;
+        data.resize(size);
     }
 
     float getFloat(int i) {
@@ -43,6 +65,10 @@ struct ColumnStoreData {
 
     void setInt(int i, int value) {
         *reinterpret_cast<int *>(data.data() + i) = value;
+    }
+
+    void setString(int i, std::string &string) {
+        memcpy(data.data() + i, string.c_str(), string.size());
     }
 
     void setString(int i, std::string string) {
@@ -108,6 +134,41 @@ struct ColumnStoreData {
             } else
                 throw std::runtime_error("Unknown DataType");
         }
+    }
+};
+
+struct MetadataManager {
+    fs::path file;
+    json metadata;
+    Parser::SchemaMetaData schemaMetadata;
+    MetadataManager(std::string column_store_path) {
+        file = getMetaDataPath(column_store_path);
+        std::ifstream inp(file);
+        inp >> metadata;
+        inp.close();
+
+        Parser::SchemaExtractor schema_extractor(metadata["schema_path"]);
+        schemaMetadata = schema_extractor.get_meta_data();
+    }
+
+    void save() {
+        std::ofstream o(file);
+        o << metadata.dump(4) << std::endl;
+        o.close();
+    }
+
+    operator json &() { return metadata; }
+    operator Parser::SchemaMetaData &() { return schemaMetadata; }
+    json &getFileMetadata() { return metadata; }
+    Parser::SchemaMetaData &getSchemaMetadata() { return schemaMetadata; }
+
+    json &getProjectionFileInfo(std::string projection) {
+        assert(metadata["projections"].count(projection));
+        return metadata["projections"][projection];
+    }
+
+    Parser::Projection &getProjectionSchemaInfo(std::string projection) {
+        return schemaMetadata.get_projection(projection);
     }
 };
 

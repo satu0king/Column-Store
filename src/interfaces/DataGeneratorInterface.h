@@ -57,7 +57,7 @@ class DataGeneratorInterface {
      *
      * Pretty print the relational data in a tabular form with column names
      */
-    void print();
+    void print(int recordCount = -1);
 
     /**
      * @brief Destroy the Data Generator Interface object
@@ -71,6 +71,5 @@ class DataGeneratorInterface {
  *
  */
 typedef std::shared_ptr<DataGeneratorInterface> DataSource;
-
 
 };  // namespace ColumnStore

@@ -32,6 +32,11 @@ struct Column {
      * Index is used to retrieve column value from record
      */
     int index;
+
+    Column(std::string name, DataType type, int index)
+        : name(name), type(type), index(index) {}
+        
+    Column() {}
 };
 
 // class ColumnNotFoundException : public exception {

@@ -43,7 +43,7 @@ std::vector<DataRecord> DataGeneratorInterface::nextBatch(int records) {
  *
  * Pretty print the relational data in a tabular form with column names
  */
-void DataGeneratorInterface::print() {
+void DataGeneratorInterface::print(int recordCount) {
     auto m = getMetadata();
     fort::char_table table;
     table << fort::header;
@@ -54,7 +54,7 @@ void DataGeneratorInterface::print() {
 
     table << fort::endr;
 
-    while (hasNext()) {
+    while (hasNext() && recordCount--) {
         auto record = next();
         for (int i = 0; i < columns.size(); i++) {
             auto type = columns[i].type;

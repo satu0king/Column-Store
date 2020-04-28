@@ -7,6 +7,7 @@
 #include "Column.h"
 #include "ForeignKey.h"
 #include "JoinIndex.h"
+#include "interfaces/DataRecord.h"
 
 namespace Parser {
 using std::exception;
@@ -34,6 +35,10 @@ struct projection_column {
     operator Parser::DataType() { return data_type; }
     operator ColumnStore::DataType() { return data_type; }
     operator int() { return data_type; }
+    operator Parser::Column() { return Parser::Column(name, data_type, index); }
+    operator ColumnStore::Column() {
+        return ColumnStore::Column(name, data_type, index);
+    }
 };
 
 class Projection {
@@ -77,6 +82,22 @@ class Projection {
                                 " does not have column " + name);
         }
         return columns[column_map[name]];
+    }
+
+    std::vector<Parser::Column> get_metadata_columns() {
+        std::vector<Parser::Column> result;
+        result.reserve(columns.size());
+        for (auto& c : columns) result.push_back(c);
+
+        return result;
+    }
+
+    ColumnStore::DataRecordMetadata get_metadata() {
+        std::vector<ColumnStore::Column> result;
+        result.reserve(columns.size());
+        for (auto& c : columns) result.push_back(c);
+
+        return result;
     }
 };
 }  // namespace Parser

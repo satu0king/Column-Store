@@ -107,9 +107,7 @@ Metadata GenericQueryBuilder::generateMetadata() {
                 data_sources[source]->getMetadata()->getColumn(name).type;
 
             // Construct column information
-            Column c = {.name = name,
-                        .type = type,
-                        .index = static_cast<int>(columns.size())};
+            Column c(name, type, columns.size());
 
             columns.push_back(c);
         }

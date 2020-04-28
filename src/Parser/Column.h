@@ -1,6 +1,7 @@
 #pragma once
 
 #include "interfaces/Column.h"
+#include <iostream>
 
 namespace Parser {
 struct DataType {
@@ -18,12 +19,16 @@ struct DataType {
     DataType(std::string type) {
         if (type == "int") {
             dataType = ColumnStore::DataType::INT;
+            size = 4;
         } else if (type == "float") {
             dataType = ColumnStore::DataType::FLOAT;
+            size = 4;
         } else if (type.substr(0, 6) == "string") {
             dataType = ColumnStore::DataType::STRING;
             size = stoi(type.substr(6));
         }
+
+        // std::cout << "SIZE " << type << " " << size << std::endl;
     }
 
     operator int() { return size; };

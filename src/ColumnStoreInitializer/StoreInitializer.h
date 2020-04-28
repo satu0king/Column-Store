@@ -1,5 +1,4 @@
 #pragma once
-#include <experimental/filesystem>
 #include <fstream>
 #include <iostream>
 #include <nlohmann/json.hpp>
@@ -7,13 +6,13 @@
 #include "Parser/SchemaMetaData.h"
 
 #ifdef __cpp_lib_filesystem
-    #include <filesystem>
-    namespace fs = std::filesystem;
+#include <filesystem>
+namespace fs = std::filesystem;
 #elif __cpp_lib_experimental_filesystem
-    #include <experimental/filesystem>
-    namespace fs = std::experimental::filesystem;
+#include <experimental/filesystem>
+namespace fs = std::experimental::filesystem;
 #else
-    #error "no filesystem support ='("
+#error "no filesystem support ='("
 #endif
 
 using nlohmann::json;
@@ -57,8 +56,6 @@ class Initializer {
         fs::path path = getProjectionPath(column_store_path, name);
 
         createFile(path);
-        // add directories based on the object path
-        // (without this line it will not work)
 
         for (auto &index : projection.get_join_indexes()) {
             fs::path path = getJoinIndexPath(column_store_path, name, index);

@@ -197,5 +197,15 @@ class PostgreSQLDataSource : public ColumnStore::DataGeneratorInterface {
         return d;
     }
 
+    void advance(int recordCount) {
+        while(data.size() && recordCount) {
+            recordCount--;
+            data.pop();
+        }
+        if(recordCount) {
+            offset += recordCount;
+        }
+    }
+
     bool hasNext() { return (offset < total_number_of_rows) || data.size(); }
 };
