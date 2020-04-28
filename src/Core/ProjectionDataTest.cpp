@@ -49,9 +49,9 @@ int main() {
     std::cout << record[1].as<float>() << std::endl;
     std::cout << record[2].as<std::string>() << std::endl;
 
-    record[0] = DataValue(69);
-    record[1] = DataValue(3.4f);
-    record[2] = DataValue(std::string("World"));
+    record[0] = 69;
+    record[1] = 3.4f;
+    record[2] = std::string("World");
 
     // Testing DataRecord -> ColumnStoreData
     data.set(record, columns);

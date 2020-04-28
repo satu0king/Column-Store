@@ -1,5 +1,8 @@
 #pragma once
 
+#include <stdio.h>
+#include <string.h>
+
 #include <fstream>
 #include <string>
 #include <vector>
@@ -16,8 +19,7 @@ struct ColumnStoreData {
     ColumnStoreData(ColumnStoreData &&data) : data(data.data) {}
     ColumnStoreData(int size) : data(size) {}
 
-    ColumnStoreData(DataRecord &record,
-                    std::vector<Parser::Column> &columns) {
+    ColumnStoreData(DataRecord &record, std::vector<Parser::Column> &columns) {
         int size = 0;
         for (auto &c : columns) size += c;
 
@@ -90,8 +92,7 @@ struct ColumnStoreData {
         return DataRecord(values);
     }
 
-    void set(DataRecord &record,
-             std::vector<Parser::Column> &columns) {
+    void set(DataRecord &record, std::vector<Parser::Column> &columns) {
         int offset = 0;
         for (int i = 0; i < columns.size(); ++i) {
             Parser::DataType type = columns[i];

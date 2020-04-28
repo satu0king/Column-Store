@@ -7,13 +7,13 @@
 #include <unordered_map>
 #include <vector>
 
-#include "Column.h"
 #include "../Fort/fort.hpp"
+#include "Column.h"
 
 /** @file DataRecord.h
  * @brief Data storage structures
  */
-namespace ColumnStore{
+namespace ColumnStore {
 /**
  * @brief Implementation of a single data element
  *
@@ -41,7 +41,13 @@ class DataValue {
         return std::any_cast<T>(value);
     }
 
+    void operator=(std::any value) { this->value = value; }
+
     std::any get() { return value; }
+
+    operator int() { return as<int>(); }
+    operator float() { return as<float>(); }
+    operator std::string() { return as<std::string>(); }
 };
 
 /**
@@ -168,8 +174,8 @@ class DataRecordMetadata {
     }
 
     /**
-     * @brief Print metadata 
-     * 
+     * @brief Print metadata
+     *
      * Prints column names and type
      */
     void print() {
@@ -193,8 +199,8 @@ class DataRecordMetadata {
 
 /**
  * @brief Shared pointer to DataRecordMetadata
- * 
+ *
  * Metadata is transfered between objects using this type
  */
 typedef std::shared_ptr<DataRecordMetadata> Metadata;
-};
+};  // namespace ColumnStore
