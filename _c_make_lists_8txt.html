@@ -72,10 +72,30 @@ $(function() {
 Functions</h2></td></tr>
 <tr class="memitem:a36072fbc441a3e7c1d5f237f089fee63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a36072fbc441a3e7c1d5f237f089fee63">cmake_minimum_required</a> (VERSION 3.10) project(ColumnStore VERSION 0.1) set(CMAKE_CXX_STANDARD 17) set(CMAKE_CXX_STANDARD_REQUIRED True) set(LIB_DIR $</td></tr>
 <tr class="separator:a36072fbc441a3e7c1d5f237f089fee63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a256bd339a4eecd357875e85c7ec2c269"><td class="memItemLeft" align="right" valign="top">libs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a256bd339a4eecd357875e85c7ec2c269">if</a> (CMAKE_COMPILER_IS_GNUCXX) set(CMAKE_FS_LINK stdc++fs) endif() find_package(Boost 1.65.1 COMPONENTS program_options REQUIRED) find_package(nlohmann_json 3.2.0 REQUIRED) add_subdirectory(src/PostgresDataGenerator) add_subdirectory(src/Parser) add_subdirectory(src/CSVDataGenerator) add_subdirectory(src/Fort) add_subdirectory(src/GenericQuery) add_subdirectory(src/interfaces) add_executable(schema_loader src/Parser/SchemaLoaderTester.cpp) target_link_libraries(schema_loader PRIVATE parser) add_executable(postgres_data_test src/PostgresDataGenerator/PostgreSQLDataGeneratorTest.cpp) target_link_libraries(postgres_data_test PRIVATE postgres_data_generator) add_executable(main_test test.cpp) target_link_libraries(main_test PRIVATE csv_data_generator generic_query interfaces) add_executable(column_store_init src/ColumnStoreInitializer/Driver.cpp) target_link_libraries(column_store_init PRIVATE parser Boost</td></tr>
+<tr class="memitem:a256bd339a4eecd357875e85c7ec2c269"><td class="memItemLeft" align="right" valign="top">libs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#a256bd339a4eecd357875e85c7ec2c269">if</a> (CMAKE_COMPILER_IS_GNUCXX) set(CMAKE_FS_LINK stdc++fs) endif() find_package(Boost 1.65.1 COMPONENTS program_options REQUIRED) find_package(nlohmann_json 3.2.0 REQUIRED) add_subdirectory(src/PostgresDataGenerator) add_subdirectory(src/Parser) add_subdirectory(src/CSVDataGenerator) add_subdirectory(src/Fort) add_subdirectory(src/GenericQuery) add_subdirectory(src/interfaces) <a class="el" href="_c_make_lists_8txt.html#af00fa650513cfb1c97463a1b57d5da5b">add_executable</a>(schema_loader src/Parser/SchemaLoaderTester.cpp) target_link_libraries(schema_loader PRIVATE parser) <a class="el" href="_c_make_lists_8txt.html#af00fa650513cfb1c97463a1b57d5da5b">add_executable</a>(postgres_data_test src/PostgresDataGenerator/PostgreSQLDataGeneratorTest.cpp) target_link_libraries(postgres_data_test PRIVATE postgres_data_generator) <a class="el" href="_c_make_lists_8txt.html#af00fa650513cfb1c97463a1b57d5da5b">add_executable</a>(main_test test.cpp) target_link_libraries(main_test PRIVATE csv_data_generator generic_query interfaces) <a class="el" href="_c_make_lists_8txt.html#af00fa650513cfb1c97463a1b57d5da5b">add_executable</a>(column_store_init src/ColumnStoreInitializer/Driver.cpp) target_link_libraries(column_store_init PRIVATE parser Boost</td></tr>
 <tr class="separator:a256bd339a4eecd357875e85c7ec2c269"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af00fa650513cfb1c97463a1b57d5da5b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_make_lists_8txt.html#af00fa650513cfb1c97463a1b57d5da5b">add_executable</a> (projection_test src/Core/ProjectionDataTest.cpp) target_include_directories(projection_test PUBLIC src/interfaces) target_link_libraries(projection_test PRIVATE parser Boost</td></tr>
+<tr class="separator:af00fa650513cfb1c97463a1b57d5da5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="af00fa650513cfb1c97463a1b57d5da5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af00fa650513cfb1c97463a1b57d5da5b">&#9670;&nbsp;</a></span>add_executable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">add_executable </td>
+          <td>(</td>
+          <td class="paramtype">projection_test src/Core/ProjectionDataTest.&#160;</td>
+          <td class="paramname"><em>cpp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a36072fbc441a3e7c1d5f237f089fee63"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a36072fbc441a3e7c1d5f237f089fee63">&#9670;&nbsp;</a></span>cmake_minimum_required()</h2>
 

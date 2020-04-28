@@ -119,6 +119,12 @@ $(function() {
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
+<li>Column()
+: <a class="el" href="struct_parser_1_1_column.html#a1981bc41b2b79e7c1cb29798ddfc6e8d">Parser::Column</a>
+</li>
+<li>ColumnStoreData()
+: <a class="el" href="struct_column_store_1_1_column_store_data.html#a0c29adc4e87303ec0b197f5a2b01df48">ColumnStore::ColumnStoreData</a>
+</li>
 <li>configureSchema()
 : <a class="el" href="class_column_store_1_1_initializer.html#ac1514e25217df229b2c711c1d7377dd5">ColumnStore::Initializer</a>
 </li>
@@ -187,7 +193,8 @@ $(function() {
 : <a class="el" href="class_generic_query_1_1_generic_data_generator.html#a009a5809f606dcfa19b7b104f1341c93">GenericQuery::GenericDataGenerator</a>
 </li>
 <li>get()
-: <a class="el" href="class_column_store_1_1_data_value.html#a010374ac15477f049fe3759eef2ef330">ColumnStore::DataValue</a>
+: <a class="el" href="struct_column_store_1_1_column_store_data.html#ad62f025d89621e6a4bb5f71c1c1424f4">ColumnStore::ColumnStoreData</a>
+, <a class="el" href="class_column_store_1_1_data_value.html#a010374ac15477f049fe3759eef2ef330">ColumnStore::DataValue</a>
 </li>
 <li>get_base_table()
 : <a class="el" href="class_parser_1_1_projection.html#ac9534917afc80633d4f58675a6977ff9">Parser::Projection</a>
@@ -263,8 +270,17 @@ $(function() {
 <li>getColumnStoreColumn()
 : <a class="el" href="struct_parser_1_1_column.html#a17e1dfc2c77860b82051ba8c516276a5">Parser::Column</a>
 </li>
+<li>getFloat()
+: <a class="el" href="struct_column_store_1_1_column_store_data.html#a984563edc31186ecce69bb72d42ad02a">ColumnStore::ColumnStoreData</a>
+</li>
+<li>getInt()
+: <a class="el" href="struct_column_store_1_1_column_store_data.html#ab5e1008e6d493c23cc685d8ecc045003">ColumnStore::ColumnStoreData</a>
+</li>
 <li>getMetadata()
 : <a class="el" href="class_column_store_1_1_data_generator_interface.html#a67fea3f3de472ee88fa0ca4c4945026d">ColumnStore::DataGeneratorInterface</a>
+</li>
+<li>getString()
+: <a class="el" href="struct_column_store_1_1_column_store_data.html#a184266b97e8c8b181d1f90abb7854c3c">ColumnStore::ColumnStoreData</a>
 </li>
 <li>getValidator()
 : <a class="el" href="class_column_store_1_1_and_query.html#a7b90e2f5e64c6fb7b3fe6ac3b5a11b5e">ColumnStore::AndQuery</a>
@@ -337,17 +353,34 @@ $(function() {
 
 
 <h3><a id="index_o"></a>- o -</h3><ul>
+<li>operator char *()
+: <a class="el" href="struct_column_store_1_1_column_store_data.html#a1d1cfc4ad27243399c93ed8ed33dff7c">ColumnStore::ColumnStoreData</a>
+</li>
 <li>operator ColumnStore::Column()
 : <a class="el" href="struct_parser_1_1_column.html#a87fa62e73a89dec1709e9ae500f544fe">Parser::Column</a>
 </li>
 <li>operator ColumnStore::DataType()
-: <a class="el" href="struct_parser_1_1_data_type.html#aa813835b4626ff3849cd8d7286352fb7">Parser::DataType</a>
+: <a class="el" href="struct_parser_1_1_column.html#a012d3f278a0afdd4779ed83d7b871ac2">Parser::Column</a>
+, <a class="el" href="struct_parser_1_1_data_type.html#aa813835b4626ff3849cd8d7286352fb7">Parser::DataType</a>
+, <a class="el" href="struct_parser_1_1projection__column.html#a591df1a230bbffe9037f17dd08329709">Parser::projection_column</a>
+</li>
+<li>operator const char *()
+: <a class="el" href="struct_column_store_1_1_column_store_data.html#a1f19ff33ab81245121690646f534e5fd">ColumnStore::ColumnStoreData</a>
+</li>
+<li>operator int()
+: <a class="el" href="struct_parser_1_1_column.html#a8e0b51b032a2e8939e4bd8ee7ba79f7d">Parser::Column</a>
+, <a class="el" href="struct_parser_1_1_data_type.html#ad5c1cf55248f6e6e0e5ae711bdaff665">Parser::DataType</a>
+, <a class="el" href="struct_parser_1_1projection__column.html#a672e08696a7d640c810d573bc5178b11">Parser::projection_column</a>
+</li>
+<li>operator Parser::DataType()
+: <a class="el" href="struct_parser_1_1_column.html#a61c2ffe2f0fed535b252e076434fe712">Parser::Column</a>
+, <a class="el" href="struct_parser_1_1projection__column.html#a93d54c06d725c5f1bef653467808a960">Parser::projection_column</a>
 </li>
 <li>operator[]()
 : <a class="el" href="struct_column_store_1_1_data_record.html#a30ee7c2884d59e1c29ca011d039baa06">ColumnStore::DataRecord</a>
 , <a class="el" href="class_column_store_1_1_data_record_metadata.html#ae7d6a450490e65591b0ebe1fdd4ead94">ColumnStore::DataRecordMetadata</a>
-, <a class="el" href="class_parser_1_1_projection.html#a1a5fdc3d4c5062c2bfdcd8f759e8cac8">Parser::Projection</a>
-, <a class="el" href="class_parser_1_1_table.html#a1e22b10515d9ae3ceff4e7b559f19905">Parser::Table</a>
+, <a class="el" href="class_parser_1_1_projection.html#aa4a011a962cd160c6dea98a94d59b6c6">Parser::Projection</a>
+, <a class="el" href="class_parser_1_1_table.html#ab7747f9279078caa52d32223c4a69d53">Parser::Table</a>
 </li>
 <li>OrQuery()
 : <a class="el" href="class_column_store_1_1_or_query.html#a634ace867e732304e5a6fa0dcc739a09">ColumnStore::OrQuery</a>
@@ -376,6 +409,9 @@ $(function() {
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
+<li>read()
+: <a class="el" href="struct_column_store_1_1_column_store_data.html#a38006d276ae82fa38cbbb505d733b20f">ColumnStore::ColumnStoreData</a>
+</li>
 <li>ReccordValidatorMetadataInterface()
 : <a class="el" href="class_column_store_1_1_reccord_validator_metadata_interface.html#a9c50fc7d7246c2bc78a607737375305a">ColumnStore::ReccordValidatorMetadataInterface</a>
 </li>
@@ -394,6 +430,9 @@ $(function() {
 </li>
 <li>SchemaLoader()
 : <a class="el" href="class_parser_1_1_schema_loader.html#a4839334fa29c59ff271101a8c62839f5">Parser::SchemaLoader</a>
+</li>
+<li>set()
+: <a class="el" href="struct_column_store_1_1_column_store_data.html#a76afe5df455a1a7b2e1887ced8b4af45">ColumnStore::ColumnStoreData</a>
 </li>
 <li>set_base_table()
 : <a class="el" href="class_parser_1_1_projection.html#afcbee95953e9c201075c88fb1b9ab72d">Parser::Projection</a>
@@ -416,8 +455,20 @@ $(function() {
 <li>setBaseSource()
 : <a class="el" href="class_generic_query_1_1_generic_query_builder.html#a551f3151383fa621b76e56738bea03f4">GenericQuery::GenericQueryBuilder</a>
 </li>
+<li>setFloat()
+: <a class="el" href="struct_column_store_1_1_column_store_data.html#a46fc761cb8373eb0da9e44fcffa5b1c7">ColumnStore::ColumnStoreData</a>
+</li>
+<li>setInt()
+: <a class="el" href="struct_column_store_1_1_column_store_data.html#a494f71da2018eb18d60433f2d3ffb178">ColumnStore::ColumnStoreData</a>
+</li>
+<li>setString()
+: <a class="el" href="struct_column_store_1_1_column_store_data.html#acdebe426925ff32573b16acd74192dd3">ColumnStore::ColumnStoreData</a>
+</li>
 <li>setup_database()
 : <a class="el" href="class_parser_1_1_schema_loader.html#a201a585b2d5348825b434e4e2c79bfbb">Parser::SchemaLoader</a>
+</li>
+<li>size()
+: <a class="el" href="struct_column_store_1_1_column_store_data.html#a7b3fba454c0190a547a5eb1907089f52">ColumnStore::ColumnStoreData</a>
 </li>
 </ul>
 
@@ -448,6 +499,9 @@ $(function() {
 </li>
 <li>where()
 : <a class="el" href="class_generic_query_1_1_generic_query_builder.html#ae9390e286bce58d2e8d12f54ae0c8973">GenericQuery::GenericQueryBuilder</a>
+</li>
+<li>write()
+: <a class="el" href="struct_column_store_1_1_column_store_data.html#a56dcaf890bd8755cfbf0c4068de844b6">ColumnStore::ColumnStoreData</a>
 </li>
 </ul>
 
