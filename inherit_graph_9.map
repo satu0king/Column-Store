@@ -1,3 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$struct_generic_query_1_1_generic_data_generator_1_1_data_generater_join.html" title="helper structure to efficiently process joins" alt="" coords="5,5,199,47"/>
+<area shape="rect" id="node1" href="$class_column_store_1_1_record_validator_interface.html" title="Base RecordValidator Interface." alt="" coords="5,74,200,115"/>
+<area shape="rect" id="node2" href="$class_column_store_1_1_and_record_validator.html" title="Logical AND RecordValidator." alt="" coords="248,5,467,32"/>
+<area shape="rect" id="node3" href="$class_column_store_1_1_not_record_validator.html" title="Inverts RecordValidator." alt="" coords="249,56,465,83"/>
+<area shape="rect" id="node4" href="$class_column_store_1_1_or_record_validator.html" title="Logical OR RecordValidator." alt="" coords="253,107,462,133"/>
+<area shape="rect" id="node5" href="$class_column_store_1_1_reccord_validator_metadata_interface.html" title="Extended RecordValidator Interface which handles Metadata." alt="" coords="256,158,459,199"/>
+<area shape="rect" id="node6" href="$class_column_store_1_1_equal_record_validator.html" title="Checks equality of a data field." alt="" coords="528,125,704,166"/>
+<area shape="rect" id="node7" href="$class_column_store_1_1_less_than_record_validator.html" title="Checks if value of a field is less than given value." alt="" coords="515,190,717,231"/>
 </map>

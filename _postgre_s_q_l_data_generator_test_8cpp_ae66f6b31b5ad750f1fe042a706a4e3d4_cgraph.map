@@ -1,8 +1,9 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,46,56,73"/>
-<area shape="rect" id="node2" href="$class_parser_1_1_schema_extractor.html#ad1cf0228db1f16646ca251163b2d1da9" title=" " alt="" coords="115,5,280,47"/>
-<area shape="rect" id="node3" href="$class_column_store_1_1_data_generator_interface.html#af9cf96f6d35a6e0edd42f0592667b4fa" title="Print the data." alt="" coords="104,71,291,112"/>
-<area shape="rect" id="node4" href="$class_column_store_1_1_data_generator_interface.html#a67fea3f3de472ee88fa0ca4c4945026d" title="Interface for relational data sources." alt="" coords="339,5,525,47"/>
-<area shape="rect" id="node5" href="$class_column_store_1_1_data_generator_interface.html#abb1cf070990a2591ed786ee169df00ed" title=" " alt="" coords="339,71,525,112"/>
-<area shape="rect" id="node6" href="$class_column_store_1_1_data_generator_interface.html#a9a29eb24c66f2c0c0a081744e107841e" title=" " alt="" coords="339,136,525,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,78,56,105"/>
+<area shape="rect" id="node2" href="$class_postgre_s_q_l_data_source.html#a33f72f6b967a43d54368dcd6ca09d4ac" title=" " alt="" coords="116,5,279,47"/>
+<area shape="rect" id="node3" href="$class_parser_1_1_schema_extractor.html#ad1cf0228db1f16646ca251163b2d1da9" title=" " alt="" coords="115,71,280,112"/>
+<area shape="rect" id="node4" href="$class_column_store_1_1_data_generator_interface.html#af0805f02dbbd75f26df7cd387c3ad0a7" title="Print the data." alt="" coords="104,136,291,177"/>
+<area shape="rect" id="node5" href="$class_column_store_1_1_data_generator_interface.html#a67fea3f3de472ee88fa0ca4c4945026d" title="Interface for relational data sources." alt="" coords="339,71,525,112"/>
+<area shape="rect" id="node6" href="$class_column_store_1_1_data_generator_interface.html#abb1cf070990a2591ed786ee169df00ed" title=" " alt="" coords="339,136,525,177"/>
+<area shape="rect" id="node7" href="$class_column_store_1_1_data_generator_interface.html#a9a29eb24c66f2c0c0a081744e107841e" title=" " alt="" coords="339,201,525,243"/>
 </map>

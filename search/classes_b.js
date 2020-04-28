@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['postgresqldatasource_280',['PostgreSQLDataSource',['../class_postgre_s_q_l_data_source.html',1,'']]],
-  ['postgresqlmetadata_281',['PostgreSQLMetaData',['../class_postgre_s_q_l_meta_data.html',1,'']]],
-  ['projection_282',['Projection',['../class_parser_1_1_projection.html',1,'Parser']]],
-  ['projection_5fcolumn_283',['projection_column',['../struct_parser_1_1projection__column.html',1,'Parser']]],
-  ['projectionnotfoundexception_284',['ProjectionNotFoundException',['../class_parser_1_1_projection_not_found_exception.html',1,'Parser']]]
+  ['orquery_291',['OrQuery',['../class_column_store_1_1_or_query.html',1,'ColumnStore']]],
+  ['orrecordvalidator_292',['OrRecordValidator',['../class_column_store_1_1_or_record_validator.html',1,'ColumnStore']]]
 ];

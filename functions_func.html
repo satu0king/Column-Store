@@ -99,6 +99,9 @@ $(function() {
 <li>add_table()
 : <a class="el" href="class_parser_1_1_schema_meta_data.html#ab23b7f3837248c9186d3be0781d1b61c">Parser::SchemaMetaData</a>
 </li>
+<li>advance()
+: <a class="el" href="class_postgre_s_q_l_data_source.html#a33f72f6b967a43d54368dcd6ca09d4ac">PostgreSQLDataSource</a>
+</li>
 <li>AndQuery()
 : <a class="el" href="class_column_store_1_1_and_query.html#adc2fc5695acb2607eca7113d84d2ac51">ColumnStore::AndQuery</a>
 </li>
@@ -120,7 +123,8 @@ $(function() {
 
 <h3><a id="index_c"></a>- c -</h3><ul>
 <li>Column()
-: <a class="el" href="struct_parser_1_1_column.html#a1981bc41b2b79e7c1cb29798ddfc6e8d">Parser::Column</a>
+: <a class="el" href="struct_column_store_1_1_column.html#a2e09df7e383700f928f03f0369804444">ColumnStore::Column</a>
+, <a class="el" href="struct_parser_1_1_column.html#a1981bc41b2b79e7c1cb29798ddfc6e8d">Parser::Column</a>
 </li>
 <li>ColumnStoreData()
 : <a class="el" href="struct_column_store_1_1_column_store_data.html#a0c29adc4e87303ec0b197f5a2b01df48">ColumnStore::ColumnStoreData</a>
@@ -225,6 +229,12 @@ $(function() {
 <li>get_meta_data()
 : <a class="el" href="class_parser_1_1_schema_extractor.html#ad1cf0228db1f16646ca251163b2d1da9">Parser::SchemaExtractor</a>
 </li>
+<li>get_metadata()
+: <a class="el" href="class_parser_1_1_projection.html#a9eb7600e1b320b1b7a3b963efb4de151">Parser::Projection</a>
+</li>
+<li>get_metadata_columns()
+: <a class="el" href="class_parser_1_1_projection.html#ad286cdf1a9334555810879e308bf2f67">Parser::Projection</a>
+</li>
 <li>get_password()
 : <a class="el" href="class_postgre_s_q_l_meta_data.html#a0adb5c131f96c86a18faf85e2906bebe">PostgreSQLMetaData</a>
 </li>
@@ -270,6 +280,9 @@ $(function() {
 <li>getColumnStoreColumn()
 : <a class="el" href="struct_parser_1_1_column.html#a17e1dfc2c77860b82051ba8c516276a5">Parser::Column</a>
 </li>
+<li>getFileMetadata()
+: <a class="el" href="struct_column_store_1_1_metadata_manager.html#aec1fcddf09d04c4a55e8c4d383bc250b">ColumnStore::MetadataManager</a>
+</li>
 <li>getFloat()
 : <a class="el" href="struct_column_store_1_1_column_store_data.html#a984563edc31186ecce69bb72d42ad02a">ColumnStore::ColumnStoreData</a>
 </li>
@@ -278,6 +291,15 @@ $(function() {
 </li>
 <li>getMetadata()
 : <a class="el" href="class_column_store_1_1_data_generator_interface.html#a67fea3f3de472ee88fa0ca4c4945026d">ColumnStore::DataGeneratorInterface</a>
+</li>
+<li>getProjectionFileInfo()
+: <a class="el" href="struct_column_store_1_1_metadata_manager.html#aef6a0b651c0cfa40aa325ce103da551e">ColumnStore::MetadataManager</a>
+</li>
+<li>getProjectionSchemaInfo()
+: <a class="el" href="struct_column_store_1_1_metadata_manager.html#a051845669071884a18110b7cd6534500">ColumnStore::MetadataManager</a>
+</li>
+<li>getSchemaMetadata()
+: <a class="el" href="struct_column_store_1_1_metadata_manager.html#a41016d8956e700dd171c4aed06750099">ColumnStore::MetadataManager</a>
 </li>
 <li>getString()
 : <a class="el" href="struct_column_store_1_1_column_store_data.html#a184266b97e8c8b181d1f90abb7854c3c">ColumnStore::ColumnStoreData</a>
@@ -333,6 +355,13 @@ $(function() {
 </ul>
 
 
+<h3><a id="index_m"></a>- m -</h3><ul>
+<li>MetadataManager()
+: <a class="el" href="struct_column_store_1_1_metadata_manager.html#af75f3a6d9c39504c3f03969ef3b1619e">ColumnStore::MetadataManager</a>
+</li>
+</ul>
+
+
 <h3><a id="index_n"></a>- n -</h3><ul>
 <li>next()
 : <a class="el" href="class_column_store_1_1_data_generator_interface.html#a9a29eb24c66f2c0c0a081744e107841e">ColumnStore::DataGeneratorInterface</a>
@@ -358,6 +387,7 @@ $(function() {
 </li>
 <li>operator ColumnStore::Column()
 : <a class="el" href="struct_parser_1_1_column.html#a87fa62e73a89dec1709e9ae500f544fe">Parser::Column</a>
+, <a class="el" href="struct_parser_1_1projection__column.html#ad7f097a6af4fcf148c74f3ad6301b6e2">Parser::projection_column</a>
 </li>
 <li>operator ColumnStore::DataType()
 : <a class="el" href="struct_parser_1_1_column.html#a012d3f278a0afdd4779ed83d7b871ac2">Parser::Column</a>
@@ -376,9 +406,18 @@ $(function() {
 , <a class="el" href="struct_parser_1_1_data_type.html#ad5c1cf55248f6e6e0e5ae711bdaff665">Parser::DataType</a>
 , <a class="el" href="struct_parser_1_1projection__column.html#a672e08696a7d640c810d573bc5178b11">Parser::projection_column</a>
 </li>
+<li>operator json &amp;()
+: <a class="el" href="struct_column_store_1_1_metadata_manager.html#a96d420b0539f34ee28f5cd2b7e4290e7">ColumnStore::MetadataManager</a>
+</li>
+<li>operator Parser::Column()
+: <a class="el" href="struct_parser_1_1projection__column.html#aa7426145d3fcf8342aab7467caa3e089">Parser::projection_column</a>
+</li>
 <li>operator Parser::DataType()
 : <a class="el" href="struct_parser_1_1_column.html#a61c2ffe2f0fed535b252e076434fe712">Parser::Column</a>
 , <a class="el" href="struct_parser_1_1projection__column.html#a93d54c06d725c5f1bef653467808a960">Parser::projection_column</a>
+</li>
+<li>operator Parser::SchemaMetaData &amp;()
+: <a class="el" href="struct_column_store_1_1_metadata_manager.html#acd66a8d813eba7a46d743fa68fe3777d">ColumnStore::MetadataManager</a>
 </li>
 <li>operator std::string()
 : <a class="el" href="class_column_store_1_1_data_value.html#a6887bb74061ce5d6ee34bcae9bac608b">ColumnStore::DataValue</a>
@@ -389,8 +428,8 @@ $(function() {
 <li>operator[]()
 : <a class="el" href="struct_column_store_1_1_data_record.html#a30ee7c2884d59e1c29ca011d039baa06">ColumnStore::DataRecord</a>
 , <a class="el" href="class_column_store_1_1_data_record_metadata.html#ae7d6a450490e65591b0ebe1fdd4ead94">ColumnStore::DataRecordMetadata</a>
-, <a class="el" href="class_parser_1_1_projection.html#a1a5fdc3d4c5062c2bfdcd8f759e8cac8">Parser::Projection</a>
-, <a class="el" href="class_parser_1_1_table.html#ab7747f9279078caa52d32223c4a69d53">Parser::Table</a>
+, <a class="el" href="class_parser_1_1_projection.html#aa4a011a962cd160c6dea98a94d59b6c6">Parser::Projection</a>
+, <a class="el" href="class_parser_1_1_table.html#a1e22b10515d9ae3ceff4e7b559f19905">Parser::Table</a>
 </li>
 <li>OrQuery()
 : <a class="el" href="class_column_store_1_1_or_query.html#a634ace867e732304e5a6fa0dcc739a09">ColumnStore::OrQuery</a>
@@ -409,7 +448,7 @@ $(function() {
 : <a class="el" href="class_postgre_s_q_l_meta_data.html#a828881b2c715f56dc90786e6d31e86af">PostgreSQLMetaData</a>
 </li>
 <li>print()
-: <a class="el" href="class_column_store_1_1_data_generator_interface.html#af9cf96f6d35a6e0edd42f0592667b4fa">ColumnStore::DataGeneratorInterface</a>
+: <a class="el" href="class_column_store_1_1_data_generator_interface.html#af0805f02dbbd75f26df7cd387c3ad0a7">ColumnStore::DataGeneratorInterface</a>
 , <a class="el" href="class_column_store_1_1_data_record_metadata.html#ab0644e68d364004e039b7d9e4a42f4bc">ColumnStore::DataRecordMetadata</a>
 </li>
 <li>ProjectionNotFoundException()
@@ -432,6 +471,9 @@ $(function() {
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
+<li>save()
+: <a class="el" href="struct_column_store_1_1_metadata_manager.html#ad1d4c6173860e572a115d45f7b2f1c42">ColumnStore::MetadataManager</a>
+</li>
 <li>saveMetadata()
 : <a class="el" href="class_column_store_1_1_initializer.html#a96ac91aaecc46af8d918a8352179901c">ColumnStore::Initializer</a>
 </li>
@@ -472,7 +514,7 @@ $(function() {
 : <a class="el" href="struct_column_store_1_1_column_store_data.html#a494f71da2018eb18d60433f2d3ffb178">ColumnStore::ColumnStoreData</a>
 </li>
 <li>setString()
-: <a class="el" href="struct_column_store_1_1_column_store_data.html#acdebe426925ff32573b16acd74192dd3">ColumnStore::ColumnStoreData</a>
+: <a class="el" href="struct_column_store_1_1_column_store_data.html#a8c38d7ec418c129bff09aa3ae4851dca">ColumnStore::ColumnStoreData</a>
 </li>
 <li>setup_database()
 : <a class="el" href="class_parser_1_1_schema_loader.html#a201a585b2d5348825b434e4e2c79bfbb">Parser::SchemaLoader</a>

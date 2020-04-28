@@ -80,7 +80,7 @@ Collaboration diagram for Parser::Projection:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_parser_1_1_projection__coll__graph.png" border="0" usemap="#_parser_1_1_projection_coll__map" alt="Collaboration graph"/></div>
 <map name="_parser_1_1_projection_coll__map" id="_parser_1_1_projection_coll__map">
-<area shape="rect" title=" " alt="" coords="362,344,523,627"/>
+<area shape="rect" title=" " alt="" coords="355,344,531,656"/>
 <area shape="rect" title=" " alt="" coords="5,160,157,252"/>
 <area shape="rect" title=" " alt="" coords="237,5,296,83"/>
 <area shape="rect" title=" " alt="" coords="182,160,351,252"/>
@@ -123,6 +123,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a89c8c564abe2e85f5040481ec0def1b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4a011a962cd160c6dea98a94d59b6c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_parser_1_1projection__column.html">projection_column</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_projection.html#aa4a011a962cd160c6dea98a94d59b6c6">operator[]</a> (std::string name)</td></tr>
 <tr class="separator:aa4a011a962cd160c6dea98a94d59b6c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad286cdf1a9334555810879e308bf2f67"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_parser_1_1_column.html">Parser::Column</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_projection.html#ad286cdf1a9334555810879e308bf2f67">get_metadata_columns</a> ()</td></tr>
+<tr class="separator:ad286cdf1a9334555810879e308bf2f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eb7600e1b320b1b7a3b963efb4de151"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_column_store_1_1_data_record_metadata.html">ColumnStore::DataRecordMetadata</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser_1_1_projection.html#a9eb7600e1b320b1b7a3b963efb4de151">get_metadata</a> ()</td></tr>
+<tr class="separator:a9eb7600e1b320b1b7a3b963efb4de151"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -361,8 +365,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_parser_1_1_projection_a179465064a9f37ff16fb234e6f53ac8c_icgraph.png" border="0" usemap="#class_parser_1_1_projection_a179465064a9f37ff16fb234e6f53ac8c_icgraph" alt=""/></div>
 <map name="class_parser_1_1_projection_a179465064a9f37ff16fb234e6f53ac8c_icgraph" id="class_parser_1_1_projection_a179465064a9f37ff16fb234e6f53ac8c_icgraph">
-<area shape="rect" title=" " alt="" coords="216,5,340,47"/>
-<area shape="rect" href="class_postgre_s_q_l_data_source.html#ad03bcc06efafaa8bafc0236d096ff213" title=" " alt="" coords="5,5,168,47"/>
+<area shape="rect" title=" " alt="" coords="315,5,439,47"/>
+<area shape="rect" href="class_postgre_s_q_l_data_source.html#ad03bcc06efafaa8bafc0236d096ff213" title=" " alt="" coords="104,5,267,47"/>
+<area shape="rect" href="_projection_data_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
 </map>
 </div>
 
@@ -416,6 +421,56 @@ Here is the caller graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname">vector&lt;<a class="el" href="struct_parser_1_1foreign__key.html">foreign_key</a>&gt; Parser::Projection::get_join_tables </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9eb7600e1b320b1b7a3b963efb4de151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eb7600e1b320b1b7a3b963efb4de151">&#9670;&nbsp;</a></span>get_metadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_column_store_1_1_data_record_metadata.html">ColumnStore::DataRecordMetadata</a> Parser::Projection::get_metadata </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad286cdf1a9334555810879e308bf2f67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad286cdf1a9334555810879e308bf2f67">&#9670;&nbsp;</a></span>get_metadata_columns()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="struct_parser_1_1_column.html">Parser::Column</a>&gt; Parser::Projection::get_metadata_columns </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
