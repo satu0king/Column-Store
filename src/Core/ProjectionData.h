@@ -211,12 +211,31 @@ class ColStoreLoader {
         auto &fileData = manager->getProjectionFileInfo(projection_name);
         int tuplesMoved = fileData["tuples_move_count"];
         auto &schema = manager->getProjectionSchemaInfo(projection_name);
-        // PostgresDataGenerator source;
-        // source.advance(tuplesMoved);
+        auto &db_metadata = manager->getFileMetadata();
+        Postgres::PostgreSQLMetaData postgresql_metadata(db_metadata["source_db_config"]["db_name"],
+                                                        db_metadata["source_db_config"]["db_user"],
+                                                        db_metadata["source_db_config"]["db_password"],
+                                                        manager);
+        Postgres::PostgreSQLDataSource postgresql_data_source(postgresql_metadata, projection_name);
+        postgresql_data_source.advance(tuplesMoved);
+        Parser::Projection projection = postgresql_metadata.get_schema_meta_data().get_projection(projection_name);
+        std::vector<Parser::Column> projection_columns = projection.get_metadata_columns();
+        ColumnStoreData projection_data();
 
-        int newTotal = tuplesMoved + 100;
+        std::ofstream o(file);
+        int c = 0;
+        while (postgresql_data_source.hasNext()) {
+                auto record = postgresql_data_source.next();
+                projection_data.set(record, projection_columns);
+                projection_data.write(o);
+                c++;
+        }
+        o.close();
+
+        int newTotal = tuplesMoved + c;
 
         fileData["tuples_move_count"] = newTotal;
+        manager->save();
     }
 
     void updateAll() {
