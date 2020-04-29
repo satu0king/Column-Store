@@ -9,6 +9,7 @@
 
 using Parser::SchemaMetaData;
 
+namespace Postgres {
 class PostgreSQLMetaData {
     std::string db_name, username, password;
     pqxx::connection *conn;
@@ -23,3 +24,4 @@ class PostgreSQLMetaData {
     std::string get_password() const { return password; }
     SchemaMetaData get_schema_meta_data() const { return schema_meta_data; }
 };
+}

@@ -44,10 +44,10 @@ struct ColumnStoreData {
     ColumnStoreData(std::vector<Parser::Column> &columns) {
         int size = 0;
         for (auto &c : columns) {
-            size += c.type.size;
-            std::cout << c.type.size << std::endl;
+            size += c;
+            // std::cout << c.type.size << std::endl;
         }
-        std::cout << size << std::endl;
+        // std::cout << size << std::endl;
         data.resize(size);
     }
 
@@ -147,7 +147,7 @@ class MetadataManager {
     static std::mutex lock;
     static std::map<fs::path, std::shared_ptr<MetadataManager>> metaMap;
 
-    MetadataManager(fs::path file) {
+    MetadataManager(fs::path file) : file(file) {
         std::ifstream inp(file);
         inp >> metadata;
         inp.close();
@@ -212,17 +212,17 @@ class ColStoreLoader {
         int tuplesMoved = fileData["tuples_move_count"];
         auto &schema = manager->getProjectionSchemaInfo(projection_name);
         auto &db_metadata = manager->getFileMetadata();
+        fs::path file = manager->getProjectionFileInfo(projection_name)["file"];
         Postgres::PostgreSQLMetaData postgresql_metadata(db_metadata["source_db_config"]["db_name"],
                                                         db_metadata["source_db_config"]["db_user"],
                                                         db_metadata["source_db_config"]["db_password"],
-                                                        manager);
+                                                        manager->getSchemaMetadata());
         Postgres::PostgreSQLDataSource postgresql_data_source(postgresql_metadata, projection_name);
         postgresql_data_source.advance(tuplesMoved);
-        Parser::Projection projection = postgresql_metadata.get_schema_meta_data().get_projection(projection_name);
-        std::vector<Parser::Column> projection_columns = projection.get_metadata_columns();
-        ColumnStoreData projection_data();
+        std::vector<Parser::Column> projection_columns = schema.get_metadata_columns();
+        ColumnStoreData projection_data(projection_columns);
 
-        std::ofstream o(file);
+        std::ofstream o(file, std::ofstream::out | std::ofstream::app);
         int c = 0;
         while (postgresql_data_source.hasNext()) {
                 auto record = postgresql_data_source.next();

@@ -9,8 +9,6 @@
 #include "Parser/SchemaMetaData.h"
 #include "PostgreSQLMetaData.h"
 
-using namespace std;
-
 using ColumnStore::DataRecord;
 using ColumnStore::DataRecordMetadata;
 using ColumnStore::DataSource;
@@ -20,32 +18,33 @@ using ColumnStore::Metadata;
 using Parser::Projection;
 using Parser::projection_column;
 using Parser::Table;
+using std::vector;
 
+namespace Postgres {
 class PostgreSQLDataSource : public ColumnStore::DataGeneratorInterface {
     std::queue<DataRecord> data;
     pqxx::connection *conn;
     std::string relation_name;
     int offset, batch_size, total_number_of_rows;
     SchemaMetaData schema_meta_data;
-    vector<string> columns;
+    vector<std::string> columns;
 
     pqxx::result get_rows_of_columns(pqxx::transaction_base &txn,
                                      vector<ColumnStore::Column> columns) {
-        string sql = "SELECT ";
+        std::string sql = "SELECT ";
         for (int i = 0; i < int(columns.size()); i++) {
-            string column_name = columns[i].name;
+            std::string column_name = columns[i].name;
             sql += (column_name + ",");
         }
         sql.pop_back();
-        sql += " FROM " + relation_name + " LIMIT " + to_string(batch_size) +
-               " OFFSET " + to_string(offset) + ";";
-        // cout << sql << endl;
+        sql += " FROM " + relation_name + " LIMIT " + std::to_string(batch_size) +
+               " OFFSET " + std::to_string(offset) + ";";
         offset += batch_size;
         return txn.exec(sql);
     }
 
     void set_total_number_of_rows(pqxx::transaction_base &txn) {
-        string sql = "SELECT count(*) FROM " + relation_name + ";";
+        std::string sql = "SELECT count(*) FROM " + relation_name + ";";
         pqxx::result rows = txn.exec(sql);
         total_number_of_rows = rows[0]["count"].as<int>();
     }
@@ -57,29 +56,25 @@ class PostgreSQLDataSource : public ColumnStore::DataGeneratorInterface {
             vector<DataValue> values;
             for (int i = 0; i < int(columns.size()); i++) {
                 auto type = columns[i].type;
-                string column_name = columns[i].name;
+                std::string column_name = columns[i].name;
                 if (type == DataType::INT) {
-                    // cout << (int)row[column_name].as<int>() << "\t";
                     values.push_back(
                         DataValue((int)row[column_name].as<int>()));
                 } else if (type == DataType::FLOAT) {
-                    // cout << (float)row[column_name].as<float>() << "\t";
                     values.push_back(
                         DataValue((float)row[column_name].as<float>()));
                 } else if (type == DataType::STRING) {
-                    // cout << (string)row[column_name].as<string>() << "\t";
                     values.push_back(
-                        DataValue((string)row[column_name].as<string>()));
+                        DataValue((std::string)row[column_name].as<std::string>()));
                 }
             }
-            // cout << endl;
             data.push(values);
         }
     }
 
    public:
     PostgreSQLDataSource(PostgreSQLMetaData postgresql_meta_data,
-                         std::string r_name, vector<string> c = {},
+                         std::string r_name, vector<std::string> c = {},
                          int b_size = 16) {
         conn = postgresql_meta_data.get_connection();
         pqxx::work txn{*conn};
@@ -105,7 +100,6 @@ class PostgreSQLDataSource : public ColumnStore::DataGeneratorInterface {
                 metadata = Metadata(new DataRecordMetadata(metadata_columns));
                 load_into_queue(txn, metadata_columns);
             } catch (const Parser::TableNotFoundException &e) {
-                cout << e.what() << endl;
                 vector<Projection> projections =
                     schema_meta_data.get_projections();
                 Projection p = schema_meta_data.get_projection(relation_name);
@@ -131,11 +125,11 @@ class PostgreSQLDataSource : public ColumnStore::DataGeneratorInterface {
                 metadata = Metadata(new DataRecordMetadata(metadata_columns));
                 load_into_queue(txn, metadata_columns);
             } catch (const Parser::ProjectionNotFoundException &e) {
-                cout << e.what() << endl;
+                std::cout << e.what() << std::endl;
                 exit(1);
             }
-        } catch (const exception &e) {
-            cout << e.what() << endl;
+        } catch (const std::exception &e) {
+            std::cout << e.what() << std::endl;
             exit(1);
         }
     }
@@ -157,7 +151,7 @@ class PostgreSQLDataSource : public ColumnStore::DataGeneratorInterface {
                         }
                     }
                     load_into_queue(txn, metadata_columns);
-                } catch (const exception &e) {
+                } catch (const std::exception &e) {
                     vector<Projection> projections =
                         schema_meta_data.get_projections();
                     Projection p =
@@ -186,9 +180,9 @@ class PostgreSQLDataSource : public ColumnStore::DataGeneratorInterface {
                     }
                     load_into_queue(txn, metadata_columns);
                 }
-            } catch (const exception &e) {
-                cout << "No relation " + relation_name << endl;
-                cerr << e.what() << endl;
+            } catch (const std::exception &e) {
+                std::cout << "No relation " + relation_name << std::endl;
+                std::cerr << e.what() << std::endl;
                 exit(1);
             }
         }
@@ -209,3 +203,4 @@ class PostgreSQLDataSource : public ColumnStore::DataGeneratorInterface {
 
     bool hasNext() { return (offset < total_number_of_rows) || data.size(); }
 };
+}

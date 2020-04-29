@@ -4,6 +4,8 @@
 
 using namespace std;
 
+using Postgres::PostgreSQLMetaData;
+
 PostgreSQLMetaData::PostgreSQLMetaData(string db_name, string username,
                                        string password, SchemaMetaData schema) {
     schema_meta_data = schema;

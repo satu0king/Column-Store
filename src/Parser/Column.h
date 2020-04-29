@@ -11,7 +11,7 @@ struct DataType {
         : dataType(dataType), size(size) {
         if (dataType == ColumnStore::DataType::INT ||
             dataType == ColumnStore::DataType::FLOAT)
-            size = 4;
+            this->size = 4;
     }
 
     DataType(const char *type) : DataType(std::string(type)) {}
