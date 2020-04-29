@@ -1,7 +1,9 @@
 <map id="Parser::SchemaMetaData::get_projections" name="Parser::SchemaMetaData::get_projections">
-<area shape="rect" id="node1" title=" " alt="" coords="315,39,485,80"/>
-<area shape="rect" id="node2" href="$class_column_store_1_1_initializer.html#a89bc8ca87b00170b3b7c6c0803b13e1b" title=" " alt="" coords="108,5,263,47"/>
-<area shape="rect" id="node4" href="$class_postgre_s_q_l_data_source.html#ad03bcc06efafaa8bafc0236d096ff213" title=" " alt="" coords="104,71,267,112"/>
-<area shape="rect" id="node3" href="$_driver_8cpp.html#adacbe0175a79dff748855d8c9839f82b" title=" " alt="" coords="5,13,56,39"/>
-<area shape="rect" id="node5" href="$_projection_data_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,78,56,105"/>
+<area shape="rect" id="node1" title=" " alt="" coords="813,39,984,80"/>
+<area shape="rect" id="node2" href="$class_column_store_1_1_initializer.html#a89bc8ca87b00170b3b7c6c0803b13e1b" title=" " alt="" coords="599,5,753,47"/>
+<area shape="rect" id="node4" href="$class_postgres_1_1_postgre_s_q_l_data_source.html#a025936580a008992ca4b62b68aa44231" title=" " alt="" coords="587,71,765,112"/>
+<area shape="rect" id="node3" href="$_driver_8cpp.html#adacbe0175a79dff748855d8c9839f82b" title=" " alt="" coords="417,13,467,39"/>
+<area shape="rect" id="node5" href="$class_column_store_1_1_col_store_loader.html#a30730a24b33168d6aa00bf2c2601c395" title=" " alt="" coords="345,71,539,112"/>
+<area shape="rect" id="node6" href="$class_column_store_1_1_col_store_loader.html#a3829c8c7b337faf19adc56d0cad06bc2" title=" " alt="" coords="104,71,297,112"/>
+<area shape="rect" id="node7" href="$_projection_data_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,78,56,105"/>
 </map>

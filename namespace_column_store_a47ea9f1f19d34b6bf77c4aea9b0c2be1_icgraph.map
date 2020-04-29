@@ -1,7 +1,6 @@
 <map id="ColumnStore::getMetaDataPath" name="ColumnStore::getMetaDataPath">
 <area shape="rect" id="node1" title=" " alt="" coords="359,46,563,73"/>
 <area shape="rect" id="node2" href="$class_column_store_1_1_metadata_manager.html#ad43c82fc87bd88c13627938873a0aa57" title=" " alt="" coords="104,5,311,47"/>
-<area shape="rect" id="node4" href="$class_column_store_1_1_initializer.html#a96ac91aaecc46af8d918a8352179901c" title=" " alt="" coords="130,71,285,112"/>
-<area shape="rect" id="node3" href="$_projection_data_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
-<area shape="rect" id="node5" href="$_driver_8cpp.html#adacbe0175a79dff748855d8c9839f82b" title=" " alt="" coords="5,78,56,105"/>
+<area shape="rect" id="node3" href="$class_column_store_1_1_initializer.html#a96ac91aaecc46af8d918a8352179901c" title=" " alt="" coords="130,71,285,112"/>
+<area shape="rect" id="node4" href="$_driver_8cpp.html#adacbe0175a79dff748855d8c9839f82b" title=" " alt="" coords="5,78,56,105"/>
 </map>

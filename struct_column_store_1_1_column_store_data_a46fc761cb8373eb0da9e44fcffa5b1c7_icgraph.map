@@ -1,6 +1,8 @@
 <map id="ColumnStore::ColumnStoreData::setFloat" name="ColumnStore::ColumnStoreData::setFloat">
-<area shape="rect" id="node1" title=" " alt="" coords="459,27,637,69"/>
-<area shape="rect" id="node2" href="$_projection_data_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="69,5,120,32"/>
-<area shape="rect" id="node3" href="$struct_column_store_1_1_column_store_data.html#a76afe5df455a1a7b2e1887ced8b4af45" title=" " alt="" coords="232,57,411,98"/>
-<area shape="rect" id="node4" href="$struct_column_store_1_1_column_store_data.html#a1c27e7497005e9818356be043bd8ce73" title=" " alt="" coords="5,57,184,98"/>
+<area shape="rect" id="node1" title=" " alt="" coords="813,39,992,80"/>
+<area shape="rect" id="node2" href="$struct_column_store_1_1_column_store_data.html#a76afe5df455a1a7b2e1887ced8b4af45" title=" " alt="" coords="587,39,765,80"/>
+<area shape="rect" id="node3" href="$struct_column_store_1_1_column_store_data.html#a1c27e7497005e9818356be043bd8ce73" title=" " alt="" coords="353,5,531,47"/>
+<area shape="rect" id="node4" href="$class_column_store_1_1_col_store_loader.html#a30730a24b33168d6aa00bf2c2601c395" title=" " alt="" coords="345,71,539,112"/>
+<area shape="rect" id="node5" href="$class_column_store_1_1_col_store_loader.html#a3829c8c7b337faf19adc56d0cad06bc2" title=" " alt="" coords="104,71,297,112"/>
+<area shape="rect" id="node6" href="$_projection_data_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,78,56,105"/>
 </map>
