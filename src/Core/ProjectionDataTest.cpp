@@ -83,37 +83,37 @@ int main() {
     }};
 
     ColumnStoreData projection_data(projection_columns);
-    MetadataManager manager("../store");
+    auto manager = ColumnStore::MetadataManager::getInstance("../store");
 
-    PostgreSQLMetaData postgresql_meta_data("column_store", "test", "test",
-                                            manager);
-    vector<string> column_names = {"emp_id", "age", "city_name"};
-    PostgreSQLDataSource postgresql_data_source(
-        postgresql_meta_data, "EMPLOYEE_CITY_PROJECTION", column_names);
-    // postgresql_data_source.print(10);
+    // PostgreSQLMetaData postgresql_meta_data("column_store", "test", "test",
+    //                                         *manager);
+    // vector<string> column_names = {"emp_id", "age", "city_name"};
+    // PostgreSQLDataSource postgresql_data_source(
+    //     postgresql_meta_data, "EMPLOYEE_CITY_PROJECTION", column_names);
+    // // postgresql_data_source.print(10);
 
-    fs::path file =
-        manager.getProjectionFileInfo("EMPLOYEE_CITY_PROJECTION")["file"];
+    // fs::path file =
+    //     manager->getProjectionFileInfo("EMPLOYEE_CITY_PROJECTION")["file"];
 
-    std::ofstream o(file);
-    int c = 2;
-    while (postgresql_data_source.hasNext()) {
-        {
-        auto record = postgresql_data_source.next();
-        projection_data.set(record, projection_columns);
-        projection_data.write(o);
-        }
-    }
-    o.close();
+    // std::ofstream o(file);
+    // int c = 2;
+    // while (postgresql_data_source.hasNext()) {
+    //     {
+    //     auto record = postgresql_data_source.next();
+    //     projection_data.set(record, projection_columns);
+    //     projection_data.write(o);
+    //     }
+    // }
+    // o.close();
 
-    // Reading Projection Test 
+    // // Reading Projection Test 
 
-    std::ifstream i(file);
-    while(i >> projection_data) {
-        std::cout << projection_data.getInt(0) << "\t" 
-        << projection_data.getInt(4) << "\t"
-        << projection_data.getString(8, 8) << "\n";
-    }
+    // std::ifstream i(file);
+    // while(i >> projection_data) {
+    //     std::cout << projection_data.getInt(0) << "\t" 
+    //     << projection_data.getInt(4) << "\t"
+    //     << projection_data.getString(8, 8) << "\n";
+    // }
 
 
 }

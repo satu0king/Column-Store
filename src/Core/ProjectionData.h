@@ -5,6 +5,9 @@
 
 #include <experimental/filesystem>
 #include <fstream>
+#include <map>
+#include <memory>
+#include <mutex>
 #include <nlohmann/json.hpp>
 #include <string>
 #include <vector>
@@ -136,18 +139,35 @@ struct ColumnStoreData {
     }
 };
 
-struct MetadataManager {
+class MetadataManager {
     fs::path file;
     json metadata;
     Parser::SchemaMetaData schemaMetadata;
-    MetadataManager(std::string column_store_path) {
-        file = getMetaDataPath(column_store_path);
+
+    static std::mutex lock;
+    static std::map<fs::path, std::shared_ptr<MetadataManager>> metaMap;
+
+    MetadataManager(fs::path file) {
         std::ifstream inp(file);
         inp >> metadata;
         inp.close();
 
         Parser::SchemaExtractor schema_extractor(metadata["schema_path"]);
         schemaMetadata = schema_extractor.get_meta_data();
+    }
+
+   public:
+    static int getInstance(std::string column_store_path) {
+        fs::path file = getMetaDataPath(column_store_path);
+        std::lock_guard guard(lock);
+        return 0;
+
+        // if (MetadataManager::metaMap.count(file))
+        //     return MetadataManager::metaMap[file];
+        // MetadataManager::metaMap[file] =
+        //     std::shared_ptr<MetadataManager>(new MetadataManager(file));
+
+        // return MetadataManager::metaMap[file];
     }
 
     void save() {
@@ -168,6 +188,33 @@ struct MetadataManager {
 
     Parser::Projection &getProjectionSchemaInfo(std::string projection) {
         return schemaMetadata.get_projection(projection);
+    }
+};
+
+class ColStoreLoader {
+    MetadataManager manager;
+
+   public:
+    ColStoreLoader(std::string column_store_path)
+        : manager(column_store_path) {}
+
+    void update(std::string projection_name) {
+        auto &fileData = manager.getProjectionFileInfo(projection_name);
+        int tuplesMoved = fileData["tuples_move_count"];
+        auto &schema = manager.getProjectionSchemaInfo(projection_name);
+        PostgresDataGenerator source;
+        source.advance(tuplesMoved);
+
+        fileData["tuples_move_count"] = newTotal;
+    }
+
+    void updateAll() {
+        for (auto &[projection_name, _] :
+             manager.getFileMetadata()["projections"].items()) {
+            update(projection_name);
+        }
+
+        manager.save();
     }
 };
 
