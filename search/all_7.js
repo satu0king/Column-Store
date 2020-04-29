@@ -39,7 +39,7 @@ var searchData=
   ['getcolumnstorecolumn_121',['getColumnStoreColumn',['../struct_parser_1_1_column.html#a17e1dfc2c77860b82051ba8c516276a5',1,'Parser::Column']]],
   ['getfilemetadata_122',['getFileMetadata',['../class_column_store_1_1_metadata_manager.html#aec1fcddf09d04c4a55e8c4d383bc250b',1,'ColumnStore::MetadataManager']]],
   ['getfloat_123',['getFloat',['../struct_column_store_1_1_column_store_data.html#a984563edc31186ecce69bb72d42ad02a',1,'ColumnStore::ColumnStoreData']]],
-  ['getinstance_124',['getInstance',['../class_column_store_1_1_metadata_manager.html#af7ca435f8b67c69a3d701b30e675e40a',1,'ColumnStore::MetadataManager']]],
+  ['getinstance_124',['getInstance',['../class_column_store_1_1_metadata_manager.html#ad43c82fc87bd88c13627938873a0aa57',1,'ColumnStore::MetadataManager']]],
   ['getint_125',['getInt',['../struct_column_store_1_1_column_store_data.html#ab5e1008e6d493c23cc685d8ecc045003',1,'ColumnStore::ColumnStoreData']]],
   ['getjoinindexpath_126',['getJoinIndexPath',['../namespace_column_store.html#a7e41e4bd8b603907857cfa2dfbc3e0d1',1,'ColumnStore']]],
   ['getmetadata_127',['getMetadata',['../class_column_store_1_1_data_generator_interface.html#a67fea3f3de472ee88fa0ca4c4945026d',1,'ColumnStore::DataGeneratorInterface']]],

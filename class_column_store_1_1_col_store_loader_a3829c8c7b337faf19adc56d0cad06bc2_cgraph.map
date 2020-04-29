@@ -1,9 +1,4 @@
 <map id="ColumnStore::ColStoreLoader::updateAll" name="ColumnStore::ColStoreLoader::updateAll">
-<area shape="rect" id="node1" title=" " alt="" coords="5,71,199,112"/>
-<area shape="rect" id="node2" href="$class_column_store_1_1_metadata_manager.html#aec1fcddf09d04c4a55e8c4d383bc250b" title=" " alt="" coords="247,5,453,47"/>
-<area shape="rect" id="node3" href="$class_column_store_1_1_metadata_manager.html#ad1d4c6173860e572a115d45f7b2f1c42" title=" " alt="" coords="247,71,453,112"/>
-<area shape="rect" id="node4" href="$class_column_store_1_1_col_store_loader.html#a30730a24b33168d6aa00bf2c2601c395" title=" " alt="" coords="253,136,447,177"/>
-<area shape="rect" id="node5" href="$class_column_store_1_1_metadata_manager.html#aef6a0b651c0cfa40aa325ce103da551e" title=" " alt="" coords="501,103,708,144"/>
-<area shape="rect" id="node6" href="$class_column_store_1_1_metadata_manager.html#a051845669071884a18110b7cd6534500" title=" " alt="" coords="501,168,708,209"/>
-<area shape="rect" id="node7" href="$class_parser_1_1_schema_meta_data.html#a0faac78cca66deb1940a7af5759c622f" title=" " alt="" coords="756,168,927,209"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,199,47"/>
+<area shape="rect" id="node2" href="$class_column_store_1_1_col_store_loader.html#a30730a24b33168d6aa00bf2c2601c395" title=" " alt="" coords="247,5,440,47"/>
 </map>

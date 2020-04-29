@@ -113,8 +113,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af7ca435f8b67c69a3d701b30e675e40a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_metadata_manager.html#af7ca435f8b67c69a3d701b30e675e40a">getInstance</a> (std::string column_store_path)</td></tr>
-<tr class="separator:af7ca435f8b67c69a3d701b30e675e40a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad43c82fc87bd88c13627938873a0aa57"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="class_column_store_1_1_metadata_manager.html">MetadataManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_metadata_manager.html#ad43c82fc87bd88c13627938873a0aa57">getInstance</a> (std::string column_store_path)</td></tr>
+<tr class="separator:ad43c82fc87bd88c13627938873a0aa57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -134,8 +134,8 @@ Private Attributes</h2></td></tr>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a3d20a61e5d96ce5f60a915d3e5c23053"><td class="memItemLeft" align="right" valign="top">static std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_metadata_manager.html#a3d20a61e5d96ce5f60a915d3e5c23053">lock</a></td></tr>
 <tr class="separator:a3d20a61e5d96ce5f60a915d3e5c23053"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2babebb85ac08f88bef9eade31b5e3c"><td class="memItemLeft" align="right" valign="top">static std::map&lt; fs::path, std::shared_ptr&lt; <a class="el" href="class_column_store_1_1_metadata_manager.html">MetadataManager</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_metadata_manager.html#aa2babebb85ac08f88bef9eade31b5e3c">metaMap</a></td></tr>
-<tr class="separator:aa2babebb85ac08f88bef9eade31b5e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eee51889e92dbfac008521ca44292b6"><td class="memItemLeft" align="right" valign="top">static std::map&lt; fs::path, std::shared_ptr&lt; <a class="el" href="class_column_store_1_1_metadata_manager.html">MetadataManager</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_metadata_manager.html#a5eee51889e92dbfac008521ca44292b6">metaMap</a></td></tr>
+<tr class="separator:a5eee51889e92dbfac008521ca44292b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3075fe59f496afbdd0827ec48a76388a"></a>
@@ -170,6 +170,16 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="class_parser_1_1_schema_extractor.html#ad1cf0228db1f16646ca251163b2d1da9" title=" " alt="" coords="260,5,425,47"/>
 </map>
 </div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_column_store_1_1_metadata_manager_a3075fe59f496afbdd0827ec48a76388a_icgraph.png" border="0" usemap="#class_column_store_1_1_metadata_manager_a3075fe59f496afbdd0827ec48a76388a_icgraph" alt=""/></div>
+<map name="class_column_store_1_1_metadata_manager_a3075fe59f496afbdd0827ec48a76388a_icgraph" id="class_column_store_1_1_metadata_manager_a3075fe59f496afbdd0827ec48a76388a_icgraph">
+<area shape="rect" title=" " alt="" coords="359,5,565,47"/>
+<area shape="rect" href="class_column_store_1_1_metadata_manager.html#ad43c82fc87bd88c13627938873a0aa57" title=" " alt="" coords="104,5,311,47"/>
+<area shape="rect" href="_projection_data_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -196,20 +206,11 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_column_store_1_1_metadata_manager_aec1fcddf09d04c4a55e8c4d383bc250b_icgraph.png" border="0" usemap="#class_column_store_1_1_metadata_manager_aec1fcddf09d04c4a55e8c4d383bc250b_icgraph" alt=""/></div>
-<map name="class_column_store_1_1_metadata_manager_aec1fcddf09d04c4a55e8c4d383bc250b_icgraph" id="class_column_store_1_1_metadata_manager_aec1fcddf09d04c4a55e8c4d383bc250b_icgraph">
-<area shape="rect" title=" " alt="" coords="247,5,453,47"/>
-<area shape="rect" href="class_column_store_1_1_col_store_loader.html#a3829c8c7b337faf19adc56d0cad06bc2" title=" " alt="" coords="5,5,199,47"/>
-</map>
-</div>
 
 </div>
 </div>
-<a id="af7ca435f8b67c69a3d701b30e675e40a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7ca435f8b67c69a3d701b30e675e40a">&#9670;&nbsp;</a></span>getInstance()</h2>
+<a id="ad43c82fc87bd88c13627938873a0aa57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad43c82fc87bd88c13627938873a0aa57">&#9670;&nbsp;</a></span>getInstance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,7 +219,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int ColumnStore::MetadataManager::getInstance </td>
+          <td class="memname">static std::shared_ptr&lt;<a class="el" href="class_column_store_1_1_metadata_manager.html">MetadataManager</a>&gt; ColumnStore::MetadataManager::getInstance </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>column_store_path</em></td><td>)</td>
@@ -234,17 +235,19 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_column_store_1_1_metadata_manager_af7ca435f8b67c69a3d701b30e675e40a_cgraph.png" border="0" usemap="#class_column_store_1_1_metadata_manager_af7ca435f8b67c69a3d701b30e675e40a_cgraph" alt=""/></div>
-<map name="class_column_store_1_1_metadata_manager_af7ca435f8b67c69a3d701b30e675e40a_cgraph" id="class_column_store_1_1_metadata_manager_af7ca435f8b67c69a3d701b30e675e40a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,212,47"/>
-<area shape="rect" href="namespace_column_store.html#a47ea9f1f19d34b6bf77c4aea9b0c2be1" title=" " alt="" coords="260,13,464,39"/>
+<div class="center"><img src="class_column_store_1_1_metadata_manager_ad43c82fc87bd88c13627938873a0aa57_cgraph.png" border="0" usemap="#class_column_store_1_1_metadata_manager_ad43c82fc87bd88c13627938873a0aa57_cgraph" alt=""/></div>
+<map name="class_column_store_1_1_metadata_manager_ad43c82fc87bd88c13627938873a0aa57_cgraph" id="class_column_store_1_1_metadata_manager_ad43c82fc87bd88c13627938873a0aa57_cgraph">
+<area shape="rect" title=" " alt="" coords="5,27,212,69"/>
+<area shape="rect" href="namespace_column_store.html#a47ea9f1f19d34b6bf77c4aea9b0c2be1" title=" " alt="" coords="261,5,465,32"/>
+<area shape="rect" href="class_column_store_1_1_metadata_manager.html#a3075fe59f496afbdd0827ec48a76388a" title=" " alt="" coords="260,57,467,98"/>
+<area shape="rect" href="class_parser_1_1_schema_extractor.html#ad1cf0228db1f16646ca251163b2d1da9" title=" " alt="" coords="515,57,680,98"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_column_store_1_1_metadata_manager_af7ca435f8b67c69a3d701b30e675e40a_icgraph.png" border="0" usemap="#class_column_store_1_1_metadata_manager_af7ca435f8b67c69a3d701b30e675e40a_icgraph" alt=""/></div>
-<map name="class_column_store_1_1_metadata_manager_af7ca435f8b67c69a3d701b30e675e40a_icgraph" id="class_column_store_1_1_metadata_manager_af7ca435f8b67c69a3d701b30e675e40a_icgraph">
+<div class="center"><img src="class_column_store_1_1_metadata_manager_ad43c82fc87bd88c13627938873a0aa57_icgraph.png" border="0" usemap="#class_column_store_1_1_metadata_manager_ad43c82fc87bd88c13627938873a0aa57_icgraph" alt=""/></div>
+<map name="class_column_store_1_1_metadata_manager_ad43c82fc87bd88c13627938873a0aa57_icgraph" id="class_column_store_1_1_metadata_manager_ad43c82fc87bd88c13627938873a0aa57_icgraph">
 <area shape="rect" title=" " alt="" coords="104,5,311,47"/>
 <area shape="rect" href="_projection_data_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
 </map>
@@ -275,16 +278,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_column_store_1_1_metadata_manager_aef6a0b651c0cfa40aa325ce103da551e_icgraph.png" border="0" usemap="#class_column_store_1_1_metadata_manager_aef6a0b651c0cfa40aa325ce103da551e_icgraph" alt=""/></div>
-<map name="class_column_store_1_1_metadata_manager_aef6a0b651c0cfa40aa325ce103da551e_icgraph" id="class_column_store_1_1_metadata_manager_aef6a0b651c0cfa40aa325ce103da551e_icgraph">
-<area shape="rect" title=" " alt="" coords="488,5,695,47"/>
-<area shape="rect" href="class_column_store_1_1_col_store_loader.html#a30730a24b33168d6aa00bf2c2601c395" title=" " alt="" coords="247,5,440,47"/>
-<area shape="rect" href="class_column_store_1_1_col_store_loader.html#a3829c8c7b337faf19adc56d0cad06bc2" title=" " alt="" coords="5,5,199,47"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -318,16 +311,6 @@ Here is the call graph for this function:</div>
 <map name="class_column_store_1_1_metadata_manager_a051845669071884a18110b7cd6534500_cgraph" id="class_column_store_1_1_metadata_manager_a051845669071884a18110b7cd6534500_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,212,47"/>
 <area shape="rect" href="class_parser_1_1_schema_meta_data.html#a0faac78cca66deb1940a7af5759c622f" title=" " alt="" coords="260,5,431,47"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_column_store_1_1_metadata_manager_a051845669071884a18110b7cd6534500_icgraph.png" border="0" usemap="#class_column_store_1_1_metadata_manager_a051845669071884a18110b7cd6534500_icgraph" alt=""/></div>
-<map name="class_column_store_1_1_metadata_manager_a051845669071884a18110b7cd6534500_icgraph" id="class_column_store_1_1_metadata_manager_a051845669071884a18110b7cd6534500_icgraph">
-<area shape="rect" title=" " alt="" coords="488,5,695,47"/>
-<area shape="rect" href="class_column_store_1_1_col_store_loader.html#a30730a24b33168d6aa00bf2c2601c395" title=" " alt="" coords="247,5,440,47"/>
-<area shape="rect" href="class_column_store_1_1_col_store_loader.html#a3829c8c7b337faf19adc56d0cad06bc2" title=" " alt="" coords="5,5,199,47"/>
 </map>
 </div>
 
@@ -430,15 +413,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_column_store_1_1_metadata_manager_ad1d4c6173860e572a115d45f7b2f1c42_icgraph.png" border="0" usemap="#class_column_store_1_1_metadata_manager_ad1d4c6173860e572a115d45f7b2f1c42_icgraph" alt=""/></div>
-<map name="class_column_store_1_1_metadata_manager_ad1d4c6173860e572a115d45f7b2f1c42_icgraph" id="class_column_store_1_1_metadata_manager_ad1d4c6173860e572a115d45f7b2f1c42_icgraph">
-<area shape="rect" title=" " alt="" coords="247,5,453,47"/>
-<area shape="rect" href="class_column_store_1_1_col_store_loader.html#a3829c8c7b337faf19adc56d0cad06bc2" title=" " alt="" coords="5,5,199,47"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -509,8 +483,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aa2babebb85ac08f88bef9eade31b5e3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2babebb85ac08f88bef9eade31b5e3c">&#9670;&nbsp;</a></span>metaMap</h2>
+<a id="a5eee51889e92dbfac008521ca44292b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eee51889e92dbfac008521ca44292b6">&#9670;&nbsp;</a></span>metaMap</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -519,7 +493,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::map&lt;fs::path, std::shared_ptr&lt;<a class="el" href="class_column_store_1_1_metadata_manager.html">MetadataManager</a>&gt; &gt; ColumnStore::MetadataManager::metaMap</td>
+          <td class="memname">std::map&lt; fs::path, std::shared_ptr&lt; <a class="el" href="class_column_store_1_1_metadata_manager.html">MetadataManager</a> &gt; &gt; ColumnStore::MetadataManager::metaMap</td>
         </tr>
       </table>
   </td>
