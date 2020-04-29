@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['what_484',['what',['../class_parser_1_1_projection_not_found_exception.html#ab2f50959b2e2ca033ecb7170114e6929',1,'Parser::ProjectionNotFoundException::what()'],['../class_parser_1_1_table_not_found_exception.html#adc43648eb4fe57c68f98a3a394a41874',1,'Parser::TableNotFoundException::what()']]],
-  ['where_485',['where',['../class_generic_query_1_1_generic_query_builder.html#ae9390e286bce58d2e8d12f54ae0c8973',1,'GenericQuery::GenericQueryBuilder']]],
-  ['write_486',['write',['../struct_column_store_1_1_column_store_data.html#a56dcaf890bd8755cfbf0c4068de844b6',1,'ColumnStore::ColumnStoreData']]]
+  ['validate_495',['validate',['../class_column_store_1_1_record_validator_interface.html#a1c505a9dbcdea4f808f4cd97ef2f12d5',1,'ColumnStore::RecordValidatorInterface::validate()'],['../class_column_store_1_1_not_record_validator.html#af284265f32c7f15430a1589f99174473',1,'ColumnStore::NotRecordValidator::validate()'],['../class_column_store_1_1_and_record_validator.html#a5b903074691f3ac8e1c037c3e266e4e7',1,'ColumnStore::AndRecordValidator::validate()'],['../class_column_store_1_1_or_record_validator.html#af9435736b1b7f743c408912968fcca3e',1,'ColumnStore::OrRecordValidator::validate()'],['../class_column_store_1_1_equal_record_validator.html#ab9305f182e95bd163e31c1fc125a5967',1,'ColumnStore::EqualRecordValidator::validate()'],['../class_column_store_1_1_less_than_record_validator.html#a168990de231a4cea6f2c05282fd6342d',1,'ColumnStore::LessThanRecordValidator::validate()']]]
 ];

@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['table_545',['table',['../struct_parser_1_1foreign__key.html#a8501d2600b910376e8697f4e999e825d',1,'Parser::foreign_key::table()'],['../struct_parser_1_1projection__column.html#af74fbab2b199ef230dd065edc60c7fdb',1,'Parser::projection_column::table()']]],
-  ['table_5fmap_546',['table_map',['../class_parser_1_1_schema_meta_data.html#a00e53a46e79f915742448f438247c36a',1,'Parser::SchemaMetaData']]],
-  ['table_5fname_547',['table_name',['../class_parser_1_1_table.html#a9cb76abe816d393af117532278d34d8f',1,'Parser::Table']]],
-  ['tables_548',['tables',['../class_parser_1_1_schema_meta_data.html#aa86b3a850d464e7601278c453b5ea465',1,'Parser::SchemaMetaData']]],
-  ['to_549',['to',['../struct_parser_1_1foreign__key.html#a2d8ab0529bcab487c924c52349df1a23',1,'Parser::foreign_key::to()'],['../struct_parser_1_1join__index.html#ae4a9fcb5cfaf343f9ebfea529e280f37',1,'Parser::join_index::to()']]],
-  ['total_5fnumber_5fof_5frows_550',['total_number_of_rows',['../class_postgre_s_q_l_data_source.html#ad10094438529644542ac113bb5951150',1,'PostgreSQLDataSource']]],
-  ['type_551',['type',['../struct_column_store_1_1_column.html#a2c48b55ecb83bb61b165ba2e3cebf0d6',1,'ColumnStore::Column::type()'],['../struct_parser_1_1_column.html#ace17dc9903d1ea2906f603af72b6523d',1,'Parser::Column::type()']]]
+  ['schema_5fmeta_5fdata_555',['schema_meta_data',['../class_parser_1_1_schema_extractor.html#aa63cc65b9efb77763ebc0230f02cb98b',1,'Parser::SchemaExtractor::schema_meta_data()'],['../class_parser_1_1_schema_loader.html#ab2ee6254c27328a0f1e6d5ec0bd27c16',1,'Parser::SchemaLoader::schema_meta_data()'],['../class_postgre_s_q_l_data_source.html#a00eab176e38a4f5102f3c8c048420dbe',1,'PostgreSQLDataSource::schema_meta_data()'],['../class_postgre_s_q_l_meta_data.html#a5ac9955fdf2c4387a335a02f623081d1',1,'PostgreSQLMetaData::schema_meta_data()']]],
+  ['schemametadata_556',['schemaMetadata',['../class_column_store_1_1_metadata_manager.html#a83dbb8562842189f1be666c52c53c39c',1,'ColumnStore::MetadataManager']]],
+  ['size_557',['size',['../struct_parser_1_1_data_type.html#ae4f726519952e9fe2ab098faaebab04b',1,'Parser::DataType']]],
+  ['sort_5fkey_558',['sort_key',['../class_parser_1_1_projection.html#a42437487f946501616fac68f9cbb1847',1,'Parser::Projection']]],
+  ['sql_5ffile_5fname_559',['sql_file_name',['../class_parser_1_1_data_loader.html#ae0066c7be42fe00694181ff171a7965d',1,'Parser::DataLoader']]]
 ];
