@@ -157,17 +157,21 @@ class MetadataManager {
     }
 
    public:
-    static int getInstance(std::string column_store_path) {
+    static std::shared_ptr<MetadataManager> getInstance(
+        std::string column_store_path) {
         fs::path file = getMetaDataPath(column_store_path);
-        std::lock_guard guard(lock);
-        return 0;
 
-        // if (MetadataManager::metaMap.count(file))
-        //     return MetadataManager::metaMap[file];
-        // MetadataManager::metaMap[file] =
-        //     std::shared_ptr<MetadataManager>(new MetadataManager(file));
+        if (MetadataManager::metaMap.count(file))
+            return MetadataManager::metaMap[file];
 
-        // return MetadataManager::metaMap[file];
+        std::lock_guard guard(MetadataManager::lock);
+
+        // Using Double Checked Locking
+        if (!MetadataManager::metaMap.count(file))
+            MetadataManager::metaMap[file] =
+                std::shared_ptr<MetadataManager>(new MetadataManager(file));
+
+        return MetadataManager::metaMap[file];
     }
 
     void save() {
@@ -191,30 +195,37 @@ class MetadataManager {
     }
 };
 
+std::mutex MetadataManager::lock;
+std::map<fs::path, std::shared_ptr<MetadataManager>> MetadataManager::metaMap;
+
+typedef std::shared_ptr<MetadataManager> MetadataManagerSingleton;
+
 class ColStoreLoader {
-    MetadataManager manager;
+    MetadataManagerSingleton manager;
 
    public:
     ColStoreLoader(std::string column_store_path)
-        : manager(column_store_path) {}
+        : manager(MetadataManager::getInstance(column_store_path)) {}
 
     void update(std::string projection_name) {
-        auto &fileData = manager.getProjectionFileInfo(projection_name);
+        auto &fileData = manager->getProjectionFileInfo(projection_name);
         int tuplesMoved = fileData["tuples_move_count"];
-        auto &schema = manager.getProjectionSchemaInfo(projection_name);
-        PostgresDataGenerator source;
-        source.advance(tuplesMoved);
+        auto &schema = manager->getProjectionSchemaInfo(projection_name);
+        // PostgresDataGenerator source;
+        // source.advance(tuplesMoved);
+
+        int newTotal = tuplesMoved + 100;
 
         fileData["tuples_move_count"] = newTotal;
     }
 
     void updateAll() {
         for (auto &[projection_name, _] :
-             manager.getFileMetadata()["projections"].items()) {
+             manager->getFileMetadata()["projections"].items()) {
             update(projection_name);
         }
 
-        manager.save();
+        manager->save();
     }
 };
 
