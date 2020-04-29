@@ -69,7 +69,7 @@ class Projection {
     vector<projection_column> get_columns() { return columns; }
     vector<join_index> get_join_indexes() { return join_indexes; }
     projection_column& operator[](int i) {
-        if (i >= columns.size()) {
+        if (i >= int(columns.size())) {
             throw runtime_error("Index out of Bounds in Projection:" +
                                 projection_name);
         }

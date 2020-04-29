@@ -50,13 +50,13 @@ void DataGeneratorInterface::print(int recordCount) {
 
     auto columns = m->getColumns();
 
-    for (int i = 0; i < columns.size(); i++) table << columns[i].name;
+    for (int i = 0; i < int(columns.size()); i++) table << columns[i].name;
 
     table << fort::endr;
 
     while (hasNext() && recordCount--) {
         auto record = next();
-        for (int i = 0; i < columns.size(); i++) {
+        for (int i = 0; i < int(columns.size()); i++) {
             auto type = columns[i].type;
             if (type == DataType::INT)
                 table << record[i].as<int>();
