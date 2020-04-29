@@ -92,12 +92,12 @@ class Projection {
         return result;
     }
 
-    ColumnStore::DataRecordMetadata get_metadata() {
+    ColumnStore::DataRecordMetadata* get_metadata() {
         std::vector<ColumnStore::Column> result;
         result.reserve(columns.size());
         for (auto& c : columns) result.push_back(c);
 
-        return result;
+        return new ColumnStore::DataRecordMetadata(result);
     }
 };
 }  // namespace Parser

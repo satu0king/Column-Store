@@ -32,9 +32,9 @@ namespace ColumnStore {
 struct ColumnStoreData {
     std::vector<unsigned char> data;
     ColumnStoreData(std::vector<unsigned char> &data) : data(data) {}
-    ColumnStoreData(std::vector<unsigned char> &&data) : data(data) {}
-    ColumnStoreData(ColumnStoreData &&data) : data(data.data) {}
-    ColumnStoreData(int size) : data(size) {}
+    // ColumnStoreData(std::vector<unsigned char> &&data) : data(data) {}
+    // ColumnStoreData(ColumnStoreData &&data) : data(data.data) {}
+    ColumnStoreData(int size=0) : data(size) {}
 
     ColumnStoreData(DataRecord &record, std::vector<Parser::Column> &columns)
         : ColumnStoreData(columns) {

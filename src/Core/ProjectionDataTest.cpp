@@ -3,6 +3,7 @@
 #include "PostgresDataGenerator/PostgreSQLDataGenerator.h"
 #include "PostgresDataGenerator/PostgreSQLMetaData.h"
 #include "ProjectionData.h"
+#include "../ColStoreDataGenerator/ColStoreDataGenerator.h"
 
 using namespace ColumnStore;
 
@@ -74,7 +75,7 @@ int main() {
     // std::cout << newData.getFloat(4) << std::endl;
     // std::cout << newData.getString(8, 8) << std::endl;
 
-    // // Creating Projection Test
+    // Creating Projection Test
 
     // std::vector<Parser::Column> projection_columns = {{
     //     Parser::Column("emp_id", "int"),
@@ -114,4 +115,8 @@ int main() {
 
     ColumnStore::ColStoreLoader loader("../store");
     loader.updateAll();
+    ColumnStore::ColStoreDataSource source1("../store", "EMPLOYEE_CITY_PROJECTION");
+    source1.print();
+    ColumnStore::ColStoreDataSource source2("../store", "EMPLOYEE_DEPARTMENT_PROJECTION");
+    source2.print();
 }
