@@ -83,11 +83,12 @@ Inheritance diagram for ColumnStore::DataGeneratorInterface:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_column_store_1_1_data_generator_interface__inherit__graph.png" border="0" usemap="#_column_store_1_1_data_generator_interface_inherit__map" alt="Inheritance graph"/></div>
 <map name="_column_store_1_1_data_generator_interface_inherit__map" id="_column_store_1_1_data_generator_interface_inherit__map">
-<area shape="rect" title="Interface for relational data sources." alt="" coords="286,5,473,171"/>
+<area shape="rect" title="Interface for relational data sources." alt="" coords="381,5,567,171"/>
 <area shape="rect" href="class_column_store_1_1_col_store_data_source.html" title=" " alt="" coords="5,255,185,465"/>
 <area shape="rect" href="class_c_s_v_1_1_c_s_v_data_source.html" title=" " alt="" coords="209,307,360,413"/>
-<area shape="rect" href="class_generic_query_1_1_generic_data_generator.html" title=" " alt="" coords="385,233,563,487"/>
-<area shape="rect" href="class_postgres_1_1_postgre_s_q_l_data_source.html" title=" " alt="" coords="588,219,779,501"/>
+<area shape="rect" href="class_generic_query_1_1_generic_data_aggregator.html" title=" " alt="" coords="385,285,563,435"/>
+<area shape="rect" href="class_generic_query_1_1_generic_data_generator.html" title=" " alt="" coords="587,233,766,487"/>
+<area shape="rect" href="class_postgres_1_1_postgre_s_q_l_data_source.html" title=" " alt="" coords="791,219,981,501"/>
 </map>
 </div>
 <div class="dynheader">
@@ -188,9 +189,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_column_store_1_1_data_generator_interface_a67fea3f3de472ee88fa0ca4c4945026d_icgraph.png" border="0" usemap="#class_column_store_1_1_data_generator_interface_a67fea3f3de472ee88fa0ca4c4945026d_icgraph" alt=""/></div>
 <map name="class_column_store_1_1_data_generator_interface_a67fea3f3de472ee88fa0ca4c4945026d_icgraph" id="class_column_store_1_1_data_generator_interface_a67fea3f3de472ee88fa0ca4c4945026d_icgraph">
-<area shape="rect" title="Interface for relational data sources." alt="" coords="339,5,525,47"/>
-<area shape="rect" href="class_column_store_1_1_data_generator_interface.html#af0805f02dbbd75f26df7cd387c3ad0a7" title="Print the data." alt="" coords="104,5,291,47"/>
-<area shape="rect" href="_projection_data_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
+<area shape="rect" title="Interface for relational data sources." alt="" coords="379,39,565,80"/>
+<area shape="rect" href="class_generic_query_1_1_generic_data_aggregator.html#ab6d155dbe03a051ce9de2d076200c04a" title="Construct a new Generic Data Generator object." alt="" coords="104,5,331,47"/>
+<area shape="rect" href="class_column_store_1_1_data_generator_interface.html#af0805f02dbbd75f26df7cd387c3ad0a7" title="Print the data." alt="" coords="124,71,311,112"/>
+<area shape="rect" href="_projection_data_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,78,56,105"/>
 </map>
 </div>
 
@@ -220,7 +222,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>returns true if record can be generated </dd></dl>
 
-<p>Implemented in <a class="el" href="class_postgres_1_1_postgre_s_q_l_data_source.html#ad2fbdc11d202cc0d3bfb7d527826ec6b">Postgres::PostgreSQLDataSource</a>, <a class="el" href="class_generic_query_1_1_generic_data_generator.html#aed2e55a891e4389135847e0eb8296ce1">GenericQuery::GenericDataGenerator</a>, <a class="el" href="class_c_s_v_1_1_c_s_v_data_source.html#a78f06de277757f381383669129e585e8">CSV::CSVDataSource</a>, and <a class="el" href="class_column_store_1_1_col_store_data_source.html#a4034a1ae062fa0f5155a6854b2b21c5c">ColumnStore::ColStoreDataSource</a>.</p>
+<p>Implemented in <a class="el" href="class_postgres_1_1_postgre_s_q_l_data_source.html#ad2fbdc11d202cc0d3bfb7d527826ec6b">Postgres::PostgreSQLDataSource</a>, <a class="el" href="class_generic_query_1_1_generic_data_aggregator.html#a6d4314d526f28477cce9a90e3d350065">GenericQuery::GenericDataAggregator</a>, <a class="el" href="class_generic_query_1_1_generic_data_generator.html#aed2e55a891e4389135847e0eb8296ce1">GenericQuery::GenericDataGenerator</a>, <a class="el" href="class_c_s_v_1_1_c_s_v_data_source.html#a78f06de277757f381383669129e585e8">CSV::CSVDataSource</a>, and <a class="el" href="class_column_store_1_1_col_store_data_source.html#a4034a1ae062fa0f5155a6854b2b21c5c">ColumnStore::ColStoreDataSource</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -259,7 +261,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>next record </dd></dl>
 
-<p>Implemented in <a class="el" href="class_postgres_1_1_postgre_s_q_l_data_source.html#a025936580a008992ca4b62b68aa44231">Postgres::PostgreSQLDataSource</a>, <a class="el" href="class_generic_query_1_1_generic_data_generator.html#a8433e193e38f9044bfc3bd00a926915b">GenericQuery::GenericDataGenerator</a>, <a class="el" href="class_c_s_v_1_1_c_s_v_data_source.html#aa7a79b80ce4cb8c7aad8cb8b29b07192">CSV::CSVDataSource</a>, and <a class="el" href="class_column_store_1_1_col_store_data_source.html#ab575e3930a6199843aa639e4824338d7">ColumnStore::ColStoreDataSource</a>.</p>
+<p>Implemented in <a class="el" href="class_generic_query_1_1_generic_data_aggregator.html#a7c938a3e411df4341f38da866bf04dfa">GenericQuery::GenericDataAggregator</a>, <a class="el" href="class_postgres_1_1_postgre_s_q_l_data_source.html#a025936580a008992ca4b62b68aa44231">Postgres::PostgreSQLDataSource</a>, <a class="el" href="class_generic_query_1_1_generic_data_generator.html#a8433e193e38f9044bfc3bd00a926915b">GenericQuery::GenericDataGenerator</a>, <a class="el" href="class_c_s_v_1_1_c_s_v_data_source.html#aa7a79b80ce4cb8c7aad8cb8b29b07192">CSV::CSVDataSource</a>, and <a class="el" href="class_column_store_1_1_col_store_data_source.html#ab575e3930a6199843aa639e4824338d7">ColumnStore::ColStoreDataSource</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

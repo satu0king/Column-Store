@@ -1,10 +1,10 @@
 <map id="GenericQuery::GenericDataGenerator" name="GenericQuery::GenericDataGenerator">
-<area shape="rect" id="node1" title=" " alt="" coords="383,432,561,627"/>
-<area shape="rect" id="node2" href="$class_column_store_1_1_data_generator_interface.html" title="Interface for relational data sources." alt="" coords="5,175,192,340"/>
-<area shape="rect" id="node3" href="$class_generic_query_1_1_generic_query_builder.html" title="Generic Query Builder Class." alt="" coords="216,145,403,369"/>
+<area shape="rect" id="node1" title=" " alt="" coords="383,461,561,656"/>
+<area shape="rect" id="node2" href="$class_column_store_1_1_data_generator_interface.html" title="Interface for relational data sources." alt="" coords="5,189,192,355"/>
+<area shape="rect" id="node3" href="$class_generic_query_1_1_generic_query_builder.html" title="Generic Query Builder Class." alt="" coords="216,145,403,399"/>
 <area shape="rect" id="node4" title=" " alt="" coords="227,5,282,83"/>
 <area shape="rect" id="node5" title=" " alt="" coords="335,5,391,83"/>
-<area shape="rect" id="node6" title=" " alt="" coords="427,219,517,296"/>
-<area shape="rect" id="node7" href="$struct_column_store_1_1_data_record.html" title="Stores a row of data." alt="" coords="541,204,712,311"/>
-<area shape="rect" id="node8" title=" " alt="" coords="736,219,851,296"/>
+<area shape="rect" id="node6" title=" " alt="" coords="427,233,517,311"/>
+<area shape="rect" id="node7" href="$struct_column_store_1_1_data_record.html" title="Stores a row of data." alt="" coords="541,219,712,325"/>
+<area shape="rect" id="node8" title=" " alt="" coords="736,233,851,311"/>
 </map>

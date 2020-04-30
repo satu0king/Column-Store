@@ -65,7 +65,15 @@ $(function() {
 
 <h3><a id="index__5F"></a>- _ -</h3><ul>
 <li>_hasNext
-: <a class="el" href="class_generic_query_1_1_generic_data_generator.html#a004b59a6dd154ce34c91fc8178c18c89">GenericQuery::GenericDataGenerator</a>
+: <a class="el" href="class_generic_query_1_1_generic_data_aggregator.html#a1a2f095a7b40ed536f843883e0d5f291">GenericQuery::GenericDataAggregator</a>
+, <a class="el" href="class_generic_query_1_1_generic_data_generator.html#a004b59a6dd154ce34c91fc8178c18c89">GenericQuery::GenericDataGenerator</a>
+</li>
+</ul>
+
+
+<h3><a id="index_a"></a>- a -</h3><ul>
+<li>aggregations
+: <a class="el" href="class_generic_query_1_1_generic_query_builder.html#a89ceae86939b6fbbfee94927a4122b8e">GenericQuery::GenericQueryBuilder</a>
 </li>
 </ul>
 
@@ -88,7 +96,8 @@ $(function() {
 : <a class="el" href="class_postgres_1_1_postgre_s_q_l_data_source.html#ad5ff835b00dfeb4504bc4e3e9fac4590">Postgres::PostgreSQLDataSource</a>
 </li>
 <li>builder
-: <a class="el" href="class_generic_query_1_1_generic_data_generator.html#a413a7d6285946117aa296156c71891ca">GenericQuery::GenericDataGenerator</a>
+: <a class="el" href="class_generic_query_1_1_generic_data_aggregator.html#ab2bc0dcc36b4d3e0a7f414978383e5b5">GenericQuery::GenericDataAggregator</a>
+, <a class="el" href="class_generic_query_1_1_generic_data_generator.html#a413a7d6285946117aa296156c71891ca">GenericQuery::GenericDataGenerator</a>
 </li>
 </ul>
 
@@ -108,7 +117,8 @@ $(function() {
 : <a class="el" href="class_column_store_1_1_initializer.html#a94e294287eb89ccb6046ac9739383532">ColumnStore::Initializer</a>
 </li>
 <li>columnIndex
-: <a class="el" href="class_column_store_1_1_equal_record_validator.html#a80698f81dd3e8526a4af48424ecaf9d1">ColumnStore::EqualRecordValidator</a>
+: <a class="el" href="struct_column_store_1_1_aggregator.html#ad7752da38ce7278b25677cbe1198d046">ColumnStore::Aggregator</a>
+, <a class="el" href="class_column_store_1_1_equal_record_validator.html#a80698f81dd3e8526a4af48424ecaf9d1">ColumnStore::EqualRecordValidator</a>
 , <a class="el" href="class_column_store_1_1_less_than_record_validator.html#a4e1faf608063e24a6ffbd91c317f5cf3">ColumnStore::LessThanRecordValidator</a>
 </li>
 <li>columnMap
@@ -133,7 +143,8 @@ $(function() {
 , <a class="el" href="class_postgres_1_1_postgre_s_q_l_meta_data.html#abe26b2f8c8d89ad64ca7013cfc6bf507">Postgres::PostgreSQLMetaData</a>
 </li>
 <li>count
-: <a class="el" href="class_column_store_1_1_col_store_data_source.html#a285f17a319c2b11644c1b941a2fa0865">ColumnStore::ColStoreDataSource</a>
+: <a class="el" href="struct_column_store_1_1_average_aggregator.html#a3d9c2ec69c0af8596446d743ab6279cc">ColumnStore::AverageAggregator</a>
+, <a class="el" href="class_column_store_1_1_col_store_data_source.html#a285f17a319c2b11644c1b941a2fa0865">ColumnStore::ColStoreDataSource</a>
 </li>
 </ul>
 
@@ -241,16 +252,23 @@ $(function() {
 <li>metaMap
 : <a class="el" href="class_column_store_1_1_metadata_manager.html#a5eee51889e92dbfac008521ca44292b6">ColumnStore::MetadataManager</a>
 </li>
+<li>mn
+: <a class="el" href="struct_column_store_1_1_min_aggregator.html#a3eedac53b04796aebe4f2d06840d75fc">ColumnStore::MinAggregator</a>
+</li>
 <li>msg
 : <a class="el" href="class_parser_1_1_projection_not_found_exception.html#a2abbeca6dd7c7feb9ec6b3cad943587d">Parser::ProjectionNotFoundException</a>
 , <a class="el" href="class_parser_1_1_table_not_found_exception.html#a7c75349dd2b3546b298407d4110a4251">Parser::TableNotFoundException</a>
+</li>
+<li>mx
+: <a class="el" href="struct_column_store_1_1_max_aggregator.html#a3254922520d9a3115bf7409ed8ebbfa4">ColumnStore::MaxAggregator</a>
 </li>
 </ul>
 
 
 <h3><a id="index_n"></a>- n -</h3><ul>
 <li>name
-: <a class="el" href="struct_column_store_1_1_column.html#af8d8ee9865ba00efdc527983fe89076f">ColumnStore::Column</a>
+: <a class="el" href="struct_column_store_1_1_aggregator.html#a6a36a5adbccbf455bcea383967f36605">ColumnStore::Aggregator</a>
+, <a class="el" href="struct_column_store_1_1_column.html#af8d8ee9865ba00efdc527983fe89076f">ColumnStore::Column</a>
 , <a class="el" href="class_column_store_1_1_equal_query.html#a59270a74208e06c18d9ebc57a8967a54">ColumnStore::EqualQuery</a>
 , <a class="el" href="class_column_store_1_1_less_than_query.html#aad48404a00f736c9c1b7d8d33e2a59b1">ColumnStore::LessThanQuery</a>
 , <a class="el" href="struct_parser_1_1_column.html#a240d94e5668128ca7440169f9a35c8c4">Parser::Column</a>
@@ -314,6 +332,9 @@ $(function() {
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
+<li>record
+: <a class="el" href="class_generic_query_1_1_generic_data_aggregator.html#a52114edeb45310d61c8fc3952ee42030">GenericQuery::GenericDataAggregator</a>
+</li>
 <li>recordValidator
 : <a class="el" href="class_generic_query_1_1_generic_data_generator.html#a7464ef7eee0e2fe53e4faf3b154cfc94">GenericQuery::GenericDataGenerator</a>
 </li>
@@ -341,6 +362,9 @@ $(function() {
 </li>
 <li>sql_file_name
 : <a class="el" href="class_parser_1_1_data_loader.html#ae0066c7be42fe00694181ff171a7965d">Parser::DataLoader</a>
+</li>
+<li>sum
+: <a class="el" href="struct_column_store_1_1_average_aggregator.html#ab7345e2c2c1cc78689d5154880ccdc16">ColumnStore::AverageAggregator</a>
 </li>
 </ul>
 
@@ -370,7 +394,8 @@ $(function() {
 : <a class="el" href="class_column_store_1_1_col_store_data_source.html#ac80db32a38899c865604aa9d1be0a4e3">ColumnStore::ColStoreDataSource</a>
 </li>
 <li>type
-: <a class="el" href="struct_column_store_1_1_column.html#a2c48b55ecb83bb61b165ba2e3cebf0d6">ColumnStore::Column</a>
+: <a class="el" href="struct_column_store_1_1_aggregator.html#aa0bb3615b36ef89e283be99800fce0b1">ColumnStore::Aggregator</a>
+, <a class="el" href="struct_column_store_1_1_column.html#a2c48b55ecb83bb61b165ba2e3cebf0d6">ColumnStore::Column</a>
 , <a class="el" href="struct_parser_1_1_column.html#ace17dc9903d1ea2906f603af72b6523d">Parser::Column</a>
 </li>
 </ul>

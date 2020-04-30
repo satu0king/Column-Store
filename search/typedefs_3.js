@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['recordvalidator_592',['RecordValidator',['../namespace_column_store.html#a3c6fedd40d8bf24dde513b17a7ca5d94',1,'ColumnStore']]]
+  ['query_634',['Query',['../namespace_column_store.html#a42efce201d3924ec51c727817093edcc',1,'ColumnStore']]]
 ];

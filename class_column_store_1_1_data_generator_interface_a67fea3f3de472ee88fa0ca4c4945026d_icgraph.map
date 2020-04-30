@@ -1,5 +1,6 @@
 <map id="ColumnStore::DataGeneratorInterface::getMetadata" name="ColumnStore::DataGeneratorInterface::getMetadata">
-<area shape="rect" id="node1" title="Interface for relational data sources." alt="" coords="339,5,525,47"/>
-<area shape="rect" id="node2" href="$class_column_store_1_1_data_generator_interface.html#af0805f02dbbd75f26df7cd387c3ad0a7" title="Print the data." alt="" coords="104,5,291,47"/>
-<area shape="rect" id="node3" href="$_projection_data_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
+<area shape="rect" id="node1" title="Interface for relational data sources." alt="" coords="379,39,565,80"/>
+<area shape="rect" id="node2" href="$class_generic_query_1_1_generic_data_aggregator.html#ab6d155dbe03a051ce9de2d076200c04a" title="Construct a new Generic Data Generator object." alt="" coords="104,5,331,47"/>
+<area shape="rect" id="node3" href="$class_column_store_1_1_data_generator_interface.html#af0805f02dbbd75f26df7cd387c3ad0a7" title="Print the data." alt="" coords="124,71,311,112"/>
+<area shape="rect" id="node4" href="$_projection_data_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,78,56,105"/>
 </map>

@@ -1,0 +1,15 @@
+<map id="src/interfaces/AggregatorQuery.h" name="src/interfaces/AggregatorQuery.h">
+<area shape="rect" id="node1" title="Generic Condition Builder." alt="" coords="84,5,252,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,59,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="134,244,202,271"/>
+<area shape="rect" id="node4" title=" " alt="" coords="278,319,333,345"/>
+<area shape="rect" id="node5" title=" " alt="" coords="751,244,862,271"/>
+<area shape="rect" id="node6" href="$_data_generator_interface_8h.html" title="Data Generator Interface." alt="" coords="229,95,395,121"/>
+<area shape="rect" id="node7" title=" " alt="" coords="227,244,285,271"/>
+<area shape="rect" id="node8" title=" " alt="" coords="625,244,727,271"/>
+<area shape="rect" id="node9" href="$interfaces_2_column_8h.html" title="Column Metadata and Type information." alt="" coords="310,244,386,271"/>
+<area shape="rect" id="node11" href="$_data_record_8h.html" title="Data storage structures." alt="" coords="374,169,474,196"/>
+<area shape="rect" id="node10" title=" " alt="" coords="357,319,425,345"/>
+<area shape="rect" id="node12" title=" " alt="" coords="461,244,504,271"/>
+<area shape="rect" id="node13" title=" " alt="" coords="528,244,600,271"/>
+</map>

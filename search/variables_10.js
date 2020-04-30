@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['table_573',['table',['../struct_parser_1_1foreign__key.html#a8501d2600b910376e8697f4e999e825d',1,'Parser::foreign_key::table()'],['../struct_parser_1_1projection__column.html#af74fbab2b199ef230dd065edc60c7fdb',1,'Parser::projection_column::table()']]],
-  ['table_5fmap_574',['table_map',['../class_parser_1_1_schema_meta_data.html#a00e53a46e79f915742448f438247c36a',1,'Parser::SchemaMetaData']]],
-  ['table_5fname_575',['table_name',['../class_parser_1_1_table.html#a9cb76abe816d393af117532278d34d8f',1,'Parser::Table']]],
-  ['tables_576',['tables',['../class_parser_1_1_schema_meta_data.html#aa86b3a850d464e7601278c453b5ea465',1,'Parser::SchemaMetaData']]],
-  ['to_577',['to',['../struct_parser_1_1foreign__key.html#a2d8ab0529bcab487c924c52349df1a23',1,'Parser::foreign_key::to()'],['../struct_parser_1_1join__index.html#ae4a9fcb5cfaf343f9ebfea529e280f37',1,'Parser::join_index::to()']]],
-  ['total_5fnumber_5fof_5frows_578',['total_number_of_rows',['../class_postgres_1_1_postgre_s_q_l_data_source.html#a0a7008d76895d5e8997eddb6fea0c091',1,'Postgres::PostgreSQLDataSource']]],
-  ['tuples_5fmove_5fcount_579',['tuples_move_count',['../class_column_store_1_1_col_store_data_source.html#ac80db32a38899c865604aa9d1be0a4e3',1,'ColumnStore::ColStoreDataSource']]],
-  ['type_580',['type',['../struct_column_store_1_1_column.html#a2c48b55ecb83bb61b165ba2e3cebf0d6',1,'ColumnStore::Column::type()'],['../struct_parser_1_1_column.html#ace17dc9903d1ea2906f603af72b6523d',1,'Parser::Column::type()']]]
+  ['schema_5fmeta_5fdata_609',['schema_meta_data',['../class_parser_1_1_schema_extractor.html#aa63cc65b9efb77763ebc0230f02cb98b',1,'Parser::SchemaExtractor::schema_meta_data()'],['../class_parser_1_1_schema_loader.html#ab2ee6254c27328a0f1e6d5ec0bd27c16',1,'Parser::SchemaLoader::schema_meta_data()'],['../class_postgres_1_1_postgre_s_q_l_data_source.html#a2de4afb28bd8efb24b0b6bf09d659a34',1,'Postgres::PostgreSQLDataSource::schema_meta_data()'],['../class_postgres_1_1_postgre_s_q_l_meta_data.html#a2b156c92e8195dfdce75e5154505a18e',1,'Postgres::PostgreSQLMetaData::schema_meta_data()']]],
+  ['schemametadata_610',['schemaMetadata',['../class_column_store_1_1_metadata_manager.html#a83dbb8562842189f1be666c52c53c39c',1,'ColumnStore::MetadataManager']]],
+  ['size_611',['size',['../struct_parser_1_1_data_type.html#ae4f726519952e9fe2ab098faaebab04b',1,'Parser::DataType']]],
+  ['sort_5fkey_612',['sort_key',['../class_parser_1_1_projection.html#a42437487f946501616fac68f9cbb1847',1,'Parser::Projection']]],
+  ['sql_5ffile_5fname_613',['sql_file_name',['../class_parser_1_1_data_loader.html#ae0066c7be42fe00694181ff171a7965d',1,'Parser::DataLoader']]],
+  ['sum_614',['sum',['../struct_column_store_1_1_average_aggregator.html#ab7345e2c2c1cc78689d5154880ccdc16',1,'ColumnStore::AverageAggregator']]]
 ];

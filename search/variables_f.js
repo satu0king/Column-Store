@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['schema_5fmeta_5fdata_568',['schema_meta_data',['../class_parser_1_1_schema_extractor.html#aa63cc65b9efb77763ebc0230f02cb98b',1,'Parser::SchemaExtractor::schema_meta_data()'],['../class_parser_1_1_schema_loader.html#ab2ee6254c27328a0f1e6d5ec0bd27c16',1,'Parser::SchemaLoader::schema_meta_data()'],['../class_postgres_1_1_postgre_s_q_l_data_source.html#a2de4afb28bd8efb24b0b6bf09d659a34',1,'Postgres::PostgreSQLDataSource::schema_meta_data()'],['../class_postgres_1_1_postgre_s_q_l_meta_data.html#a2b156c92e8195dfdce75e5154505a18e',1,'Postgres::PostgreSQLMetaData::schema_meta_data()']]],
-  ['schemametadata_569',['schemaMetadata',['../class_column_store_1_1_metadata_manager.html#a83dbb8562842189f1be666c52c53c39c',1,'ColumnStore::MetadataManager']]],
-  ['size_570',['size',['../struct_parser_1_1_data_type.html#ae4f726519952e9fe2ab098faaebab04b',1,'Parser::DataType']]],
-  ['sort_5fkey_571',['sort_key',['../class_parser_1_1_projection.html#a42437487f946501616fac68f9cbb1847',1,'Parser::Projection']]],
-  ['sql_5ffile_5fname_572',['sql_file_name',['../class_parser_1_1_data_loader.html#ae0066c7be42fe00694181ff171a7965d',1,'Parser::DataLoader']]]
+  ['record_606',['record',['../class_generic_query_1_1_generic_data_aggregator.html#a52114edeb45310d61c8fc3952ee42030',1,'GenericQuery::GenericDataAggregator']]],
+  ['recordvalidator_607',['recordValidator',['../class_generic_query_1_1_generic_data_generator.html#a7464ef7eee0e2fe53e4faf3b154cfc94',1,'GenericQuery::GenericDataGenerator']]],
+  ['relation_5fname_608',['relation_name',['../class_postgres_1_1_postgre_s_q_l_data_source.html#ae1ba5a1e97331edb807699e985c1a8eb',1,'Postgres::PostgreSQLDataSource']]]
 ];

@@ -1,6 +1,7 @@
 <map id="ColumnStore::ColumnStoreData::write" name="ColumnStore::ColumnStoreData::write">
-<area shape="rect" id="node1" title=" " alt="" coords="587,5,765,47"/>
-<area shape="rect" id="node2" href="$class_column_store_1_1_col_store_loader.html#a30730a24b33168d6aa00bf2c2601c395" title=" " alt="" coords="345,5,539,47"/>
-<area shape="rect" id="node3" href="$class_column_store_1_1_col_store_loader.html#a3829c8c7b337faf19adc56d0cad06bc2" title=" " alt="" coords="104,5,297,47"/>
-<area shape="rect" id="node4" href="$_projection_data_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,56,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="587,27,765,69"/>
+<area shape="rect" id="node2" href="$_projection_data_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="417,5,467,32"/>
+<area shape="rect" id="node3" href="$class_column_store_1_1_col_store_loader.html#a30730a24b33168d6aa00bf2c2601c395" title=" " alt="" coords="345,57,539,98"/>
+<area shape="rect" id="node4" href="$class_column_store_1_1_col_store_loader.html#a3829c8c7b337faf19adc56d0cad06bc2" title=" " alt="" coords="104,57,297,98"/>
+<area shape="rect" id="node5" href="$_column_store_updater_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,64,56,91"/>
 </map>

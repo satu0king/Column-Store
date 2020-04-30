@@ -1,7 +1,8 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_column_store_1_1_data_generator_interface.html" title="Interface for relational data sources." alt="" coords="5,93,192,135"/>
-<area shape="rect" id="node2" href="$class_column_store_1_1_col_store_data_source.html" title=" " alt="" coords="240,5,420,47"/>
-<area shape="rect" id="node3" href="$class_c_s_v_1_1_c_s_v_data_source.html" title=" " alt="" coords="255,71,405,98"/>
-<area shape="rect" id="node4" href="$class_generic_query_1_1_generic_data_generator.html" title=" " alt="" coords="241,123,419,164"/>
-<area shape="rect" id="node5" href="$class_postgres_1_1_postgre_s_q_l_data_source.html" title=" " alt="" coords="241,188,419,229"/>
+<area shape="rect" id="node1" href="$class_column_store_1_1_condition_query.html" title="Base Condition Query Structure." alt="" coords="5,107,196,133"/>
+<area shape="rect" id="node2" href="$class_column_store_1_1_and_query.html" title="Logical AND query." alt="" coords="261,5,421,32"/>
+<area shape="rect" id="node3" href="$class_column_store_1_1_equal_query.html" title="Equality Query." alt="" coords="257,56,426,83"/>
+<area shape="rect" id="node4" href="$class_column_store_1_1_less_than_query.html" title="Less Than Query." alt="" coords="244,107,439,133"/>
+<area shape="rect" id="node5" href="$class_column_store_1_1_not_query.html" title="Logical NOT query." alt="" coords="262,157,421,184"/>
+<area shape="rect" id="node6" href="$class_column_store_1_1_or_query.html" title="Logical OR query." alt="" coords="266,208,417,235"/>
 </map>
