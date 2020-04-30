@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_parser_1_1_schema_meta_data.html" title=" " alt="" coords="5,5,176,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,42,83,69"/>
+<area shape="rect" id="node2" href="$class_parser_1_1_projection_not_found_exception.html" title=" " alt="" coords="145,5,327,47"/>
+<area shape="rect" id="node3" href="$class_parser_1_1_table_not_found_exception.html" title=" " alt="" coords="131,71,341,98"/>
 </map>

@@ -4,7 +4,10 @@ var searchData=
   ['join_5findex_172',['join_index',['../struct_parser_1_1join__index.html',1,'Parser']]],
   ['join_5findexes_173',['join_indexes',['../class_parser_1_1_projection.html#a83e9519f420e7b27c43bfb5aab07e26a',1,'Parser::Projection']]],
   ['join_5ftables_174',['join_tables',['../class_parser_1_1_projection.html#a282404a448e6f59b3f0375bd902c48e4',1,'Parser::Projection']]],
-  ['joinindex_2eh_175',['JoinIndex.h',['../_join_index_8h.html',1,'']]],
-  ['joinmap_176',['joinMap',['../struct_generic_query_1_1_generic_data_generator_1_1_data_generater_join.html#a27616f3ffb659547dc3af5433dd7ea16',1,'GenericQuery::GenericDataGenerator::DataGeneraterJoin']]],
-  ['joins_177',['joins',['../class_generic_query_1_1_generic_data_generator.html#a7e341e3c4b3bf192e4a128d4b24e272b',1,'GenericQuery::GenericDataGenerator::joins()'],['../class_generic_query_1_1_generic_query_builder.html#a90a7b420b42ea56a39db18ccb1019231',1,'GenericQuery::GenericQueryBuilder::joins()']]]
+  ['joinhash_175',['JoinHash',['../struct_generic_query_1_1_join_hash.html',1,'GenericQuery']]],
+  ['joinindex_2eh_176',['JoinIndex.h',['../_join_index_8h.html',1,'']]],
+  ['joinmap_177',['joinMap',['../struct_generic_query_1_1_generic_data_generator_1_1_data_generater_join.html#aecb13b9ac9e406e55a541453e195d7fc',1,'GenericQuery::GenericDataGenerator::DataGeneraterJoin']]],
+  ['joins_178',['joins',['../class_generic_query_1_1_generic_data_generator.html#a7e341e3c4b3bf192e4a128d4b24e272b',1,'GenericQuery::GenericDataGenerator::joins()'],['../class_generic_query_1_1_generic_query_builder.html#a90a7b420b42ea56a39db18ccb1019231',1,'GenericQuery::GenericQueryBuilder::joins()']]],
+  ['joinvalue_179',['JoinValue',['../struct_generic_query_1_1_join_value.html',1,'GenericQuery::JoinValue'],['../struct_generic_query_1_1_join_value.html#ac60b3bed27e1baa8ce90ca98ff3feead',1,'GenericQuery::JoinValue::JoinValue()']]],
+  ['joinvaluemanager_180',['JoinValueManager',['../struct_generic_query_1_1_join_value_manager.html',1,'GenericQuery::JoinValueManager'],['../struct_generic_query_1_1_join_value_manager.html#a0c26324306a002413d26c1bea6430cf9',1,'GenericQuery::JoinValueManager::JoinValueManager()']]]
 ];

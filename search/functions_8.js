@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['if_514',['if',['../_c_make_lists_8txt.html#a256bd339a4eecd357875e85c7ec2c269',1,'CMakeLists.txt']]],
-  ['initconfig_515',['initConfig',['../_driver_8cpp.html#a249120153b5b05aa5ab079bfafeb3da5',1,'initConfig(int ac, char *av[]):&#160;Driver.cpp'],['../_column_store_updater_8cpp.html#a249120153b5b05aa5ab079bfafeb3da5',1,'initConfig(int ac, char *av[]):&#160;ColumnStoreUpdater.cpp']]],
-  ['initialize_516',['initialize',['../struct_column_store_1_1_aggregator.html#a142927efe6515067d507255840c9dd50',1,'ColumnStore::Aggregator']]],
-  ['initializer_517',['Initializer',['../class_column_store_1_1_initializer.html#a7ed55b4c1b3ed10ead11c0fc9fb75cc8',1,'ColumnStore::Initializer']]]
+  ['if_523',['if',['../_c_make_lists_8txt.html#a256bd339a4eecd357875e85c7ec2c269',1,'CMakeLists.txt']]],
+  ['initconfig_524',['initConfig',['../_driver_8cpp.html#a249120153b5b05aa5ab079bfafeb3da5',1,'initConfig(int ac, char *av[]):&#160;Driver.cpp'],['../_column_store_updater_8cpp.html#a249120153b5b05aa5ab079bfafeb3da5',1,'initConfig(int ac, char *av[]):&#160;ColumnStoreUpdater.cpp']]],
+  ['initialize_525',['initialize',['../struct_column_store_1_1_aggregator.html#a142927efe6515067d507255840c9dd50',1,'ColumnStore::Aggregator']]],
+  ['initializer_526',['Initializer',['../class_column_store_1_1_initializer.html#a7ed55b4c1b3ed10ead11c0fc9fb75cc8',1,'ColumnStore::Initializer']]]
 ];

@@ -1,0 +1,10 @@
+<map id="GenericQuery::JoinValueManager::processValue" name="GenericQuery::JoinValueManager::processValue">
+<area shape="rect" id="node1" title=" " alt="" coords="1276,75,1491,116"/>
+<area shape="rect" id="node2" href="$class_generic_query_1_1_generic_data_generator.html#a1edac837e3efdbef3c179aec2f0e00d9" title="Gets the next candidate record." alt="" coords="1033,45,1228,87"/>
+<area shape="rect" id="node5" href="$class_generic_query_1_1_generic_data_generator.html#a009a5809f606dcfa19b7b104f1341c93" title="Construct a new Generic Data Generator object." alt="" coords="317,104,532,145"/>
+<area shape="rect" id="node3" href="$class_generic_query_1_1_generic_data_generator.html#ad6120dee559e07000053d95cb48ee279" title="internal function to process and generate next valid record" alt="" coords="807,45,985,87"/>
+<area shape="rect" id="node4" href="$class_generic_query_1_1_generic_data_generator.html#ac792337f68466ab51907562009de17e7" title="internal function to set the next valid record" alt="" coords="580,45,759,87"/>
+<area shape="rect" id="node6" href="$class_generic_query_1_1_generic_data_generator.html#a8433e193e38f9044bfc3bd00a926915b" title="generates a new record" alt="" coords="335,39,514,80"/>
+<area shape="rect" id="node7" href="$class_generic_query_1_1_generic_data_aggregator.html#ab6d155dbe03a051ce9de2d076200c04a" title="Construct a new Generic Data Generator object." alt="" coords="24,5,251,47"/>
+<area shape="rect" id="node8" href="$class_generic_query_1_1_generic_group_by_aggregator.html#aa0e4bd6af8560b8a4315fc97cd6876a7" title="Construct a new Generic Data Generator object." alt="" coords="5,71,269,112"/>
+</map>
