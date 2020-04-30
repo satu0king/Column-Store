@@ -1,5 +1,16 @@
 #include <iostream>
 
+#include "src/PostgresDataGenerator/PostgreSQLDataGenerator.h"
+#include "src/PostgresDataGenerator/PostgreSQLMetaData.h"
+#include "src/Core/ProjectionData.h"
+#include "src/ColStoreDataGenerator/ColStoreDataGenerator.h"
+
+
+
+
+
+
+
 #include "src/CSVDataGenerator/CSVDataGenerator.h"
 #include "src/GenericQuery/GenericGenerator.h"
 #include "src/GenericQuery/GenericQueryBuilder.h"
@@ -14,6 +25,9 @@ int main(int argc, char **argv) {
     DataSource studentCSV =
         DataSource(new CSVDataSource("../data/students.csv"));
     DataSource gradesCSV = DataSource(new CSVDataSource("../data/grades.csv"));
+
+    DataSource employee_city = DataSource(new ColumnStore::ColStoreDataSource("../store", "EMPLOYEE_CITY_PROJECTION"));
+    DataSource employee_department = DataSource(new ColumnStore::ColStoreDataSource("../store", "EMPLOYEE_DEPARTMENT_PROJECTION"));
 
     {
         GenericQueryBuilder builder;
@@ -44,7 +58,8 @@ int main(int argc, char **argv) {
             // builder.groupBy("Name");
             // builder.groupBy("Roll_Number");
             // builder.groupBy("CGPA");
-            // builder.aggregate(AggregatorQuery(new AverageAggregator("Score")));
+            // builder.aggregate(AggregatorQuery(new
+            // AverageAggregator("Score")));
             // builder.aggregate(AggregatorQuery(new MaxAggregator("Score")));
             // builder.aggregate(AggregatorQuery(new MinAggregator("Score")));
         }
@@ -63,6 +78,10 @@ int main(int argc, char **argv) {
         auto generator = builder.build();
 
         generator->print();
+    } {
+
+        employee_city->print(10);
+        employee_department->print(10);
     }
     return 0;
 }

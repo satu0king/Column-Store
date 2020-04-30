@@ -17,6 +17,8 @@ using std::vector;
 using std::queue;
 using std::string;
 
+using nlohmann::json;
+
 namespace ColumnStore {
 class ColStoreDataSource : public ColumnStore::DataGeneratorInterface {
     MetadataManagerSingleton manager;

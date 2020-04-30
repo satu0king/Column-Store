@@ -35,7 +35,8 @@ add_executable(postgres_data_test src/PostgresDataGenerator/PostgreSQLDataGenera
 target_link_libraries(postgres_data_test PRIVATE postgres_data_generator)
 
 add_executable(main_test test.cpp)
-target_link_libraries(main_test PRIVATE csv_data_generator generic_query interfaces)
+target_include_directories(main_test PUBLIC src)
+target_link_libraries(main_test PRIVATE csv_data_generator generic_query interfaces parser Boost::program_options nlohmann_json::nlohmann_json ${CMAKE_FS_LINK} interfaces postgres_data_generator)
 
 add_executable(column_store_init src/ColumnStoreInitializer/Driver.cpp)
 target_link_libraries(column_store_init PRIVATE parser Boost::program_options nlohmann_json::nlohmann_json ${CMAKE_FS_LINK})
