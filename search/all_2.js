@@ -6,5 +6,5 @@ var searchData=
   ['basesource_28',['baseSource',['../class_generic_query_1_1_generic_data_generator.html#a310d26400bd3325a362939fea6aa5a03',1,'GenericQuery::GenericDataGenerator::baseSource()'],['../class_generic_query_1_1_generic_query_builder.html#ab5e563f480a2371576735f2fccfa744a',1,'GenericQuery::GenericQueryBuilder::baseSource()']]],
   ['batch_5fsize_29',['batch_size',['../class_postgres_1_1_postgre_s_q_l_data_source.html#ad5ff835b00dfeb4504bc4e3e9fac4590',1,'Postgres::PostgreSQLDataSource']]],
   ['build_30',['build',['../class_generic_query_1_1_generic_query_builder.html#a8ec7469b95a87781667dc9f09a66802d',1,'GenericQuery::GenericQueryBuilder']]],
-  ['builder_31',['builder',['../class_generic_query_1_1_generic_data_generator.html#a413a7d6285946117aa296156c71891ca',1,'GenericQuery::GenericDataGenerator::builder()'],['../class_generic_query_1_1_generic_data_aggregator.html#ab2bc0dcc36b4d3e0a7f414978383e5b5',1,'GenericQuery::GenericDataAggregator::builder()']]]
+  ['builder_31',['builder',['../class_generic_query_1_1_generic_data_generator.html#a413a7d6285946117aa296156c71891ca',1,'GenericQuery::GenericDataGenerator']]]
 ];

@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['join_5findexes_582',['join_indexes',['../class_parser_1_1_projection.html#a83e9519f420e7b27c43bfb5aab07e26a',1,'Parser::Projection']]],
-  ['join_5ftables_583',['join_tables',['../class_parser_1_1_projection.html#a282404a448e6f59b3f0375bd902c48e4',1,'Parser::Projection']]],
-  ['joinmap_584',['joinMap',['../struct_generic_query_1_1_generic_data_generator_1_1_data_generater_join.html#a27616f3ffb659547dc3af5433dd7ea16',1,'GenericQuery::GenericDataGenerator::DataGeneraterJoin']]],
-  ['joins_585',['joins',['../class_generic_query_1_1_generic_data_generator.html#a7e341e3c4b3bf192e4a128d4b24e272b',1,'GenericQuery::GenericDataGenerator::joins()'],['../class_generic_query_1_1_generic_query_builder.html#a90a7b420b42ea56a39db18ccb1019231',1,'GenericQuery::GenericQueryBuilder::joins()']]]
+  ['index_616',['index',['../struct_column_store_1_1_column.html#a6a98ab24f092b4c2284f69213825d3e3',1,'ColumnStore::Column::index()'],['../struct_parser_1_1_column.html#a1634178cd0b141bd4fa16317eee1e023',1,'Parser::Column::index()'],['../struct_parser_1_1projection__column.html#a424af2c816e2dcba190e14e06f163c21',1,'Parser::projection_column::index()']]],
+  ['indices_617',['indices',['../struct_generic_query_1_1_generic_data_generator_1_1_data_generater_join.html#a72418034d8a827b974bc09248b944fd4',1,'GenericQuery::GenericDataGenerator::DataGeneraterJoin::indices()'],['../struct_generic_query_1_1_group_by_manager.html#a38334f4e65200c9c83aa15605dd4c6ee',1,'GenericQuery::GroupByManager::indices()']]]
 ];

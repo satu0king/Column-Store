@@ -83,10 +83,10 @@ Inheritance diagram for ColumnStore::Aggregator:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_column_store_1_1_aggregator__inherit__graph.png" border="0" usemap="#_column_store_1_1_aggregator_inherit__map" alt="Inheritance graph"/></div>
 <map name="_column_store_1_1_aggregator_inherit__map" id="_column_store_1_1_aggregator_inherit__map">
-<area shape="rect" title="Base Condition Query Structure." alt="" coords="256,5,423,185"/>
-<area shape="rect" href="struct_column_store_1_1_average_aggregator.html" title=" " alt="" coords="5,233,220,369"/>
-<area shape="rect" href="struct_column_store_1_1_max_aggregator.html" title=" " alt="" coords="244,241,435,362"/>
-<area shape="rect" href="struct_column_store_1_1_min_aggregator.html" title=" " alt="" coords="459,241,646,362"/>
+<area shape="rect" title="Base Condition Query Structure." alt="" coords="256,5,423,215"/>
+<area shape="rect" href="struct_column_store_1_1_average_aggregator.html" title=" " alt="" coords="5,263,220,413"/>
+<area shape="rect" href="struct_column_store_1_1_max_aggregator.html" title=" " alt="" coords="244,270,435,406"/>
+<area shape="rect" href="struct_column_store_1_1_min_aggregator.html" title=" " alt="" coords="459,270,646,406"/>
 </map>
 </div>
 <div class="dynheader">
@@ -94,7 +94,7 @@ Collaboration diagram for ColumnStore::Aggregator:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_column_store_1_1_aggregator__coll__graph.png" border="0" usemap="#_column_store_1_1_aggregator_coll__map" alt="Collaboration graph"/></div>
 <map name="_column_store_1_1_aggregator_coll__map" id="_column_store_1_1_aggregator_coll__map">
-<area shape="rect" title="Base Condition Query Structure." alt="" coords="5,145,172,311"/>
+<area shape="rect" title="Base Condition Query Structure." alt="" coords="5,145,172,340"/>
 <area shape="rect" title=" " alt="" coords="61,5,116,83"/>
 </map>
 </div>
@@ -109,11 +109,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae899ffb1c9365249338f834174a0c63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdf8c6b38fc1e0e6130aeb70bc277b28"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_column_store_1_1_aggregator.html#afdf8c6b38fc1e0e6130aeb70bc277b28">getValue</a> ()=0</td></tr>
 <tr class="separator:afdf8c6b38fc1e0e6130aeb70bc277b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa343c3ca5ae48926d56082f4c9b40bbc"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_column_store_1_1_aggregator.html#aa343c3ca5ae48926d56082f4c9b40bbc">~Aggregator</a> ()</td></tr>
+<tr class="memdesc:aa343c3ca5ae48926d56082f4c9b40bbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the Condition Query object.  <a href="struct_column_store_1_1_aggregator.html#aa343c3ca5ae48926d56082f4c9b40bbc">More...</a><br /></td></tr>
+<tr class="separator:aa343c3ca5ae48926d56082f4c9b40bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a555ec8835a44ee27e9018670a48d09f4"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_column_store_1_1_aggregator.html#a555ec8835a44ee27e9018670a48d09f4">aggregatorType</a> ()=0</td></tr>
-<tr class="memdesc:a555ec8835a44ee27e9018670a48d09f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the Condition Query object.  <a href="struct_column_store_1_1_aggregator.html#a555ec8835a44ee27e9018670a48d09f4">More...</a><br /></td></tr>
 <tr class="separator:a555ec8835a44ee27e9018670a48d09f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c7da003dfa6003b80671028cb845493"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_column_store_1_1_aggregator.html#a8c7da003dfa6003b80671028cb845493">getColumnName</a> ()</td></tr>
 <tr class="separator:a8c7da003dfa6003b80671028cb845493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6202a9de7314a18754cd35b130dc4b9e"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="struct_column_store_1_1_aggregator.html">Aggregator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_column_store_1_1_aggregator.html#a6202a9de7314a18754cd35b130dc4b9e">clone</a> ()=0</td></tr>
+<tr class="separator:a6202a9de7314a18754cd35b130dc4b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -152,6 +156,33 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa343c3ca5ae48926d56082f4c9b40bbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa343c3ca5ae48926d56082f4c9b40bbc">&#9670;&nbsp;</a></span>~Aggregator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ColumnStore::Aggregator::~Aggregator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destroy the Condition Query object. </p>
 
 </div>
 </div>
@@ -207,18 +238,43 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destroy the Condition Query object. </p>
-
 <p>Implemented in <a class="el" href="struct_column_store_1_1_min_aggregator.html#ac27a64048359af8da70f02111730fac6">ColumnStore::MinAggregator</a>, <a class="el" href="struct_column_store_1_1_max_aggregator.html#a031f7b6baf1b9b1522036165c83bf988">ColumnStore::MaxAggregator</a>, and <a class="el" href="struct_column_store_1_1_average_aggregator.html#a88d39346f141eccc10091b009ee08ff8">ColumnStore::AverageAggregator</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_column_store_1_1_aggregator_a555ec8835a44ee27e9018670a48d09f4_icgraph.png" border="0" usemap="#struct_column_store_1_1_aggregator_a555ec8835a44ee27e9018670a48d09f4_icgraph" alt=""/></div>
 <map name="struct_column_store_1_1_aggregator_a555ec8835a44ee27e9018670a48d09f4_icgraph" id="struct_column_store_1_1_aggregator_a555ec8835a44ee27e9018670a48d09f4_icgraph">
-<area shape="rect" title="Destroy the Condition Query object." alt="" coords="220,5,387,47"/>
+<area shape="rect" title=" " alt="" coords="220,5,387,47"/>
 <area shape="rect" href="struct_column_store_1_1_aggregator.html#a8c7da003dfa6003b80671028cb845493" title=" " alt="" coords="5,5,172,47"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a6202a9de7314a18754cd35b130dc4b9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6202a9de7314a18754cd35b130dc4b9e">&#9670;&nbsp;</a></span>clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="struct_column_store_1_1_aggregator.html">Aggregator</a>&gt; ColumnStore::Aggregator::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="struct_column_store_1_1_min_aggregator.html#a5c45a62c198b23edc23ee7033b05d48b">ColumnStore::MinAggregator</a>, <a class="el" href="struct_column_store_1_1_max_aggregator.html#ab4bb794f4e42ed2fae2a6db96a9555d2">ColumnStore::MaxAggregator</a>, and <a class="el" href="struct_column_store_1_1_average_aggregator.html#a5ff8324374d89e506a47ee175f2eaa0f">ColumnStore::AverageAggregator</a>.</p>
 
 </div>
 </div>
@@ -250,7 +306,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="struct_column_store_1_1_aggregator_a8c7da003dfa6003b80671028cb845493_cgraph.png" border="0" usemap="#struct_column_store_1_1_aggregator_a8c7da003dfa6003b80671028cb845493_cgraph" alt=""/></div>
 <map name="struct_column_store_1_1_aggregator_a8c7da003dfa6003b80671028cb845493_cgraph" id="struct_column_store_1_1_aggregator_a8c7da003dfa6003b80671028cb845493_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,172,47"/>
-<area shape="rect" href="struct_column_store_1_1_aggregator.html#a555ec8835a44ee27e9018670a48d09f4" title="Destroy the Condition Query object." alt="" coords="220,5,387,47"/>
+<area shape="rect" href="struct_column_store_1_1_aggregator.html#a555ec8835a44ee27e9018670a48d09f4" title=" " alt="" coords="220,5,387,47"/>
 </map>
 </div>
 

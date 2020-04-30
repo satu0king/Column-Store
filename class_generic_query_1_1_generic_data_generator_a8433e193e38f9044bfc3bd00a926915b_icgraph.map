@@ -1,4 +1,5 @@
 <map id="GenericQuery::GenericDataGenerator::next" name="GenericQuery::GenericDataGenerator::next">
-<area shape="rect" id="node1" title="generates a new record" alt="" coords="280,5,459,47"/>
-<area shape="rect" id="node2" href="$class_generic_query_1_1_generic_data_aggregator.html#ab6d155dbe03a051ce9de2d076200c04a" title="Construct a new Generic Data Generator object." alt="" coords="5,5,232,47"/>
+<area shape="rect" id="node1" title="generates a new record" alt="" coords="317,39,496,80"/>
+<area shape="rect" id="node2" href="$class_generic_query_1_1_generic_data_aggregator.html#ab6d155dbe03a051ce9de2d076200c04a" title="Construct a new Generic Data Generator object." alt="" coords="24,5,251,47"/>
+<area shape="rect" id="node3" href="$class_generic_query_1_1_generic_group_by_aggregator.html#aa0e4bd6af8560b8a4315fc97cd6876a7" title="Construct a new Generic Data Generator object." alt="" coords="5,71,269,112"/>
 </map>

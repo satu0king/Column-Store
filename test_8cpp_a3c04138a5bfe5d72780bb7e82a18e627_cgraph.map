@@ -1,10 +1,11 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,166,56,193"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,202,56,229"/>
 <area shape="rect" id="node2" href="$class_generic_query_1_1_generic_query_builder.html#a7029903f9302572e1cef82165a927c73" title=" " alt="" coords="104,5,291,47"/>
 <area shape="rect" id="node3" href="$class_generic_query_1_1_generic_query_builder.html#a8ec7469b95a87781667dc9f09a66802d" title=" " alt="" coords="104,71,291,112"/>
-<area shape="rect" id="node4" href="$class_generic_query_1_1_generic_query_builder.html#a427ff30da7981b44596426a2645d434b" title="Creates a join from base source to a join source." alt="" coords="573,224,760,265"/>
-<area shape="rect" id="node5" href="$class_generic_query_1_1_generic_query_builder.html#ab7713ce5ae6376eacd2521aa6519aab2" title="Registers a new data source and gives is an alias name." alt="" coords="104,188,291,229"/>
-<area shape="rect" id="node6" href="$class_generic_query_1_1_generic_query_builder.html#a551f3151383fa621b76e56738bea03f4" title="Set the Base Source and the columns required in the query result." alt="" coords="104,253,291,295"/>
-<area shape="rect" id="node7" href="$class_generic_query_1_1_generic_query_builder.html#ae9390e286bce58d2e8d12f54ae0c8973" title="Sets the query object." alt="" coords="104,319,291,360"/>
-<area shape="rect" id="node8" href="$class_generic_query_1_1_generic_query_builder.html#a500b382e1f94c1376a6e3b3b4a3f98dd" title="Generates metadata of result records using join and query information." alt="" coords="339,253,525,295"/>
+<area shape="rect" id="node4" href="$class_generic_query_1_1_generic_query_builder.html#a1b02d98de26e0ff05582f9a38900e10e" title=" " alt="" coords="104,136,291,177"/>
+<area shape="rect" id="node5" href="$class_generic_query_1_1_generic_query_builder.html#a427ff30da7981b44596426a2645d434b" title="Creates a join from base source to a join source." alt="" coords="573,289,760,331"/>
+<area shape="rect" id="node6" href="$class_generic_query_1_1_generic_query_builder.html#ab7713ce5ae6376eacd2521aa6519aab2" title="Registers a new data source and gives is an alias name." alt="" coords="104,253,291,295"/>
+<area shape="rect" id="node7" href="$class_generic_query_1_1_generic_query_builder.html#a551f3151383fa621b76e56738bea03f4" title="Set the Base Source and the columns required in the query result." alt="" coords="104,319,291,360"/>
+<area shape="rect" id="node8" href="$class_generic_query_1_1_generic_query_builder.html#ae9390e286bce58d2e8d12f54ae0c8973" title="Sets the query object." alt="" coords="104,384,291,425"/>
+<area shape="rect" id="node9" href="$class_generic_query_1_1_generic_query_builder.html#a500b382e1f94c1376a6e3b3b4a3f98dd" title="Generates metadata of result records using join and query information." alt="" coords="339,319,525,360"/>
 </map>

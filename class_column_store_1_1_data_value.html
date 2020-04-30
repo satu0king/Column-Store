@@ -91,10 +91,10 @@ Collaboration diagram for ColumnStore::DataValue:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3fb6f08f1cc50eadd40e19accdbdd6f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_data_value.html#a3fb6f08f1cc50eadd40e19accdbdd6f3">DataValue</a> (std::any <a class="el" href="class_column_store_1_1_data_value.html#aad814ff992b2eb67f84b1cde55456c4e">value</a>)</td></tr>
 <tr class="separator:a3fb6f08f1cc50eadd40e19accdbdd6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9a94f310f4838094813b8fc3a058a40"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:af9a94f310f4838094813b8fc3a058a40"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_data_value.html#af9a94f310f4838094813b8fc3a058a40">as</a> ()</td></tr>
-<tr class="memdesc:af9a94f310f4838094813b8fc3a058a40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts value by type.  <a href="class_column_store_1_1_data_value.html#af9a94f310f4838094813b8fc3a058a40">More...</a><br /></td></tr>
-<tr class="separator:af9a94f310f4838094813b8fc3a058a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48e1a20e0fc7be32fdb2e7bed65b7019"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a48e1a20e0fc7be32fdb2e7bed65b7019"><td class="memTemplItemLeft" align="right" valign="top">const T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_data_value.html#a48e1a20e0fc7be32fdb2e7bed65b7019">as</a> () const</td></tr>
+<tr class="memdesc:a48e1a20e0fc7be32fdb2e7bed65b7019"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts value by type.  <a href="class_column_store_1_1_data_value.html#a48e1a20e0fc7be32fdb2e7bed65b7019">More...</a><br /></td></tr>
+<tr class="separator:a48e1a20e0fc7be32fdb2e7bed65b7019"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ad141b3af3d07753d0d6f0e652a2a93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_data_value.html#a8ad141b3af3d07753d0d6f0e652a2a93">operator=</a> (std::any <a class="el" href="class_column_store_1_1_data_value.html#aad814ff992b2eb67f84b1cde55456c4e">value</a>)</td></tr>
 <tr class="separator:a8ad141b3af3d07753d0d6f0e652a2a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a010374ac15477f049fe3759eef2ef330"><td class="memItemLeft" align="right" valign="top">std::any&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_column_store_1_1_data_value.html#a010374ac15477f049fe3759eef2ef330">get</a> ()</td></tr>
@@ -113,7 +113,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of a single data element. </p>
-<p>The object can hold any data type. The actual data can be extracted by using <a class="el" href="class_column_store_1_1_data_value.html#af9a94f310f4838094813b8fc3a058a40" title="Extracts value by type.">as&lt;T&gt;()</a> function where T is the type. Type information itself is not stored in the <a class="el" href="class_column_store_1_1_data_value.html" title="Implementation of a single data element.">DataValue</a> object and has to be inferred from <a class="el" href="class_column_store_1_1_data_record_metadata.html" title="Stores metadata information of the data record.">DataRecordMetadata</a> objects.</p>
+<p>The object can hold any data type. The actual data can be extracted by using <a class="el" href="class_column_store_1_1_data_value.html#a48e1a20e0fc7be32fdb2e7bed65b7019" title="Extracts value by type.">as&lt;T&gt;()</a> function where T is the type. Type information itself is not stored in the <a class="el" href="class_column_store_1_1_data_value.html" title="Implementation of a single data element.">DataValue</a> object and has to be inferred from <a class="el" href="class_column_store_1_1_data_record_metadata.html" title="Stores metadata information of the data record.">DataRecordMetadata</a> objects.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_column_store_1_1_data_record.html" title="Stores a row of data.">DataRecord</a> </dd>
 <dd>
 <a class="el" href="class_column_store_1_1_data_record_metadata.html" title="Stores metadata information of the data record.">DataRecordMetadata</a> </dd></dl>
@@ -145,8 +145,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af9a94f310f4838094813b8fc3a058a40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9a94f310f4838094813b8fc3a058a40">&#9670;&nbsp;</a></span>as()</h2>
+<a id="a48e1a20e0fc7be32fdb2e7bed65b7019"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48e1a20e0fc7be32fdb2e7bed65b7019">&#9670;&nbsp;</a></span>as()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -157,10 +157,10 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T ColumnStore::DataValue::as </td>
+          <td class="memname">const T ColumnStore::DataValue::as </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>

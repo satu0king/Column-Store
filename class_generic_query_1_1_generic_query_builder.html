@@ -85,7 +85,7 @@ Collaboration diagram for GenericQuery::GenericQueryBuilder:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_generic_query_1_1_generic_query_builder__coll__graph.png" border="0" usemap="#_generic_query_1_1_generic_query_builder_coll__map" alt="Collaboration graph"/></div>
 <map name="_generic_query_1_1_generic_query_builder_coll__map" id="_generic_query_1_1_generic_query_builder_coll__map">
-<area shape="rect" title="Generic Query Builder Class." alt="" coords="5,145,192,399"/>
+<area shape="rect" title="Generic Query Builder Class." alt="" coords="5,145,192,428"/>
 <area shape="rect" title=" " alt="" coords="18,5,73,83"/>
 <area shape="rect" title=" " alt="" coords="125,5,181,83"/>
 </map>
@@ -121,6 +121,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8ec7469b95a87781667dc9f09a66802d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7029903f9302572e1cef82165a927c73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_1_1_generic_query_builder.html#a7029903f9302572e1cef82165a927c73">aggregate</a> (<a class="el" href="namespace_column_store.html#a1995d6eb6f29c72ef3dd73b33cc6266b">ColumnStore::AggregatorQuery</a> <a class="el" href="class_generic_query_1_1_generic_query_builder.html#afd45498afd091f250d440d033a160d81">query</a>)</td></tr>
 <tr class="separator:a7029903f9302572e1cef82165a927c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b02d98de26e0ff05582f9a38900e10e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_1_1_generic_query_builder.html#a1b02d98de26e0ff05582f9a38900e10e">groupBy</a> (std::string name)</td></tr>
+<tr class="separator:a1b02d98de26e0ff05582f9a38900e10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -144,6 +146,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:afd45498afd091f250d440d033a160d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89ceae86939b6fbbfee94927a4122b8e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespace_column_store.html#a1995d6eb6f29c72ef3dd73b33cc6266b">ColumnStore::AggregatorQuery</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_1_1_generic_query_builder.html#a89ceae86939b6fbbfee94927a4122b8e">aggregations</a></td></tr>
 <tr class="separator:a89ceae86939b6fbbfee94927a4122b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe30b75adbd620be689fff861f806a5e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_1_1_generic_query_builder.html#afe30b75adbd620be689fff861f806a5e">groupBys</a></td></tr>
+<tr class="separator:afe30b75adbd620be689fff861f806a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -151,6 +155,8 @@ Friends</h2></td></tr>
 <tr class="separator:acc2036a337429622ef580c19211d1f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fa83f6e880b33555cc44cb5df3ccb7c"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_1_1_generic_query_builder.html#a7fa83f6e880b33555cc44cb5df3ccb7c">GenericDataAggregator</a></td></tr>
 <tr class="separator:a7fa83f6e880b33555cc44cb5df3ccb7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6a0346d7040c53235bbd29aa2b3d6a8"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_generic_query_1_1_generic_query_builder.html#ad6a0346d7040c53235bbd29aa2b3d6a8">GenericGroupByAggregator</a></td></tr>
+<tr class="separator:ad6a0346d7040c53235bbd29aa2b3d6a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generic Query Builder Class. </p>
@@ -295,6 +301,41 @@ Here is the caller graph for this function:</div>
 <map name="class_generic_query_1_1_generic_query_builder_ac0c48f2da9cedcb6497255b4cf739098_icgraph" id="class_generic_query_1_1_generic_query_builder_ac0c48f2da9cedcb6497255b4cf739098_icgraph">
 <area shape="rect" title="creates record" alt="" coords="268,5,479,47"/>
 <area shape="rect" href="class_generic_query_1_1_generic_data_generator.html#a009a5809f606dcfa19b7b104f1341c93" title="Construct a new Generic Data Generator object." alt="" coords="5,5,220,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1b02d98de26e0ff05582f9a38900e10e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b02d98de26e0ff05582f9a38900e10e">&#9670;&nbsp;</a></span>groupBy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GenericQuery::GenericQueryBuilder::groupBy </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_generic_query_1_1_generic_query_builder_a1b02d98de26e0ff05582f9a38900e10e_icgraph.png" border="0" usemap="#class_generic_query_1_1_generic_query_builder_a1b02d98de26e0ff05582f9a38900e10e_icgraph" alt=""/></div>
+<map name="class_generic_query_1_1_generic_query_builder_a1b02d98de26e0ff05582f9a38900e10e_icgraph" id="class_generic_query_1_1_generic_query_builder_a1b02d98de26e0ff05582f9a38900e10e_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,291,47"/>
+<area shape="rect" href="test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
 </map>
 </div>
 
@@ -546,6 +587,28 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="ad6a0346d7040c53235bbd29aa2b3d6a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6a0346d7040c53235bbd29aa2b3d6a8">&#9670;&nbsp;</a></span>GenericGroupByAggregator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_generic_query_1_1_generic_group_by_aggregator.html">GenericGroupByAggregator</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a89ceae86939b6fbbfee94927a4122b8e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a89ceae86939b6fbbfee94927a4122b8e">&#9670;&nbsp;</a></span>aggregations</h2>
@@ -663,6 +726,28 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>map of data source name and data generator </p>
+
+</div>
+</div>
+<a id="afe30b75adbd620be689fff861f806a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe30b75adbd620be689fff861f806a5e">&#9670;&nbsp;</a></span>groupBys</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; GenericQuery::GenericQueryBuilder::groupBys</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
