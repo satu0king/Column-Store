@@ -33,7 +33,7 @@ struct Column {
      */
     int index;
 
-    Column(std::string name, DataType type, int index)
+    Column(std::string name, DataType type, int index = -1)
         : name(name), type(type), index(index) {}
         
     Column() {}

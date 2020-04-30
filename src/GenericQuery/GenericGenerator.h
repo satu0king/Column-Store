@@ -109,4 +109,73 @@ class GenericDataGenerator : public ColumnStore::DataGeneratorInterface {
      */
     DataRecord next();
 };
+
+class GenericDataAggregator : public ColumnStore::DataGeneratorInterface {
+    /** @brief  builder object from which we are generating data */
+    GenericQueryBuilder builder;
+
+    bool _hasNext = false;
+
+    DataRecord record;
+
+   public:
+    /**
+     * @brief Construct a new Generic Data Generator object
+     *
+     * The generator processes all column data and maps it to column indices for
+     * efficiency. All joined data sources are loaded into memory in the
+     * constructor
+     *
+     * @param builder object to constuct generator from
+     */
+    GenericDataAggregator(GenericQueryBuilder builder) : builder(builder) {
+        GenericDataGenerator generator(builder);
+
+        auto generatorMetadata = generator.getMetadata();
+
+        auto &aggregations = builder.aggregations;
+
+        std::vector<ColumnStore::Column> columns;
+        for (auto &aggregate : aggregations)
+            columns.emplace_back(aggregate->getColumnName(),
+                                 ColumnStore::DataType::FLOAT);
+
+        metadata = Metadata(new DataRecordMetadata(columns));
+
+        if (!generator.hasNext()) return;
+
+        for (auto &aggregate : aggregations)
+            aggregate->initialize(generatorMetadata);
+
+        while (generator.hasNext()) {
+            auto record = generator.next();
+            for (auto &aggregate : aggregations) aggregate->addRecord(record);
+        }
+
+        std::vector<ColumnStore::DataValue> values;
+
+        for (auto &aggregate : aggregations)
+            values.emplace_back(aggregate->getValue());
+
+        record = ColumnStore::DataRecord(values);
+        _hasNext = true;
+    }
+    /**
+     * @brief check if a record is available
+     *
+     * @return true
+     * @return false
+     */
+    bool hasNext() { return _hasNext; }
+
+    /**
+     * @brief generates a new record
+     *
+     * @return DataRecord
+     */
+    DataRecord next() {
+        _hasNext = false;
+        return record;
+    }
+};
 }  // namespace GenericQuery

@@ -31,7 +31,7 @@ class ColStoreDataSource : public ColumnStore::DataGeneratorInterface {
             : manager(MetadataManager::getInstance(column_store_path)), projection_name(p_name) {
                 count = 0;
                 json &projection_json = manager->getProjectionFileInfo(projection_name);
-                file = std::ifstream(projection_json["file"]);
+                file = std::ifstream((std::string)projection_json["file"]);
                 tuples_move_count = projection_json["tuples_move_count"];
                 Parser::Projection &projection = manager->getProjectionSchemaInfo(projection_name);
                 columns = projection.get_metadata_columns();

@@ -95,7 +95,10 @@ class DataRecordMetadata {
 
    public:
     DataRecordMetadata(std::vector<Column> columns) : columns(columns) {
-        for (int i = 0; i < int(columns.size()); i++) columnMap[columns[i].name] = i;
+        for (int i = 0; i < int(columns.size()); i++) {
+            columnMap[columns[i].name] = i;
+            columns[i].index = i;
+        }
     }
     /**
      * @brief Get the Columns object

@@ -3,6 +3,7 @@
 #include <string>
 #include <unordered_map>
 
+#include "interfaces/AggregatorQuery.h"
 #include "interfaces/ConditionQuery.h"
 #include "interfaces/DataGeneratorInterface.h"
 #include "interfaces/Validators.h"
@@ -21,11 +22,11 @@ using ColumnStore::ConditionQuery;
 using ColumnStore::DataRecord;
 using ColumnStore::DataRecordMetadata;
 using ColumnStore::DataSource;
+using ColumnStore::DataType;
 using ColumnStore::DataValue;
 using ColumnStore::Metadata;
 using ColumnStore::Query;
 using ColumnStore::RecordValidator;
-using ColumnStore::DataType;
 
 class GenericDataGenerator;
 
@@ -95,7 +96,10 @@ class GenericQueryBuilder {
      */
     Query query = Query(new ConditionQuery);
 
+    std::vector<ColumnStore::AggregatorQuery> aggregations;
+
     friend class GenericDataGenerator;
+    friend class GenericDataAggregator;
 
    public:
     /**
@@ -152,7 +156,10 @@ class GenericQueryBuilder {
      */
     RecordValidator generateRecordValidator();
 
-
     DataSource build();
+
+    void aggregate(ColumnStore::AggregatorQuery query) {
+        aggregations.push_back(query);
+    }
 };
 };  // namespace GenericQuery

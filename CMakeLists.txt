@@ -44,6 +44,10 @@ add_executable(projection_test src/Core/ProjectionDataTest.cpp)
 target_include_directories(projection_test PUBLIC src/interfaces)
 target_link_libraries(projection_test PRIVATE parser Boost::program_options nlohmann_json::nlohmann_json ${CMAKE_FS_LINK} interfaces postgres_data_generator)
 
+add_executable(column_store_updater src/Core/ColumnStoreUpdater.cpp)
+target_include_directories(column_store_updater PUBLIC src/interfaces)
+target_link_libraries(column_store_updater PRIVATE parser Boost::program_options nlohmann_json::nlohmann_json ${CMAKE_FS_LINK} interfaces postgres_data_generator)
+
 # add_executable(cache_server src/cache/cache_server.cpp)
 # target_link_libraries(cache_server PRIVATE Boost::program_options cache basic_data_connector postgres_data_connector gossip membership_list)
 

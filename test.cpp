@@ -1,10 +1,9 @@
 #include <iostream>
 
-
-#include "src/interfaces/DataRecord.h"
-#include "src/GenericQuery/GenericQueryBuilder.h"
-#include "src/GenericQuery/GenericGenerator.h"
 #include "src/CSVDataGenerator/CSVDataGenerator.h"
+#include "src/GenericQuery/GenericGenerator.h"
+#include "src/GenericQuery/GenericQueryBuilder.h"
+#include "src/interfaces/DataRecord.h"
 
 using namespace ColumnStore;
 using namespace GenericQuery;
@@ -12,7 +11,8 @@ using namespace CSV;
 
 int main(int argc, char **argv) {
     DataSource sampleCSV = DataSource(new CSVDataSource("../data/sample.csv"));
-    DataSource studentCSV = DataSource(new CSVDataSource("../data/students.csv"));
+    DataSource studentCSV =
+        DataSource(new CSVDataSource("../data/students.csv"));
     DataSource gradesCSV = DataSource(new CSVDataSource("../data/grades.csv"));
 
     {
@@ -29,7 +29,6 @@ int main(int argc, char **argv) {
     }
 
     {
-
         GenericQueryBuilder builder;
         builder.registerDataSource("students", studentCSV);
         builder.registerDataSource("grades", gradesCSV);
@@ -41,6 +40,10 @@ int main(int argc, char **argv) {
         builder.where(Query(new AndQuery(
             Query(new LessThanQuery("CGPA", 3.4f)),
             Query(new NotQuery(Query(new LessThanQuery("CGPA", 3.2f)))))));
+
+        builder.aggregate(AggregatorQuery(new AverageAggregator("MaxScore")));
+        builder.aggregate(AggregatorQuery(new MaxAggregator("CGPA")));
+        builder.aggregate(AggregatorQuery(new MinAggregator("CGPA")));
 
         auto generator = builder.build();
 
