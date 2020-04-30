@@ -1,6 +1,6 @@
 # g++ -std=c++17 *.cpp -lpqxx -lpq
 
-add_library(generic_query GenericGenerator.cpp GenericQueryBuilder.cpp)
+add_library(generic_query GenericGenerator.cpp GenericQueryBuilder.cpp GroupByManager)
 
 target_compile_options(generic_query PRIVATE -Wall)
 

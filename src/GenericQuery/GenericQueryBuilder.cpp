@@ -132,9 +132,14 @@ RecordValidator GenericQueryBuilder::generateRecordValidator() {
 }
 
 DataSource GenericQueryBuilder::build() {
-    if (aggregations.empty())
-        return DataSource(new GenericDataGenerator(*this));
-    
-    return DataSource(new GenericDataAggregator(*this));
+    if (groupBys.size() && aggregations.empty())
+        throw std::runtime_error("Group By doesnt have aggregations");
+
+    if (groupBys.size()) return DataSource(new GenericGroupByAggregator(*this));
+
+    if (aggregations.size())
+        return DataSource(new GenericDataAggregator(*this));
+
+    return DataSource(new GenericDataGenerator(*this));
 }
 };  // namespace GenericQuery

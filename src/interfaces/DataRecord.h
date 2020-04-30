@@ -37,7 +37,7 @@ class DataValue {
      * @return actual datavalue after casting
      */
     template <typename T>
-    T as() {
+    const T as() const {
         return std::any_cast<T>(value);
     }
 

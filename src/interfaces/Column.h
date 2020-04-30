@@ -35,7 +35,9 @@ struct Column {
 
     Column(std::string name, DataType type, int index = -1)
         : name(name), type(type), index(index) {}
-        
+
+    operator DataType() const { return type; }
+
     Column() {}
 };
 

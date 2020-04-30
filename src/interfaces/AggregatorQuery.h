@@ -43,9 +43,11 @@ struct Aggregator {
      * @brief Destroy the Condition Query object
      *
      */
-    // virtual ~Aggregator() {}
+    virtual ~Aggregator() {}
     virtual std::string aggregatorType() = 0;
     std::string getColumnName() { return aggregatorType() + "(" + name + ")"; }
+
+    virtual std::shared_ptr<Aggregator> clone() = 0;
 };
 
 /**
@@ -72,6 +74,10 @@ struct AverageAggregator : public Aggregator {
         count++;
     }
 
+    AggregatorQuery clone() {
+        return AggregatorQuery(new AverageAggregator(*this));
+    }
+
     float getValue() {
         assert(count);
         return sum / count;
@@ -96,6 +102,11 @@ struct MaxAggregator : public Aggregator {
     }
 
     float getValue() { return mx; }
+
+
+    AggregatorQuery clone() {
+        return AggregatorQuery(new MaxAggregator(*this));
+    }
 };
 
 struct MinAggregator : public Aggregator {
@@ -116,6 +127,11 @@ struct MinAggregator : public Aggregator {
     }
 
     float getValue() { return mn; }
+
+
+    AggregatorQuery clone() {
+        return AggregatorQuery(new MinAggregator(*this));
+    }
 };
 
 };  // namespace ColumnStore

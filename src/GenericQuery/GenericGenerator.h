@@ -1,10 +1,12 @@
 
 #pragma once
 #include <memory>
+#include <queue>
 #include <string>
 #include <unordered_map>
 
 #include "GenericQueryBuilder.h"
+#include "GroupByManager.h"
 #include "interfaces/ConditionQuery.h"
 #include "interfaces/DataGeneratorInterface.h"
 #include "interfaces/Validators.h"
@@ -111,9 +113,6 @@ class GenericDataGenerator : public ColumnStore::DataGeneratorInterface {
 };
 
 class GenericDataAggregator : public ColumnStore::DataGeneratorInterface {
-    /** @brief  builder object from which we are generating data */
-    GenericQueryBuilder builder;
-
     bool _hasNext = false;
 
     DataRecord record;
@@ -128,7 +127,7 @@ class GenericDataAggregator : public ColumnStore::DataGeneratorInterface {
      *
      * @param builder object to constuct generator from
      */
-    GenericDataAggregator(GenericQueryBuilder builder) : builder(builder) {
+    GenericDataAggregator(GenericQueryBuilder builder) {
         GenericDataGenerator generator(builder);
 
         auto generatorMetadata = generator.getMetadata();
@@ -178,4 +177,90 @@ class GenericDataAggregator : public ColumnStore::DataGeneratorInterface {
         return record;
     }
 };
+
+class GenericGroupByAggregator : public ColumnStore::DataGeneratorInterface {
+    std::queue<ColumnStore::DataRecord> records;
+
+   public:
+    /**
+     * @brief Construct a new Generic Data Generator object
+     *
+     * The generator processes all column data and maps it to column indices for
+     * efficiency. All joined data sources are loaded into memory in the
+     * constructor
+     *
+     * @param builder object to constuct generator from
+     */
+    GenericGroupByAggregator(GenericQueryBuilder builder) {
+        GenericDataGenerator generator(builder);
+
+        auto generatorMetadata = generator.getMetadata();
+
+        GroupByManager manager(builder.groupBys, generatorMetadata);
+
+        std::vector<std::string> &groupBys = builder.groupBys;
+        auto &aggregations = builder.aggregations;
+
+        std::vector<ColumnStore::Column> columns;
+
+        for (auto &grp : groupBys)
+            columns.push_back(generatorMetadata->getColumn(grp));
+
+        for (auto &aggregate : aggregations)
+            columns.emplace_back(aggregate->getColumnName(),
+                                 ColumnStore::DataType::FLOAT);
+
+        metadata = Metadata(new DataRecordMetadata(columns));
+
+        std::unordered_map<GroupByValue,
+                           std::vector<ColumnStore::AggregatorQuery>, GroupHash>
+            map;
+
+        for (auto &aggregate : aggregations)
+            aggregate->initialize(generatorMetadata);
+
+        auto duplicateAggregators = [&]() {
+            std::vector<ColumnStore::AggregatorQuery> temp;
+            for (auto &agg : aggregations) temp.push_back(agg->clone());
+            return temp;
+        };
+
+        while (generator.hasNext()) {
+            auto record = generator.next();
+            auto groupValue = manager.processRecord(record);
+            if (!map.count(groupValue))
+                map[groupValue] = duplicateAggregators();
+
+            auto &aggregations1 = map[groupValue];
+
+            for (auto &aggregate : aggregations1) aggregate->addRecord(record);
+        }
+
+        for (auto &[groupValue, aggregations1] : map) {
+            std::vector<ColumnStore::DataValue> values = groupValue.values;
+            for (auto &aggregate : aggregations1)
+                values.emplace_back(aggregate->getValue());
+            records.emplace(values);
+        }
+    }
+    /**
+     * @brief check if a record is available
+     *
+     * @return true
+     * @return false
+     */
+    bool hasNext() { return !records.empty(); }
+
+    /**
+     * @brief generates a new record
+     *
+     * @return DataRecord
+     */
+    DataRecord next() {
+        auto temp = records.front();
+        records.pop();
+        return temp;
+    }
+};
+
 }  // namespace GenericQuery

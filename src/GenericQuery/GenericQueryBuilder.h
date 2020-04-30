@@ -97,9 +97,11 @@ class GenericQueryBuilder {
     Query query = Query(new ConditionQuery);
 
     std::vector<ColumnStore::AggregatorQuery> aggregations;
+    std::vector<std::string> groupBys;
 
     friend class GenericDataGenerator;
     friend class GenericDataAggregator;
+    friend class GenericGroupByAggregator;
 
    public:
     /**
@@ -161,5 +163,7 @@ class GenericQueryBuilder {
     void aggregate(ColumnStore::AggregatorQuery query) {
         aggregations.push_back(query);
     }
+
+    void groupBy(std::string name) { groupBys.push_back(name); }
 };
 };  // namespace GenericQuery

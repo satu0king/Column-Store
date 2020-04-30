@@ -36,14 +36,29 @@ int main(int argc, char **argv) {
 
         builder.join("students", {"Id", "Name", "Roll_Number", "CGPA"},
                      "Student_Id", "Id");
+        // builder.where(Query(new AndQuery(
+        //     Query(new LessThanQuery("CGPA", 3.4f)),
+        //     Query(new NotQuery(Query(new LessThanQuery("CGPA", 3.2f)))))));
 
-        builder.where(Query(new AndQuery(
-            Query(new LessThanQuery("CGPA", 3.4f)),
-            Query(new NotQuery(Query(new LessThanQuery("CGPA", 3.2f)))))));
+        {
+            // builder.groupBy("Name");
+            // builder.groupBy("Roll_Number");
+            // builder.groupBy("CGPA");
+            // builder.aggregate(AggregatorQuery(new AverageAggregator("Score")));
+            // builder.aggregate(AggregatorQuery(new MaxAggregator("Score")));
+            // builder.aggregate(AggregatorQuery(new MinAggregator("Score")));
+        }
 
-        builder.aggregate(AggregatorQuery(new AverageAggregator("MaxScore")));
-        builder.aggregate(AggregatorQuery(new MaxAggregator("CGPA")));
-        builder.aggregate(AggregatorQuery(new MinAggregator("CGPA")));
+        {
+            builder.groupBy("Course_Name");
+            builder.groupBy("MaxScore");
+            builder.aggregate(AggregatorQuery(new AverageAggregator("Score")));
+            builder.aggregate(AggregatorQuery(new MaxAggregator("Score")));
+            builder.aggregate(AggregatorQuery(new MinAggregator("Score")));
+        }
+
+        // builder.aggregate(AggregatorQuery(new MaxAggregator("CGPA")));
+        // builder.aggregate(AggregatorQuery(new MinAggregator("CGPA")));
 
         auto generator = builder.build();
 
