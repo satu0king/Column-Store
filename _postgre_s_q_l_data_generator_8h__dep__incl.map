@@ -1,7 +1,8 @@
 <map id="src/PostgresDataGenerator/PostgreSQLDataGenerator.h" name="src/PostgresDataGenerator/PostgreSQLDataGenerator.h">
-<area shape="rect" id="node1" title=" " alt="" coords="382,5,574,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="505,5,697,47"/>
 <area shape="rect" id="node2" href="$_column_store_updater_8cpp.html" title=" " alt="" coords="5,102,225,129"/>
 <area shape="rect" id="node3" href="$_projection_data_test_8cpp.html" title=" " alt="" coords="250,102,461,129"/>
 <area shape="rect" id="node4" href="$_postgre_s_q_l_data_generator_test_8cpp.html" title=" " alt="" coords="485,95,717,136"/>
 <area shape="rect" id="node5" href="$_postgre_s_q_l_meta_data_8cpp.html" title=" " alt="" coords="741,95,921,136"/>
+<area shape="rect" id="node6" href="$test_8cpp.html" title=" " alt="" coords="945,102,1013,129"/>
 </map>

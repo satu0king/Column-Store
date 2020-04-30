@@ -1,9 +1,10 @@
 <map id="src/Parser/SchemaLoader.h" name="src/Parser/SchemaLoader.h">
-<area shape="rect" id="node1" title=" " alt="" coords="297,5,481,32"/>
-<area shape="rect" id="node2" href="$_driver_8cpp.html" title=" " alt="" coords="5,80,176,121"/>
-<area shape="rect" id="node3" href="$_projection_data_8h.html" title=" " alt="" coords="200,87,371,114"/>
-<area shape="rect" id="node6" href="$_schema_loader_8cpp.html" title=" " alt="" coords="395,87,594,114"/>
-<area shape="rect" id="node7" href="$_schema_loader_tester_8cpp.html" title=" " alt="" coords="617,87,852,114"/>
-<area shape="rect" id="node4" href="$_column_store_updater_8cpp.html" title=" " alt="" coords="55,169,275,196"/>
-<area shape="rect" id="node5" href="$_projection_data_test_8cpp.html" title=" " alt="" coords="300,169,511,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="367,5,551,32"/>
+<area shape="rect" id="node2" href="$_driver_8cpp.html" title=" " alt="" coords="75,80,246,121"/>
+<area shape="rect" id="node3" href="$_projection_data_8h.html" title=" " alt="" coords="270,87,441,114"/>
+<area shape="rect" id="node7" href="$_schema_loader_8cpp.html" title=" " alt="" coords="465,87,664,114"/>
+<area shape="rect" id="node8" href="$_schema_loader_tester_8cpp.html" title=" " alt="" coords="687,87,922,114"/>
+<area shape="rect" id="node4" href="$_column_store_updater_8cpp.html" title=" " alt="" coords="5,169,225,196"/>
+<area shape="rect" id="node5" href="$_projection_data_test_8cpp.html" title=" " alt="" coords="250,169,461,196"/>
+<area shape="rect" id="node6" href="$test_8cpp.html" title=" " alt="" coords="484,169,552,196"/>
 </map>
