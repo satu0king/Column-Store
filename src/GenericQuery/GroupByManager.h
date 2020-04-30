@@ -13,6 +13,8 @@ namespace GenericQuery {
 
 struct GroupByValue;
 
+struct JoinValue;
+
 struct GroupByManager {
     std::vector<int> indices;
     std::vector<DataType> types;
@@ -30,6 +32,17 @@ struct GroupByManager {
     GroupByValue processRecord(DataRecord &record);
 };
 
+struct JoinValueManager {
+    DataType type;
+    JoinValueManager(std::string name, Metadata metadata) {
+        type = metadata->getColumn(name);
+    }
+
+    bool compare(const JoinValue &value1, const JoinValue &value2) const;
+    size_t hash(const JoinValue &value) const;
+    JoinValue processValue(DataValue &value);
+};
+
 struct GroupByValue {
     std::vector<ColumnStore::DataValue> values;
     GroupByManager *manager;
@@ -40,12 +53,28 @@ struct GroupByValue {
     const DataValue &operator[](int index) const { return values[index]; }
 };
 
+struct JoinValue {
+    ColumnStore::DataValue value;
+    JoinValueManager *manager;
+    JoinValue(ColumnStore::DataValue value, JoinValueManager *manager)
+        : value(value), manager(manager) {}
+    bool operator==(const JoinValue &value) const {
+        return manager->compare(*this, value);
+    }
+
+    operator const ColumnStore::DataValue() const { return value; }
+};
+
 struct GroupHash {
    public:
-    // Use sum of lengths of first and last names
-    // as hash function.
     size_t operator()(const GroupByValue &value) const {
         return value.manager->hash(value);
     }
 };
-}
+
+struct JoinHash {
+    size_t operator()(const JoinValue &value) const {
+        return value.manager->hash(value);
+    }
+};
+}  // namespace GenericQuery

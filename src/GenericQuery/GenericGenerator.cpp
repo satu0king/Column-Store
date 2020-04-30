@@ -63,7 +63,9 @@ DataRecord GenericDataGenerator::_getCandidateNext() {
 
     // Find join record and extract join column values
     for (DataGeneraterJoin& join : joins) {
-        DataRecord& record = join.joinMap[baseRecord[join.FKIndex].as<int>()];
+
+        JoinValue joinValue = join.manager.processValue(baseRecord[join.FKIndex]);
+        DataRecord& record = join.joinMap[joinValue];
         for (int index : join.indices) values.push_back(record[index]);
     }
 
@@ -98,7 +100,7 @@ GenericDataGenerator::GenericDataGenerator(GenericQueryBuilder builder)
         DataSource joinSource = builder.data_sources[source];
         Metadata join_metadata = joinSource->getMetadata();
 
-        DataGeneraterJoin join;
+        DataGeneraterJoin join(_join.primaryKey, join_metadata);
 
         // Extracting FK index
         join.FKIndex = baseSource_metadatda->getColumn(_join.foreignKey).index;
@@ -112,15 +114,16 @@ GenericDataGenerator::GenericDataGenerator(GenericQueryBuilder builder)
         join.indices = indices;
 
         // Join has to be done over INT only
-        assert(join_metadata->getColumn(_join.primaryKey).type ==
-               DataType::INT);
-        assert(baseSource_metadatda->getColumn(_join.foreignKey).type ==
-               DataType::INT);
+        // assert(join_metadata->getColumn(_join.primaryKey).type ==
+        //        DataType::INT);
+        // assert(baseSource_metadatda->getColumn(_join.foreignKey).type ==
+        //        DataType::INT);
 
         // Building Join Data Map (this will be in memory)
         while (joinSource->hasNext()) {
             DataRecord record = joinSource->next();
-            join.joinMap[record[PKIndex].as<int>()] = record;
+            JoinValue joinValue = join.manager.processValue(record[PKIndex]);
+            join.joinMap[joinValue] = record;
         }
 
         joins.push_back(join);

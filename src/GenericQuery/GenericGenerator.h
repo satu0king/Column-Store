@@ -51,7 +51,12 @@ class GenericDataGenerator : public ColumnStore::DataGeneratorInterface {
          * processes the PK-FK join in memory. This is not an issue as long as
          * the number of joined table records is small.
          */
-        std::unordered_map<int, DataRecord> joinMap;
+
+        JoinValueManager manager;
+        std::unordered_map<JoinValue, DataRecord, JoinHash> joinMap;
+
+        DataGeneraterJoin(std::string name, Metadata metadata)
+            : manager(name, metadata) {}
     };
 
     bool _hasNext = false;
