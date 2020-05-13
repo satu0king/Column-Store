@@ -116,9 +116,6 @@
             </columns>
 
             <primary_key>id</primary_key>
-
-            <foreign_keys>
-            </foreign_keys>
         </table>
 
     </tables>
@@ -130,9 +127,6 @@
 
             <tables>
                 <base_table>TABLE1</base_table>
-                <join_tables>
-                    
-                </join_tables>
             </tables>
 
             <columns>
@@ -149,9 +143,6 @@
             </columns>
 
             <sort_key>id</sort_key>
-
-            <join_indexes>
-            </join_indexes>
 
         </projection>
     </projections>
