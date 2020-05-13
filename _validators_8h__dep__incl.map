@@ -1,11 +1,12 @@
 <map id="src/interfaces/Validators.h" name="src/interfaces/Validators.h">
-<area shape="rect" id="node1" title="RecordValidator Interfaces and Implementations for Query Processing." alt="" coords="231,5,405,32"/>
-<area shape="rect" id="node2" href="$_generic_query_builder_8h.html" title="Generic Query Builder." alt="" coords="72,169,244,211"/>
-<area shape="rect" id="node3" href="$_generic_generator_8h.html" title=" " alt="" coords="359,348,531,389"/>
-<area shape="rect" id="node7" href="$_group_by_manager_8h.html" title=" " alt="" coords="208,259,385,300"/>
-<area shape="rect" id="node9" href="$_condition_query_8h.html" title="Generic Condition Builder." alt="" coords="180,80,339,121"/>
-<area shape="rect" id="node5" href="$_generic_query_builder_8cpp.html" title=" " alt="" coords="5,437,177,479"/>
-<area shape="rect" id="node6" href="$test_8cpp.html" title=" " alt="" coords="245,445,313,471"/>
-<area shape="rect" id="node4" href="$_generic_generator_8cpp.html" title=" " alt="" coords="359,437,531,479"/>
-<area shape="rect" id="node8" href="$_group_by_manager_8cpp.html" title=" " alt="" coords="157,348,335,389"/>
+<area shape="rect" id="node1" title="RecordValidator Interfaces and Implementations for Query Processing." alt="" coords="125,5,298,32"/>
+<area shape="rect" id="node2" href="$_generic_query_builder_8h.html" title="Generic Query Builder." alt="" coords="291,169,463,211"/>
+<area shape="rect" id="node3" href="$_generic_generator_8h.html" title=" " alt="" coords="5,348,177,389"/>
+<area shape="rect" id="node8" href="$_group_by_manager_8h.html" title=" " alt="" coords="151,259,328,300"/>
+<area shape="rect" id="node10" href="$_condition_query_8h.html" title="Generic Condition Builder." alt="" coords="191,80,349,121"/>
+<area shape="rect" id="node4" href="$_complete_8h.html" title=" " alt="" coords="225,445,334,471"/>
+<area shape="rect" id="node7" href="$_generic_query_builder_8cpp.html" title=" " alt="" coords="369,437,541,479"/>
+<area shape="rect" id="node6" href="$_generic_generator_8cpp.html" title=" " alt="" coords="5,437,177,479"/>
+<area shape="rect" id="node5" href="$test_8cpp.html" title=" " alt="" coords="245,527,313,553"/>
+<area shape="rect" id="node9" href="$_group_by_manager_8cpp.html" title=" " alt="" coords="201,348,379,389"/>
 </map>

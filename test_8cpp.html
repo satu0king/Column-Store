@@ -68,63 +68,57 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &quot;<a class="el" href="_postgre_s_q_l_data_generator_8h_source.html">src/PostgresDataGenerator/PostgreSQLDataGenerator.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_postgre_s_q_l_meta_data_8h_source.html">src/PostgresDataGenerator/PostgreSQLMetaData.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_projection_data_8h_source.html">src/Core/ProjectionData.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_col_store_data_generator_8h_source.html">src/ColStoreDataGenerator/ColStoreDataGenerator.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_c_s_v_data_generator_8h_source.html">src/CSVDataGenerator/CSVDataGenerator.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_generic_generator_8h_source.html">src/GenericQuery/GenericGenerator.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_generic_query_builder_8h_source.html">src/GenericQuery/GenericQueryBuilder.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_data_record_8h_source.html">src/interfaces/DataRecord.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_complete_8h_source.html">src/Complete.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for test.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="test_8cpp__incl.png" border="0" usemap="#test_8cpp" alt=""/></div>
 <map name="test_8cpp" id="test_8cpp">
-<area shape="rect" title=" " alt="" coords="1548,5,1616,32"/>
-<area shape="rect" title=" " alt="" coords="436,572,508,599"/>
-<area shape="rect" href="_postgre_s_q_l_data_generator_8h.html" title=" " alt="" coords="1352,80,1544,121"/>
-<area shape="rect" href="_data_record_8h.html" title="Data storage structures." alt="" coords="1909,497,2009,524"/>
-<area shape="rect" href="_postgre_s_q_l_meta_data_8h.html" title=" " alt="" coords="1150,177,1310,203"/>
-<area shape="rect" href="_projection_data_8h.html" title=" " alt="" coords="854,87,1024,114"/>
-<area shape="rect" href="_col_store_data_generator_8h.html" title=" " alt="" coords="1486,169,1664,211"/>
-<area shape="rect" href="_c_s_v_data_generator_8h.html" title="Data Generator for CSV files." alt="" coords="1942,169,2096,211"/>
-<area shape="rect" href="_generic_generator_8h.html" title=" " alt="" coords="2390,80,2562,121"/>
-<area shape="rect" href="_generic_query_builder_8h.html" title="Generic Query Builder." alt="" coords="2809,259,2960,285"/>
-<area shape="rect" title=" " alt="" coords="1281,333,1360,360"/>
-<area shape="rect" title=" " alt="" coords="2177,259,2234,285"/>
-<area shape="rect" title=" " alt="" coords="899,572,958,599"/>
-<area shape="rect" href="_data_generator_interface_8h.html" title="Data Generator Interface." alt="" coords="2014,408,2181,449"/>
-<area shape="rect" href="_schema_meta_data_8h.html" title=" " alt="" coords="1027,333,1206,360"/>
-<area shape="rect" title=" " alt="" coords="2825,572,2893,599"/>
-<area shape="rect" title=" " alt="" coords="2026,572,2129,599"/>
-<area shape="rect" href="interfaces_2_column_8h.html" title="Column Metadata and Type information." alt="" coords="1245,572,1321,599"/>
-<area shape="rect" title=" " alt="" coords="1742,647,1797,673"/>
-<area shape="rect" title=" " alt="" coords="965,647,1033,673"/>
-<area shape="rect" title=" " alt="" coords="1938,572,1980,599"/>
-<area shape="rect" title=" " alt="" coords="2194,572,2305,599"/>
-<area shape="rect" href="_projection_8h.html" title=" " alt="" coords="1352,415,1443,442"/>
-<area shape="rect" href="_table_8h.html" title=" " alt="" coords="1136,415,1200,442"/>
-<area shape="rect" href="_parser_2_column_8h.html" title=" " alt="" coords="1169,497,1245,524"/>
-<area shape="rect" href="_foreign_key_8h.html" title=" " alt="" coords="1321,497,1418,524"/>
-<area shape="rect" href="_join_index_8h.html" title=" " alt="" coords="1442,497,1529,524"/>
-<area shape="rect" href="_schema_extractor_8h.html" title=" " alt="" coords="968,259,1142,285"/>
-<area shape="rect" title=" " alt="" coords="764,333,952,360"/>
-<area shape="rect" title=" " alt="" coords="977,177,1037,203"/>
-<area shape="rect" title=" " alt="" coords="1062,177,1126,203"/>
-<area shape="rect" title=" " alt="" coords="35,259,192,285"/>
-<area shape="rect" title=" " alt="" coords="216,259,283,285"/>
-<area shape="rect" title=" " alt="" coords="773,177,820,203"/>
-<area shape="rect" title=" " alt="" coords="844,177,901,203"/>
-<area shape="rect" title=" " alt="" coords="712,259,843,285"/>
-<area shape="rect" href="_store_initializer_8h.html" title=" " alt="" coords="286,169,434,211"/>
-<area shape="rect" href="_schema_loader_8h.html" title=" " alt="" coords="586,177,748,203"/>
-<area shape="rect" title=" " alt="" coords="2043,259,2152,285"/>
-<area shape="rect" href="_condition_query_8h.html" title="Generic Condition Builder." alt="" coords="2400,333,2582,360"/>
-<area shape="rect" href="_validators_8h.html" title="RecordValidator Interfaces and Implementations for Query Processing." alt="" coords="2680,415,2771,442"/>
-<area shape="rect" href="_group_by_manager_8h.html" title=" " alt="" coords="2462,177,2594,203"/>
-<area shape="rect" href="_aggregator_query_8h.html" title="Generic Condition Builder." alt="" coords="2910,333,3101,360"/>
-<area shape="rect" title=" " alt="" coords="2998,415,3051,442"/>
+<area shape="rect" title=" " alt="" coords="955,5,1023,32"/>
+<area shape="rect" title=" " alt="" coords="797,647,869,673"/>
+<area shape="rect" href="_complete_8h.html" title=" " alt="" coords="1947,80,2056,107"/>
+<area shape="rect" href="_postgre_s_q_l_data_generator_8h.html" title=" " alt="" coords="1673,155,1865,196"/>
+<area shape="rect" href="_data_record_8h.html" title="Data storage structures." alt="" coords="2170,572,2270,599"/>
+<area shape="rect" href="_postgre_s_q_l_meta_data_8h.html" title=" " alt="" coords="1393,251,1553,278"/>
+<area shape="rect" href="_projection_data_8h.html" title=" " alt="" coords="541,162,689,189"/>
+<area shape="rect" href="_col_store_data_generator_8h.html" title=" " alt="" coords="1916,244,2087,285"/>
+<area shape="rect" href="_c_s_v_data_generator_8h.html" title="Data Generator for CSV files." alt="" coords="2213,244,2403,285"/>
+<area shape="rect" href="_generic_generator_8h.html" title=" " alt="" coords="2734,162,2951,189"/>
+<area shape="rect" href="_generic_query_builder_8h.html" title="Generic Query Builder." alt="" coords="2682,333,2833,360"/>
+<area shape="rect" title=" " alt="" coords="1693,408,1771,435"/>
+<area shape="rect" title=" " alt="" coords="2397,333,2454,360"/>
+<area shape="rect" title=" " alt="" coords="1575,647,1633,673"/>
+<area shape="rect" href="_data_generator_interface_8h.html" title="Data Generator Interface." alt="" coords="2253,483,2419,524"/>
+<area shape="rect" href="_schema_meta_data_8h.html" title=" " alt="" coords="1388,408,1567,435"/>
+<area shape="rect" title=" " alt="" coords="3091,647,3159,673"/>
+<area shape="rect" title=" " alt="" coords="2257,647,2359,673"/>
+<area shape="rect" href="interfaces_2_column_8h.html" title="Column Metadata and Type information." alt="" coords="1673,647,1749,673"/>
+<area shape="rect" title=" " alt="" coords="1953,721,2007,748"/>
+<area shape="rect" title=" " alt="" coords="1365,721,1433,748"/>
+<area shape="rect" title=" " alt="" coords="2139,647,2181,673"/>
+<area shape="rect" title=" " alt="" coords="2506,647,2617,673"/>
+<area shape="rect" href="_projection_8h.html" title=" " alt="" coords="1439,490,1529,517"/>
+<area shape="rect" href="_table_8h.html" title=" " alt="" coords="1721,490,1785,517"/>
+<area shape="rect" href="_parser_2_column_8h.html" title=" " alt="" coords="1490,572,1566,599"/>
+<area shape="rect" href="_foreign_key_8h.html" title=" " alt="" coords="1693,572,1790,599"/>
+<area shape="rect" href="_join_index_8h.html" title=" " alt="" coords="1226,572,1313,599"/>
+<area shape="rect" href="_schema_extractor_8h.html" title=" " alt="" coords="1236,333,1409,360"/>
+<area shape="rect" title=" " alt="" coords="1125,408,1313,435"/>
+<area shape="rect" title=" " alt="" coords="367,251,427,278"/>
+<area shape="rect" title=" " alt="" coords="452,251,516,278"/>
+<area shape="rect" title=" " alt="" coords="93,333,251,360"/>
+<area shape="rect" title=" " alt="" coords="275,333,341,360"/>
+<area shape="rect" title=" " alt="" coords="591,251,638,278"/>
+<area shape="rect" title=" " alt="" coords="662,251,719,278"/>
+<area shape="rect" title=" " alt="" coords="488,333,619,360"/>
+<area shape="rect" href="_store_initializer_8h.html" title=" " alt="" coords="195,244,343,285"/>
+<area shape="rect" href="_schema_loader_8h.html" title=" " alt="" coords="1095,251,1257,278"/>
+<area shape="rect" title=" " alt="" coords="2263,333,2372,360"/>
+<area shape="rect" href="_condition_query_8h.html" title="Generic Condition Builder." alt="" coords="2544,408,2725,435"/>
+<area shape="rect" href="_validators_8h.html" title="RecordValidator Interfaces and Implementations for Query Processing." alt="" coords="2768,490,2859,517"/>
+<area shape="rect" href="_group_by_manager_8h.html" title=" " alt="" coords="2795,251,2927,278"/>
+<area shape="rect" href="_aggregator_query_8h.html" title="Generic Condition Builder." alt="" coords="2953,408,3143,435"/>
+<area shape="rect" title=" " alt="" coords="2984,490,3037,517"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -164,15 +158,12 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.png" border="0" usemap="#test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" alt=""/></div>
 <map name="test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" id="test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph">
-<area shape="rect" title=" " alt="" coords="5,202,56,229"/>
+<area shape="rect" title=" " alt="" coords="5,143,56,170"/>
 <area shape="rect" href="class_generic_query_1_1_generic_query_builder.html#a7029903f9302572e1cef82165a927c73" title=" " alt="" coords="104,5,291,47"/>
 <area shape="rect" href="class_generic_query_1_1_generic_query_builder.html#a8ec7469b95a87781667dc9f09a66802d" title=" " alt="" coords="104,71,291,112"/>
-<area shape="rect" href="class_generic_query_1_1_generic_query_builder.html#a1b02d98de26e0ff05582f9a38900e10e" title=" " alt="" coords="104,136,291,177"/>
-<area shape="rect" href="class_generic_query_1_1_generic_query_builder.html#a427ff30da7981b44596426a2645d434b" title="Creates a join from base source to a join source." alt="" coords="573,289,760,331"/>
-<area shape="rect" href="class_generic_query_1_1_generic_query_builder.html#ab7713ce5ae6376eacd2521aa6519aab2" title="Registers a new data source and gives is an alias name." alt="" coords="104,253,291,295"/>
-<area shape="rect" href="class_generic_query_1_1_generic_query_builder.html#a551f3151383fa621b76e56738bea03f4" title="Set the Base Source and the columns required in the query result." alt="" coords="104,319,291,360"/>
-<area shape="rect" href="class_generic_query_1_1_generic_query_builder.html#ae9390e286bce58d2e8d12f54ae0c8973" title="Sets the query object." alt="" coords="104,384,291,425"/>
-<area shape="rect" href="class_generic_query_1_1_generic_query_builder.html#a500b382e1f94c1376a6e3b3b4a3f98dd" title="Generates metadata of result records using join and query information." alt="" coords="339,319,525,360"/>
+<area shape="rect" href="class_parser_1_1_schema_extractor.html#ad1cf0228db1f16646ca251163b2d1da9" title=" " alt="" coords="115,136,280,177"/>
+<area shape="rect" href="class_generic_query_1_1_generic_query_builder.html#ab7713ce5ae6376eacd2521aa6519aab2" title="Registers a new data source and gives is an alias name." alt="" coords="104,201,291,243"/>
+<area shape="rect" href="class_generic_query_1_1_generic_query_builder.html#a551f3151383fa621b76e56738bea03f4" title="Set the Base Source and the columns required in the query result." alt="" coords="104,267,291,308"/>
 </map>
 </div>
 

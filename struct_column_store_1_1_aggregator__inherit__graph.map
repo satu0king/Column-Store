@@ -1,6 +1,8 @@
 <map id="ColumnStore::Aggregator" name="ColumnStore::Aggregator">
-<area shape="rect" id="node1" title="Base Condition Query Structure." alt="" coords="256,5,423,215"/>
+<area shape="rect" id="node1" title="Base Condition Query Structure." alt="" coords="481,5,648,215"/>
 <area shape="rect" id="node2" href="$struct_column_store_1_1_average_aggregator.html" title=" " alt="" coords="5,263,220,413"/>
-<area shape="rect" id="node3" href="$struct_column_store_1_1_max_aggregator.html" title=" " alt="" coords="244,270,435,406"/>
-<area shape="rect" id="node4" href="$struct_column_store_1_1_min_aggregator.html" title=" " alt="" coords="459,270,646,406"/>
+<area shape="rect" id="node3" href="$struct_column_store_1_1_count_aggregator.html" title=" " alt="" coords="245,270,445,406"/>
+<area shape="rect" id="node4" href="$struct_column_store_1_1_max_aggregator.html" title=" " alt="" coords="469,270,660,406"/>
+<area shape="rect" id="node5" href="$struct_column_store_1_1_min_aggregator.html" title=" " alt="" coords="685,270,871,406"/>
+<area shape="rect" id="node6" href="$struct_column_store_1_1_sum_aggregator.html" title=" " alt="" coords="896,270,1089,406"/>
 </map>

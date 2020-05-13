@@ -1,9 +1,10 @@
 <map id="src/GenericQuery/GenericQueryBuilder.h" name="src/GenericQuery/GenericQueryBuilder.h">
-<area shape="rect" id="node1" title="Generic Query Builder." alt="" coords="192,5,364,47"/>
-<area shape="rect" id="node2" href="$_generic_generator_8h.html" title=" " alt="" coords="129,184,301,225"/>
-<area shape="rect" id="node4" href="$_generic_query_builder_8cpp.html" title=" " alt="" coords="5,273,177,315"/>
-<area shape="rect" id="node5" href="$test_8cpp.html" title=" " alt="" coords="452,281,520,307"/>
-<area shape="rect" id="node6" href="$_group_by_manager_8h.html" title=" " alt="" coords="253,95,431,136"/>
-<area shape="rect" id="node3" href="$_generic_generator_8cpp.html" title=" " alt="" coords="201,273,373,315"/>
-<area shape="rect" id="node7" href="$_group_by_manager_8cpp.html" title=" " alt="" coords="325,184,503,225"/>
+<area shape="rect" id="node1" title="Generic Query Builder." alt="" coords="161,5,333,47"/>
+<area shape="rect" id="node2" href="$_generic_generator_8h.html" title=" " alt="" coords="98,184,270,225"/>
+<area shape="rect" id="node3" href="$_complete_8h.html" title=" " alt="" coords="5,281,115,307"/>
+<area shape="rect" id="node6" href="$_generic_query_builder_8cpp.html" title=" " alt="" coords="379,273,551,315"/>
+<area shape="rect" id="node7" href="$_group_by_manager_8h.html" title=" " alt="" coords="222,95,399,136"/>
+<area shape="rect" id="node5" href="$_generic_generator_8cpp.html" title=" " alt="" coords="139,273,311,315"/>
+<area shape="rect" id="node4" href="$test_8cpp.html" title=" " alt="" coords="26,363,94,389"/>
+<area shape="rect" id="node8" href="$_group_by_manager_8cpp.html" title=" " alt="" coords="294,184,471,225"/>
 </map>
