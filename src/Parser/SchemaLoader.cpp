@@ -109,6 +109,7 @@ void Parser::SchemaLoader::create_views() {
                    join_tab.table + "." + join_tab.to;
         }
 
+        sql += " ORDER BY " + projection.get_sort_key(); 
         sql += ";";
         cout << sql << endl;
         W.exec(sql);

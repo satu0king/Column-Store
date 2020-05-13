@@ -84,6 +84,44 @@ struct AverageAggregator : public Aggregator {
     }
 };
 
+struct SumAggregator : public Aggregator {
+    double sum;
+
+    SumAggregator(std::string name) : Aggregator(name), sum(0) {}
+
+    std::string aggregatorType() { return "Sum"; }
+
+    void addRecord(DataRecord &record) {
+        if (type == DataType::INT)
+            sum += record[columnIndex].as<int>();
+        else if (type == DataType::FLOAT)
+            sum += record[columnIndex].as<float>();
+        else
+            throw std::runtime_error("Unknown DataType");
+    }
+
+    AggregatorQuery clone() {
+        return AggregatorQuery(new SumAggregator(*this));
+    }
+
+    float getValue() { return sum; }
+};
+
+struct CountAggregator : public Aggregator {
+    int count;
+    CountAggregator(std::string name) : Aggregator(name), count(0) {}
+
+    std::string aggregatorType() { return "Count"; }
+
+    void addRecord(DataRecord &record) { count++; }
+
+    AggregatorQuery clone() {
+        return AggregatorQuery(new CountAggregator(*this));
+    }
+
+    float getValue() { return count; }
+};
+
 struct MaxAggregator : public Aggregator {
     float mx;
 
@@ -102,7 +140,6 @@ struct MaxAggregator : public Aggregator {
     }
 
     float getValue() { return mx; }
-
 
     AggregatorQuery clone() {
         return AggregatorQuery(new MaxAggregator(*this));
@@ -127,7 +164,6 @@ struct MinAggregator : public Aggregator {
     }
 
     float getValue() { return mn; }
-
 
     AggregatorQuery clone() {
         return AggregatorQuery(new MinAggregator(*this));

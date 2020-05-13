@@ -75,7 +75,7 @@ class PostgreSQLDataSource : public ColumnStore::DataGeneratorInterface {
    public:
     PostgreSQLDataSource(PostgreSQLMetaData postgresql_meta_data,
                          std::string r_name, vector<std::string> c = {},
-                         int b_size = 16) {
+                         int b_size = 5000) {
         conn = postgresql_meta_data.get_connection();
         pqxx::work txn{*conn};
         relation_name = r_name;

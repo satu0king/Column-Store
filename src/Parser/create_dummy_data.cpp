@@ -11,7 +11,7 @@ void create_dummy_data(string file_name) {
     ofstream my_file(file_name);
     int num_cities = 100;
     int num_departments = 50;
-    int num_employees = 5000;
+    int num_employees = 500000;
     string to_write = "INSERT INTO CITY (id, name) VALUES ";
     for (int i = 1; i <= num_cities; i++) {
         to_write += ("(" + to_string(i) + ",'city_" + to_string(i) + "'),");
@@ -53,7 +53,7 @@ void create_dummy_data(string file_name) {
     my_file << to_write;
 }
 
-// int main() {
-//     create_dummy_data("dummy_data.sql");
-//     return 0;
-// }
+int main() {
+    create_dummy_data("../../data/dummy_data_large.sql");
+    return 0;
+}

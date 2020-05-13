@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.CStore.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:cstore="http://www.CStore.com"
+    xsi:schemaLocation="http://www.CStore.come schema.xsd">
+
+    <tables>
+        <table>
+            <table_name>TABLE1</table_name>
+
+            <columns>
+                <column>
+                    <column_name>id</column_name>
+                    <data_type>int</data_type>
+                </column>
+                <column><column_name>col0</column_name><data_type>int</data_type></column> 
+                <column><column_name>col1</column_name><data_type>int</data_type></column> 
+                <column><column_name>col2</column_name><data_type>int</data_type></column> 
+                <column><column_name>col3</column_name><data_type>int</data_type></column> 
+                <column><column_name>col4</column_name><data_type>int</data_type></column> 
+                <column><column_name>col5</column_name><data_type>int</data_type></column> 
+                <column><column_name>col6</column_name><data_type>int</data_type></column> 
+                <column><column_name>col7</column_name><data_type>int</data_type></column> 
+                <column><column_name>col8</column_name><data_type>int</data_type></column> 
+                <column><column_name>col9</column_name><data_type>int</data_type></column> 
+                <column><column_name>col10</column_name><data_type>int</data_type></column> 
+                <column><column_name>col11</column_name><data_type>int</data_type></column> 
+                <column><column_name>col12</column_name><data_type>int</data_type></column> 
+                <column><column_name>col13</column_name><data_type>int</data_type></column> 
+                <column><column_name>col14</column_name><data_type>int</data_type></column> 
+                <column><column_name>col15</column_name><data_type>int</data_type></column> 
+                <column><column_name>col16</column_name><data_type>int</data_type></column> 
+                <column><column_name>col17</column_name><data_type>int</data_type></column> 
+                <column><column_name>col18</column_name><data_type>int</data_type></column> 
+                <column><column_name>col19</column_name><data_type>int</data_type></column> 
+                <column><column_name>col20</column_name><data_type>int</data_type></column> 
+                <column><column_name>col21</column_name><data_type>int</data_type></column> 
+                <column><column_name>col22</column_name><data_type>int</data_type></column> 
+                <column><column_name>col23</column_name><data_type>int</data_type></column> 
+                <column><column_name>col24</column_name><data_type>int</data_type></column> 
+                <column><column_name>col25</column_name><data_type>int</data_type></column> 
+                <column><column_name>col26</column_name><data_type>int</data_type></column> 
+                <column><column_name>col27</column_name><data_type>int</data_type></column> 
+                <column><column_name>col28</column_name><data_type>int</data_type></column> 
+                <column><column_name>col29</column_name><data_type>int</data_type></column> 
+                <column><column_name>col30</column_name><data_type>int</data_type></column> 
+                <column><column_name>col31</column_name><data_type>int</data_type></column> 
+                <column><column_name>col32</column_name><data_type>int</data_type></column> 
+                <column><column_name>col33</column_name><data_type>int</data_type></column> 
+                <column><column_name>col34</column_name><data_type>int</data_type></column> 
+                <column><column_name>col35</column_name><data_type>int</data_type></column> 
+                <column><column_name>col36</column_name><data_type>int</data_type></column> 
+                <column><column_name>col37</column_name><data_type>int</data_type></column> 
+                <column><column_name>col38</column_name><data_type>int</data_type></column> 
+                <column><column_name>col39</column_name><data_type>int</data_type></column> 
+                <column><column_name>col40</column_name><data_type>int</data_type></column> 
+                <column><column_name>col41</column_name><data_type>int</data_type></column> 
+                <column><column_name>col42</column_name><data_type>int</data_type></column> 
+                <column><column_name>col43</column_name><data_type>int</data_type></column> 
+                <column><column_name>col44</column_name><data_type>int</data_type></column> 
+                <column><column_name>col45</column_name><data_type>int</data_type></column> 
+                <column><column_name>col46</column_name><data_type>int</data_type></column> 
+                <column><column_name>col47</column_name><data_type>int</data_type></column> 
+                <column><column_name>col48</column_name><data_type>int</data_type></column> 
+                <column><column_name>col49</column_name><data_type>int</data_type></column> 
+                <column><column_name>col50</column_name><data_type>int</data_type></column> 
+                <column><column_name>col51</column_name><data_type>int</data_type></column> 
+                <column><column_name>col52</column_name><data_type>int</data_type></column> 
+                <column><column_name>col53</column_name><data_type>int</data_type></column> 
+                <column><column_name>col54</column_name><data_type>int</data_type></column> 
+                <column><column_name>col55</column_name><data_type>int</data_type></column> 
+                <column><column_name>col56</column_name><data_type>int</data_type></column> 
+                <column><column_name>col57</column_name><data_type>int</data_type></column> 
+                <column><column_name>col58</column_name><data_type>int</data_type></column> 
+                <column><column_name>col59</column_name><data_type>int</data_type></column> 
+                <column><column_name>col60</column_name><data_type>int</data_type></column> 
+                <column><column_name>col61</column_name><data_type>int</data_type></column> 
+                <column><column_name>col62</column_name><data_type>int</data_type></column> 
+                <column><column_name>col63</column_name><data_type>int</data_type></column> 
+                <column><column_name>col64</column_name><data_type>int</data_type></column> 
+                <column><column_name>col65</column_name><data_type>int</data_type></column> 
+                <column><column_name>col66</column_name><data_type>int</data_type></column> 
+                <column><column_name>col67</column_name><data_type>int</data_type></column> 
+                <column><column_name>col68</column_name><data_type>int</data_type></column> 
+                <column><column_name>col69</column_name><data_type>int</data_type></column> 
+                <column><column_name>col70</column_name><data_type>int</data_type></column> 
+                <column><column_name>col71</column_name><data_type>int</data_type></column> 
+                <column><column_name>col72</column_name><data_type>int</data_type></column> 
+                <column><column_name>col73</column_name><data_type>int</data_type></column> 
+                <column><column_name>col74</column_name><data_type>int</data_type></column> 
+                <column><column_name>col75</column_name><data_type>int</data_type></column> 
+                <column><column_name>col76</column_name><data_type>int</data_type></column> 
+                <column><column_name>col77</column_name><data_type>int</data_type></column> 
+                <column><column_name>col78</column_name><data_type>int</data_type></column> 
+                <column><column_name>col79</column_name><data_type>int</data_type></column> 
+                <column><column_name>col80</column_name><data_type>int</data_type></column> 
+                <column><column_name>col81</column_name><data_type>int</data_type></column> 
+                <column><column_name>col82</column_name><data_type>int</data_type></column> 
+                <column><column_name>col83</column_name><data_type>int</data_type></column> 
+                <column><column_name>col84</column_name><data_type>int</data_type></column> 
+                <column><column_name>col85</column_name><data_type>int</data_type></column> 
+                <column><column_name>col86</column_name><data_type>int</data_type></column> 
+                <column><column_name>col87</column_name><data_type>int</data_type></column> 
+                <column><column_name>col88</column_name><data_type>int</data_type></column> 
+                <column><column_name>col89</column_name><data_type>int</data_type></column> 
+                <column><column_name>col90</column_name><data_type>int</data_type></column> 
+                <column><column_name>col91</column_name><data_type>int</data_type></column> 
+                <column><column_name>col92</column_name><data_type>int</data_type></column> 
+                <column><column_name>col93</column_name><data_type>int</data_type></column> 
+                <column><column_name>col94</column_name><data_type>int</data_type></column> 
+                <column><column_name>col95</column_name><data_type>int</data_type></column> 
+                <column><column_name>col96</column_name><data_type>int</data_type></column> 
+                <column><column_name>col97</column_name><data_type>int</data_type></column> 
+                <column><column_name>col98</column_name><data_type>int</data_type></column> 
+                <column><column_name>col99</column_name><data_type>int</data_type></column> 
+            </columns>
+
+            <primary_key>id</primary_key>
+
+            <foreign_keys>
+            </foreign_keys>
+        </table>
+
+    </tables>
+
+    <projections>
+        <projection>
+
+            <projection_name>PROJECTION1</projection_name>
+
+            <tables>
+                <base_table>TABLE1</base_table>
+                <join_tables>
+                    
+                </join_tables>
+            </tables>
+
+            <columns>
+                <column>
+                    <name>id</name>
+                    <table_name>TABLE1</table_name>
+                    <column_name>id</column_name>
+                </column>
+                <column>
+                    <name>col0</name>
+                    <table_name>TABLE1</table_name>
+                    <column_name>col0</column_name>
+                </column>
+            </columns>
+
+            <sort_key>id</sort_key>
+
+            <join_indexes>
+            </join_indexes>
+
+        </projection>
+    </projections>
+
+</schema>

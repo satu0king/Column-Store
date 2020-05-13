@@ -208,6 +208,7 @@ class ColStoreLoader {
         : manager(MetadataManager::getInstance(column_store_path)) {}
 
     void update(std::string projection_name) {
+        std::cout << "Updating " << projection_name << std::endl;
         auto &fileData = manager->getProjectionFileInfo(projection_name);
         int tuplesMoved = fileData["tuples_move_count"];
         auto &schema = manager->getProjectionSchemaInfo(projection_name);
@@ -229,7 +230,11 @@ class ColStoreLoader {
                 projection_data.set(record, projection_columns);
                 projection_data.write(o);
                 c++;
+                if(c % 1000 == 0)
+                    std::cout << c << " records processed" << std::endl;
+                
         }
+        std::cout << c << " records processed" << std::endl;
         o.close();
 
         int newTotal = tuplesMoved + c;
